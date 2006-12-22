@@ -23,9 +23,9 @@ et_min=0.0;
 et_min_start=0.0;
 
 strobe_switch = props.globals.getNode("controls/switches/strobe", 1);
-aircraft.light.new("sim/model/Boeing-777-200/lighting/strobe", 0.05, 1.2, strobe_switch);
+aircraft.light.new("sim/model/Boeing-777-200/lighting/strobe", [0.05, 1.2], strobe_switch);
 beacon_switch = props.globals.getNode("controls/switches/beacon", 1);
-aircraft.light.new("sim/model/Boeing-777-200/lighting/beacon", 0.05, 1.25, beacon_switch);
+aircraft.light.new("sim/model/Boeing-777-200/lighting/beacon", [0.05, 1.25], beacon_switch);
 
 init_controls = func {
 setprop("/instrumentation/efis/baro",0.0);
