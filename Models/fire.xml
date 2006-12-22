@@ -1,0 +1,18 @@
+<PropertyList>
+ <path>fire.ac</path>
+
+ <animation>
+   <type>select</type>
+   <object-name>fire1</object-name>
+   <object-name>fire2</object-name>
+   <object-name>fire3</object-name>
+   <object-name>fire4</object-name>
+   <condition>
+   <equals>
+    <property>sim/crashed[0]</property>
+    <value>true</value>
+   </equals>
+  </condition>
+ </animation>
+
+</PropertyList>

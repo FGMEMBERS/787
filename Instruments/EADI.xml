@@ -1,0 +1,412 @@
+<?xml version="1.0"?>
+
+<!--
+Adapted to glass cockpit
+David Culp, davidculp2@attbi.com, June 2003, GPL
+
+Electronic Attitude Director Indicator
+_______________________________________________________________________________
+This is an instrument configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the instrument's layers and actions.
+
+Each instrument is composed of layers stacked on top of each other.
+A layer may be a texture (with transparent parts to show the layers
+underneath), text, or a special layer that switches between two
+others (say, to turn an indicator light on or off).  Each layer can
+move independently in proportion to a property value, and text
+can be generated from property values as well: all of the layer's
+movements are defined as transformations.
+
+Actions are hotspots on the instrument that will respond to a mouse
+click.  Actions always modify the values of properties, either by
+adjusting them, toggling them, or swaping them with other
+properties' values.
+-->
+
+<PropertyList>
+
+ <name>Electronic Attitude Director Indicator</name>
+
+ <w-base>188</w-base>
+ <h-base>379</h-base>
+
+ <layers>
+
+  <layer>
+   <name>ladder</name>
+   <type>texture</type>
+   <texture>
+    <path>Aircraft/787/Instruments/Textures/eadi_ladder.rgb</path>
+    <x1>0.007843</x1>
+    <y1>0.0</y1>
+    <x2>0.507843</x2>
+    <y2>0.77647</y2>
+   </texture>
+   <w>128</w>
+   <h>200</h>
+   <transformations>
+    <transformation>
+     <type>y-shift</type>
+     <offset>99</offset>
+    </transformation>
+    <transformation>
+     <type>rotation</type>
+     <property>/orientation/roll-deg</property>
+     <min>-360.0</min>
+     <max>360.0</max>
+     <scale>-1</scale>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <property>/orientation/pitch-deg</property>
+     <min>-60.0</min>
+     <max>60.0</max>
+     <scale>-1.4</scale>
+     <offset>0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>mask</name>
+   <type>texture</type>
+   <texture>
+    <path>Aircraft/737-300/Instruments/Textures/adihsi.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.0</y1>
+    <x2>0.737255</x2>
+    <y2>0.741683</y2>
+   </texture>
+  </layer>
+
+  <layer>
+   <name>Glideslope Needle</name>
+   <type>texture</type>
+   <condition>
+    <equals>
+      <property>/instrumentation/nav/in-range</property>
+      <value>true</value>
+    </equals>
+   </condition>
+   <texture>
+    <path>Aircraft/737-300/Instruments/Textures/adihsi.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.962818</y1>
+    <x2>0.02353</x2>
+    <y2>0.968688</y2>
+   </texture>
+   <h>4</h>
+   <w>8</w>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>68</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <property>/instrumentation/nav/gs-needle-deflection</property>
+     <min>-10</min>
+     <max>10</max>
+     <scale>3.0</scale>
+     <offset>106</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+ <layer>
+   <name>Localizer Bar</name>
+   <condition>
+    <equals>
+      <property>/instrumentation/nav/in-range</property>
+      <value>true</value>
+    </equals>
+   </condition>
+   <texture>
+    <path>Aircraft/737-300/Instruments/Textures/adihsi.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.988258</y1>
+    <x2>0.011765</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>4</w>
+   <h>8</h>
+   <transformations>
+    <transformation>
+     <type>y-shift</type>
+     <offset>42</offset>
+    </transformation>
+    <transformation>
+     <type>x-shift</type>
+     <property>/instrumentation/nav/heading-needle-deflection</property>
+     <scale>3.0</scale>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+    <name>Digital airspeed</name>
+    <type>text</type>
+    <font>led</font>
+    <point-size>6</point-size>
+    <color>
+     <red>1.0</red>
+     <green>1.0</green>
+     <blue>1.0</blue>
+    </color>
+    <chunks>
+     <chunk>
+      <type>number-value</type>
+      <property>/velocities/airspeed-kt</property>
+      <min>40.0</min>
+      <max>590.0</max>
+      <format>%4.0f</format>
+     </chunk>
+    </chunks>
+    <transformations>
+     <transformation>
+      <type>x-shift</type>
+      <offset>-82</offset>
+     </transformation>
+     <transformation>
+      <type>y-shift</type>
+      <offset>161</offset>
+     </transformation>
+    </transformations>
+  </layer>
+
+  <layer>
+    <name>Digital mach</name>
+    <type>text</type>
+    <font>led</font>
+    <point-size>5</point-size>
+    <color>
+     <red>1.0</red>
+     <green>0.8</green>
+     <blue>0.8</blue>
+    </color>
+    <chunks>
+     <chunk>
+      <type>number-value</type>
+      <property>/fdm/jsbsim/velocities/mach-norm[0]</property>
+      <min>0.40</min>
+      <format>%3.2f</format>
+     </chunk>
+    </chunks>
+    <transformations>
+     <transformation>
+      <type>x-shift</type>
+      <offset>-82</offset>
+     </transformation>
+     <transformation>
+      <type>y-shift</type>
+      <offset>145</offset>
+     </transformation>
+    </transformations>
+  </layer>
+
+  <layer>
+   <name>digital altimeter</name>
+   <type>text</type>
+   <font>led</font>
+   <point-size>6</point-size>
+   <color>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+     <scale>1</scale>
+     <format>%4.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>44</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>161</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>digital vertical speed</name>
+   <type>text</type>
+   <font>led</font>
+   <point-size>5</point-size>
+   <color>
+    <red>1.0</red>
+    <green>0.8</green>
+    <blue>0.8</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/velocities/vertical-speed-fps</property>
+     <scale>60</scale>
+     <format>%4.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>48</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>145</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>digital heading-magnetic</name>
+   <type>text</type>
+   <font>led</font>
+   <point-size>6</point-size>
+   <color>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+   </color>
+   <chunks>
+    <chunk>
+     <type>number-value</type>
+     <property>/orientation/heading-magnetic-deg</property>
+     <format>%4.0f</format>
+    </chunk>
+   </chunks>
+   <transformations>
+    <transformation>
+     <type>x-shift</type>
+     <offset>-17</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-10</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>localizer card</name>
+   <texture>
+    <path>Aircraft/T38/Instruments/Textures/t38-hsi.rgb</path>
+    <x1>0.58984</x1>
+    <y1>0.00781</y1>
+    <x2>0.99218</x2>
+    <y2>0.42578</y2>
+   </texture>
+   <w>105</w>
+   <h>105</h>
+   <transformations>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-80</offset>
+    </transformation>
+    <transformation>
+     <type>rotation</type>
+     <property>/instrumentation/nav/radials/selected-deg[0]</property>
+     <scale>1.0</scale>
+    </transformation>
+    <transformation>
+     <type>rotation</type>
+     <property>/orientation/heading-magnetic-deg[0]</property>
+     <scale>-1.0</scale>
+    </transformation>
+   </transformations>
+  </layer>
+
+ <layer>
+   <name>Localizer Bar</name>
+   <condition>
+    <equals>
+      <property>/instrumentation/nav/in-range</property>
+      <value>true</value>
+    </equals>
+   </condition>
+   <texture>
+    <path>Aircraft/T38/Instruments/Textures/t38-hsi.rgb</path>
+    <x1>0.51562</x1>
+    <y1>0.65234</y1>
+    <x2>0.55297</x2>
+    <y2>0.85547</y2>
+   </texture>
+   <w>8</w>
+   <h>50</h>
+   <transformations>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-80</offset>
+    </transformation>
+    <transformation>
+     <type>rotation</type>
+     <property>/instrumentation/nav/radials/selected-deg[0]</property>
+     <scale>1.0</scale>
+    </transformation>
+    <transformation>
+     <type>rotation</type>
+     <property>/orientation/heading-magnetic-deg[0]</property>
+     <scale>-1.0</scale>
+    </transformation>
+    <transformation>
+     <type>x-shift</type>
+     <property>/instrumentation/nav/heading-needle-deflection[0]</property>
+     <scale>4.0</scale>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>compass rose</name>
+   <texture>
+    <path>Aircraft/T38/Instruments/Textures/t38-hsi.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.515625</y1>
+    <x2>0.484375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>120</w>
+   <h>120</h>
+   <transformations>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-80</offset>
+    </transformation>
+    <transformation>
+     <type>rotation</type>
+     <property>/orientation/heading-magnetic-deg</property>
+     <scale>-1.0</scale>
+    </transformation>
+   </transformations>
+  </layer>
+
+  <layer>
+   <name>Airplane Symbol</name>
+   <texture>
+    <path>Aircraft/T38/Instruments/Textures/t38-hsi.rgb</path>
+    <x1>0.39453</x1>
+    <y1>0.17578</y1>
+    <x2>0.453125</x2>
+    <y2>0.23438</y2>
+   </texture>
+   <w>16</w>
+   <h>16</h>
+   <transformations>
+    <transformation>
+     <type>y-shift</type>
+     <offset>-80</offset>
+    </transformation>
+   </transformations>
+  </layer>
+
+
+ </layers>
+
+</PropertyList>

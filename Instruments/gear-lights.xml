@@ -1,0 +1,65 @@
+<PropertyList>
+ <name>gear lights</name>
+ <w-base>64</w-base>
+ <h-base>64</h-base>
+ <layers>
+  <layer>      
+  <name>gear lights</name>
+  <condition>
+   <less-than>
+   <property>/gear/gear/position-norm</property>
+   <value>1</value>
+   </less-than>
+  </condition> 
+  <condition>
+   <greater-than>
+   <property>/gear/gear/position-norm</property>
+   <value>0</value>
+   </greater-than>
+  </condition>   
+   <texture>
+    <path>Aircraft/787/Instruments/Textures/gear-lights.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.0</y1>
+    <x2>0.5</x2>
+    <y2>0.5</y2>
+   </texture>
+  </layer>
+
+
+  <layer>      
+  <name>gear lights</name>   
+  <condition>
+   <equals>
+   <property>/gear/gear/position-norm</property>
+   <value>1</value>
+   </equals>
+  </condition>   
+   <texture>
+    <path>Aircraft/787/Instruments/Textures/gear-lights.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.5</y1>
+    <x2>0.5</x2>
+    <y2>1.0</y2>
+   </texture>
+  </layer>
+
+  <layer>      
+  <name>gear lights</name>   
+  <condition>
+   <equals>
+   <property>/gear/gear/position-norm</property>
+   <value>0</value>
+   </equals>
+  </condition>   
+   <texture>
+    <path>Aircraft/787/Instruments/Textures/gear-lights.rgb</path>
+    <x1>0.5</x1>
+    <y1>0.0</y1>
+    <x2>1.0</x2>
+    <y2>0.5</y2>
+   </texture>
+  </layer>
+ </layers>
+</PropertyList>
+   

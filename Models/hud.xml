@@ -1,0 +1,384 @@
+<PropertyList>
+ <path>hud.ac</path>
+
+<animation>
+   <type>select</type>
+   <object-name>FDbars</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+       <equals>
+         <property>/instrumentation/flightdirector/fd-on</property>
+         <value>1</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>NDhdg</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>NDptc</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>Glass.001</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>NDptc10</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>NDptc00</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>NDptc-10</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>pointer</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>vector</object-name>
+   <condition>
+     <and>
+       <equals>
+         <property>/sim/hud/visibility[0]</property>
+         <value>true</value>
+       </equals>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+     </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>NDhdg</object-name>
+   <property>orientation/roll-deg[0]</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+   <animation>
+   <type>texrotate</type>
+   <object-name>NDhdg</object-name>
+   <property>/orientation/heading-magnetic-deg</property>
+<factor>10</factor>
+   <center>
+     <x>0.5</x>
+     <y>0.5</y>
+     <z>0.0</z>
+   </center>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>-1</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>NDptc00</object-name>
+   <property>orientation/roll-deg[0]</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>NDptc00</object-name>
+   <property>orientation/pitch-deg[0]</property>
+<factor>0.018</factor>
+<axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>-1.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>NDptc10</object-name>
+   <property>orientation/roll-deg[0]</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>NDptc10</object-name>
+   <property>orientation/pitch-deg[0]</property>
+<factor>0.018</factor>
+<axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>-1.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>NDptc-10</object-name>
+   <property>orientation/roll-deg[0]</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>NDptc-10</object-name>
+   <property>orientation/pitch-deg[0]</property>
+<factor>0.018</factor>
+<axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>-1.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>NDptc</object-name>
+   <property>orientation/roll-deg[0]</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+   <animation>
+   <type>texrotate</type>
+   <object-name>NDptc</object-name>
+   <property>/orientation/pitch-deg</property>
+<factor>10</factor>
+   <center>
+     <x>0.5</x>
+     <y>0.5</y>
+     <z>0.0</z>
+   </center>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>-1</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>FDbars</object-name>
+   <property>/instrumentation/flightdirector/vbar-roll</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>FDbars</object-name>
+   <property>/instrumentation/flightdirector/vbar-pitch</property>
+<factor>0.0014</factor>
+<axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>vector</object-name>
+   <property>orientation/alpha-deg[0]</property>
+<factor>0.018</factor>
+<axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>-1.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>vector</object-name>
+   <property>orientation/side-slip-deg[0]</property>
+<factor>0.018</factor>
+<axis>
+     <x>0.0</x>
+     <y>-1.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+</PropertyList>

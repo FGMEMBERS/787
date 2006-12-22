@@ -1,0 +1,54 @@
+<PropertyList>
+ <name>flap guage</name>
+ <w-base>128</w-base>
+ <h-base>128</h-base>
+ <layers>
+  <layer>
+   <name>background</name>
+   <w>110</w>
+   <h>110</h>
+   <texture>
+     <path>Aircraft/787/Instruments/Textures/flap-guage.rgb</path>
+    <x1>0.0</x1>
+    <x2>1.0</x2>
+    <y1>0.0</y1>
+    <y2>1.0</y2>
+   </texture>
+  </layer>
+
+  <layer>
+   <name>big needle</name>
+   <w>4</w>
+   <h>32</h>
+   <texture>
+    <path>Aircraft/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <transformations>
+    <transformation>
+     <type>rotation</type>
+     <property>/surface-positions/flap-pos-norm[0]</property>
+     <interpolation>
+      <entry><ind>  0.000</ind><dep> -90.0</dep></entry>
+      <entry><ind>  0.125</ind><dep> -53.0</dep></entry>
+      <entry><ind>  0.250</ind><dep>  -9.0</dep></entry>
+      <entry><ind>  0.375</ind><dep>  29.0</dep></entry>
+      <entry><ind>  0.500</ind><dep>  68.0</dep></entry>
+      <entry><ind>  0.625</ind><dep>  95.0</dep></entry>
+      <entry><ind>  0.750</ind><dep> 127.0</dep></entry>
+      <entry><ind>  0.875</ind><dep> 159.0</dep></entry>
+      <entry><ind>  1.000</ind><dep> 183.0</dep></entry>
+     </interpolation>
+    </transformation>     
+    <transformation>
+     <type>y-shift</type>
+     <offset>16.0</offset>
+    </transformation>
+   </transformations>
+  </layer>
+   
+ </layers>
+</PropertyList>

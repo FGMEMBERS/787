@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+
+<!--
+PFD
+-->
+
+<PropertyList>
+ 
+ <name>Honeywell Primus 1000 PFD</name>
+ <w-base>142</w-base>
+ <h-base>176</h-base>
+
+ <layers>
+
+  
+   <layer>
+     <name>inhg display</name>
+     <type>text</type>
+     <font>courb</font>
+     <point-size>5</point-size>
+     <color>
+       <red>0.4</red>
+       <green>0.7</green>
+       <blue>0.8</blue>
+     </color>
+     <chunks>
+       <chunk>
+         <type>number-value</type>
+         <property>/instrumentation/altimeter/setting-inhg</property>
+         <format>%2.2f</format>
+       </chunk>
+     </chunks>
+     <transformations>
+       <transformation>
+         <type>x-shift</type>
+         <offset>34</offset>
+       </transformation>
+       <transformation>
+         <type>y-shift</type>
+         <offset>-1</offset>
+       </transformation>
+     </transformations>
+   </layer>
+   
+   <layer>
+     <name>gspd display</name>
+     <type>text</type>
+     <font>courb</font>
+     <point-size>5</point-size>
+     <color>
+       <red>0.9</red>
+       <green>0.9</green>
+       <blue>0.5</blue>
+     </color>
+     <chunks>
+       <chunk>
+         <type>number-value</type>
+         <property>/instrumentation/gps/indicated-ground-speed-kt</property>
+         <format>% 3.0f</format>
+       </chunk>
+     </chunks>
+     <transformations>
+       <transformation>
+         <type>x-shift</type>
+         <offset>16</offset>
+       </transformation>
+       <transformation>
+         <type>y-shift</type>
+         <offset>-56</offset>
+       </transformation>
+     </transformations>
+   </layer>
+
+   <layer>
+     <name>heading display</name>
+     <type>text</type>
+     <font>courb</font>
+     <point-size>5</point-size>
+     <color>
+       <red>0.9</red>
+       <green>0.9</green>
+       <blue>0.5</blue>
+     </color>
+     <chunks>
+       <chunk>
+         <type>number-value</type>
+         <property>/instrumentation/heading-indicator/indicated-heading</property>
+         <format>%03.0f</format>
+       </chunk>
+     </chunks>
+     <transformations>
+       <transformation>
+         <type>x-shift</type>
+         <offset>-50</offset>
+       </transformation>
+       <transformation>
+         <type>y-shift</type>
+         <offset>-56</offset>
+       </transformation>
+     </transformations>
+   </layer>
+
+   
+</layers>
+<actions>
+  <action>
+    <name>calibrate fine</name>
+    <button>0</button>
+    <x>44</x>
+    <y>-80</y>
+    <w>8</w>
+    <h>10</h>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/altimeter/setting-inhg</property>
+      <step>-0.01</step>
+      <min>26.0</min>
+      <max>33.0</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  
+  <action>
+    <name>calibrate coarse</name>
+    <button>1</button>
+    <x>44</x>
+    <y>-80</y>
+    <w>8</w>
+    <h>10</h>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/altimeter/setting-inhg</property>
+      <step>-0.1</step>
+      <min>26.0</min>
+      <max>33.0</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  
+  <action>
+    <name>calibrate fine</name>
+    <button>0</button>
+    <x>52</x>
+    <y>-80</y>
+    <w>8</w>
+    <h>10</h>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/altimeter/setting-inhg</property>
+      <step>0.01</step>
+      <min>26.0</min>
+      <max>33.0</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  
+  <action>
+    <name>calibrate coarse</name>
+    <button>1</button>
+    <x>52</x>
+    <y>-80</y>
+    <w>8</w>
+    <h>10</h>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/altimeter/setting-inhg</property>
+      <step>0.1</step>
+      <min>26.0</min>
+      <max>33.0</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</actions>
+
+</PropertyList>
