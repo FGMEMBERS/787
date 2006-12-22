@@ -1,7 +1,7 @@
 <PropertyList>
 <sim>
 <description>Boeing 787-8</description>
-<author>Justin Smithies and Syd Adams</author>
+<author>Joshua Wilson</author>
 <status>Development</status>
 <aircraft-version>04062006</aircraft-version>
 <flight-model>yasim</flight-model>
