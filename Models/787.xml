@@ -786,247 +786,6 @@
   </condition>
  </animation>
 
- <animation>
-   <type>select</type>
-   <object-name>Exhaust1</object-name>
-   <condition>
-   <or>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>1</value>
-   </equals>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>2</value>
-   </equals>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>5</value>
-   </equals>
-   </or>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>Exhaust2</object-name>
-   <condition>
-   <or>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>1</value>
-   </equals>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>2</value>
-   </equals>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>5</value>
-   </equals>
-   </or>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>ltailcone</object-name>
-   <object-name>bodyfairing</object-name>
-   <object-name>fin</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>rtailcone</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>cabinlighting</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>no1engcore</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>no2engcore</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>fuselage</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>fuselage.002</object-name>
-   <condition>
-   <or>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>1</value>
-   </equals>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>2</value>
-   </equals>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>5</value>
-   </equals>
-   </or>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>Lgear</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>Rgear</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>lgearlstrut</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>rgearlstrut</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>lgearustrut</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>rgearustrut</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>ubeaconlenz</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>lbeaconlenz</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>lhlight.001</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>rhlight.002</object-name>
-   <condition>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
-  </condition>
- </animation>
-
   <animation>
   <type>material</type>
   <object-name>Baro.knob</object-name>
@@ -1449,10 +1208,6 @@
    <object-name>lightedfin</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/switches/logo-lights</property>
     <not>
     <property>sim/crashed</property>
@@ -1471,10 +1226,6 @@
    <object-name>lightedrudder</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/switches/logo-lights</property>
     <not>
     <property>sim/crashed</property>
@@ -3625,7 +3376,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Raxle2</object-name>
-  <property>position/altitude-agl-ft[0]</property>
+  <property>position/gear-agl-ft[0]</property>
    <interpolation>
     <entry>
       <ind>0.0</ind>
@@ -4031,7 +3782,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Laxle2</object-name>
-  <property>position/altitude-agl-ft[0]</property>
+  <property>position/gear-agl-ft[0]</property>
    <interpolation>
     <entry>
       <ind>0.0</ind>
@@ -4267,11 +4018,11 @@
    <condition>
    <and>
    <greater-than>
-    <property>position/altitude-agl-ft[0]</property>
+    <property>position/gear-agl-ft[0]</property>
     <value>0</value>
    </greater-than>
    <less-than>
-    <property>position/altitude-agl-ft[0]</property>
+    <property>position/gear-agl-ft[0]</property>
     <value>2</value>
    </less-than>
    <less-than>
@@ -4305,11 +4056,11 @@
    <condition>
    <and>
    <greater-than>
-    <property>position/altitude-agl-ft[0]</property>
+    <property>position/gear-agl-ft[0]</property>
     <value>0</value>
    </greater-than>
    <less-than>
-    <property>position/altitude-agl-ft[0]</property>
+    <property>position/gear-agl-ft[0]</property>
     <value>2</value>
    </less-than>
    <less-than>
@@ -4336,74 +4087,6 @@
      <z>1</z>
    </axis>
  </animation>
-
-<!--
- <animation>
-  <type>select</type>
-  <object-name>lcontrail</object-name>
-   <condition>
-    <greater-than>
-     <property>position/altitude-ft[0]</property>
-     <value>25000</value>
-    </greater-than>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>rcontrail</object-name>
-   <condition>
-    <greater-than>
-     <property>position/altitude-ft[0]</property>
-     <value>25000</value>
-    </greater-than>
-   </condition>
- </animation>
-
- <animation>
-  <type>noshadow</type>
-  <object-name>lcontrail</object-name>
- </animation>
-
- <animation>
-  <type>noshadow</type>
-  <object-name>rcontrail</object-name>
- </animation>
-
- <animation>
-  <type>texrotate</type>
-  <object-name>lcontrail</object-name>
-  <property>/sim/time/elapsed-sec</property>
-  <factor>50</factor>
-   <center>
-     <x>0.5</x>
-     <y>0.5</y>
-     <z>0</z>
-   </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
- <animation>
-  <type>texrotate</type>
-  <object-name>rcontrail</object-name>
-  <property>/sim/time/elapsed-sec</property>
-  <factor>50</factor>
-   <center>
-     <x>0.5</x>
-     <y>0.5</y>
-     <z>0</z>
-   </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
--->
 
  <animation>
   <type>rotate</type>
@@ -5174,10 +4857,6 @@
   <object-name>lhlightedwinga</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -5226,10 +4905,6 @@
   <object-name>rhlightedwinga</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -5338,10 +5013,6 @@
   <object-name>lhlightedslata</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -5355,10 +5026,6 @@
   <object-name>rhlightedslata</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -9612,10 +9279,6 @@
   <object-name>lhlightedslat</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -9629,10 +9292,6 @@
   <object-name>rhlightedslat</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -9775,20 +9434,8 @@
       <dep>0</dep>
     </entry>
     <entry>
-      <ind>0.375</ind>
-      <dep>7.0</dep>
-    </entry>
-    <entry>
-      <ind>0.833</ind>
-      <dep>22.0</dep>
-    </entry>
-    <entry>
-      <ind>0.900</ind>
-      <dep>10.0</dep>
-    </entry>
-    <entry>
       <ind>1.0</ind>
-      <dep>10.0</dep>
+      <dep>30.0</dep>
     </entry>
   </interpolation>   
   <center>
@@ -10036,95 +9683,6 @@
    <x>-0.25</x>
    <y>6</y>
    <z>-1.2</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>translate</type>
-  <object-name>lhibflap2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
- <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.033</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.375</ind>
-      <dep>0.07</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.10</dep>
-    </entry>
-  </interpolation>
-  <axis>
-   <x>1</x>
-   <y>0</y>
-   <z>-0.2</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>lhibflap2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
- <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.200</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>30.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>3.43</x-m>
-   <y-m>-6.8</y-m>
-   <z-m>0.2</z-m>
-  </center>
-  <axis>
-   <x>-0.25</x>
-   <y>6</y>
-   <z>-1.2</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>lhibflap2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
- <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.375</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>20.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>3.85</x-m>
-   <y-m>-5.7</y-m>
-   <z-m>-0.2</z-m>
-  </center>
-  <axis>
-   <x>-0.3</x>
-   <y>6</y>
-   <z>-0.96</z>
   </axis>
  </animation>
 
@@ -10532,20 +10090,8 @@
       <dep>0</dep>
     </entry>
     <entry>
-      <ind>0.375</ind>
-      <dep>7.0</dep>
-    </entry>
-    <entry>
-      <ind>0.833</ind>
-      <dep>22.0</dep>
-    </entry>
-    <entry>
-      <ind>0.900</ind>
-      <dep>10.0</dep>
-    </entry>
-    <entry>
       <ind>1.0</ind>
-      <dep>10.0</dep>
+      <dep>30.0</dep>
     </entry>
   </interpolation>   
   <center>
@@ -10793,95 +10339,6 @@
    <x>0.25</x>
    <y>6</y>
    <z>1.2</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>translate</type>
-  <object-name>rhibflap2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
- <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.033</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.375</ind>
-      <dep>0.07</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>0.10</dep>
-    </entry>
-  </interpolation>
-  <axis>
-   <x>1</x>
-   <y>0</y>
-   <z>-0.2</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>rhibflap2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
- <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.200</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>30.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>3.43</x-m>
-   <y-m>6.8</y-m>
-   <z-m>0.2</z-m>
-  </center>
-  <axis>
-   <x>0.25</x>
-   <y>6</y>
-   <z>1.2</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>rhibflap2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
- <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>0.375</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>20.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>3.85</x-m>
-   <y-m>5.7</y-m>
-   <z-m>-0.2</z-m>
-  </center>
-  <axis>
-   <x>0.3</x>
-   <y>6</y>
-   <z>0.96</z>
   </axis>
  </animation>
 
@@ -11510,10 +10967,6 @@
   <object-name>noselight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/landing-light-c[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11527,10 +10980,6 @@
   <object-name>llandlt</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/landing-light-l[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11544,10 +10993,6 @@
   <object-name>rlandlt</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/landing-light-r[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11561,10 +11006,6 @@
   <object-name>taxilights</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/taxi-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11578,10 +11019,6 @@
   <object-name>lhturnofflt</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/turn-off-lights-l</property>
    <not>
    <property>sim/crashed</property>
@@ -11595,10 +11032,6 @@
   <object-name>rhturnofflt</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/turn-off-lights-r</property>
    <not>
    <property>sim/crashed</property>
@@ -11612,10 +11045,6 @@
   <object-name>winglts</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11629,10 +11058,6 @@
   <object-name>lhlightedwing</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11651,10 +11076,6 @@
   <object-name>rhlightedwing</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11673,10 +11094,6 @@
   <object-name>logolts</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/logo-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11690,10 +11107,6 @@
   <object-name>lhnavlite</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/nav-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11707,10 +11120,6 @@
   <object-name>lnavlight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/nav-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11929,10 +11338,6 @@
   <object-name>rhnavlite</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/nav-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -11946,10 +11351,6 @@
   <object-name>rnavlight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/nav-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -12168,10 +11569,6 @@
   <object-name>lhlight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/nav-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -12185,10 +11582,6 @@
   <object-name>rhlight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/switches/nav-lights[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -12234,10 +11627,6 @@
   <object-name>lbeacon</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/beacon/state[0]</property>
     <value>true</value>
@@ -12255,10 +11644,6 @@
   <object-name>lredflash</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/beacon/state[0]</property>
     <value>true</value>
@@ -12276,10 +11661,6 @@
   <object-name>ubeacon</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/beacon/state[0]</property>
     <value>true</value>
@@ -12297,10 +11678,6 @@
   <object-name>uredflash</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/beacon/state[0]</property>
     <value>true</value>
@@ -12334,35 +11711,95 @@
  </animation>
 
  <animation>
-   <type>translate</type>
+   <type>rotate</type>
    <object-name>uredflash</object-name>
-   <offset-m>12</offset-m>
+   <property>/sim/current-view/heading-offset-deg[0]</property>
+  <center>
+   <x-m>-11.14</x-m>
+   <y-m>0</y-m>
+   <z-m>4.6</z-m>
+  </center>
    <axis>
-     <x>-11.5</x>
+     <x>0</x>
      <y>0</y>
-     <z>4.6</z>
+     <z>1</z>
    </axis>
- </animation>
- 
- <animation>
-   <type>billboard</type>
-   <object-name>uredflash</object-name>
  </animation>
 
  <animation>
-   <type>translate</type>
-   <object-name>lredflash</object-name>
-   <offset-m>11.25</offset-m>
+   <type>rotate</type>
+   <object-name>uredflash</object-name>
+   <property>/sim/current-view/pitch-offset-deg[0]</property>
+   <interpolation>
+    <entry>
+      <ind>-90</ind>
+      <dep>90</dep>
+    </entry>
+    <entry>
+      <ind>0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>90.0</ind>
+      <dep>-90.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>-11.14</x-m>
+   <y-m>0</y-m>
+   <z-m>4.6</z-m>
+  </center>
    <axis>
-     <x>-11.5</x>
-     <y>0</y>
-     <z>-1.8</z>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
    </axis>
  </animation>
- 
+
  <animation>
-   <type>billboard</type>
+   <type>rotate</type>
    <object-name>lredflash</object-name>
+   <property>/sim/current-view/heading-offset-deg[0]</property>
+  <center>
+   <x-m>-11.14</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.8</z-m>
+  </center>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>lredflash</object-name>
+   <property>/sim/current-view/pitch-offset-deg[0]</property>
+   <interpolation>
+    <entry>
+      <ind>-90</ind>
+      <dep>90</dep>
+    </entry>
+    <entry>
+      <ind>0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>90.0</ind>
+      <dep>-90.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>-11.14</x-m>
+   <y-m>0</y-m>
+   <z-m>-1.8</z-m>
+  </center>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
  </animation>
 
   <animation>
@@ -12375,10 +11812,6 @@
   <object-name>lwhiteflash</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>true</value>
@@ -12396,10 +11829,6 @@
   <object-name>lights.001</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>true</value>
@@ -12643,10 +12072,6 @@
   <object-name>lights.002</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>true</value>
@@ -12664,10 +12089,6 @@
   <object-name>lights.003</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>true</value>
@@ -12685,10 +12106,6 @@
   <object-name>rwhiteflash</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>true</value>
@@ -12932,10 +12349,6 @@
    <object-name>noselight1</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>controls/switches/landing-light-c[0]</property>
    <not>
    <property>sim/crashed</property>
@@ -13176,10 +12589,6 @@
    <object-name>noselight2</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/switches/taxi-lights</property>
    <not>
    <property>sim/crashed</property>
@@ -13390,10 +12799,6 @@
    <object-name>Llight1</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/switches/landing-light-l</property>
    <not>
    <property>sim/crashed</property>
@@ -13844,10 +13249,6 @@
    <object-name>LTOlight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/lighting/turn-off-lights-l</property>
      <not>
      <property>sim/crashed</property>
@@ -14066,10 +13467,6 @@
    <object-name>RTOlight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/lighting/turn-off-lights-r</property>
      <not>
      <property>sim/crashed</property>
@@ -14288,10 +13685,6 @@
    <object-name>lhilight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/lighting/logo-lights[0]</property>
      <not>
      <property>sim/crashed</property>
@@ -14518,10 +13911,6 @@
    <object-name>rhilight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
      <property>/controls/lighting/logo-lights[0]</property>
      <not>
      <property>sim/crashed</property>
@@ -14758,10 +14147,6 @@
   <object-name>tlwhiteflash</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>true</value>
@@ -14779,10 +14164,6 @@
   <object-name>trwhiteflash</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>true</value>
@@ -14796,35 +14177,95 @@
  </animation>
 
  <animation>
-   <type>translate</type>
+   <type>rotate</type>
    <object-name>tlwhiteflash</object-name>
-   <offset-m>28.3</offset-m>
+   <property>/sim/current-view/heading-offset-deg[0]</property>
+  <center>
+   <x-m>28.15</x-m>
+   <y-m>-0.6</y-m>
+   <z-m>2.1</z-m>
+  </center>
    <axis>
-     <x>28.2</x>
-     <y>-0.6</y>
-     <z>2.1</z>
-   </axis>
- </animation>
- 
- <animation>
-   <type>translate</type>
-   <object-name>trwhiteflash</object-name>
-   <offset-m>28.3</offset-m>
-   <axis>
-     <x>28.2</x>
-     <y>0.6</y>
-     <z>2.1</z>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
    </axis>
  </animation>
 
  <animation>
-   <type>billboard</type>
-   <object-name>tlwhiteflash</object-name>
+   <type>rotate</type>
+   <object-name>trwhiteflash</object-name>
+   <property>/sim/current-view/heading-offset-deg[0]</property>
+  <center>
+   <x-m>28.15</x-m>
+   <y-m>0.6</y-m>
+   <z-m>2.1</z-m>
+  </center>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+   </axis>
  </animation>
 
  <animation>
-   <type>billboard</type>
+   <type>rotate</type>
    <object-name>trwhiteflash</object-name>
+   <property>/sim/current-view/pitch-offset-deg[0]</property>
+   <interpolation>
+    <entry>
+      <ind>-90</ind>
+      <dep>90</dep>
+    </entry>
+    <entry>
+      <ind>0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>90.0</ind>
+      <dep>-90.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>28.15</x-m>
+   <y-m>0.6</y-m>
+   <z-m>2.1</z-m>
+  </center>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>tlwhiteflash</object-name>
+   <property>/sim/current-view/pitch-offset-deg[0]</property>
+   <interpolation>
+    <entry>
+      <ind>-90</ind>
+      <dep>90</dep>
+    </entry>
+    <entry>
+      <ind>0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>90.0</ind>
+      <dep>-90.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>28.15</x-m>
+   <y-m>-0.6</y-m>
+   <z-m>2.1</z-m>
+  </center>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
  </animation>
 
  <animation>
@@ -14832,10 +14273,6 @@
    <object-name>rtaillight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>false</value>
@@ -14853,10 +14290,6 @@
    <object-name>ltaillight</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
    <equals>
     <property>sim/model/Boeing-777-200/lighting/strobe/state[0]</property>
     <value>false</value>
@@ -15305,10 +14738,6 @@
   <object-name>lhlightedreverser</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
      <not>
      <property>sim/crashed</property>
@@ -15322,10 +14751,6 @@
   <object-name>rhlightedreverser</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
      <not>
      <property>sim/crashed</property>
@@ -15391,10 +14816,6 @@
   <object-name>rhlightedreverser</object-name>
    <condition>
    <and>
-   <greater-than>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </greater-than>
   <property>controls/lighting/logo-lights[0]</property>
      <not>
      <property>sim/crashed</property>
@@ -15500,26 +14921,26 @@
   </axis>
  </animation>
 
-  <animation>
-   <type>noshadow</type>
-   <object-name>Exhaust1</object-name>
-   <object-name>Exhaust2</object-name>
+<animation>
+ <type>noshadow</type>
+ <object-name>Exhaust1</object-name>
+ <object-name>Exhaust2</object-name>
  </animation>
 
-<animation>
-	<type>shader</type>
-	<shader>heat-haze</shader>
-	<object-name>Exhaust1</object-name>
-	<factor>0.12</factor>
-	<speed-prop>engines/engine[0]/n1</speed-prop>
-</animation>
+ <animation>
+ <type>shader</type>
+ <shader>heat-haze</shader>
+ <object-name>Exhaust1</object-name>
+ <factor>0.12</factor>
+ <speed-prop>engines/engine[0]/n1</speed-prop>
+ </animation>
 
-<animation>
-	<type>shader</type>
-	<shader>heat-haze</shader>
-	<object-name>Exhaust2</object-name>
-	<factor>0.12</factor>
-	<speed-prop>engines/engine[1]/n1</speed-prop>
-</animation>
+ <animation>
+ <type>shader</type>
+ <shader>heat-haze</shader>
+ <object-name>Exhaust2</object-name>
+ <factor>0.12</factor>
+ <speed-prop>engines/engine[1]/n1</speed-prop>
+ </animation> 
 
 </PropertyList>

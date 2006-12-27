@@ -39,13 +39,13 @@
     </view>
     <view n="2">
       <config>
-        <z-offset-m archive="y" type="double">150.0</z-offset-m>
+        <z-offset-m archive="y" type="double">100.0</z-offset-m>
       </config>
     </view>
 
     <view n="5">
       <config>
-        <z-offset-m archive="y" type="double">200.0</z-offset-m>
+        <z-offset-m archive="y" type="double">125.0</z-offset-m>
       </config>
     </view>
 

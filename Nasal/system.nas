@@ -31,6 +31,7 @@ init_controls = func {
 setprop("/instrumentation/efis/baro",0.0);
 setprop("/instrumentation/efis/inhg",0);
 setprop("/instrumentation/efis/kpa",0);
+setprop("/instrumentation/efis/stab",0);
 setprop("//instrumentation/mk-viii/serviceable","true");
 setprop("//instrumentation/mk-viii/configuration-module/category-1","254");
 setprop("/instrumentation/gps/wp/wp/waypoint-type","airport");
@@ -39,6 +40,10 @@ setprop("/instrumentation/gps/serviceable","true");
 setprop("/engines/engine[0]/fuel-flow_pph",0.0);
 setprop("/engines/engine[1]/fuel-flow_pph",0.0);
 setprop("/instrumentation/efis/baro-mode",0.0);
+setprop("/instrumentation/efis/fixed-temp",0.0);
+setprop("/instrumentation/efis/fixed-stab",0.0);
+setprop("/instrumentation/efis/fixed-pitch",0.0);
+setprop("/instrumentation/efis/fixed-vs",0.0);
 setprop("/instrumentation/efis/alt-mode",0.0);
 setprop("/controls/engines/reverser-position",0.0);
 setprop("/environment/turbulence/use-cloud-turbulence","true");
@@ -64,6 +69,40 @@ et_min=0.0;
 }
 
 # ESTIMATED TIME CALCULATIONS 
+
+update_radar = func{
+true_heading = getprop("/orientation/heading-deg");
+ai_craft = props.globals.getNode("/ai/models").getChildren("aircraft");
+for(i=0; i<size(ai_craft);i=i+1){
+tgt_offset=getprop("/ai/models/aircraft[" ~ i ~ "]/radar/bearing-deg");
+if(tgt_offset == nil){tgt_offset = 0.0;}
+tgt_offset -= true_heading;
+if (tgt_offset < -180){tgt_offset +=360;}
+if (tgt_offset > 180){tgt_offset -=360;}
+setprop("/instrumentation/radar/ai[" ~ i ~ "]/brg-offset",tgt_offset);
+test_dist=getprop("/instrumentation/radar/range");
+test1_dist = getprop("/ai/models/aircraft[" ~ i ~ "]/radar/range-nm");
+if(test1_dist == nil){test1_dist=0.0;}
+norm_dist= (1 / test_dist) * test1_dist;
+setprop("/instrumentation/radar/ai[" ~ i ~ "]/norm-dist", norm_dist);
+}
+
+mp_craft = props.globals.getNode("/ai/models").getChildren("multiplayer");
+for(i=0; i<size(mp_craft);i=i+1){
+tgt_offset=getprop("/ai/models/multiplayer[" ~ i ~ "]/radar/bearing-deg");
+if(tgt_offset == nil){tgt_offset = 0.0;}
+tgt_offset -= true_heading;
+if (tgt_offset < -180){tgt_offset +=360;}
+if (tgt_offset > 180){tgt_offset -=360;}
+setprop("/instrumentation/radar/mp[" ~ i ~ "]/brg-offset",tgt_offset);
+test_dist=getprop("/instrumentation/radar/range");
+test1_dist = getprop("/ai/models/multiplayer[" ~ i ~ "]/radar/range-nm");
+if(test1_dist == nil){test1_dist=0.0;}
+norm_dist= (1 / test_dist) * test1_dist;
+setprop("/instrumentation/radar/mp[" ~ i ~ "]/norm-dist", norm_dist);
+	}
+} 
+
 
 update_clock = func{
 sec = getprop("/sim/time/elapsed-sec") - et_min_start;
@@ -99,16 +138,34 @@ setprop(r2,"reverser",0);
 }
 update_systems = func {
 update_clock();
-
+update_radar();
 baro = getprop("/instrumentation/altimeter/setting-inhg");
 setprop("/instrumentation/efis/inhg",baro * 100);
 setprop("/instrumentation/efis/kpa",baro * 33.8637526);
+setprop("/instrumentation/efis/stab",getprop("/controls/flight/elevator-trim") * 15);
 
 if(getprop("/instrumentation/efis/baro-mode")== 0){
 setprop("/instrumentation/efis/baro", baro * 100);
 }else{
 setprop("/instrumentation/efis/baro",baro * 33.8637526);
 }
+
+test = getprop("/environment/temperature-degc");
+if(test < 0.00){test = -1 * test;}
+setprop("/instrumentation/efis/fixed-temp",test);
+
+test = getprop("/controls/flight/elevator-trim");
+if(test < 0.00){test = -1 * test;}
+setprop("/instrumentation/efis/fixed-stab",test);
+
+test = getprop("/orientation/pitch-deg");
+if(test < 0.00){test = -1 * test;}
+setprop("/instrumentation/efis/fixed-pitch",test);
+
+test = getprop("/autopilot/settings/vertical-speed-fpm");
+if(test == nil ){test=0.0;}
+if(test < 0.00){test = -1 * test;}
+setprop("/instrumentation/efis/fixed-vs",test);
 
 
 force = getprop("/accelerations/pilot-g");
