@@ -8,14 +8,14 @@
 <instruments>
 
  <!-- AP FD controls -->  
-  <instrument include="Ap_Fd.xml">
+ <!-- <instrument include="Ap_Fd.xml">
     <name>AP-FD controls</name>
     <x>535</x>
     <y>458</y>
     <w>656</w>
     <h>108</h>
   </instrument>
-<!--
+
   <instrument include="../Instruments/clock.xml">
     <name>clock LH Gauge</name>
     <x>101</x>
@@ -31,15 +31,7 @@
     <w>8</w>
     <h>8</h>
   </instrument>
--->   
-  <instrument include="dme.xml">
-    <name>DME</name>
-    <x>340</x>
-    <y>250</y>
-    <w>60</w>
-    <h>22</h>
-  </instrument>
-<!--
+
   <instrument include="dme2.xml">
     <name>DME</name>
     <x>340</x>
@@ -55,7 +47,16 @@
     <w>60</w>
     <h>22</h>
   </instrument>
--->
+
+ -->
+  <instrument include="dme.xml">
+    <name>DME</name>
+    <x>340</x>
+    <y>250</y>
+    <w>60</w>
+    <h>22</h>
+  </instrument>
+
 <instrument>
   <name>panel hotspots</name>
   <x>512</x>

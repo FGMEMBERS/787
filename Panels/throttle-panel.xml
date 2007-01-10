@@ -6,14 +6,7 @@
  <h>512</h>
 
 <instruments>
-   
-  <instrument include="radiostack.xml">
-    <name>Allied Signal Radio</name>
-    <x>140</x>
-    <y>245</y>
-    <w>80</w>
-    <h>35</h>
-  </instrument>
+
 
 <instrument>
   <name>panel hotspots</name>
@@ -58,7 +51,7 @@
        <min>0</min>
        <max>1</max>
        <wrap>false</wrap>
-x     </binding>
+      </binding>
    </action>
    
    <action>
@@ -334,7 +327,209 @@ x     </binding>
      </binding>
    </action>
 
+   <action>
+     <name>Nav 1 Course decrease 1</name>
+     <button>0</button>
+     <x>-125</x>
+     <y>175</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav/radials/selected-deg</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>359</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+       
+   <action>
+     <name>Nav 1 Course decrease 10</name>
+     <button>1</button>
+     <x>-125</x>
+     <y>175</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav/radials/selected-deg</property>
+      <step>-10</step>
+      <min>0</min>
+      <max>350</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+           
+   <action>
+     <name>Nav 1 Course increase 1</name>
+     <button>0</button>
+     <x>-115</x>
+     <y>175</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav/radials/selected-deg</property>
+      <step>1</step>
+      <min>0</min>
+      <max>359</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+               
+   <action>
+     <name>Nav 1 Course increase 10</name>
+     <button>1</button>
+     <x>-115</x>
+     <y>175</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav/radials/selected-deg</property>
+      <step>10</step>
+      <min>0</min>
+      <max>350</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
 
+   <action>
+     <name>Nav 2 Course decrease 1</name>
+     <button>0</button>
+     <x>-125</x>
+     <y>170</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav[1]/radials/selected-deg</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>359</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+       
+   <action>
+     <name>Nav 2 Course decrease 10</name>
+     <button>1</button>
+     <x>-125</x>
+     <y>170</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav[1]/radials/selected-deg</property>
+      <step>-10</step>
+      <min>0</min>
+      <max>350</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+           
+   <action>
+     <name>Nav 2 Course increase 1</name>
+     <button>0</button>
+     <x>-115</x>
+     <y>170</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav[1]/radials/selected-deg</property>
+      <step>1</step>
+      <min>0</min>
+      <max>359</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+               
+   <action>
+     <name>Nav 2 Course increase 10</name>
+     <button>1</button>
+     <x>-115</x>
+     <y>170</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/nav[1]/radials/selected-deg</property>
+      <step>10</step>
+      <min>0</min>
+      <max>350</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+
+   <action>
+     <name>ADF Course decrease 1</name>
+     <button>0</button>
+     <x>-125</x>
+     <y>165</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/adf/rotation-deg</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>359</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+       
+   <action>
+     <name>ADF Course decrease 10</name>
+     <button>1</button>
+     <x>-125</x>
+     <y>165</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/adf/rotation-deg</property>
+      <step>-10</step>
+      <min>0</min>
+      <max>350</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+           
+   <action>
+     <name>ADF Course increase 1</name>
+     <button>0</button>
+     <x>-115</x>
+     <y>165</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/adf/rotation-deg</property>
+      <step>1</step>
+      <min>0</min>
+      <max>359</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
+               
+   <action>
+     <name>ADF Course increase 10</name>
+     <button>1</button>
+     <x>-115</x>
+     <y>165</y>
+     <w>10</w>
+     <h>5</h>
+     <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/adf/rotation-deg</property>
+      <step>10</step>
+      <min>0</min>
+      <max>350</max>
+      <wrap>true</wrap>
+     </binding>
+   </action>
 
 </actions>
 

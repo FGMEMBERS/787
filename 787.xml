@@ -1,20 +1,19 @@
 <!--787 yasim 
 
 Specs:
-2 - 77,200 lb PW4077 turbofans
-or  77,000 lb GE90-77Bs
-or  76,000 lb Rolls-Royce Trent 877s
+or  75,000 lb GENXs
+or  75,000 lb Rolls-Royce Trent 1000s
 
-Typical Cruise = 0.84 Mach / 35000 ft
+Typical Cruise = 0.85 Mach / 35000 ft
 Max Speed = 0.87 / 35000 ft
-Wing span: 60.93m
-Length: 63.73 m
-Tail Height: 18.51m 
-Diameter : 6.19 m
+Wing span: 60.10m
+Length: 56.7 m
+Tail Height: 16.97m 
+Diameter : 5.74 m
 Wing Area: 427.8m2
-Max Fuel :31,000 US gal
-Max TO weight: 545,000 lbs
-
+Max Fuel :32,940 US gal
+Max TO weight: 476,000 lbs
+http://www.boeing.com/commercial/airports/787.html
 TO speed : 145 kt
 Landing speed : 131 kt
 

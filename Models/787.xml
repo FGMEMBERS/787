@@ -179,20 +179,39 @@
   </panel>
 
   <panel>
+    <path>Aircraft/787/Panels/dash-panel.xml</path>
+    <bottom-left>
+      <x-m>-23.44</x-m>
+      <y-m>-0.877</y-m>
+      <z-m>1.30</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-23.44</x-m>
+      <y-m>0.919</y-m>
+      <z-m>1.30</z-m>
+    </bottom-right>
+    <top-left>
+      <x-m>-23.54</x-m>
+      <y-m>-0.877</y-m>
+      <z-m>2.05</z-m>
+    </top-left>
+  </panel>
+
+  <panel>
     <path>Aircraft/787/Panels/oh-panel.xml</path>
     <bottom-left>
       <x-m>-23.627</x-m>
-      <y-m>-0.522</y-m>
+      <y-m>-0.5</y-m>
       <z-m>2.322</z-m>
     </bottom-left>
     <bottom-right>
       <x-m>-23.627</x-m>
-      <y-m>0.522</y-m>
+      <y-m>0.5</y-m>
       <z-m>2.322</z-m>
     </bottom-right>
     <top-left>
       <x-m>-22.917</x-m>
-      <y-m>-0.522</y-m>
+      <y-m>-0.5</y-m>
       <z-m>2.653</z-m>
     </top-left>
   </panel>
@@ -200,19 +219,38 @@
   <panel>
     <path>Aircraft/787/Panels/throttle-panel.xml</path>
     <bottom-left>
-      <x-m>-22.264</x-m>
-      <y-m>-0.243</y-m>
-      <z-m>1.220</z-m>
+      <x-m>-22.214</x-m>
+      <y-m>-0.293</y-m>
+      <z-m>1.320</z-m>
     </bottom-left>
     <bottom-right>
-      <x-m>-22.264</x-m>
-      <y-m>0.258</y-m>
-      <z-m>1.220</z-m>
+      <x-m>-22.214</x-m>
+      <y-m>0.208</y-m>
+      <z-m>1.320</z-m>
     </bottom-right>
     <top-left>
-      <x-m>-23.555</x-m>
-      <y-m>-0.243</y-m>
-      <z-m>1.566</z-m>
+      <x-m>-23.505</x-m>
+      <y-m>-0.293</y-m>
+      <z-m>1.666</z-m>
+    </top-left>
+  </panel>
+
+  <panel>
+    <path>Aircraft/787/Panels/radio-panel.xml</path>
+    <bottom-left>
+      <x-m>-22.35</x-m>
+      <y-m>-0.280</y-m>
+      <z-m>0.82</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-22.35</x-m>
+      <y-m>0.195</y-m>
+      <z-m>0.82</z-m>
+    </bottom-right>
+    <top-left>
+      <x-m>-23.64</x-m>
+      <y-m>-0.280</y-m>
+      <z-m>1.62</z-m>
     </top-left>
   </panel>
 
@@ -341,6 +379,28 @@
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Exhaust1</object-name>
+   <condition>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Exhaust2</object-name>
+   <condition>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </greater-than>
   </condition>
  </animation>
 
@@ -1923,6 +1983,16 @@
    </condition>
  </animation>
 
+   <animation>
+   <type>select</type>
+   <object-name>APvsnegative</object-name>
+   <condition>
+   <less-than>
+   <property>/autopilot/settings/vertical-speed-fpm</property>
+   <value>0</value>
+   </less-than>
+   </condition>
+ </animation>
 
    <animation>
    <type>select</type>
@@ -4871,36 +4941,6 @@
  </animation>
 
  <animation>
-  <type>rotate</type>
-  <object-name>lhlightedwinga</object-name>
-  <property>/gear/gear[1]/compression-norm</property>
-  <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>1.8</dep>
-    </entry>
-    <entry>
-      <ind>0.333</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>1</ind>
-      <dep>-1.5</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>0</x-m>
-   <y-m>-9.5</y-m>
-   <z-m>1.0</z-m>
-  </center>
-  <axis>
-   <x>-4</x>
-   <y>-1</y>
-   <z>0.25</z>
-  </axis>
- </animation>
-
- <animation>
   <type>select</type>
   <object-name>rhlightedwinga</object-name>
    <condition>
@@ -7518,24 +7558,6 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>lhlightedwinga</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
-  <offset-deg>-1</offset-deg>
-  <center>
-   <x-m>0</x-m>
-   <y-m>-9.5</y-m>
-   <z-m>1.0</z-m>
-  </center>
-  <axis>
-   <x>-4</x>
-   <y>-1</y>
-   <z>0.25</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
   <object-name>lwinga</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -8876,8 +8898,8 @@
   <offset-deg>0</offset-deg>   
   <center>
    <x-m>4</x-m>
-   <y-m>-11.2</y-m>
-   <z-m>1</z-m>
+   <y-m>-11.215</y-m>
+   <z-m>1.075</z-m>
   </center>
   <axis>
    <x>-0.9</x>
@@ -8912,8 +8934,8 @@
   <offset-deg>0</offset-deg>   
   <center>
    <x-m>4</x-m>
-   <y-m>11.2</y-m>
-   <z-m>1</z-m>
+   <y-m>11.215</y-m>
+   <z-m>1.075</z-m>
   </center>
   <axis>
    <x>0.9</x>
@@ -9430,7 +9452,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.300</ind>
+      <ind>0.2</ind>
       <dep>0</dep>
     </entry>
     <entry>
@@ -9440,8 +9462,8 @@
   </interpolation>   
   <center>
    <x-m>4</x-m>
-   <y-m>-11.2</y-m>
-   <z-m>1</z-m>
+   <y-m>-11.215</y-m>
+   <z-m>1.075</z-m>
   </center>
   <axis>
    <x>-0.9</x>
@@ -9583,11 +9605,11 @@
     </entry>
     <entry>
       <ind>0.375</ind>
-      <dep>0.07</dep>
+      <dep>0.12</dep>
     </entry>
     <entry>
       <ind>1.0</ind>
-      <dep>0.10</dep>
+      <dep>0.2</dep>
     </entry>
   </interpolation>
   <axis>
@@ -9612,11 +9634,11 @@
     </entry>
     <entry>
       <ind>0.375</ind>
-      <dep>0.07</dep>
+      <dep>0.12</dep>
     </entry>
     <entry>
       <ind>1.0</ind>
-      <dep>0.10</dep>
+      <dep>0.2</dep>
     </entry>
   </interpolation>
   <axis>
@@ -10086,7 +10108,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.300</ind>
+      <ind>0.033</ind>
       <dep>0</dep>
     </entry>
     <entry>
@@ -10096,8 +10118,8 @@
   </interpolation>   
   <center>
    <x-m>4</x-m>
-   <y-m>11.2</y-m>
-   <z-m>1</z-m>
+   <y-m>11.215</y-m>
+   <z-m>1.075</z-m>
   </center>
   <axis>
    <x>0.9</x>
@@ -10116,7 +10138,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.033</ind>
+      <ind>0.2</ind>
       <dep>0.0</dep>
     </entry>
     <entry>
@@ -10239,11 +10261,11 @@
     </entry>
     <entry>
       <ind>0.375</ind>
-      <dep>0.07</dep>
+      <dep>0.12</dep>
     </entry>
     <entry>
       <ind>1.0</ind>
-      <dep>0.10</dep>
+      <dep>0.2</dep>
     </entry>
   </interpolation>
   <axis>
@@ -10268,11 +10290,11 @@
     </entry>
     <entry>
       <ind>0.375</ind>
-      <dep>0.07</dep>
+      <dep>0.12</dep>
     </entry>
     <entry>
       <ind>1.0</ind>
-      <dep>0.10</dep>
+      <dep>0.2</dep>
     </entry>
   </interpolation>
   <axis>
