@@ -537,6 +537,122 @@
  </animation>
 
  <animation>
+   <type>translate</type>
+   <object-name>llpedal</object-name>
+   <property>controls/flight/rudder[0]</property>
+   <factor>0.05</factor>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>rlpedal</object-name>
+   <property>controls/flight/rudder[0]</property>
+   <factor>-0.05</factor>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>lrpedal</object-name>
+   <property>controls/flight/rudder[0]</property>
+   <factor>0.05</factor>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>rrpedal</object-name>
+   <property>controls/flight/rudder[0]</property>
+   <factor>-0.05</factor>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>llpedal</object-name>
+   <property>controls/gear/brake-left[0]</property>
+   <factor>20</factor>
+   <center>
+    <x-m>-23.5</x-m>
+    <y-m>-0.73</y-m>
+    <z-m>1.2</z-m>
+   </center>
+   <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+   </axis>
+  </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rlpedal</object-name>
+   <property>controls/gear/brake-right[0]</property>
+   <factor>20</factor>
+   <center>
+    <x-m>-23.5</x-m>
+    <y-m>-0.44</y-m>
+    <z-m>1.2</z-m>
+   </center>
+   <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+   </axis>
+  </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lrpedal</object-name>
+   <property>controls/gear/brake-left[0]</property>
+   <factor>20</factor>
+   <center>
+    <x-m>-23.5</x-m>
+    <y-m>0.44</y-m>
+    <z-m>1.2</z-m>
+   </center>
+   <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+   </axis>
+  </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rrpedal</object-name>
+   <property>controls/gear/brake-right[0]</property>
+   <factor>20</factor>
+   <center>
+    <x-m>-23.5</x-m>
+    <y-m>0.73</y-m>
+    <z-m>1.2</z-m>
+   </center>
+   <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+   </axis>
+  </animation>
+
+ <animation>
    <type>select</type>
    <object-name>APlettering</object-name>
   <object-name>OHlettering</object-name>
@@ -3240,6 +3356,17 @@
  </animation> 
 
  <animation>
+  <type>select</type>
+  <object-name>Rgear</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[2]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Rgear</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -3328,6 +3455,17 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>Rstrut</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[2]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Rstrut</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -3346,9 +3484,20 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>Rknuckle</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[2]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Rknuckle</object-name>
-  <property>gear/gear[1]/position-norm</property>
+  <property>gear/gear[2]/position-norm</property>
   <factor>80</factor>
   <offset-deg>-80</offset-deg>
   <center>
@@ -3379,7 +3528,7 @@
   <object-name>mgearbay</object-name>
    <condition>
     <greater-than>
-    <property>gear/gear[1]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
      <value>0</value>
     </greater-than>
    </condition>
@@ -3521,6 +3670,17 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>rhgearltorque</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[2]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>rhgearltorque</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -3536,6 +3696,17 @@
    <y>0</y>
    <z>1</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>rhgearutorque</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[2]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
  </animation>
 
  <animation>
@@ -3603,6 +3774,17 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>rgearustrut</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[2]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>rgearustrut</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -3619,6 +3801,17 @@
    <z>0.05</z>
   </axis>
  </animation> 
+
+ <animation>
+  <type>select</type>
+  <object-name>rgearlstrut</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[2]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
 
  <animation>
   <type>rotate</type>
@@ -3654,6 +3847,17 @@
    <y>0</y>
    <z>1</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Lgear</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[1]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
  </animation>
 
  <animation>
@@ -3745,6 +3949,17 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>Lstrut</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[1]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Lstrut</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -3760,6 +3975,17 @@
    <y>0</y>
    <z>1</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Lknuckle</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[1]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
  </animation>
 
  <animation>
@@ -3927,6 +4153,17 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>lhgearltorque</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[1]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>lhgearltorque</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -3960,6 +4197,17 @@
    <y>0</y>
    <z>1</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>lhgearutorque</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[1]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
  </animation>
 
  <animation>
@@ -4009,6 +4257,17 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>lgearustrut</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[1]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>lgearustrut</object-name>
   <property>gear/gear[1]/position-norm</property>
@@ -4025,6 +4284,17 @@
    <z>0.05</z>
   </axis>
  </animation> 
+
+ <animation>
+  <type>select</type>
+  <object-name>lgearlstrut</object-name>
+   <condition>
+    <greater-than>
+     <property>gear/gear[1]/position-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
 
  <animation>
   <type>rotate</type>
@@ -9421,7 +9691,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.300</ind>
+      <ind>0.19</ind>
       <dep>0</dep>
     </entry>
     <entry>
@@ -9463,7 +9733,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.2</ind>
+      <ind>0.19</ind>
       <dep>0</dep>
     </entry>
     <entry>
@@ -10077,7 +10347,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.300</ind>
+      <ind>0.19</ind>
       <dep>0</dep>
     </entry>
     <entry>
@@ -10119,7 +10389,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.033</ind>
+      <ind>0.19</ind>
       <dep>0</dep>
     </entry>
     <entry>
@@ -10149,7 +10419,7 @@
       <dep>0.0</dep>
     </entry>
     <entry>
-      <ind>0.2</ind>
+      <ind>0.033</ind>
       <dep>0.0</dep>
     </entry>
     <entry>
@@ -13271,6 +13541,17 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>no2engl</object-name>
+   <condition>
+    <greater-than>
+     <property>surface-positions/reverser-pos-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>translate</type>
   <object-name>rhreverser</object-name>
   <property>surface-positions/reverser-pos-norm</property>
@@ -13406,6 +13687,17 @@
    <y>0</y>
    <z>0</z>
   </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>no1engl</object-name>
+   <condition>
+    <greater-than>
+     <property>surface-positions/reverser-pos-norm</property>
+     <value>0</value>
+    </greater-than>
+   </condition>
  </animation>
 
  <animation>
