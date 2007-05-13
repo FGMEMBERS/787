@@ -42,8 +42,22 @@
         <z-offset-m archive="y" type="double">100.0</z-offset-m>
       </config>
     </view>
-
+    <view n="3">
+      <config>
+        <z-offset-m archive="y" type="double">100.0</z-offset-m>
+      </config>
+    </view>
+    <view n="4">
+      <config>
+        <z-offset-m archive="y" type="double">100.0</z-offset-m>
+      </config>
+    </view>
     <view n="5">
+      <config>
+        <z-offset-m archive="y" type="double">125.0</z-offset-m>
+      </config>
+    </view>
+    <view n="6">
       <config>
         <z-offset-m archive="y" type="double">125.0</z-offset-m>
       </config>
