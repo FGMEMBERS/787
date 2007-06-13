@@ -308,8 +308,8 @@
   <object-name>Cube.048</object-name>
   <object-name>Cube.049</object-name>
   <object-name>Cube.051</object-name>
-  <object-name>Cube.060</object-name>
   <object-name>Cube.059</object-name>
+  <object-name>Cube.060</object-name>
   <object-name>Cylinder</object-name>
   <object-name>Cylinder.001</object-name>
   <object-name>Cylinder.003</object-name>
@@ -338,7 +338,6 @@
   <object-name>OHknob.010</object-name>
   <object-name>OHknob.011</object-name>
   <object-name>OHknob.012</object-name>
-  <object-name>OHknob.013</object-name>
   <object-name>OHknob.014</object-name>
   <object-name>OHknob.015</object-name>
   <object-name>OHknob.016</object-name>
@@ -367,6 +366,51 @@
 
  <animation>
    <type>select</type>
+  <object-name>Btn.004</object-name>
+  <object-name>Btn.005</object-name>
+  <object-name>Btn.006</object-name>
+  <object-name>Btn.007</object-name>
+  <object-name>Btn.008</object-name>
+  <object-name>Btn.009</object-name>
+  <object-name>Btn.010</object-name>
+  <object-name>Btn.057</object-name>
+  <object-name>Btn.058</object-name>
+  <object-name>Cube.015</object-name>
+  <object-name>Cube.044</object-name>
+  <object-name>Cube.045</object-name>
+  <object-name>Cube.046</object-name>
+  <object-name>Cube.047</object-name>
+  <object-name>Cube.053</object-name>
+  <object-name>Cube.054</object-name>
+  <object-name>Cube.056</object-name>
+  <object-name>Cube.057</object-name>
+  <object-name>Cube.058</object-name>
+  <object-name>OHknob.013</object-name>
+  <object-name>Plane.008</object-name>
+  <object-name>Plane.018</object-name>
+  <object-name>Plane.019</object-name>
+  <object-name>Plane.027</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+  <object-name>Plane.010</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
    <object-name>Plane.024</object-name>
    <object-name>Panel.008</object-name>
    <object-name>Bezel.013</object-name>
@@ -374,6 +418,28 @@
    <object-name>CDuscreen.002</object-name>
    <object-name>dmeface</object-name>
    <object-name>dmebezel_0</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Cube.042</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Cube.043</object-name>
    <condition>
    <equals>
     <property>sim/current-view/view-number</property>
@@ -401,6 +467,61 @@
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APalt.10000</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APalt.1000</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APalt.100</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APalt.10</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APalt.1</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
   </condition>
  </animation>
 
@@ -537,6 +658,17 @@
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>llpedal</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>translate</type>
    <object-name>llpedal</object-name>
    <property>controls/flight/rudder[0]</property>
@@ -546,6 +678,17 @@
      <y>0</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>rlpedal</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
  <animation>
@@ -561,6 +704,17 @@
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>lrpedal</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>translate</type>
    <object-name>lrpedal</object-name>
    <property>controls/flight/rudder[0]</property>
@@ -570,6 +724,17 @@
      <y>0</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>rrpedal</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
  <animation>
@@ -820,6 +985,17 @@
 
  <animation>
    <type>select</type>
+   <object-name>OHtoggle.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
    <object-name>OHtoggle.003</object-name>
    <condition>
    <equals>
@@ -854,6 +1030,72 @@
  <animation>
    <type>select</type>
    <object-name>Strobe.swtch</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APias.100</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APias.10</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APias.1</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APhdg.100</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APhdg.10</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APhdg.1</object-name>
    <condition>
    <equals>
     <property>sim/current-view/view-number</property>
@@ -2092,10 +2334,16 @@
    <type>select</type>
    <object-name>APvs.minus2</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
    <less-than>
    <property>/autopilot/settings/vertical-speed-fpm</property>
    <value>-990</value>
    </less-than>
+   </and>
    </condition>
  </animation>
 
@@ -2103,10 +2351,16 @@
    <type>select</type>
    <object-name>APvsnegative</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
    <less-than>
    <property>/autopilot/settings/vertical-speed-fpm</property>
    <value>0</value>
    </less-than>
+   </and>
    </condition>
  </animation>
 
@@ -2115,6 +2369,10 @@
    <object-name>APvs.minus1</object-name>
    <condition>
 <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
    <less-than>
    <property>/autopilot/settings/vertical-speed-fpm</property>
    <value>0</value>
@@ -2131,10 +2389,16 @@
    <type>select</type>
    <object-name>APvs.10000</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
    <greater-than>
    <property>/instrumentation/efis/fixed-vs</property>
    <value>9900</value>
    </greater-than>
+   </and>
    </condition>
  </animation>
  
@@ -2156,10 +2420,16 @@
    <type>select</type>
    <object-name>APvs.1000</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
    <greater-than>
    <property>/instrumentation/efis/fixed-vs</property>
    <value>900</value>
    </greater-than>
+   </and>
    </condition>
  </animation>
 
@@ -2176,6 +2446,17 @@
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>APvs.100</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
     <animation>
    <type>textranslate</type>
    <object-name>APvs.100</object-name>
@@ -2189,6 +2470,17 @@
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>APvs.10</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
     <animation>
    <type>textranslate</type>
    <object-name>APvs.10</object-name>
@@ -2200,6 +2492,17 @@
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APvs.1</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
     <animation>
@@ -2218,10 +2521,16 @@
 <animation>
 <type>select</type>
 <object-name>APtoggle</object-name>
-<condition>
-<property>/instrumentation/flightdirector/autopilot-on</property>
-</condition>
- </animation>
+ <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <property>/instrumentation/flightdirector/autopilot-on</property>
+   </and>
+ </condition>
+</animation>
 
     <animation>
    <type>rotate</type>
@@ -2777,26 +3086,6 @@
  </animation>
 
   <animation>
-  <type>scale</type>
-  <object-name>noselight1</object-name>
-  <property>gear/gear[0]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.1</ind>
-      <dep>1.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>1.0</dep>
-    </entry>
-  </interpolation>
- </animation>
-
-  <animation>
   <type>rotate</type>
   <object-name>noselight2</object-name>
   <property>gear/gear[0]/position-norm</property>
@@ -2820,26 +3109,6 @@
    <y>1</y>
    <z>0</z>
   </axis>
- </animation>
-
-  <animation>
-  <type>scale</type>
-  <object-name>noselight2</object-name>
-  <property>gear/gear[0]/position-norm</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.1</ind>
-      <dep>1.0</dep>
-    </entry>
-    <entry>
-      <ind>1.0</ind>
-      <dep>1.0</dep>
-    </entry>
-  </interpolation>
  </animation>
 
  <animation>
@@ -4337,6 +4606,10 @@
   <object-name>ngsmoke</object-name>
    <condition>
    <and>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </greater-than>
    <property>/gear/gear[0]/wow</property>
    <less-than>
     <property>orientation/pitch-rate-degps[0]</property>
@@ -4368,6 +4641,10 @@
   <object-name>lhsmoke</object-name>
    <condition>
    <and>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </greater-than>
    <greater-than>
     <property>position/gear-agl-ft[0]</property>
     <value>0</value>
@@ -4406,6 +4683,10 @@
   <object-name>rhsmoke</object-name>
    <condition>
    <and>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </greater-than>
    <greater-than>
     <property>position/gear-agl-ft[0]</property>
     <value>0</value>
@@ -9189,6 +9470,24 @@
   </axis>
  </animation>
 
+ <animation>
+  <type>rotate</type>
+  <object-name>lhibaileron</object-name>
+  <property>controls/flight/aileron-trim</property>
+  <factor>20</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>4</x-m>
+   <y-m>-11.215</y-m>
+   <z-m>1.075</z-m>
+  </center>
+  <axis>
+   <x>-0.9</x>
+   <y>2.8</y>
+   <z>-0.5</z>
+  </axis>
+ </animation>
+
   <animation>
   <type>rotate</type>
   <object-name>rhobaileron</object-name>
@@ -9211,6 +9510,24 @@
   <type>rotate</type>
   <object-name>rhibaileron</object-name>
   <property>controls/flight/aileron</property>
+  <factor>-20</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>4</x-m>
+   <y-m>11.215</y-m>
+   <z-m>1.075</z-m>
+  </center>
+  <axis>
+   <x>0.9</x>
+   <y>2.8</y>
+   <z>0.5</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>rhibaileron</object-name>
+  <property>controls/flight/aileron-trim</property>
   <factor>-20</factor>
   <offset-deg>0</offset-deg>   
   <center>
@@ -11480,7 +11797,7 @@
      <property>/sim/current-view/heading-offset-deg[0]</property>
    <interpolation>
     <entry>
-      <ind>0.0</ind>
+      <ind>0.001</ind>
       <dep>1</dep>
     </entry>
     <entry>
@@ -11585,7 +11902,7 @@
    <interpolation>
     <entry>
       <ind>-90.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>-70.0</ind>
@@ -11601,7 +11918,7 @@
     </entry>
     <entry>
       <ind>90</ind>
-      <dep>0.0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>
@@ -11716,11 +12033,11 @@
     </entry>
     <entry>
       <ind>20</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>225</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>270</ind>
@@ -11816,7 +12133,7 @@
    <interpolation>
     <entry>
       <ind>-90.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>-70.0</ind>
@@ -11832,7 +12149,7 @@
     </entry>
     <entry>
       <ind>90</ind>
-      <dep>0.0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>
@@ -12223,11 +12540,11 @@
     </entry>
     <entry>
       <ind>200</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
-      <ind>360</ind>
-      <dep>0</dep>
+      <ind>340</ind>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>360</ind>
@@ -12319,7 +12636,7 @@
    <interpolation>
     <entry>
       <ind>-90.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>-70.0</ind>
@@ -12335,7 +12652,7 @@
     </entry>
     <entry>
       <ind>90</ind>
-      <dep>0.0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>
@@ -12488,11 +12805,11 @@
     </entry>
     <entry>
       <ind>20.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>160</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>200</ind>
@@ -12596,7 +12913,7 @@
    <interpolation>
     <entry>
       <ind>-90.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>-70.0</ind>
@@ -12612,7 +12929,7 @@
     </entry>
     <entry>
       <ind>90</ind>
-      <dep>0.0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>
@@ -12653,6 +12970,10 @@
    <condition>
    <and>
      <property>controls/switches/landing-light-c[0]</property>
+    <greater-than>
+     <property>/controls/switches/taxi-lights</property>
+     <value>0.15</value>
+    </greater-than>
    <not>
    <property>sim/crashed</property>
    </not>
@@ -12691,7 +13012,11 @@
    <object-name>noselight2</object-name>
    <condition>
    <and>
+    <greater-than>
      <property>/controls/switches/taxi-lights</property>
+     <value>0.15</value>
+    </greater-than>
+     <property>/gear/gear/position-norm</property>
    <not>
    <property>sim/crashed</property>
    </not>
@@ -13231,11 +13556,11 @@
    <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>80</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>100</ind>
@@ -13247,11 +13572,11 @@
     </entry>
     <entry>
       <ind>200</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>360.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>
@@ -13263,11 +13588,11 @@
    <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>160</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>170</ind>
@@ -13279,11 +13604,11 @@
     </entry>
     <entry>
       <ind>280</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>360.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>
@@ -13439,7 +13764,7 @@
    <interpolation>
     <entry>
       <ind>-90.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>-70</ind>
@@ -13451,7 +13776,7 @@
     </entry>
     <entry>
       <ind>90</ind>
-      <dep>0.0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>
@@ -13463,7 +13788,7 @@
    <interpolation>
     <entry>
       <ind>-90.0</ind>
-      <dep>0</dep>
+      <dep>0.001</dep>
     </entry>
     <entry>
       <ind>-70</ind>
@@ -13475,7 +13800,7 @@
     </entry>
     <entry>
       <ind>90</ind>
-      <dep>0.0</dep>
+      <dep>0.001</dep>
     </entry>
   </interpolation>
  </animation>

@@ -5,6 +5,28 @@
 <PropertyList>
  <path>ndb.ac</path>
 
+ <animation>
+   <type>select</type>
+   <object-name>NDB2</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>NDB2.screen</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
   <type>material</type>
   <object-name>NDB2</object-name>
@@ -15,6 +37,17 @@
     <factor-prop>/controls/switches/map-lights</factor-prop>	
   </emission>
 </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Rudder.ptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
   <animation>
   <type>translate</type>
@@ -28,6 +61,17 @@
    </axis>
 </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>Lail.ptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
   <type>translate</type>
   <object-name>Lail.ptr</object-name>
@@ -39,6 +83,17 @@
      <z>-1</z>
    </axis>
 </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Rail.ptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
   <animation>
   <type>translate</type>
@@ -52,6 +107,17 @@
    </axis>
 </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>Lflap.ptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
   <type>translate</type>
   <object-name>Lflap.ptr</object-name>
@@ -64,6 +130,17 @@
    </axis>
 </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>Rflap.ptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
   <type>translate</type>
   <object-name>Rflap.ptr</object-name>
@@ -75,6 +152,17 @@
      <z>-1</z>
    </axis>
 </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>spoiler.1</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
   <animation>
   <type>textranslate</type>
@@ -105,6 +193,17 @@
    </axis>
 </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>spoiler.2</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
   <type>textranslate</type>
   <object-name>spoiler.2</object-name>
@@ -134,6 +233,17 @@
    </axis>
 </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>Elev.ptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
   <type>translate</type>
   <object-name>Elev.ptr</object-name>
@@ -151,10 +261,16 @@
    <type>select</type>
    <object-name>stabtxt</object-name>
 <condition>
+<and>
+ <equals>
+  <property>sim/current-view/view-number</property>
+  <value>0</value>
+ </equals>
 <less-than>   
 <property>/controls/flight/elevator-trim</property>
    <value>0</value>
 </less-than>
+</and>
 </condition>
  </animation>
 
@@ -203,11 +319,28 @@
    <type>select</type>
    <object-name>rdr</object-name>
 <condition>
+<and>
+ <equals>
+  <property>sim/current-view/view-number</property>
+  <value>0</value>
+ </equals>
 <less-than>   
 <property>/controls/flight/rudder-trim</property>
    <value>0</value>
 </less-than>
+</and>
 </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>rdr.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>
@@ -223,6 +356,17 @@
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>rdr.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>rdr.002</object-name>
@@ -234,6 +378,17 @@
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>rdr.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>

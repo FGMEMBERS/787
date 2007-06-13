@@ -458,7 +458,7 @@ Autopilot Controls
   <action>
     <name>WXRADAR range up </name>
     <button>0</button>
-    <x>-208</x>
+    <x>-202</x>
     <y>-6</y>
     <w>12</w>
     <h>12</h>
@@ -479,7 +479,7 @@ Autopilot Controls
   <action>
     <name>WXRADAR range down </name>
     <button>0</button>
-    <x>-220</x>
+    <x>-214</x>
     <y>-6</y>
     <w>12</w>
     <h>12</h>

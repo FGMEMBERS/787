@@ -1,34 +1,47 @@
 <!--
-Syd Adams
-777-200 PFD 
+Syd Adams, Josh Wilson
+787 PFD 
 -->
 
 <PropertyList>
 
  <path>pfd.ac</path>
 
-<animation>
-    <name>Alpha Sort</name>
-    <object-name>APspeed</object-name>
+ <animation>
+   <type>select</type>
+   <object-name>APspeed</object-name>
+    <object-name>Alt10.001</object-name>
+    <object-name>AIroll</object-name>
     <object-name>APlnav</object-name>
     <object-name>APvnav</object-name>
-    <object-name>ASIribbon</object-name>
-    <object-name>ALTribbon</object-name>
-    <object-name>RAtape</object-name>
+    <object-name>dmetxt</object-name>
+    <object-name>hdgmode</object-name>
+    <object-name>mach</object-name>
+    <object-name>pointer</object-name>
     <object-name>VSIscale</object-name>
-    <object-name>HDGface</object-name>
-    <object-name>AI</object-name>
     <object-name>PFDscreen</object-name>
-</animation>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
  
 <animation>
    <type>select</type>
    <object-name>FDbars</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
        <equals>
          <property>/instrumentation/flightdirector/fd-on</property>
          <value>1</value>
        </equals>
+   </and>
    </condition>
  </animation>
 
@@ -36,10 +49,16 @@ Syd Adams
    <type>select</type>
    <object-name>fd.annun</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
        <equals>
          <property>/instrumentation/flightdirector/fd-on</property>
          <value>1</value>
        </equals>
+   </and>
    </condition>
  </animation>
 
@@ -47,19 +66,43 @@ Syd Adams
    <type>select</type>
    <object-name>ap.annun</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
        <equals>
          <property>/instrumentation/flightdirector/autopilot-on</property>
          <value>1</value>
        </equals>
+   </and>
    </condition>
  </animation>
 
  <animation>
    <type>select</type>
    <object-name>GSscale</object-name>
+   <condition>
+     <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
+         <property>/instrumentation/nav/has-gs</property>
+         <property>/instrumentation/nav/in-range</property>
+     </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
    <object-name>GSneedle</object-name>
    <condition>
      <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
          <property>/instrumentation/nav/has-gs</property>
          <property>/instrumentation/nav/in-range</property>
      </and>
@@ -96,10 +139,16 @@ Syd Adams
    <type>select</type>
    <object-name>Omarker</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
      <equals>
        <property>/instrumentation/marker-beacon/outer</property>
        <value>true</value>
      </equals>
+   </and>
    </condition>
  </animation>
  
@@ -107,10 +156,16 @@ Syd Adams
    <type>select</type>
    <object-name>Mmarker</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
      <equals>
        <property>/instrumentation/marker-beacon/middle</property>
        <value>true</value>
      </equals>
+   </and>
    </condition>
  </animation>
  
@@ -118,19 +173,43 @@ Syd Adams
    <type>select</type>
    <object-name>Imarker</object-name>
    <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
      <equals>
        <property>/instrumentation/marker-beacon/inner</property>
        <value>true</value>
      </equals>
+   </and>
    </condition>
  </animation>
  
  <animation>
    <type>select</type>
    <object-name>LOCscale</object-name>
+   <condition>
+     <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+         <property>/instrumentation/nav/nav-loc</property>
+         <property>/instrumentation/nav/in-range</property>
+     </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
    <object-name>LOCneedle</object-name>
    <condition>
      <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
          <property>/instrumentation/nav/nav-loc</property>
          <property>/instrumentation/nav/in-range</property>
      </and>
@@ -162,7 +241,16 @@ Syd Adams
   </axis>
  </animation>
 
-
+ <animation>
+   <type>select</type>
+   <object-name>pfdhdg</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
  <animation>
    <type>rotate</type>
@@ -202,7 +290,16 @@ Syd Adams
    </center>
  </animation>
 
-
+ <animation>
+   <type>select</type>
+   <object-name>FDbars</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
  <animation>
    <type>rotate</type>
@@ -238,6 +335,17 @@ Syd Adams
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>AI</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>texmultiple</type>
    <object-name>AI</object-name>
    <transform>
@@ -266,6 +374,17 @@ Syd Adams
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>rollptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>rotate</type>
    <object-name>rollptr</object-name>
    <property>/orientation/roll-deg</property>
@@ -281,7 +400,16 @@ Syd Adams
    </center>
  </animation>
 
-
+ <animation>
+   <type>select</type>
+   <object-name>HDGface</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
   <animation>
    <type>texrotate</type>
@@ -340,6 +468,18 @@ Syd Adams
    </axis>
  </animation>
 -->
+
+ <animation>
+   <type>select</type>
+   <object-name>ASIribbon</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>ASIribbon</object-name>
@@ -380,7 +520,18 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
+
+ <animation>
+   <type>select</type>
+   <object-name>Asitext</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
  <animation>
    <type>textranslate</type>
    <object-name>Asitext</object-name>
@@ -395,6 +546,17 @@ Syd Adams
  </animation>
  
  <animation>
+   <type>select</type>
+   <object-name>Asitext.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>Asitext.001</object-name>
    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
@@ -406,8 +568,18 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
- 
+
+ <animation>
+   <type>select</type>
+   <object-name>Asitext.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
  <animation>
    <type>textranslate</type>
    <object-name>Asitext.002</object-name>
@@ -419,7 +591,17 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
+
+ <animation>
+   <type>select</type>
+   <object-name>VSIneedle</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
  <animation>
    <type>translate</type>
@@ -481,7 +663,17 @@ Syd Adams
    </center>
  </animation>
 
- 
+ <animation>
+   <type>select</type>
+   <object-name>ALTribbon</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
  <animation>
    <type>textranslate</type>
    <object-name>ALTribbon</object-name>
@@ -494,6 +686,17 @@ Syd Adams
    </axis>
  </animation>
  
+ <animation>
+   <type>select</type>
+   <object-name>Alt10</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>Alt10</object-name>
@@ -507,6 +710,17 @@ Syd Adams
  </animation>
  
  <animation>
+   <type>select</type>
+   <object-name>Alt100</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>Alt100</object-name>
    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
@@ -519,7 +733,18 @@ Syd Adams
      <z>0</z>
    </axis>
  </animation>
- 
+
+ <animation>
+   <type>select</type>
+   <object-name>Alt1000</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
  <animation>
    <type>textranslate</type>
    <object-name>Alt1000</object-name>
@@ -535,6 +760,17 @@ Syd Adams
  </animation>
  
  <animation>
+   <type>select</type>
+   <object-name>Alt10000</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>Alt10000</object-name>
    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
@@ -548,7 +784,16 @@ Syd Adams
    </axis>
  </animation>
 
- 
+ <animation>
+   <type>select</type>
+   <object-name>alttext</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
   <animation>
    <type>textranslate</type>
@@ -561,6 +806,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>alttext.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
  <animation>
@@ -577,6 +833,17 @@ Syd Adams
  </animation>
  
  <animation>
+   <type>select</type>
+   <object-name>alttext.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>alttext.002</object-name>
    <property>/autopilot/settings/target-altitude-ft</property>
@@ -587,6 +854,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>alttext.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
  <animation>
@@ -603,6 +881,17 @@ Syd Adams
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>alttext.004</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>alttext.004</object-name>
    <property>/autopilot/settings/target-altitude-ft</property>
@@ -613,6 +902,28 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
  <animation>
@@ -629,6 +940,17 @@ Syd Adams
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>pitch.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>pitch.002</object-name>
    <property>/instrumentation/efis/fixed-pitch</property>
@@ -642,6 +964,17 @@ Syd Adams
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>inhg</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>inhg</object-name>
    <property>/instrumentation/efis/baro-mode</property>
@@ -651,6 +984,17 @@ Syd Adams
      <y>-1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>inhg01</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
  <animation>
@@ -667,6 +1011,17 @@ Syd Adams
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>inhg01.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>inhg01.001</object-name>
    <property>/instrumentation/efis/baro</property>
@@ -680,6 +1035,17 @@ Syd Adams
  </animation>
 
  <animation>
+   <type>select</type>
+   <object-name>inhg01.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
    <type>textranslate</type>
    <object-name>inhg01.002</object-name>
    <property>/instrumentation/efis/baro</property>
@@ -690,6 +1056,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>inhg01.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
  <animation>
@@ -709,13 +1086,29 @@ Syd Adams
    <type>select</type>
    <object-name>pitch.003</object-name>
    <condition>
-<less-than>   
-<property>/orientation/pitch-deg</property>
-   <value>0.0</value>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <less-than>   
+    <property>/orientation/pitch-deg</property>
+    <value>0.0</value>
    </less-than>
-</condition>
+   </and>
+   </condition>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>bugtxt</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
   <animation>
    <type>textranslate</type>
@@ -728,6 +1121,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>bugtxt.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>
@@ -743,6 +1147,17 @@ Syd Adams
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>bugtxt.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>bugtxt.002</object-name>
@@ -754,6 +1169,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>iastext</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>
@@ -769,6 +1195,17 @@ Syd Adams
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>iastext.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>iastext.001</object-name>
@@ -780,6 +1217,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>iastext.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>
@@ -795,6 +1243,17 @@ Syd Adams
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>mach.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>mach.001</object-name>
@@ -806,6 +1265,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>mach.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>
@@ -821,6 +1291,17 @@ Syd Adams
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>mach.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>mach.003</object-name>
@@ -834,6 +1315,16 @@ Syd Adams
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>RAtape</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
 
   <animation>
    <type>textranslate</type>
@@ -860,6 +1351,17 @@ Syd Adams
    </axis>
 </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>dmetxt.001</object-name>
@@ -871,6 +1373,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>
@@ -886,6 +1399,17 @@ Syd Adams
    </axis>
  </animation>
 
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
   <animation>
    <type>textranslate</type>
    <object-name>dmetxt.003</object-name>
@@ -897,6 +1421,17 @@ Syd Adams
      <y>1</y>
      <z>0</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.004</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
  </animation>
 
   <animation>

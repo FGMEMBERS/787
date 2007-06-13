@@ -1,6 +1,17 @@
 <PropertyList>
  <path>hud.ac</path>
 
+ <animation>
+   <type>select</type>
+   <object-name>Pedestal.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
 <animation>
    <type>select</type>
    <object-name>FDbars</object-name>
@@ -17,6 +28,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -33,6 +48,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -49,6 +68,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -65,6 +88,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -81,6 +108,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -97,6 +128,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -113,6 +148,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -129,6 +168,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>
@@ -145,6 +188,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
      </and>
    </condition>
  </animation>

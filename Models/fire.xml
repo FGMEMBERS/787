@@ -15,4 +15,27 @@
   </condition>
  </animation>
 
+ <animation>
+   <type>scale</type>
+   <object-name>fire1</object-name>
+   <object-name>fire2</object-name>
+   <object-name>fire3</object-name>
+   <object-name>fire4</object-name>
+    <property>velocities/airspeed-kt[0]</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>1</dep>
+      </entry>
+      <entry>
+        <ind>20</ind>
+        <dep>10</dep>
+      </entry>
+      <entry>
+        <ind>40</ind>
+        <dep>100</dep>
+      </entry>
+    </interpolation>
+ </animation>
+
 </PropertyList>

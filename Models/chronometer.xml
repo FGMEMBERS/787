@@ -12,6 +12,34 @@
    <object-name>UTC.switch.001</object-name>
    <object-name>UTC.switch.002</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>colon</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>colon.001</object-name>
+   <condition>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
@@ -23,10 +51,16 @@
    <type>select</type>
    <object-name>Chronobezel</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -45,10 +79,16 @@
    <type>select</type>
    <object-name>Hr.10</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -69,10 +109,16 @@
    <type>select</type>
    <object-name>Hr.01</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -93,10 +139,16 @@
    <type>select</type>
    <object-name>Mn.10</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -117,10 +169,16 @@
    <type>select</type>
    <object-name>Mn.01</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -167,10 +225,16 @@
    <type>select</type>
    <object-name>ET.10</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -191,10 +255,16 @@
    <type>select</type>
    <object-name>ET.01</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -215,10 +285,16 @@
    <type>select</type>
    <object-name>ET10</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
 <greater-than>
 <property>/instrumentation/clock/ET-hr</property>
 <value>10</value>
 </greater-than>
+   </and>
 </condition>
  </animation>
 
@@ -226,10 +302,16 @@
    <type>select</type>
    <object-name>ET01</object-name>
    <condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
 <greater-than>
 <property>/instrumentation/clock/ET-hr</property>
 <value>1</value>
 </greater-than>
+   </and>
 </condition>
  </animation>
 
