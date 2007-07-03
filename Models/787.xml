@@ -3,8 +3,8 @@
   
   <path>787-8CO.ac</path>
  <offsets>
-   <z-m>-1.5</z-m>
-   <pitch-deg>-0.3</pitch-deg>
+   <z-m>0.3</z-m>
+   <pitch-deg>0.3</pitch-deg>
  </offsets> 
 
    <model>
@@ -4459,7 +4459,7 @@
   <center>
    <x-m>1.63</x-m>
    <y-m>-4.9</y-m>
-   <z-m>-0.3</z-m>
+   <z-m>0.3</z-m>
   </center>
   <axis>
    <x>11</x>
@@ -4903,6 +4903,36 @@
  <animation>
   <type>rotate</type>
   <object-name>rhibaileron</object-name>
+  <property>/gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhspoilera</object-name>
   <property>/gear/gear[2]/compression-norm</property>
   <interpolation>
     <entry>
@@ -5739,6 +5769,36 @@
  <animation>
   <type>rotate</type>
   <object-name>lhibspoilera</object-name>
+  <property>/gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhspoilera</object-name>
   <property>/gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -7814,6 +7874,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhspoilera</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobspoilera</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -8267,6 +8345,24 @@
  <animation>
   <type>rotate</type>
   <object-name>lhibspoilera</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhspoilera</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -11404,6 +11500,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhspoilera</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.5</ind>
+      <dep>-0.0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-60</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.285</x-m>
+   <y-m>-11.3</y-m>
+   <z-m>1.52</z-m>
+  </center>
+  <axis>
+   <x>-7.6</x>
+   <y>20</y>
+   <z>-3.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhobspoilera</object-name>
   <property>surface-positions/speedbrake-pos-norm</property>
   <interpolation>
@@ -11429,6 +11555,36 @@
    <x>-1.01</x>
    <y>2.035</y>
    <z>-0.231</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhspoilera</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.5</ind>
+      <dep>-0.0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-60</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.285</x-m>
+   <y-m>11.3</y-m>
+   <z-m>1.52</z-m>
+  </center>
+  <axis>
+   <x>7.6</x>
+   <y>20</y>
+   <z>3.2</z>
   </axis>
  </animation>
 

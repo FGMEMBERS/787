@@ -197,6 +197,27 @@
  </animation>
 
  <animation>
+   <type>translate</type>
+   <object-name>NDhdg</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+
+ <animation>
    <type>rotate</type>
    <object-name>NDhdg</object-name>
    <property>orientation/roll-deg[0]</property>
@@ -230,6 +251,27 @@
  </animation>
 
  <animation>
+   <type>translate</type>
+   <object-name>NDptc00</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+
+ <animation>
    <type>rotate</type>
    <object-name>NDptc00</object-name>
    <property>orientation/roll-deg[0]</property>
@@ -260,6 +302,27 @@
      <y-m>0</y-m>
      <z-m>0</z-m>
    </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>NDptc10</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
  </animation>
 
  <animation>
@@ -296,6 +359,27 @@
  </animation>
 
  <animation>
+   <type>translate</type>
+   <object-name>NDptc-10</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+
+ <animation>
    <type>rotate</type>
    <object-name>NDptc-10</object-name>
    <property>orientation/roll-deg[0]</property>
@@ -326,6 +410,27 @@
      <y-m>0</y-m>
      <z-m>0</z-m>
    </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>NDptc</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
  </animation>
 
  <animation>
@@ -358,6 +463,27 @@
      <x>0</x>
      <y>0</y>
      <z>-1</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>FDbars</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
    </axis>
  </animation>
 
@@ -397,6 +523,27 @@
  <animation>
    <type>translate</type>
    <object-name>vector</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>vector</object-name>
    <property>orientation/alpha-deg[0]</property>
 <factor>0.018</factor>
 <axis>
@@ -426,6 +573,27 @@
      <y-m>0</y-m>
      <z-m>0</z-m>
    </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>pointer</object-name>
+   <property>sim/current-view/y-offset-m[0]</property>
+ <interpolation>
+    <entry>
+      <ind>0.64</ind>
+      <dep>-2</dep>
+    </entry>
+    <entry>
+      <ind>4.64</ind>
+      <dep>2</dep>
+    </entry>
+  </interpolation>
+    <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
  </animation>
 
 </PropertyList>

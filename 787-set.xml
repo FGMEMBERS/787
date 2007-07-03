@@ -26,8 +26,8 @@
       <internal type="bool">true</internal>
       <config>
         <x-offset-m type="double">-0.603</x-offset-m>
-        <y-offset-m type="double">0.6</y-offset-m>
-        <z-offset-m type="double">-22.7</z-offset-m>
+        <y-offset-m type="double">2.66</y-offset-m>
+        <z-offset-m type="double">-22.6</z-offset-m>
         <pitch-offset-deg>-10</pitch-offset-deg>
         <default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
       </config>
@@ -89,6 +89,10 @@
         <desc>toggle speed brakes</desc>
       </key>
     </help>
+
+        <multiplay>
+            <chat_display>1</chat_display>
+        </multiplay>
 
   </sim>
   <engines>
