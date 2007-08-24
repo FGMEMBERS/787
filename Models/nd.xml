@@ -401,7 +401,7 @@ Syd Adams, Josh Wilson
 	<type>translate</type>
 	<object-name>waypoint1a</object-name>
 	<property>autopilot/route-manager/wp/dist[0]</property>
-<factor>0.115</factor>
+<factor>0.0116</factor>
 <axis> 
 <x>0</x>
 <y>0</y>

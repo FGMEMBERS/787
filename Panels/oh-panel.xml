@@ -168,10 +168,10 @@
      <h>16</h>
      <binding>
        <command>property-adjust</command>
-       <property>/controls/switches/cabin-lights[0]</property>
-       <step>1</step>
+       <property>/controls/lighting/instruments-norm[0]</property>
+       <step>0.2</step>
        <min>0</min>
-       <max>4</max>
+       <max>1</max>
        <wrap>false</wrap>
      </binding>
    </action>
@@ -185,10 +185,10 @@
      <h>16</h>
      <binding>
        <command>property-adjust</command>
-       <property>/controls/switches/cabin-lights[0]</property>
-       <step>-1</step>
+       <property>/controls/lighting/instruments-norm[0]</property>
+       <step>-0.2</step>
        <min>0</min>
-       <max>4</max>
+       <max>1</max>
        <wrap>false</wrap>
      </binding>
    </action>
@@ -236,7 +236,7 @@
      <h>16</h>
      <binding>
        <command>property-adjust</command>
-       <property>/controls/lighting/instruments-norm[0]</property>
+       <property>/controls/switches/cabin-lights[0]</property>
        <step>0.2</step>
        <min>0</min>
        <max>1</max>
@@ -253,7 +253,7 @@
      <h>16</h>
      <binding>
        <command>property-adjust</command>
-       <property>/controls/lighting/instruments-norm[0]</property>
+       <property>/controls/switches/cabin-lights[0]</property>
        <step>-0.2</step>
        <min>0</min>
        <max>1</max>

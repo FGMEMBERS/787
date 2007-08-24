@@ -105,7 +105,7 @@ Mach 1 = 576.6 kt @ 35,000 ft -->
 <actionpt x="2" y="9.63" z="-0.85"/>
 </jet>
 
-<jet x="7" y="-9.63"  z="-0.085" mass="8000" thrust="81921" egt="810" tsfc="0.419">
+<jet x="7" y="-9.63"  z="-0.085" mass="7280" thrust="75000" egt="810" tsfc="0.419">
   <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
 <actionpt x="2" y="-9.63" z="-0.85"/>
@@ -120,7 +120,7 @@ Mach 1 = 576.6 kt @ 35,000 ft -->
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.97" y="4.88" z="-3.85" compression="1.1">
+<gear x="-1.97" y="4.88" z="-3.85" compression="1.1">
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -128,7 +128,7 @@ Mach 1 = 576.6 kt @ 35,000 ft -->
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.97" y="-4.88" z="-3.85" compression="1.1">
+<gear x="-1.97" y="-4.88" z="-3.85" compression="1.1">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>

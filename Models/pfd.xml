@@ -538,6 +538,7 @@ Syd Adams, Josh Wilson
    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
    <factor>0.001</factor>
    <step>100</step>
+   <scroll>1</scroll>
    <axis>
      <x>0</x>
      <y>1</y>
@@ -562,6 +563,7 @@ Syd Adams, Josh Wilson
    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
    <factor>0.01</factor>
    <step>10</step>
+   <scroll>1</scroll>
    <axis>
      <x>0</x>
      <y>1</y>
@@ -726,7 +728,7 @@ Syd Adams, Josh Wilson
    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
    <factor>0.001</factor>
    <step>100</step>
-   <scroll>20</scroll>
+   <scroll>10</scroll>
    <axis>
      <x>0</x>
      <y>1</y>
@@ -751,7 +753,7 @@ Syd Adams, Josh Wilson
    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
    <factor>0.0001</factor>
    <step>1000</step>
-   <scroll>20</scroll>
+   <scroll>10</scroll>
    <axis>
      <x>0</x>
      <y>1</y>
@@ -776,7 +778,7 @@ Syd Adams, Josh Wilson
    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
    <factor>0.00001</factor>
    <step>10000</step>
-   <scroll>20</scroll>
+   <scroll>10</scroll>
    <axis>
      <x>0</x>
      <y>1</y>

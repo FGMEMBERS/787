@@ -99,9 +99,10 @@ AlternatorClass.apply_load = func( amps, dt, src ) {
 
 AlternatorClass.get_output_volts = func( src ) {
     rpm = getprop(src );
-    factor = rpm / me.rpm_threshold;
-    if ( factor > 1.0 ) {
-        factor = 1.0;
+    if (rpm == 0) {
+        factor = 0;
+    } else {
+        factor = math.ln(rpm)/4;
     }
     return me.ideal_volts * factor;
 }
@@ -109,9 +110,10 @@ AlternatorClass.get_output_volts = func( src ) {
 
 AlternatorClass.get_output_amps = func(src ){
     rpm = getprop( src );
-    factor = rpm / me.rpm_threshold;
-    if ( factor > 1.0 ) {
-        factor = 1.0;
+    if (rpm == 0) {
+        factor = 0;
+    } else {
+        factor = math.ln(rpm)/4;
     }
     return me.ideal_amps * factor;
 }

@@ -39,9 +39,9 @@
     <name>HUD1</name>
     <path>Aircraft/787/Models/hud.xml</path>
     <offsets>
-      <x-m>-23.63</x-m>
+      <x-m>-23.20</x-m>
       <y-m>-0.603</y-m>
-      <z-m>2.215</z-m>
+      <z-m>2.218</z-m>
       <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
@@ -50,9 +50,9 @@
     <name>HUD2</name>
     <path>Aircraft/787/Models/hud2.xml</path>
     <offsets>
-      <x-m>-23.63</x-m>
+      <x-m>-23.20</x-m>
       <y-m>0.603</y-m>
-      <z-m>2.215</z-m>
+      <z-m>2.218</z-m>
       <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
@@ -1283,6 +1283,17 @@
 
   <animation>
   <type>material</type>
+  <object-name>windshield</object-name>
+  <emission>
+    <red>0.9</red>
+    <green>0.75</green>
+    <blue>0.6</blue>
+    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+  </emission>
+</animation>
+
+  <animation>
+  <type>material</type>
   <object-name>BrkLever</object-name>
   <emission>
     <red>0.3</red>
@@ -1613,12 +1624,12 @@
 
  <animation>
   <type>material</type>
-  <object-name>cabinlighting</object-name>
+  <object-name>windows</object-name>
   <emission>
     <red>0.9</red>
     <green>0.75</green>
     <blue>0.6</blue>
-    <factor-prop>controls/lighting/instruments-norm[0]</factor-prop>	
+    <factor-prop>controls/switches/cabin-lights[0]</factor-prop>	
   </emission>
  </animation>
 
@@ -1828,7 +1839,7 @@
 
  <animation>
   <type>textranslate</type>
-  <object-name>cabinlighting</object-name>
+  <object-name>windows</object-name>
     <property>controls/switches/cabin-lights</property>
    <interpolation>
     <entry>
@@ -2896,10 +2907,10 @@
   <object-name>APlettering</object-name>
   <object-name>OHlettering</object-name>
   <emission>
-    <red>0.25</red>
-    <green>0.4</green>
-    <blue>0.05</blue>
-    <factor-prop>controls/switches/cabin-lights[0]</factor-prop>	
+    <red>0.4</red>
+    <green>1</green>
+    <blue>0.3</blue>
+    <factor-prop>controls/lighting/instruments-norm[0]</factor-prop>	
   </emission>
 </animation>
 
@@ -3088,7 +3099,7 @@
 
   <animation>
   <type>rotate</type>
-  <object-name>noselight2</object-name>
+  <object-name>taxilight</object-name>
   <property>gear/gear[0]/position-norm</property>
    <interpolation>
     <entry>
@@ -3119,7 +3130,73 @@
     <red>1</red>
     <green>0.94</green>
     <blue>0.9</blue>
-   <property>gear/gear[0]/position-norm</property>
+  <factor-prop>controls/switches/landing-light-c[0]</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>taxilights</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.94</green>
+    <blue>0.9</blue>
+  <factor-prop>controls/switches/taxi-lights[0]</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>winglts</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.94</green>
+    <blue>0.9</blue>
+  <factor-prop>controls/lighting/logo-lights[0]</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>llandlt</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.94</green>
+    <blue>0.9</blue>
+  <factor-prop>controls/switches/landing-light-l[0]</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>rlandlt</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.94</green>
+    <blue>0.9</blue>
+  <factor-prop>controls/switches/landing-light-r[0]</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>lhturnofflt</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.94</green>
+    <blue>0.9</blue>
+  <factor-prop>controls/lighting/turn-off-lights-l</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>rhturnofflt</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.94</green>
+    <blue>0.9</blue>
+  <factor-prop>controls/lighting/turn-off-lights-r</factor-prop>
   </emission>
  </animation>
 
@@ -3147,17 +3224,6 @@
    <y>1</y>
    <z>0</z>
   </axis>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>taxilights</object-name>
-  <emission>
-    <red>1</red>
-    <green>0.94</green>
-    <blue>0.9</blue>
-   <property>gear/gear[0]/position-norm</property>
-  </emission>
  </animation>
 
  <animation>
@@ -3639,7 +3705,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Rgear</object-name>
-  <property>gear/gear[1]/position-norm</property>
+  <property>gear/gear[2]/position-norm</property>
   <factor>80</factor>
   <offset-deg>-80</offset-deg>
   <center>
@@ -3657,7 +3723,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhobdoor</object-name>
-  <property>gear/gear[1]/position-norm</property>
+  <property>gear/gear[2]/position-norm</property>
   <factor>80</factor>
   <offset-deg>0</offset-deg>
   <center>
@@ -3674,8 +3740,26 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhfdoor</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <factor>-55</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.7</x-m>
+   <y-m>3.1</y-m>
+   <z-m>-0.42</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>-0.01</y>
+   <z>0.07</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhibdoor</object-name>
-  <property>gear/gear[1]/position-norm</property>
+  <property>gear/gear[2]/position-norm</property>
   <factor>80</factor>
   <offset-deg>0</offset-deg>
   <center>
@@ -3693,7 +3777,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhgearibdoor</object-name>
-  <property>gear/gear[1]/position-norm</property>
+  <property>gear/gear[2]/position-norm</property>
    <interpolation>
     <entry>
       <ind>0.0</ind>
@@ -3738,7 +3822,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Rstrut</object-name>
-  <property>gear/gear[1]/position-norm</property>
+  <property>gear/gear[2]/position-norm</property>
   <factor>80</factor>
   <offset-deg>-80</offset-deg>
   <center>
@@ -3874,6 +3958,19 @@
  </animation>
 
  <animation>
+  <type>translate</type>
+  <object-name>Raxle2</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>17.3</z>
+  </axis>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Raxle2</object-name>
   <property>position/gear-agl-ft[0]</property>
@@ -3907,7 +4004,8 @@
   <type>translate</type>
   <object-name>Rstrut</object-name>
   <property>gear/gear[2]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -3919,7 +4017,8 @@
   <type>translate</type>
   <object-name>Rknuckle</object-name>
   <property>gear/gear[2]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -3931,7 +4030,8 @@
   <type>translate</type>
   <object-name>Raxle</object-name>
   <property>gear/gear[2]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -4001,7 +4101,8 @@
   <type>rotate</type>
   <object-name>rhgearutorque</object-name>
   <property>gear/gear[2]/compression-norm</property>
-  <factor>20</factor>
+  <factor>52</factor>
+  <offset-deg>-7</offset-deg>
   <center>
    <x-m>2.1</x-m>
    <y-m>4.9</y-m>
@@ -4018,7 +4119,8 @@
   <type>rotate</type>
   <object-name>rhgearltorque</object-name>
   <property>gear/gear[2]/compression-norm</property>
-  <factor>-20</factor>
+  <factor>52</factor>
+  <offset-deg>-7</offset-deg>
   <center>
    <x-m>2.25</x-m>
    <y-m>4.9</y-m>
@@ -4035,7 +4137,8 @@
   <type>translate</type>
   <object-name>rhgearltorque</object-name>
   <property>gear/gear[2]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -4163,6 +4266,24 @@
    <x>11</x>
    <y>0</y>
    <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhfdoor</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>55</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.7</x-m>
+   <y-m>-3.1</y-m>
+   <z-m>-0.42</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0.01</y>
+   <z>0.07</z>
   </axis>
  </animation>
 
@@ -4357,6 +4478,19 @@
  </animation>
 
  <animation>
+  <type>translate</type>
+  <object-name>Laxle2</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>17.3</z>
+  </axis>
+ </animation>
+
+ <animation>
   <type>rotate</type>
   <object-name>Laxle2</object-name>
   <property>position/gear-agl-ft[0]</property>
@@ -4390,7 +4524,8 @@
   <type>translate</type>
   <object-name>Lstrut</object-name>
   <property>gear/gear[1]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -4402,7 +4537,8 @@
   <type>translate</type>
   <object-name>Lknuckle</object-name>
   <property>gear/gear[1]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -4414,7 +4550,8 @@
   <type>translate</type>
   <object-name>Laxle</object-name>
   <property>gear/gear[1]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -4484,7 +4621,8 @@
   <type>rotate</type>
   <object-name>lhgearutorque</object-name>
   <property>gear/gear[1]/compression-norm</property>
-  <factor>20</factor>
+  <factor>52</factor>
+  <offset-deg>-7</offset-deg>
   <center>
    <x-m>2.1</x-m>
    <y-m>-4.9</y-m>
@@ -4501,7 +4639,8 @@
   <type>rotate</type>
   <object-name>lhgearltorque</object-name>
   <property>gear/gear[1]/compression-norm</property>
-  <factor>20</factor>
+  <factor>52</factor>
+  <offset-deg>-7</offset-deg>
   <center>
    <x-m>2.25</x-m>
    <y-m>-4.9</y-m>
@@ -4518,7 +4657,8 @@
   <type>translate</type>
   <object-name>lhgearltorque</object-name>
   <property>gear/gear[1]/compression-norm</property>
-  <factor>0.3</factor>
+  <factor>1</factor>
+  <offset-m>-0.13</offset-m>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -5397,7 +5537,37 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light3</object-name>
+  <object-name>rwnavlight</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhlight</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
     <entry>
@@ -5710,36 +5880,6 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslata</object-name>
-  <property>gear/gear[1]/compression-norm</property>
-  <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>1.8</dep>
-    </entry>
-    <entry>
-      <ind>0.333</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>1</ind>
-      <dep>-1.5</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>0</x-m>
-   <y-m>-9.5</y-m>
-   <z-m>1.0</z-m>
-  </center>
-  <axis>
-   <x>-4</x>
-   <y>-1</y>
-   <z>0.25</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>lhlightedslata</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -6249,7 +6389,37 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light1</object-name>
+  <object-name>lwnavlight</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhlight</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -6669,7 +6839,37 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light3</object-name>
+  <object-name>rwnavlight</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>2</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhlight</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
     <entry>
@@ -7089,7 +7289,37 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light1</object-name>
+  <object-name>lwnavlight</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>-15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>-2</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhlight</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -7389,7 +7619,37 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light3</object-name>
+  <object-name>rwnavlight</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>1.6</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhlight</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
     <entry>
@@ -7659,7 +7919,37 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light1</object-name>
+  <object-name>lwnavlight</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>-21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>-1.6</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhlight</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -8127,7 +8417,25 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light3</object-name>
+  <object-name>rwnavlight</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhlight</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -8310,24 +8618,6 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslata</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
-  <offset-deg>-1</offset-deg>
-  <center>
-   <x-m>0</x-m>
-   <y-m>-9.5</y-m>
-   <z-m>1.0</z-m>
-  </center>
-  <axis>
-   <x>-4</x>
-   <y>-1</y>
-   <z>0.25</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>lhlightedslata</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -8633,7 +8923,25 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light1</object-name>
+  <object-name>lwnavlight</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhlight</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -8885,7 +9193,25 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light3</object-name>
+  <object-name>rwnavlight</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>2</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhlight</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -9137,7 +9463,25 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light1</object-name>
+  <object-name>lwnavlight</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>-15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>-2</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhlight</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -9317,7 +9661,25 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light3</object-name>
+  <object-name>rwnavlight</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>1.6</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhlight</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -9479,7 +9841,25 @@
 
  <animation>
   <type>rotate</type>
-  <object-name>light1</object-name>
+  <object-name>lwnavlight</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>-21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>-1.6</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhlight</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -11258,8 +11638,8 @@
   <factor>10</factor>
   <center>
    <x-m>-6.63</x-m>
-   <y-m>-9.791</y-m>
-   <z-m>-0.827</z-m>
+   <y-m>-9.72</y-m>
+   <z-m>-0.83</z-m>
   </center>
   <axis>
    <x>1</x>
@@ -11275,8 +11655,8 @@
   <factor>10</factor>   
   <center>
    <x-m>-6.63</x-m>
-   <y-m>9.791</y-m>
-   <z-m>-0.827</z-m>
+   <y-m>9.72</y-m>
+   <z-m>-0.83</z-m>
   </center>
   <axis>
    <x>1</x>
@@ -11292,8 +11672,8 @@
   <factor>10</factor>   
   <center>
    <x-m>-6.63</x-m>
-   <y-m>-9.791</y-m>
-   <z-m>-0.827</z-m>
+   <y-m>-9.72</y-m>
+   <z-m>-0.83</z-m>
   </center>
   <axis>
    <x>1</x>
@@ -11309,8 +11689,8 @@
   <factor>10</factor>   
   <center>
    <x-m>-6.63</x-m>
-   <y-m>9.791</y-m>
-   <z-m>-0.827</z-m>
+   <y-m>9.72</y-m>
+   <z-m>-0.83</z-m>
   </center>
   <axis>
    <x>1</x>
@@ -11744,85 +12124,10 @@
   <object-name>noselight</object-name>
    <condition>
    <and>
-  <property>controls/switches/landing-light-c[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>llandlt</object-name>
-   <condition>
-   <and>
-  <property>controls/switches/landing-light-l[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>rlandlt</object-name>
-   <condition>
-   <and>
-  <property>controls/switches/landing-light-r[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>taxilights</object-name>
-   <condition>
-   <and>
-  <property>controls/switches/taxi-lights[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>lhturnofflt</object-name>
-   <condition>
-   <and>
-  <property>controls/lighting/turn-off-lights-l</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>rhturnofflt</object-name>
-   <condition>
-   <and>
-  <property>controls/lighting/turn-off-lights-r</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>winglts</object-name>
-   <condition>
-   <and>
-  <property>controls/lighting/logo-lights[0]</property>
+    <greater-than>
+     <property>gear/gear/position-norm</property>
+     <value>0.05</value>
+    </greater-than>
    <not>
    <property>sim/crashed</property>
    </not>
@@ -11867,28 +12172,23 @@
  </animation>
 
  <animation>
-  <type>select</type>
+  <type>material</type>
   <object-name>logolts</object-name>
-   <condition>
-   <and>
-  <property>controls/switches/logo-lights[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
+  <emission>
+    <red>0.9</red>
+    <green>0.75</green>
+    <blue>0.6</blue>
+    <factor-prop>controls/switches/logo-lights[0]</factor-prop>	
+  </emission>
  </animation>
 
  <animation>
   <type>select</type>
-  <object-name>lhnavlite</object-name>
+  <object-name>logolts</object-name>
    <condition>
-   <and>
-  <property>controls/switches/nav-lights[0]</property>
    <not>
    <property>sim/crashed</property>
    </not>
-   </and>
    </condition>
  </animation>
 
@@ -11901,6 +12201,9 @@
    <not>
    <property>sim/crashed</property>
    </not>
+   <not>
+    <property>sim/model/Boeing-787-8/lighting/strobe/state[0]</property>
+   </not>
    </and>
    </condition>
  </animation>
@@ -11911,216 +12214,24 @@
  </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>lnavlight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>135</ind>
-      <dep>29.14</dep>
-    </entry>
-    <entry>
-      <ind>340</ind>
-      <dep>29.14</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>0</dep>
-    </entry>
-  </interpolation>
+  <type>flash</type>
+  <object-name>lnavlight</object-name>
   <center>
-   <x-m>9.65</x-m>
-   <y-m>-27.28</y-m>
-   <z-m>3.45</z-m>
+   <x-m>9.64</x-m>
+   <y-m>-27.35</y-m>
+   <z-m>3.44</z-m>
   </center>
-   <axis>
-     <x>9.65</x>
-     <y>-27.28</y>
-     <z>3.45</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>lnavlight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.001</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>135</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>340</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>1</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>lnavlight</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>180</ind>
-      <dep>180</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>270</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>360</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>9.65</x-m>
-   <y-m>-27.28</y-m>
-   <z-m>3.45</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>translate</type>
-   <object-name>lnavlight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>29.14</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>29.14</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>9.65</x-m>
-   <y-m>-27.28</y-m>
-   <z-m>3.45</z-m>
-  </center>
-   <axis>
-     <x>9.65</x>
-     <y>-27.28</y>
-     <z>3.45</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>lnavlight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>lnavlight</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>9.65</x-m>
-   <y-m>-27.28</y-m>
-   <z-m>3.45</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>rhnavlite</object-name>
-   <condition>
-   <and>
-  <property>controls/switches/nav-lights[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
+  <axis>
+   <x>-1</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>0.4</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
  </animation>
 
  <animation>
@@ -12132,6 +12243,9 @@
    <not>
    <property>sim/crashed</property>
    </not>
+   <not>
+    <property>sim/model/Boeing-787-8/lighting/strobe/state[0]</property>
+   </not>
    </and>
    </condition>
  </animation>
@@ -12142,251 +12256,24 @@
  </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>rnavlight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>20</ind>
-      <dep>29.14</dep>
-    </entry>
-    <entry>
-      <ind>225</ind>
-      <dep>29.14</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>0</dep>
-    </entry>
-  </interpolation>
+  <type>flash</type>
+  <object-name>rnavlight</object-name>
   <center>
-   <x-m>9.65</x-m>
-   <y-m>27.28</y-m>
-   <z-m>3.45</z-m>
+   <x-m>9.64</x-m>
+   <y-m>27.35</y-m>
+   <z-m>3.44</z-m>
   </center>
-   <axis>
-     <x>9.65</x>
-     <y>27.28</y>
-     <z>3.45</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>rnavlight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>20</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>225</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>1</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>rnavlight</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>180</ind>
-      <dep>180.0</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>270.0</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>360.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>9.65</x-m>
-   <y-m>27.28</y-m>
-   <z-m>3.45</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>translate</type>
-   <object-name>rnavlight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>29.14</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>29.14</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>9.65</x-m>
-   <y-m>27.28</y-m>
-   <z-m>3.45</z-m>
-  </center>
-   <axis>
-     <x>9.65</x>
-     <y>27.28</y>
-     <z>3.45</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>rnavlight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>rnavlight</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>9.65</x-m>
-   <y-m>27.28</y-m>
-   <z-m>3.45</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>lhlight</object-name>
-   <condition>
-   <and>
-  <property>controls/switches/nav-lights[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>rhlight</object-name>
-   <condition>
-   <and>
-  <property>controls/switches/nav-lights[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>lhnavlite</object-name>
-  <emission>
-    <red>1.0</red>
-    <green>0</green>
-    <blue>0</blue>
-   <property>controls/switches/nav-lights</property>
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>rhnavlite</object-name>
-  <emission>
-    <red>0</red>
-    <green>1</green>
-    <blue>0.2</blue>
-   <property>controls/switches/nav-lights</property>
-  </emission>
+  <axis>
+   <x>-1</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>0.4</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
  </animation>
 
   <animation>
@@ -12487,96 +12374,36 @@
   </emission>
  </animation>
 
- <animation>
-   <type>rotate</type>
-   <object-name>uredflash</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-  <center>
-   <x-m>-11.14</x-m>
-   <y-m>0</y-m>
-   <z-m>4.6</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>uredflash</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>-11.14</x-m>
-   <y-m>0</y-m>
-   <z-m>4.6</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>rotate</type>
+<animation>
+   <type>translate</type>
    <object-name>lredflash</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-  <center>
-   <x-m>-11.14</x-m>
-   <y-m>0</y-m>
-   <z-m>-1.8</z-m>
-  </center>
+   <offset-m>11.28448</offset-m>
    <axis>
-     <x>0</x>
+     <x>-11.14</x>
      <y>0</y>
-     <z>1</z>
+     <z>-1.8</z>
    </axis>
  </animation>
 
  <animation>
-   <type>rotate</type>
+   <type>billboard</type>
    <object-name>lredflash</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>-11.14</x-m>
-   <y-m>0</y-m>
-   <z-m>-1.8</z-m>
-  </center>
+ </animation>
+
+<animation>
+   <type>translate</type>
+   <object-name>uredflash</object-name>
+   <offset-m>12.05237</offset-m>
    <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
+     <x>-11.14</x>
+     <y>0</y>
+     <z>4.6</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>billboard</type>
+   <object-name>uredflash</object-name>
  </animation>
 
   <animation>
@@ -12601,269 +12428,30 @@
    </condition>
  </animation>
 
- <animation>
-  <type>select</type>
-  <object-name>lights.001</object-name>
-   <condition>
-   <and>
-   <equals>
-    <property>sim/model/Boeing-787-8/lighting/strobe/state[0]</property>
-    <value>true</value>
-   </equals>
-  <property>controls/switches/strobe[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>lights.001</object-name>
-  <emission>
-    <red>1.0</red>
-    <green>0.94</green>
-    <blue>0.9</blue>
-  </emission>
- </animation>
-
   <animation>
-   <type>translate</type>
-   <object-name>lwhiteflash</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>16.5</dep>
-    </entry>
-    <entry>
-      <ind>20</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>160</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>200</ind>
-      <dep>33</dep>
-    </entry>
-    <entry>
-      <ind>340</ind>
-      <dep>33</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>16.5</dep>
-    </entry>
-  </interpolation>
+  <type>flash</type>
+  <object-name>lwhiteflash</object-name>
   <center>
-   <x-m>13.71</x-m>
-   <y-m>-29.85</y-m>
-   <z-m>3.9</z-m>
+   <x-m>9.9</x-m>
+   <y-m>-27.5</y-m>
+   <z-m>3.5</z-m>
   </center>
-   <axis>
-     <x>13.71</x>
-     <y>-29.85</y>
-     <z>3.9</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>lwhiteflash</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.5</dep>
-    </entry>
-    <entry>
-      <ind>20</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>160</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>200</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>340</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>0.5</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>lwhiteflash</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>180</ind>
-      <dep>180.0</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>270.0</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>360.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>13.71</x-m>
-   <y-m>-29.85</y-m>
-   <z-m>3.9</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>translate</type>
-   <object-name>lwhiteflash</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>33</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>33</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>13.71</x-m>
-   <y-m>-29.85</y-m>
-   <z-m>3.9</z-m>
-  </center>
-   <axis>
-     <x>13.71</x>
-     <y>-29.85</y>
-     <z>3.9</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>lwhiteflash</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>lwhiteflash</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>13.71</x-m>
-   <y-m>-29.85</y-m>
-   <z-m>3.9</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
+  <axis>
+   <x>-1</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <power>2</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
  </animation>
 
  <animation>
   <type>select</type>
   <object-name>lights.002</object-name>
-   <condition>
-   <and>
-   <equals>
-    <property>sim/model/Boeing-787-8/lighting/strobe/state[0]</property>
-    <value>true</value>
-   </equals>
-  <property>controls/switches/strobe[0]</property>
-   <not>
-   <property>sim/crashed</property>
-   </not>
-   </and>
-   </condition>
- </animation>
-
- <animation>
-  <type>select</type>
-  <object-name>lights.003</object-name>
    <condition>
    <and>
    <equals>
@@ -12895,230 +12483,25 @@
    </condition>
  </animation>
 
- <animation>
-  <type>material</type>
-  <object-name>lights.003</object-name>
-  <emission>
-    <red>1.0</red>
-    <green>0.94</green>
-    <blue>0.9</blue>
-  </emission>
- </animation>
-
   <animation>
-   <type>translate</type>
-   <object-name>rwhiteflash</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>16.5</dep>
-    </entry>
-    <entry>
-      <ind>20.0</ind>
-      <dep>33</dep>
-    </entry>
-    <entry>
-      <ind>160</ind>
-      <dep>33</dep>
-    </entry>
-    <entry>
-      <ind>200</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>340</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>16.5</dep>
-    </entry>
-  </interpolation>
+  <type>flash</type>
+  <object-name>rwhiteflash</object-name>
   <center>
-   <x-m>13.71</x-m>
-   <y-m>29.85</y-m>
-   <z-m>3.9</z-m>
+   <x-m>9.9</x-m>
+   <y-m>27.5</y-m>
+   <z-m>3.5</z-m>
   </center>
-   <axis>
-     <x>13.71</x>
-     <y>29.85</y>
-     <z>3.9</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>rwhiteflash</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0.5</dep>
-    </entry>
-    <entry>
-      <ind>20.0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>160</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>200</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>340</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>360</ind>
-      <dep>0.5</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>rwhiteflash</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>180</ind>
-      <dep>180.0</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>270.0</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>360.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>13.71</x-m>
-   <y-m>29.85</y-m>
-   <z-m>3.9</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>translate</type>
-   <object-name>rwhiteflash</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>33</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>33</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>13.71</x-m>
-   <y-m>29.85</y-m>
-   <z-m>3.9</z-m>
-  </center>
-   <axis>
-     <x>13.71</x>
-     <y>29.85</y>
-     <z>3.9</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>rwhiteflash</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>-70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>0.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>70.0</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>rwhiteflash</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>13.71</x-m>
-   <y-m>29.85</y-m>
-   <z-m>3.9</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
+  <axis>
+   <x>-1</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+  <power>1</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
  </animation>
 
  <animation>
@@ -13127,13 +12510,9 @@
    <condition>
    <and>
      <property>controls/switches/landing-light-c[0]</property>
-    <greater-than>
-     <property>controls/switches/taxi-lights</property>
-     <value>0.15</value>
-    </greater-than>
-   <not>
-   <property>sim/crashed</property>
-   </not>
+     <not>
+      <property>sim/crashed</property>
+     </not>
    </and>
    </condition>
  </animation>
@@ -13166,14 +12545,14 @@
 
  <animation>
    <type>select</type>
-   <object-name>noselight2</object-name>
+   <object-name>taxilight</object-name>
    <condition>
    <and>
-    <greater-than>
      <property>controls/switches/taxi-lights</property>
+    <greater-than>
+     <property>gear/gear/position-norm</property>
      <value>0.15</value>
     </greater-than>
-     <property>gear/gear/position-norm</property>
    <not>
    <property>sim/crashed</property>
    </not>
@@ -13183,12 +12562,12 @@
 
   <animation>
    <type>noshadow</type>
-   <object-name>noselight2</object-name>
+   <object-name>taxilight</object-name>
  </animation>
 
   <animation>
   <type>flash</type>
-  <object-name>noselight2</object-name>
+  <object-name>taxilight</object-name>
   <center>
    <x-m>-21.04</x-m>
    <y-m>0.15</y-m>
@@ -13209,7 +12588,7 @@
 
  <animation>
    <type>select</type>
-   <object-name>Llight1</object-name>
+   <object-name>Llight</object-name>
    <condition>
    <and>
      <property>controls/switches/landing-light-l</property>
@@ -13222,12 +12601,12 @@
 
   <animation>
    <type>noshadow</type>
-   <object-name>Llight1</object-name>
+   <object-name>Llight</object-name>
  </animation>
 
   <animation>
   <type>flash</type>
-  <object-name>Llight1</object-name>
+  <object-name>Llight</object-name>
   <center>
    <x-m>-7</x-m>
    <y-m>-3.5</y-m>
@@ -13248,7 +12627,7 @@
 
  <animation>
    <type>select</type>
-   <object-name>Llight2</object-name>
+   <object-name>Rlight</object-name>
    <condition>
      <and>
      <property>controls/switches/landing-light-r</property>
@@ -13261,12 +12640,12 @@
 
   <animation>
    <type>noshadow</type>
-   <object-name>Llight2</object-name>
+   <object-name>Rlight</object-name>
  </animation>
 
   <animation>
   <type>flash</type>
-  <object-name>Llight2</object-name>
+  <object-name>Rlight</object-name>
   <center>
    <x-m>-7</x-m>
    <y-m>3.5</y-m>
@@ -13486,107 +12865,43 @@
    </condition>
  </animation>
 
- <animation>
-   <type>rotate</type>
+<animation>
+   <type>translate</type>
    <object-name>tlwhiteflash</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-  <center>
-   <x-m>28.15</x-m>
-   <y-m>-0.6</y-m>
-   <z-m>2.1</z-m>
-  </center>
+   <offset-m>27.29125</offset-m>
    <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
+     <x>27.2</x>
+     <y>-0.75</y>
+     <z>2.1</z>
    </axis>
  </animation>
 
  <animation>
-   <type>rotate</type>
-   <object-name>trwhiteflash</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-  <center>
-   <x-m>28.15</x-m>
-   <y-m>0.6</y-m>
-   <z-m>2.1</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>trwhiteflash</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28.15</x-m>
-   <y-m>0.6</y-m>
-   <z-m>2.1</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>rotate</type>
+   <type>billboard</type>
    <object-name>tlwhiteflash</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28.15</x-m>
-   <y-m>-0.6</y-m>
-   <z-m>2.1</z-m>
-  </center>
+ </animation>
+
+<animation>
+   <type>translate</type>
+   <object-name>trwhiteflash</object-name>
+   <offset-m>27.29125</offset-m>
    <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
+     <x>27.2</x>
+     <y>0.75</y>
+     <z>2.1</z>
    </axis>
+ </animation>
+
+ <animation>
+   <type>billboard</type>
+   <object-name>trwhiteflash</object-name>
  </animation>
 
  <animation>
    <type>select</type>
-   <object-name>rtaillight</object-name>
+   <object-name>rwnavlight</object-name>
    <condition>
    <and>
-   <equals>
-    <property>sim/model/Boeing-787-8/lighting/strobe/state[0]</property>
-    <value>false</value>
-   </equals>
      <property>controls/switches/nav-lights[0]</property>
      <not>
      <property>sim/crashed</property>
@@ -13597,13 +12912,9 @@
 
  <animation>
    <type>select</type>
-   <object-name>ltaillight</object-name>
+   <object-name>lwnavlight</object-name>
    <condition>
    <and>
-   <equals>
-    <property>sim/model/Boeing-787-8/lighting/strobe/state[0]</property>
-    <value>false</value>
-   </equals>
      <property>controls/switches/nav-lights[0]</property>
      <not>
      <property>sim/crashed</property>
@@ -13614,412 +12925,54 @@
 
   <animation>
    <type>noshadow</type>
-   <object-name>rtaillight</object-name>
+   <object-name>rwnavlight</object-name>
  </animation>
 
   <animation>
    <type>noshadow</type>
-   <object-name>ltaillight</object-name>
+   <object-name>lwnavlight</object-name>
  </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>ltaillight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>80</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>100</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>190</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>200</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>28.077</dep>
-    </entry>
-  </interpolation>
+  <type>flash</type>
+  <object-name>lwnavlight</object-name>
   <center>
-   <x-m>28</x-m>
-   <y-m>-0.6</y-m>
-   <z-m>1.99</z-m>
+   <x-m>13.5</x-m>
+   <y-m>-29.75</y-m>
+   <z-m>3.925</z-m>
   </center>
-   <axis>
-     <x>28</x>
-     <y>-0.6</y>
-     <z>1.99</z>
-   </axis>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <power>0.9</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
  </animation>
 
   <animation>
-   <type>translate</type>
-   <object-name>rtaillight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>160</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>170</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>260</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>280</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>28.077</dep>
-    </entry>
-  </interpolation>
+  <type>flash</type>
+  <object-name>rwnavlight</object-name>
   <center>
-   <x-m>28</x-m>
-   <y-m>0.6</y-m>
-   <z-m>1.99</z-m>
+   <x-m>13.5</x-m>
+   <y-m>29.75</y-m>
+   <z-m>3.925</z-m>
   </center>
-   <axis>
-     <x>28</x>
-     <y>0.6</y>
-     <z>1.99</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>ltaillight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>80</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>100</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>190</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>200</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>rtaillight</object-name>
-     <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>160</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>170</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>260</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>280</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>ltaillight</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>180</ind>
-      <dep>180.0</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>270.0</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>360.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28</x-m>
-   <y-m>-0.6</y-m>
-   <z-m>1.99</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>rtaillight</object-name>
-   <property>sim/current-view/heading-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>0.0</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>90.0</dep>
-    </entry>
-    <entry>
-      <ind>180</ind>
-      <dep>180.0</dep>
-    </entry>
-    <entry>
-      <ind>270</ind>
-      <dep>270.0</dep>
-    </entry>
-    <entry>
-      <ind>360.0</ind>
-      <dep>360.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28</x-m>
-   <y-m>0.6</y-m>
-   <z-m>1.99</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>0</y>
-     <z>1</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>translate</type>
-   <object-name>ltaillight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>-70</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>70</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>28.077</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28</x-m>
-   <y-m>-0.6</y-m>
-   <z-m>1.99</z-m>
-  </center>
-   <axis>
-     <x>28</x>
-     <y>-0.6</y>
-     <z>1.99</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>translate</type>
-   <object-name>rtaillight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>28.077</dep>
-    </entry>
-    <entry>
-      <ind>-70</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>70</ind>
-      <dep>0</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>28.077</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28</x-m>
-   <y-m>0.6</y-m>
-   <z-m>1.99</z-m>
-  </center>
-   <axis>
-     <x>28</x>
-     <y>0.6</y>
-     <z>1.99</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>ltaillight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>-70</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>70</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
-  <animation>
-   <type>scale</type>
-   <object-name>rtaillight</object-name>
-     <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90.0</ind>
-      <dep>0.001</dep>
-    </entry>
-    <entry>
-      <ind>-70</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>70</ind>
-      <dep>1</dep>
-    </entry>
-    <entry>
-      <ind>90</ind>
-      <dep>0.001</dep>
-    </entry>
-  </interpolation>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>ltaillight</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28</x-m>
-   <y-m>-0.6</y-m>
-   <z-m>1.99</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
- <animation>
-   <type>rotate</type>
-   <object-name>rtaillight</object-name>
-   <property>sim/current-view/pitch-offset-deg[0]</property>
-   <interpolation>
-    <entry>
-      <ind>-90</ind>
-      <dep>90</dep>
-    </entry>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>90.0</ind>
-      <dep>-90.0</dep>
-    </entry>
-  </interpolation>
-  <center>
-   <x-m>28</x-m>
-   <y-m>0.6</y-m>
-   <z-m>1.99</z-m>
-  </center>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <power>0.9</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
  </animation>
 
  <animation>
@@ -14134,45 +13087,6 @@
 
  <animation>
   <type>select</type>
-  <object-name>rhlightedreverser</object-name>
-   <condition>
-   <and>
-  <property>controls/lighting/logo-lights[0]</property>
-     <not>
-     <property>sim/crashed</property>
-     </not>
-   </and>
-   </condition>
- </animation>
-
-  <animation>
-   <type>noshadow</type>
-   <object-name>rhlightedreverser</object-name>
- </animation>
-
- <animation>
-  <type>translate</type>
-  <object-name>rhlightedreverser</object-name>
-  <property>surface-positions/reverser-pos-norm</property>
-  <interpolation>
-    <entry>
-      <ind>0</ind>
-      <dep>0.0</dep>
-    </entry>
-    <entry>
-      <ind>1</ind>
-      <dep>0.65</dep>
-    </entry>
-  </interpolation>
-  <axis>
-   <x>1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
-
- <animation>
-  <type>select</type>
   <object-name>no1engl</object-name>
    <condition>
     <greater-than>
@@ -14256,6 +13170,10 @@
 <animation>
  <type>noshadow</type>
  <object-name>Exhaust1</object-name>
+ </animation>
+
+<animation>
+ <type>noshadow</type>
  <object-name>Exhaust2</object-name>
  </animation>
 
@@ -14276,3 +13194,5 @@
  </animation> 
 
 </PropertyList>
+
+

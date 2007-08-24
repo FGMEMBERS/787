@@ -1,12 +1,15 @@
 AC3Db
-MATERIAL "Lights" rgb 1 1 1 amb 0 0 0 emis 1 1 1 spec 0 0 0 shi 0 trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "Lights.003" rgb 1 1 1 amb 0 0 0 emis 1 1 1 spec 0 0 0 shi 0 trans 0
 OBJECT world
 kids 37
 OBJECT poly
 name "Gear.Annun"
-texture "eicas.png"
+data 8
+Mesh.027
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007065 -0.001831 -0.061313
 0.007065 -0.007895 -0.061313
@@ -14,7 +17,7 @@ numvert 4
 0.007065 -0.001831 -0.047733
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.66015625 0.8984375
 3 0.578125 0.8984375
@@ -23,9 +26,11 @@ refs 4
 kids 0
 OBJECT poly
 name "TFuel.002"
+data 8
+Mesh.028
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007111 -0.06967 -0.062133
 0.007111 -0.077992 -0.062133
@@ -33,7 +38,7 @@ numvert 4
 0.007111 -0.06967 -0.055764
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -42,9 +47,11 @@ refs 4
 kids 0
 OBJECT poly
 name "L-EGT.needle"
-texture "eicas.png"
+data 8
+Mesh.029
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007551 0.023839 0.05539
 0.007551 0.022732 0.05539
@@ -52,7 +59,7 @@ numvert 4
 0.007551 0.023839 0.071305
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.59765625 0.6015625
 3 0.59765625 0.57421875
@@ -61,9 +68,11 @@ refs 4
 kids 0
 OBJECT poly
 name "TFuel.003"
+data 8
+Mesh.030
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007111 -0.06967 -0.069257
 0.007111 -0.077992 -0.069257
@@ -71,7 +80,7 @@ numvert 4
 0.007111 -0.06967 -0.062888
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -80,9 +89,11 @@ refs 4
 kids 0
 OBJECT poly
 name "GearAnnun.ptr1"
-texture "eicas.png"
+data 8
+Mesh.031
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.00743 0.008322 -0.063732
 0.00743 -0.002361 -0.063732
@@ -90,7 +101,7 @@ numvert 4
 0.00743 0.008322 -0.045315
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.671875 0.96484375
 3 0.56640625 0.96484375
@@ -99,9 +110,11 @@ refs 4
 kids 0
 OBJECT poly
 name "GearAnnun.ptr2"
-texture "eicas.png"
+data 9
+Mesh.1186
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.00743 0.008322 -0.063732
 0.00743 -0.002361 -0.063732
@@ -109,7 +122,7 @@ numvert 4
 0.00743 0.008322 -0.045315
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.80078125 0.96484375
 3 0.6953125 0.96484375
@@ -118,9 +131,11 @@ refs 4
 kids 0
 OBJECT poly
 name "TFuel.001"
+data 9
+Mesh.1187
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007111 -0.06967 -0.055758
 0.007111 -0.077992 -0.055758
@@ -128,7 +143,7 @@ numvert 4
 0.007111 -0.06967 -0.049389
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -137,9 +152,11 @@ refs 4
 kids 0
 OBJECT poly
 name "TFuel"
+data 9
+Mesh.1188
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007363 -0.076435 -0.063321
 0.007363 -0.077968 -0.063321
@@ -147,7 +164,7 @@ numvert 4
 0.007363 -0.076435 -0.061938
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.04296875 0.16015625
 3 0.03125 0.16015625
@@ -156,9 +173,11 @@ refs 4
 kids 0
 OBJECT poly
 name "R-EGT.needle"
-texture "eicas.png"
+data 9
+Mesh.1189
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007551 0.023839 0.00821
 0.007551 0.022732 0.00821
@@ -166,7 +185,7 @@ numvert 4
 0.007551 0.023839 0.024094
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.59765625 0.65625
 3 0.59765625 0.62890625
@@ -175,9 +194,11 @@ refs 4
 kids 0
 OBJECT poly
 name "Temp.conv"
+data 9
+Mesh.1190
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007111 0.093385 0.04392
 0.007111 0.088202 0.04392
@@ -185,7 +206,7 @@ numvert 4
 0.007111 0.093385 0.050072
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.5703125 0.80078125
 3 0.52734375 0.80078125
@@ -194,9 +215,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EICASscreen"
-texture "eicas.png"
+data 9
+Mesh.1191
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 9
 0.006458 0.097941 -0.095113
 0.006458 -0.092285 -0.095113
@@ -209,28 +232,28 @@ numvert 9
 0.006458 0.002828 0
 numsurf 4
 SURF 0x00
-mat 0
+mat 1
 refs 4
 6 0.4609375 0.98828125
 3 0.01953125 0.98828125
 7 0.01953125 0.546875
 8 0.4609375 0.546875
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.96875 0.94921875
 6 0.89453125 0.94921875
 8 0.89453125 0.875
 5 0.96875 0.875
 SURF 0x00
-mat 0
+mat 1
 refs 4
 8 0.498046964407 0.498046904802
 7 -0.0078125 0.498046875
 2 -0.0078125 -0.0078125
 4 0.498046875 -0.0078125
 SURF 0x00
-mat 0
+mat 1
 refs 4
 5 1.00390625 0.498046875
 8 0.498046964407 0.498046904802
@@ -239,9 +262,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.002"
+data 9
+Mesh.1192
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.060213
 0.006798 0.025381 0.060213
@@ -249,7 +274,7 @@ numvert 4
 0.006798 0.033546 0.065018
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -258,9 +283,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.003"
+data 9
+Mesh.1193
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.055458
 0.006798 0.025381 0.055458
@@ -268,7 +295,7 @@ numvert 4
 0.006798 0.033546 0.060264
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -277,9 +304,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.001"
+data 9
+Mesh.1194
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.065085
 0.006798 0.025381 0.065085
@@ -287,7 +316,7 @@ numvert 4
 0.006798 0.033546 0.069891
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -296,9 +325,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.004"
+data 9
+Mesh.1195
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.050704
 0.006798 0.025381 0.050704
@@ -306,7 +337,7 @@ numvert 4
 0.006798 0.033546 0.05551
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -315,9 +346,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.103"
+data 9
+Mesh.1196
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.007935
 0.006798 0.025381 0.007935
@@ -325,7 +358,7 @@ numvert 4
 0.006798 0.033546 0.012741
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -334,9 +367,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.102"
+data 9
+Mesh.1197
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.012689
 0.006798 0.025381 0.012689
@@ -344,7 +379,7 @@ numvert 4
 0.006798 0.033546 0.017495
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -353,9 +388,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.101"
+data 9
+Mesh.1198
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.017562
 0.006798 0.025381 0.017562
@@ -363,7 +400,7 @@ numvert 4
 0.006798 0.033546 0.022368
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -372,9 +409,11 @@ refs 4
 kids 0
 OBJECT poly
 name "N1.102"
+data 9
+Mesh.1199
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.076042 0.012458
 0.006798 0.067878 0.012458
@@ -382,7 +421,7 @@ numvert 4
 0.006798 0.076042 0.017264
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -391,9 +430,11 @@ refs 4
 kids 0
 OBJECT poly
 name "EGT.104"
+data 9
+Mesh.1200
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.033546 0.003181
 0.006798 0.025381 0.003181
@@ -401,7 +442,7 @@ numvert 4
 0.006798 0.033546 0.007987
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -410,9 +451,11 @@ refs 4
 kids 0
 OBJECT poly
 name "N1.101"
+data 9
+Mesh.1201
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.076042 0.01733
 0.006798 0.067878 0.01733
@@ -420,7 +463,7 @@ numvert 4
 0.006798 0.076042 0.022136
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -429,9 +472,11 @@ refs 4
 kids 0
 OBJECT poly
 name "L-N1.needle"
-texture "eicas.png"
+data 9
+Mesh.1202
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007551 0.065951 0.05539
 0.007551 0.064845 0.05539
@@ -439,7 +484,7 @@ numvert 4
 0.007551 0.065951 0.071305
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.6015625 0.58984375
 3 0.6015625 0.5625
@@ -448,9 +493,11 @@ refs 4
 kids 0
 OBJECT poly
 name "N1.103"
+data 9
+Mesh.1203
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.076042 0.007703
 0.006798 0.067878 0.007703
@@ -458,7 +505,7 @@ numvert 4
 0.006798 0.076042 0.012509
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -467,9 +514,11 @@ refs 4
 kids 0
 OBJECT poly
 name "R-N1.needle"
-texture "eicas.png"
+data 9
+Mesh.1204
+texture "eicas.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.007551 0.065951 0.007884
 0.007551 0.064845 0.007884
@@ -477,7 +526,7 @@ numvert 4
 0.007551 0.065951 0.023815
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.60546875 0.59375
 3 0.60546875 0.57421875
@@ -486,9 +535,11 @@ refs 4
 kids 0
 OBJECT poly
 name "N1.104"
+data 9
+Mesh.1205
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.076042 0.002949
 0.006798 0.067878 0.002949
@@ -496,7 +547,7 @@ numvert 4
 0.006798 0.076042 0.007755
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -505,9 +556,11 @@ refs 4
 kids 0
 OBJECT poly
 name "N1.001"
+data 9
+Mesh.1206
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.076042 0.064567
 0.006798 0.067878 0.064567
@@ -515,178 +568,7 @@ numvert 4
 0.006798 0.076042 0.069373
 numsurf 1
 SURF 0x00
-mat 0
-refs 4
-0 0.05859375 0.08984375
-3 0.01171875 0.08984375
-2 0.01171875 0.015625
-1 0.05859375 0.015625
-kids 0
-OBJECT poly
-name "N1"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.007159 0.068975 0.054407
-0.007159 0.067829 0.054407
-0.007159 0.067829 0.055456
-0.007159 0.068975 0.055456
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.046875 0.13671875
-3 0.03125 0.13671875
-2 0.03125 0.12109375
-1 0.046875 0.12109375
-kids 0
-OBJECT poly
-name "N1.003"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.006798 0.076042 0.05494
-0.006798 0.067878 0.05494
-0.006798 0.067878 0.059746
-0.006798 0.076042 0.059746
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.05859375 0.08984375
-3 0.01171875 0.08984375
-2 0.01171875 0.015625
-1 0.05859375 0.015625
-kids 0
-OBJECT poly
-name "N1.004"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.006798 0.076042 0.050186
-0.006798 0.067878 0.050186
-0.006798 0.067878 0.054991
-0.006798 0.076042 0.054991
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.05859375 0.08984375
-3 0.01171875 0.08984375
-2 0.01171875 0.015625
-1 0.05859375 0.015625
-kids 0
-OBJECT poly
-name "N1.005"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.007159 0.068975 0.00717
-0.007159 0.067829 0.00717
-0.007159 0.067829 0.00822
-0.007159 0.068975 0.00822
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.046875 0.13671875
-3 0.03125 0.13671875
-2 0.03125 0.12109375
-1 0.046875 0.12109375
-kids 0
-OBJECT poly
-name "Temp.sign.001"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.006626 0.093385 0.062966
-0.006626 0.088202 0.062966
-0.006626 0.088202 0.069119
-0.006626 0.093385 0.069119
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.51171875 0.73828125
-3 0.46484375 0.73828125
-2 0.46484375 0.6953125
-1 0.51171875 0.6953125
-kids 0
-OBJECT poly
-name "Temp.sign"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.006917 0.093385 0.062966
-0.006917 0.088202 0.062966
-0.006917 0.088202 0.069119
-0.006917 0.093385 0.069119
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.51171875 0.80078125
-3 0.46484375 0.80078125
-2 0.46484375 0.7578125
-1 0.51171875 0.7578125
-kids 0
-OBJECT poly
-name "FlapAnnun.ptr"
-texture "eicas.png"
-texrep 1 1
-crease 30
-numvert 4
-0.007613 -0.011789 -0.057652
-0.007613 -0.050709 -0.057652
-0.007613 -0.050709 -0.050509
-0.007613 -0.011789 -0.050509
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.6328125 0.522031247616
-3 0.60546875 0.522031247616
-2 0.60546875 0.373593747616
-1 0.6328125 0.373593747616
-kids 0
-OBJECT poly
-name "Temp.002"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.007111 0.094955 0.050184
-0.007111 0.086632 0.050184
-0.007111 0.086632 0.056553
-0.007111 0.094955 0.056553
-numsurf 1
-SURF 0x00
-mat 0
-refs 4
-0 0.05859375 0.08984375
-3 0.01171875 0.08984375
-2 0.01171875 0.015625
-1 0.05859375 0.015625
-kids 0
-OBJECT poly
-name "Temp.001"
-texture "digits.rgb"
-texrep 1 1
-crease 30
-numvert 4
-0.007111 0.094955 0.056559
-0.007111 0.086632 0.056559
-0.007111 0.086632 0.062928
-0.007111 0.094955 0.062928
-numsurf 1
-SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -695,9 +577,11 @@ refs 4
 kids 0
 OBJECT poly
 name "N1.002"
+data 9
+Mesh.1216
 texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
 numvert 4
 0.006798 0.076042 0.059694
 0.006798 0.067878 0.059694
@@ -705,7 +589,7 @@ numvert 4
 0.006798 0.076042 0.0645
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.05859375 0.08984375
 3 0.01171875 0.08984375
@@ -713,10 +597,201 @@ refs 4
 1 0.05859375 0.015625
 kids 0
 OBJECT poly
-name "Flap.Annun"
-texture "eicas.png"
+name "N1.003"
+data 9
+Mesh.1208
+texture "digits.rgb"
 texrep 1 1
-crease 30
+crease 30.000000
+numvert 4
+0.006798 0.076042 0.05494
+0.006798 0.067878 0.05494
+0.006798 0.067878 0.059746
+0.006798 0.076042 0.059746
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.05859375 0.08984375
+3 0.01171875 0.08984375
+2 0.01171875 0.015625
+1 0.05859375 0.015625
+kids 0
+OBJECT poly
+name "N1.004"
+data 9
+Mesh.1209
+texture "digits.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.006798 0.076042 0.050186
+0.006798 0.067878 0.050186
+0.006798 0.067878 0.054991
+0.006798 0.076042 0.054991
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.05859375 0.08984375
+3 0.01171875 0.08984375
+2 0.01171875 0.015625
+1 0.05859375 0.015625
+kids 0
+OBJECT poly
+name "N1.005"
+data 9
+Mesh.1210
+texture "digits.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.007159 0.068975 0.00717
+0.007159 0.067829 0.00717
+0.007159 0.067829 0.00822
+0.007159 0.068975 0.00822
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.046875 0.13671875
+3 0.03125 0.13671875
+2 0.03125 0.12109375
+1 0.046875 0.12109375
+kids 0
+OBJECT poly
+name "Temp.sign.001"
+data 9
+Mesh.1211
+texture "digits.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.006626 0.093385 0.062966
+0.006626 0.088202 0.062966
+0.006626 0.088202 0.069119
+0.006626 0.093385 0.069119
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.51171875 0.73828125
+3 0.46484375 0.73828125
+2 0.46484375 0.6953125
+1 0.51171875 0.6953125
+kids 0
+OBJECT poly
+name "Temp.sign"
+data 9
+Mesh.1212
+texture "digits.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.006917 0.093385 0.062966
+0.006917 0.088202 0.062966
+0.006917 0.088202 0.069119
+0.006917 0.093385 0.069119
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.51171875 0.80078125
+3 0.46484375 0.80078125
+2 0.46484375 0.7578125
+1 0.51171875 0.7578125
+kids 0
+OBJECT poly
+name "FlapAnnun.ptr"
+data 9
+Mesh.1213
+texture "eicas.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.007613 -0.011789 -0.057652
+0.007613 -0.050709 -0.057652
+0.007613 -0.050709 -0.050509
+0.007613 -0.011789 -0.050509
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.6328125 0.522031247616
+3 0.60546875 0.522031247616
+2 0.60546875 0.373593747616
+1 0.6328125 0.373593747616
+kids 0
+OBJECT poly
+name "Temp.002"
+data 9
+Mesh.1214
+texture "digits.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.007111 0.094955 0.050184
+0.007111 0.086632 0.050184
+0.007111 0.086632 0.056553
+0.007111 0.094955 0.056553
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.05859375 0.08984375
+3 0.01171875 0.08984375
+2 0.01171875 0.015625
+1 0.05859375 0.015625
+kids 0
+OBJECT poly
+name "Temp.001"
+data 9
+Mesh.1215
+texture "digits.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.007111 0.094955 0.056559
+0.007111 0.086632 0.056559
+0.007111 0.086632 0.062928
+0.007111 0.094955 0.062928
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.05859375 0.08984375
+3 0.01171875 0.08984375
+2 0.01171875 0.015625
+1 0.05859375 0.015625
+kids 0
+OBJECT poly
+name "N1"
+data 9
+Mesh.1207
+texture "digits.rgb"
+texrep 1 1
+crease 30.000000
+numvert 4
+0.007159 0.068975 0.054407
+0.007159 0.067829 0.054407
+0.007159 0.067829 0.055456
+0.007159 0.068975 0.055456
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.046875 0.13671875
+3 0.03125 0.13671875
+2 0.03125 0.12109375
+1 0.046875 0.12109375
+kids 0
+OBJECT poly
+name "Flap.Annun"
+data 9
+Mesh.1217
+texture "eicas.rgb"
+texrep 1 1
+crease 30.000000
 numvert 4
 0.007088 -0.01112 -0.067634
 0.007088 -0.051378 -0.067634
@@ -724,7 +799,7 @@ numvert 4
 0.007088 -0.01112 -0.041413
 numsurf 1
 SURF 0x00
-mat 0
+mat 1
 refs 4
 0 0.6953125 0.7890625
 3 0.5390625 0.7890625

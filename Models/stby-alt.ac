@@ -5,7 +5,7 @@ OBJECT world
 kids 18
 OBJECT poly
 name "in100"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -24,7 +24,7 @@ refs 4
 kids 0
 OBJECT poly
 name "in10"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -43,7 +43,7 @@ refs 4
 kids 0
 OBJECT poly
 name "in1"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -62,7 +62,7 @@ refs 4
 kids 0
 OBJECT poly
 name "kpa1"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -81,7 +81,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atxt1"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -100,7 +100,7 @@ refs 4
 kids 0
 OBJECT poly
 name "kpa1000"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -119,7 +119,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atxt10000"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -267,7 +267,7 @@ refs 3
 kids 0
 OBJECT poly
 name "StbyAltneedle"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 13
@@ -334,7 +334,7 @@ refs 3
 kids 0
 OBJECT poly
 name "in1000"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -353,7 +353,7 @@ refs 4
 kids 0
 OBJECT poly
 name "kpa100"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -372,7 +372,7 @@ refs 4
 kids 0
 OBJECT poly
 name "StbyAltface"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -442,7 +442,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atxt100"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -1955,7 +1955,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atxt10"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -1974,7 +1974,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atxt1000"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4
@@ -1993,7 +1993,7 @@ refs 4
 kids 0
 OBJECT poly
 name "kpa10"
-texture "stby-alt.png"
+texture "stby-alt.rgb"
 texrep 1 1
 crease 30
 numvert 4

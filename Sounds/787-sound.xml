@@ -302,6 +302,7 @@
 <property>/velocities/airspeed-kt</property>
 <type>log</type>
 <factor>0.5</factor>
+<max>1</max>
 </volume>
 </rumble>
 

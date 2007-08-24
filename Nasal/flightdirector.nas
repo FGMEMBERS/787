@@ -174,7 +174,9 @@ update_mode = func {
 
     }
 
+setlistener("/sim/signals/fdm-initialized", func {
     setprop("/instrumentation/flightdirector/lnav", lnav);
+});
 }
 
 #############################################################################
@@ -217,7 +219,9 @@ current_heading = getprop("/orientation/heading-magnetic-deg");
 if(slaved == nil){slaved = 0};
 
 if(slaved == 0){
-setprop("/instrumentation/flightdirector/to-flag",getprop("/instrumentation/nav/to-flag"));
+setlistener("/sim/signals/fdm-initialized", func {
+    setprop("/instrumentation/flightdirector/to-flag",getprop("/instrumentation/nav/to-flag"));
+});
 desired_course = getprop("/instrumentation/nav/radials/selected-deg");
 course_offset = getprop("/instrumentation/nav/heading-needle-deflection");
 nav_mag_brg = getprop("/instrumentation/nav/heading-deg");
@@ -333,10 +337,12 @@ if(vbar_pitch_prop > 15.0){vbar_pitch_prop = 15.0;}
 if(vbar_pitch_prop < -15.0){vbar_pitch_prop = -15.0;}
 
 
-setprop("/instrumentation/flightdirector/vbar-pitch",vbar_pitch_prop);
-setprop("/instrumentation/flightdirector/vbar-roll", vbar_roll_prop);
-setprop("/instrumentation/flightdirector/alt-offset", alt_offset);
-setprop("/instrumentation/flightdirector/current-alt", current_alt);
+setlistener("/sim/signals/fdm-initialized", func {
+    setprop("/instrumentation/flightdirector/vbar-pitch",vbar_pitch_prop);
+    setprop("/instrumentation/flightdirector/vbar-roll", vbar_roll_prop);
+    setprop("/instrumentation/flightdirector/alt-offset", alt_offset);
+    setprop("/instrumentation/flightdirector/current-alt", current_alt);
+});
 }
 
 

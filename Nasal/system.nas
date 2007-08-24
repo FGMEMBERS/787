@@ -190,8 +190,10 @@ if(pph1 == nil){pph1 = 0.0};
 
 pph2=getprop("/engines/engine[1]/fuel-flow-gph");
 if(pph2 == nil){pph2 = 0.0};
-setprop("engines/engine[0]/fuel-flow_pph",pph1* fuel_density);
-setprop("engines/engine[1]/fuel-flow_pph",pph2* fuel_density);
+setlistener("/sim/signals/fdm-initialized", func {
+    setprop("engines/engine[0]/fuel-flow_pph",pph1* fuel_density);
+    setprop("engines/engine[1]/fuel-flow_pph",pph2* fuel_density);
+});
 
 if(getprop("/controls/flight/speedbrake")== 1){
 interpolate("surface-positions/speedbrake-pos-norm", 1.0, 5.0);
