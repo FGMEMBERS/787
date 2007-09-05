@@ -117,7 +117,7 @@
      <h>18</h>
      <binding>
        <command>property-toggle</command>
-       <property>/controls/switches/landing-light-l</property>
+       <property>/controls/lighting/landing-light-l</property>
      </binding>
      <binding>
        <command>property-toggle</command>
@@ -134,7 +134,7 @@
      <h>18</h>
      <binding>
        <command>property-toggle</command>
-       <property>/controls/switches/landing-light-c</property>
+       <property>/controls/lighting/landing-light-c</property>
      </binding>
      <binding>
        <command>property-toggle</command>
@@ -151,7 +151,7 @@
      <h>18</h>
      <binding>
        <command>property-toggle</command>
-       <property>/controls/switches/landing-light-r</property>
+       <property>/controls/lighting/landing-light-r</property>
      </binding>
      <binding>
        <command>property-toggle</command>
@@ -271,7 +271,7 @@
      <h>18</h>
      <binding>
        <command>property-toggle</command>
-       <property>/controls/switches/beacon</property>
+       <property>/controls/lighting/beacon</property>
      </binding>
      <binding>
        <command>property-toggle</command>
@@ -288,7 +288,7 @@
      <h>18</h>
      <binding>
        <command>property-toggle</command>
-       <property>/controls/switches/nav-lights</property>
+       <property>/controls/lighting/nav-lights</property>
      </binding>
      <binding>
        <command>property-toggle</command>

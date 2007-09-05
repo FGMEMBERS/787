@@ -118,19 +118,19 @@
 </surface-positions>
 
 <controls>
-<lighting> 
-<instruments-norm>0.6</instruments-norm>
-<logo-lights>1</logo-lights>
-<panel-norm>0.2</panel-norm>
-</lighting>
-<switches>
+<lighting>
 <beacon>1</beacon>
-<cabin-lights>0.2</cabin-lights>
+<instruments-norm>0.6</instruments-norm>
 <landing-light-c type = "bool">1</landing-light-c> 
 <landing-light-l type = "bool">1</landing-light-l> 
 <landing-light-r type = "bool">1</landing-light-r>
 <logo-lights>1</logo-lights>
 <nav-lights>1</nav-lights>
+<panel-norm>0.2</panel-norm>
+</lighting>
+<switches>
+<cabin-lights>0.2</cabin-lights>
+<logo-lights>1</logo-lights>
 <taxi-lights>1</taxi-lights><strobe>1</strobe><turn-off-lights-l>1</turn-off-lights-l>
 <turn-off-lights-r>1</turn-off-lights-r>
 </switches>

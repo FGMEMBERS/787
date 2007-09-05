@@ -24,7 +24,7 @@ et_min_start=0.0;
 
 strobe_switch = props.globals.getNode("controls/switches/strobe", 1);
 aircraft.light.new("sim/model/Boeing-787-8/lighting/strobe", [0.05, 1.2], strobe_switch);
-beacon_switch = props.globals.getNode("controls/switches/beacon", 1);
+beacon_switch = props.globals.getNode("controls/lighting/beacon", 1);
 aircraft.light.new("sim/model/Boeing-787-8/lighting/beacon", [0.05, 1.25], beacon_switch);
 
 init_controls = func {
