@@ -5,17 +5,40 @@ Syd Adams, Josh Wilson
 
 <PropertyList>
 
- <path>nd.ac</path>
+ <path>nd2.ac</path>
 
  <animation>
+	 <type>select</type>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <greater-than>
+				 <property>/systems/electrical/volts</property>
+				 <value>12</value>
+			 </greater-than>
+		 </and>	
+	 </condition>
+ </animation>
+ 
+ <animation>
    <type>select</type>
+   <!--group-name>navscreen</group-name-->
    <object-name>Radarscreen</object-name>
     <object-name>NDscreen</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+   <and>
+    <equals>
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+    </equals>
+    <equals>
+     <property>instrumentation/wxradar/display-mode</property>
+     <value>2</value>
+    </equals>
+   </and>
   </condition>
  </animation>
 
@@ -23,10 +46,16 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>path</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	   <and>
+		   <equals>
+			   <property>sim/current-view/view-number</property>
+			   <value>0</value>
+		   </equals>
+		   <equals>
+			   <property>instrumentation/wxradar/display-mode</property>
+			   <value>2</value>
+		   </equals>
+	   </and>
   </condition>
  </animation>
 
@@ -34,10 +63,16 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>hdg</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	   <and>
+		   <equals>
+			   <property>sim/current-view/view-number</property>
+			   <value>0</value>
+		   </equals>
+		   <equals>
+			   <property>instrumentation/wxradar/display-mode</property>
+			   <value>2</value>
+		   </equals>
+	   </and>
   </condition>
  </animation>
 
@@ -45,10 +80,16 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>NDhdg</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	   <and>
+		   <equals>
+			   <property>sim/current-view/view-number</property>
+			   <value>0</value>
+		   </equals>
+		   <equals>
+			   <property>instrumentation/wxradar/display-mode</property>
+			   <value>2</value>
+		   </equals>
+	   </and>
   </condition>
  </animation>
 
@@ -72,10 +113,16 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>mfdhdg</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	   <and>
+		   <equals>
+			   <property>sim/current-view/view-number</property>
+			   <value>0</value>
+		   </equals>
+		   <equals>
+			   <property>instrumentation/wxradar/display-mode</property>
+			   <value>2</value>
+		   </equals>
+	   </and>
   </condition>
  </animation>
 
@@ -165,10 +212,16 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>hdgtext</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	   <and>
+		   <equals>
+			   <property>sim/current-view/view-number</property>
+			   <value>0</value>
+		   </equals>
+		   <equals>
+			   <property>instrumentation/wxradar/display-mode</property>
+			   <value>2</value>
+		   </equals>
+	   </and>
   </condition>
  </animation>
 
@@ -189,10 +242,16 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>hdgtext.001</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	   <and>
+		   <equals>
+			   <property>sim/current-view/view-number</property>
+			   <value>0</value>
+		   </equals>
+		   <equals>
+			   <property>instrumentation/wxradar/display-mode</property>
+			   <value>2</value>
+		   </equals>
+	   </and>
   </condition>
  </animation>
 
@@ -213,10 +272,16 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>hdgtext.002</object-name>
    <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	   <and>
+		   <equals>
+			   <property>sim/current-view/view-number</property>
+			   <value>0</value>
+		   </equals>
+		   <equals>
+			   <property>instrumentation/wxradar/display-mode</property>
+			   <value>2</value>
+		   </equals>
+	   </and>
   </condition>
  </animation>
 
@@ -237,16 +302,22 @@ Syd Adams, Josh Wilson
    <type>select</type>
 <object-name>rng.001</object-name>
 <condition>
-<and>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>2</value>
+		</equals>
+	</and>
+<!--and>
 <equals>
 <property>/instrumentation/wxradar/switch</property>
 <value>on</value>
 </equals>
-</and>
+</and-->
 </condition>
  </animation>
 
@@ -254,16 +325,22 @@ Syd Adams, Josh Wilson
    <type>select</type>
 <object-name>rng.002</object-name>
 <condition>
-<and>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>2</value>
+		</equals>
+	</and>
+<!--and>
 <equals>
 <property>/instrumentation/wxradar/switch</property>
 <value>on</value>
 </equals>
-</and>
+</and-->
 </condition>
  </animation>
 
@@ -271,16 +348,24 @@ Syd Adams, Josh Wilson
    <type>select</type>
 <object-name>rng.003</object-name>
 <condition>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>2</value>
+		</equals>
+	</and>
+<!---   
 <and>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
 <equals>
 <property>/instrumentation/wxradar/switch</property>
 <value>on</value>
 </equals>
 </and>
+-->
 </condition>
  </animation>
 
@@ -289,10 +374,14 @@ Syd Adams, Josh Wilson
 <object-name>wxr.annun</object-name>
 <condition>
 <and>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>2</value>
+		</equals>
 <equals>
 <property>/instrumentation/wxradar/switch</property>
 <value>on</value>
@@ -348,6 +437,10 @@ Syd Adams, Josh Wilson
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+ <property>instrumentation/wxradar/display-mode</property>
+ <value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -419,6 +512,10 @@ Syd Adams, Josh Wilson
 <value>0</value>
 </equals>
 <equals>
+<property>instrumentation/wxradar/display-mode</property>
+<value>2</value>
+</equals>
+<equals>
 <property>instrumentation/radar/range[0]</property>
 <value>20</value>
 </equals>
@@ -486,6 +583,10 @@ Syd Adams, Josh Wilson
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -557,6 +658,10 @@ Syd Adams, Josh Wilson
 <value>0</value>
 </equals>
 <equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
+<equals>
 <property>instrumentation/radar/range[0]</property>
 <value>80</value>
 </equals>
@@ -624,6 +729,10 @@ Syd Adams, Josh Wilson
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -695,6 +804,10 @@ Syd Adams, Josh Wilson
 <value>0</value>
 </equals>
 <equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
+<equals>
 <property>instrumentation/radar/range[0]</property>
 <value>320</value>
 </equals>
@@ -764,6 +877,10 @@ Syd Adams, Josh Wilson
 <value>0</value>
 </equals>
 <equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
+<equals>
 <property>instrumentation/radar/range[0]</property>
 <value>640</value>
 </equals>
@@ -828,9 +945,17 @@ Syd Adams, Josh Wilson
 <object-name>nav1a</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -842,7 +967,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav/nav-distance[0]</property>
-<value>25000</value>
+<value>18520</value>
 </less-than>
 </and>
 </condition>
@@ -929,9 +1054,17 @@ Syd Adams, Josh Wilson
 <object-name>nav2a</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -943,7 +1076,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav[1]/nav-distance[0]</property>
-<value>25000</value>
+<value>18520</value>
 </less-than>
 
 </and>
@@ -1031,9 +1164,17 @@ Syd Adams, Josh Wilson
 <object-name>nav1b</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1045,7 +1186,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav/nav-distance[0]</property>
-<value>50000</value>
+<value>37040</value>
 </less-than>
 </and>
 </condition>
@@ -1132,9 +1273,17 @@ Syd Adams, Josh Wilson
 <object-name>nav2b</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1146,7 +1295,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav[1]/nav-distance[0]</property>
-<value>50000</value>
+<value>37040</value>
 </less-than>
 </and>
 </condition>
@@ -1233,9 +1382,17 @@ Syd Adams, Josh Wilson
 <object-name>nav1c</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1247,7 +1404,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav/nav-distance[0]</property>
-<value>100000</value>
+<value>74080</value>
 </less-than>
 </and>
 </condition>
@@ -1334,9 +1491,17 @@ Syd Adams, Josh Wilson
 <object-name>nav2c</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1348,7 +1513,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav[1]/nav-distance[0]</property>
-<value>100000</value>
+<value>74080</value>
 </less-than>
 </and>
 </condition>
@@ -1435,9 +1600,17 @@ Syd Adams, Josh Wilson
 <object-name>nav1d</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1449,7 +1622,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav/nav-distance[0]</property>
-<value>200000</value>
+<value>148160</value>
 </less-than>
 
 </and>
@@ -1537,9 +1710,17 @@ Syd Adams, Josh Wilson
 <object-name>nav2d</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1551,7 +1732,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav[1]/nav-distance[0]</property>
-<value>200000</value>
+<value>148160</value>
 </less-than>
 
 </and>
@@ -1639,9 +1820,17 @@ Syd Adams, Josh Wilson
 <object-name>nav1e</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1653,7 +1842,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav/nav-distance[0]</property>
-<value>400000</value>
+<value>296320</value>
 </less-than>
 
 </and>
@@ -1741,9 +1930,17 @@ Syd Adams, Josh Wilson
 <object-name>nav2e</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1755,7 +1952,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav[1]/nav-distance[0]</property>
-<value>400000</value>
+<value>296320</value>
 </less-than>
 
 </and>
@@ -1843,9 +2040,17 @@ Syd Adams, Josh Wilson
 <object-name>nav1f</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1857,7 +2062,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav/nav-distance[0]</property>
-<value>800000</value>
+<value>592640</value>
 </less-than>
 
 </and>
@@ -1945,9 +2150,17 @@ Syd Adams, Josh Wilson
 <object-name>nav2f</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -1959,7 +2172,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav[1]/nav-distance[0]</property>
-<value>800000</value>
+<value>592640</value>
 </less-than>
 
 </and>
@@ -2047,9 +2260,17 @@ Syd Adams, Josh Wilson
 <object-name>nav1g</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -2061,7 +2282,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav/nav-distance[0]</property>
-<value>1600000</value>
+<value>1185280</value>
 </less-than>
 </and>
 </condition>
@@ -2148,9 +2369,17 @@ Syd Adams, Josh Wilson
 <object-name>nav2g</object-name>
 <condition>
 <and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
 <equals>
 <property>sim/current-view/view-number</property>
 <value>0</value>
+</equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
 </equals>
 <equals>
 <property>instrumentation/radar/range[0]</property>
@@ -2162,7 +2391,7 @@ Syd Adams, Josh Wilson
 </equals>
 <less-than>
 <property>instrumentation/nav[1]/nav-distance[0]</property>
-<value>1600000</value>
+<value>1185280</value>
 </less-than>
 </and>
 </condition>
@@ -2248,10 +2477,26 @@ Syd Adams, Josh Wilson
 <type>select</type>
 <object-name>adf</object-name>
 <condition>
+<and>
 <equals>
 <property>instrumentation/adf/in-range</property>
 <value>true</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
+<or>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>1</value>
+	</equals>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>1</value>
+	</equals>
+</or>
+</and>
 </condition>
  </animation>
 
@@ -2275,10 +2520,26 @@ Syd Adams, Josh Wilson
 <type>select</type>
 <object-name>adf2</object-name>
 <condition>
+<and>
 <equals>
 <property>instrumentation/adf/in-range</property>
 <value>true</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
+<or>
+	<equals>
+		<property>/instrumentation/efis/pfd-left-switch</property>
+		<value>1</value>
+	</equals>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>1</value>
+	</equals>
+</or>
+</and>
 </condition>
  </animation>
 
@@ -2314,6 +2575,252 @@ Syd Adams, Josh Wilson
    </center>
 </animation>
 
+<animation>
+	<type>select</type>
+	<object-name>adfllabel</object-name>
+	<object-name>adfl.001</object-name>
+	<object-name>adfl.002</object-name>
+	<object-name>adfl.003</object-name>
+	<object-name>adfidl1</object-name>
+	<object-name>adfidl2</object-name>
+	<object-name>adfidl3</object-name>
+	<object-name>adfidl4</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/adf/in-range</property>
+				<value>true</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>2</value>
+			</equals>
+				<equals>
+					<property>/instrumentation/efis/pfd-left-switch</property>
+					<value>1</value>
+				</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfl.003</object-name>
+	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
+	<factor>0.10</factor>
+	<step>1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfl.002</object-name>
+	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfl.001</object-name>
+	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidl1</object-name>
+	<property>/instrumentation/adf/ident-asc1</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidl2</object-name>
+	<property>/instrumentation/adf/ident-asc2</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidl3</object-name>
+	<property>/instrumentation/adf/ident-asc3</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidl4</object-name>
+	<property>/instrumentation/adf/ident-asc4</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>adfrlabel</object-name>
+	<object-name>adfr.001</object-name>
+	<object-name>adfr.002</object-name>
+	<object-name>adfr.003</object-name>
+	<object-name>adfidr1</object-name>
+	<object-name>adfidr2</object-name>
+	<object-name>adfidr3</object-name>
+	<object-name>adfidr4</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/adf/in-range</property>
+				<value>true</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>2</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/efis/pfd-right-switch</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfr.003</object-name>
+	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
+	<factor>0.10</factor>
+	<step>1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfr.002</object-name>
+	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfr.001</object-name>
+	<property>instrumentation/adf/indicated-bearing-deg[0]</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidr1</object-name>
+	<property>/instrumentation/adf/ident-asc1</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidr2</object-name>
+	<property>/instrumentation/adf/ident-asc2</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidr3</object-name>
+	<property>/instrumentation/adf/ident-asc3</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>adfidr4</object-name>
+	<property>/instrumentation/adf/ident-asc4</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
 <!-- AI RADAR -->
 <!-- AI-->
 
@@ -2326,10 +2833,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/ai/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/ai/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2387,10 +2902,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/ai[1]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/ai[1]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2448,10 +2971,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/ai[2]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/ai[2]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2509,10 +3040,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/ai[3]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/ai[3]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2570,10 +3109,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/ai[4]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/ai[4]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2631,10 +3178,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/ai[5]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/ai[5]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2693,10 +3248,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/mp/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/mp/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2754,10 +3317,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/mp[1]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/mp[1]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2815,10 +3386,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/mp[2]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/mp[2]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2876,10 +3455,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/mp[3]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/mp[3]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2937,10 +3524,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/mp[4]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/mp[4]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -2998,10 +3593,18 @@ Syd Adams, Josh Wilson
 <property>sim/current-view/view-number</property>
 <value>0</value>
 </equals>
+<equals>
+	<property>instrumentation/wxradar/display-mode</property>
+	<value>2</value>
+</equals>
 <greater-than>
 <property>instrumentation/radar/mp[5]/norm-dist[0]</property>
 <value>0</value>
 </greater-than>
+<less-than>
+	<property>instrumentation/radar/mp[5]/norm-dist[0]</property>
+	<value>1</value>
+</less-than>
 </and>
 </condition>
  </animation>
@@ -3053,11 +3656,22 @@ Syd Adams, Josh Wilson
  <animation>
   <type>select</type>
   <object-name>vorllabel</object-name>
+  <object-name>vorl.001</object-name>
+  <object-name>vorl.002</object-name>
+  <object-name>vorl.003</object-name>
   <condition>
   <and>
+	  <equals>
+		  <property>/instrumentation/efis/pfd-left-switch</property>
+		  <value>-1</value>
+	  </equals>
     <equals>
      <property>sim/current-view/view-number</property>
      <value>0</value>
+    </equals>
+    <equals>
+	    <property>instrumentation/wxradar/display-mode</property>
+	    <value>2</value>
     </equals>
     <equals>
       <property>/instrumentation/nav[0]/nav-loc</property>
@@ -3069,13 +3683,63 @@ Syd Adams, Josh Wilson
  </animation>
 
  <animation>
+	 <type>textranslate</type>
+	 <object-name>vorl.003</object-name>
+	 <property>instrumentation/nav/bearing-deg</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>vorl.002</object-name>
+	 <property>instrumentation/nav/bearing-deg</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>vorl.001</object-name>
+	 <property>instrumentation/nav/bearing-deg</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
   <type>select</type>
   <object-name>vorrlabel</object-name>
+  <object-name>vorr.001</object-name>
+  <object-name>vorr.002</object-name>
+  <object-name>vorr.003</object-name>
   <condition>
   <and>
+	  <equals>
+		  <property>/instrumentation/efis/pfd-right-switch</property>
+		  <value>-1</value>
+	  </equals>
     <equals>
      <property>sim/current-view/view-number</property>
      <value>0</value>
+    </equals>
+    <equals>
+	    <property>instrumentation/wxradar/display-mode</property>
+	    <value>2</value>
     </equals>
     <equals>
       <property>/instrumentation/nav[1]/nav-loc</property>
@@ -3087,13 +3751,63 @@ Syd Adams, Josh Wilson
  </animation>
 
  <animation>
+	 <type>textranslate</type>
+	 <object-name>vorr.003</object-name>
+	 <property>instrumentation/nav[1]/bearing-deg</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>vorr.002</object-name>
+	 <property>instrumentation/nav[1]/bearing-deg</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>vorr.001</object-name>
+	 <property>instrumentation/nav[1]/bearing-deg</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
   <type>select</type>
   <object-name>ilsllabel</object-name>
+  <object-name>ilsl.001</object-name>
+  <object-name>ilsl.002</object-name>
+  <object-name>ilsl.003</object-name>
   <condition>
   <and>
+	  <equals>
+		  <property>/instrumentation/efis/pfd-left-switch</property>
+		  <value>-1</value>
+	  </equals>
     <equals>
      <property>sim/current-view/view-number</property>
      <value>0</value>
+    </equals>
+    <equals>
+	    <property>instrumentation/wxradar/display-mode</property>
+	    <value>2</value>
     </equals>
     <property>/instrumentation/nav[0]/nav-loc</property>
     <property>/instrumentation/nav[0]/in-range</property>
@@ -3102,13 +3816,63 @@ Syd Adams, Josh Wilson
  </animation>
 
  <animation>
+	 <type>textranslate</type>
+	 <object-name>ilsl.003</object-name>
+	 <property>instrumentation/nav/radials/mag-target-radial-deg[0]</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ilsl.002</object-name>
+	 <property>instrumentation/nav/radials/mag-target-radial-deg[0]</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ilsl.001</object-name>
+	 <property>instrumentation/nav/radials/mag-target-radial-deg[0]</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
   <type>select</type>
   <object-name>ilsrlabel</object-name>
+  <object-name>ilsr.001</object-name>
+  <object-name>ilsr.002</object-name>
+  <object-name>ilsr.003</object-name>
   <condition>
   <and>
+	  <equals>
+		  <property>/instrumentation/efis/pfd-right-switch</property>
+		  <value>-1</value>
+	  </equals>
     <equals>
      <property>sim/current-view/view-number</property>
      <value>0</value>
+    </equals>
+    <equals>
+	    <property>instrumentation/wxradar/display-mode</property>
+	    <value>2</value>
     </equals>
     <property>/instrumentation/nav[1]/nav-loc</property>
     <property>/instrumentation/nav[1]/in-range</property>
@@ -3117,13 +3881,62 @@ Syd Adams, Josh Wilson
  </animation>
 
  <animation>
+	 <type>textranslate</type>
+	 <object-name>ilsr.003</object-name>
+	 <property>instrumentation/nav[1]/radials/mag-target-radial-deg[0]</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ilsr.002</object-name>
+	 <property>instrumentation/nav[1]/radials/mag-target-radial-deg[0]</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>ilsr.001</object-name>
+	 <property>instrumentation/nav[1]/radials/mag-target-radial-deg[0]</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
    <type>select</type>
    <object-name>navidl1</object-name>
    <condition>
+   <and>
+	   <equals>
+		   <property>/instrumentation/efis/pfd-left-switch</property>
+		   <value>-1</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+   </and>
   </condition>
  </animation>
 
@@ -3145,10 +3958,20 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>navidl2</object-name>
    <condition>
+   <and>	   
+	   <equals>
+		   <property>/instrumentation/efis/pfd-left-switch</property>
+		   <value>-1</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+   </and>
   </condition>
  </animation>
 
@@ -3170,10 +3993,20 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>navidl3</object-name>
    <condition>
+   <and>	   
+	   <equals>
+		   <property>/instrumentation/efis/pfd-left-switch</property>
+		   <value>-1</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+   </and>
   </condition>
  </animation>
 
@@ -3195,10 +4028,20 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>navidl4</object-name>
    <condition>
+   <and>	   
+	   <equals>
+		   <property>/instrumentation/efis/pfd-left-switch</property>
+		   <value>-1</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+   </and>   
   </condition>
  </animation>
 
@@ -3220,10 +4063,20 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>navidr1</object-name>
    <condition>
+   <and>	   
+	   <equals>
+		   <property>/instrumentation/efis/pfd-right-switch</property>
+		   <value>-1</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+</and>
   </condition>
  </animation>
 
@@ -3245,10 +4098,20 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>navidr2</object-name>
    <condition>
+	   <and>
+		   <equals>
+			   <property>/instrumentation/efis/pfd-right-switch</property>
+			   <value>-1</value>
+		   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+</and>
   </condition>
  </animation>
 
@@ -3270,10 +4133,20 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>navidr3</object-name>
    <condition>
+<and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+</and>
   </condition>
  </animation>
 
@@ -3295,10 +4168,20 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>navidr4</object-name>
    <condition>
+<and>
+	<equals>
+		<property>/instrumentation/efis/pfd-right-switch</property>
+		<value>-1</value>
+	</equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/wxradar/display-mode</property>
+	   <value>2</value>
+   </equals>
+</and>
   </condition>
  </animation>
 
@@ -3316,6 +4199,3310 @@ Syd Adams, Josh Wilson
   </axis>
  </animation>
 
+ <!-- VOR mode indications -->
+<animation>
+	<type>select</type>
+	<!--group-name>vorscreen</group-name-->
+	<object-name>vor_background</object-name>
+	<object-name>vor_rose</object-name>
+	<object-name>vor_arrow1</object-name>
+	<object-name>vor_arrow2</object-name>
+	<object-name>vor_arrow3</object-name>
+	<object-name>vor_maglabel</object-name>
+	<object-name>vor_hdglabel</object-name>
+	<object-name>vor_locindex</object-name>
+	<object-name>vor_hdg1</object-name>
+	<object-name>vor_hdg2</object-name>
+	<object-name>vor_hdg3</object-name>
+	<object-name>vor_bug</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>0</value>
+			</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_vorllabel</object-name>
+	<condition>
+		<and>
+			<or>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>0</value>
+			</equals>
+			</or>
+			<equals>
+				<property>/instrumentation/nav[0]/nav-loc</property>
+				<value>false</value>
+			</equals>
+			<property>/instrumentation/nav[0]/in-range</property>
+			<value>true</value>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_vorrlabel</object-name>
+	<condition>
+		<and>
+			<or>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>0</value>
+			</equals>
+			</or>
+			<equals>
+				<property>/instrumentation/nav[1]/nav-loc</property>
+				<value>false</value>
+			</equals>
+			<property>/instrumentation/nav[1]/in-range</property>
+			<value>true</value>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_ilsllabel</object-name>
+	<condition>
+		<and>
+			<or>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>0</value>
+			</equals>
+		        </or>
+			<equals>
+				<property>/instrumentation/nav[0]/nav-loc</property>
+				<value>true</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/nav[0]/in-range</property>
+				<value>true</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_ilsrlabel</object-name>
+	<condition>
+		<and>
+			<or>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>0</value>
+			</equals>
+		        </or>
+			<equals>
+				<property>/instrumentation/nav[1]/nav-loc</property>
+				<value>true</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/nav[1]/in-range</property>
+				<value>true</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_bug</object-name>
+	<property>/autopilot/settings/heading-bug-deg</property>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_locindex</object-name>
+	<property>/instrumentation/nav[0]/radials/selected-deg</property>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_arrow1</object-name>
+	<property>/instrumentation/nav[0]/radials/selected-deg</property>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_arrow2</object-name>
+	<property>/instrumentation/nav[0]/radials/selected-deg</property>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_arrow3</object-name>
+	<property>/instrumentation/nav[0]/radials/selected-deg</property>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
 
 
+<animation>
+	<type>rotate</type>
+	<object-name>vor_bug</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_locindex</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_arrow1</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_arrow2</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>vor_arrow3</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>vor_arrow2</object-name>
+	<property>/instrumentation/nav[0]/heading-needle-deflection</property>
+	<factor>0.003875</factor>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_gsindex</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/nav[0]/has-gs</property>
+				<value>true</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/nav[0]/in-range</property>
+				<value>true</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_gsarrow</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/nav[0]/has-gs</property>
+				<value>true</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/nav[0]/in-range</property>
+				<value>true</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>vor_gsarrow</object-name>
+	<property>/instrumentation/nav[0]/gs-needle-deflection</property>
+	<factor>0.003372</factor>
+	<min-m>-0.03372</min-m>
+	<max-m>0.03372</max-m>
+	<axis>
+		<x>0</x>
+		<y>0</y>
+		<z>1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_dmellabel</object-name>
+	<object-name>vor_dot</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<not-equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>3</value>
+			</not-equals>
+			<equals>
+				<property>instrumentation/dme/in-range</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+<object-name>vor_dmel1</object-name>
+<condition>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<not-equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>3</value>
+		</not-equals>
+		<equals>
+			<property>instrumentation/dme/in-range</property>
+			<value>1</value>
+		</equals>
+	</and>
+</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_dmel1</object-name>
+	<property>/instrumentation/dme[0]/indicated-distance-nm</property>
+	<factor>1.00</factor>
+	<step>0.1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+<object-name>vor_dmel2</object-name>
+<condition>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<not-equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>3</value>
+		</not-equals>
+		<equals>
+			<property>instrumentation/dme/in-range</property>
+			<value>1</value>
+		</equals>
+	</and>
+</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_dmel2</object-name>
+	<property>/instrumentation/dme[0]/indicated-distance-nm</property>
+	<factor>0.10</factor>
+	<step>1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+<object-name>vor_dmel3</object-name>
+<condition>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<not-equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>3</value>
+		</not-equals>
+		<equals>
+			<property>instrumentation/dme/in-range</property>
+			<value>1</value>
+		</equals>
+	</and>
+</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_dmel3</object-name>
+	<property>/instrumentation/dme[0]/indicated-distance-nm</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+<object-name>vor_dmel4</object-name>
+<condition>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<not-equals>
+			<property>instrumentation/wxradar/display-mode</property>
+			<value>3</value>
+		</not-equals>
+		<equals>
+			<property>instrumentation/dme/in-range</property>
+			<value>1</value>
+		</equals>
+	</and>
+</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_dmel4</object-name>
+	<property>/instrumentation/dme[0]/indicated-distance-nm</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidl1</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidl1</object-name>
+	<property>/instrumentation/nav[0]/nav-id_asc1</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidl2</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidl2</object-name>
+	<property>/instrumentation/nav[0]/nav-id_asc2</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidl3</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidl3</object-name>
+	<property>/instrumentation/nav[0]/nav-id_asc3</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidl4</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidl4</object-name>
+	<property>/instrumentation/nav[0]/nav-id_asc4</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidr1</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidr1</object-name>
+	<property>/instrumentation/nav[1]/nav-id_asc1</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidr2</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidr2</object-name>
+	<property>/instrumentation/nav[1]/nav-id_asc2</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidr3</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidr3</object-name>
+	<property>/instrumentation/nav[1]/nav-id_asc3</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_navidr4</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<or>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>instrumentation/wxradar/display-mode</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_navidr4</object-name>
+	<property>/instrumentation/nav[1]/nav-id_asc4</property>
+	<factor>0.03125</factor>
+	<step>1</step>
+	<offset>-1.0</offset>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>texrotate</type>
+	<object-name>vor_rose</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<center>
+		<x>0.5</x>
+		<y>0.5</y>
+		<z>0.0</z>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>0</y>
+		<z>-1</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_hdg1</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<factor>0.10</factor>
+	<step>1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_hdg2</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_hdg3</object-name>
+	<property>/orientation/heading-magnetic-deg</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>vor_gsp</object-name>
+	<object-name>tas_gsp</object-name>
+	<object-name>vor_gspd1</object-name>
+	<object-name>vor_gspd2</object-name>
+	<object-name>vor_gspd3</object-name>
+	<object-name>vor_tas1</object-name>
+	<object-name>vor_tas2</object-name>
+	<object-name>vor_tas3</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>instrumentation/wxradar/display-mode</property>
+				<value>2</value>
+			</equals>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_gspd1</object-name>
+	<!--property>/instrumentation/gps/indicated-ground-speed-kt</property-->
+	<property>/instrumentation/flightdirector/ground-speed-kt</property>
+	<factor>0.10</factor>
+	<step>1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_gspd2</object-name>
+	<!--property>/instrumentation/gps/indicated-ground-speed-kt</property-->
+        <property>/instrumentation/flightdirector/ground-speed-kt</property>
+	<factor>0.01</factor>
+	<step>10</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_gspd3</object-name>
+	<!--property>/instrumentation/gps/indicated-ground-speed-kt</property-->
+        <property>/instrumentation/flightdirector/ground-speed-kt</property>
+	<factor>0.001</factor>
+	<step>100</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_tas1</object-name>
+	<!--property>/instrumentation/gps/indicated-ground-speed-kt</property-->
+<property>/instrumentation/flightdirector/TAS-kt</property>
+<factor>0.10</factor>
+<step>1</step>
+<axis>
+	<x>0</x>
+	<y>1</y>
+	<z>0</z>
+</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_tas2</object-name>
+	<!--property>/instrumentation/gps/indicated-ground-speed-kt</property-->
+<property>/instrumentation/flightdirector/TAS-kt</property>
+<factor>0.01</factor>
+<step>10</step>
+<axis>
+	<x>0</x>
+	<y>1</y>
+	<z>0</z>
+</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>vor_tas3</object-name>
+	<!--property>/instrumentation/gps/indicated-ground-speed-kt</property-->
+<property>/instrumentation/flightdirector/TAS-kt</property>
+<factor>0.001</factor>
+<step>100</step>
+<axis>
+	<x>0</x>
+	<y>1</y>
+	<z>0</z>
+</axis>
+</animation>
+
+<!--
+    
+    <animation>
+	    <type>texmultiple</type>
+	    <object-name>attitude</object-name>
+	    <transform>
+		    <property>/orientation/pitch-deg</property>
+		    <subtype>textranslate</subtype>
+		    <factor>0.00933</factor>
+		    <axis>
+			    <x>0</x>
+			    <y>1</y>
+			    <z>0</z>
+		    </axis>
+	    </transform>
+	    <transform>
+		    <property>/orientation/roll-deg</property>
+		    <subtype>texrotate</subtype>
+		    <center>
+			    <x>0.503</x>
+			    <y>0.500</y>
+		    </center>
+		    <axis>
+			    <x>0</x>
+			    <y>0</y>
+			    <z>-1</z>
+		    </axis>
+	    </transform>
+    </animation>
+    
+    <animation>
+	    <type>texmultiple</type>
+	    <object-name>horizon</object-name>
+	    <transform>
+		    <property>/orientation/pitch-deg</property>
+		    <subtype>textranslate</subtype>
+		    <factor>0.00115</factor>
+		    <axis>
+			    <x>0</x>
+			    <y>1</y>
+			    <z>0</z>
+		    </axis>
+	    </transform>
+	    <transform>
+		    <property>/orientation/roll-deg</property>
+		    <subtype>texrotate</subtype>
+		    <center>
+			    <x>0.169</x>
+			    <y>0.805</y>
+		    </center>
+		    <axis>
+			    <x>0</x>
+			    <y>0</y>
+			    <z>-1</z>
+		    </axis>
+	    </transform>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>alt1</object-name>
+	    <property>/position/altitude-ft</property>
+	    <factor>0.01</factor>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>alt2</object-name>
+	    <property>/position/altitude-ft</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>alt3</object-name>
+	    <property>/position/altitude-ft</property>
+	    <factor>0.0001</factor>
+	    <step>1000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>alt4</object-name>
+	    <property>/position/altitude-ft</property>
+	    <factor>0.00001</factor>
+	    <step>10000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>asitape1</object-name>
+	    <condition>
+		    <less-than>
+			    <property>/velocities/airspeed-kt</property>
+			    <value>480.01</value>
+		    </less-than>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>asitape2</object-name>
+	    <condition>
+		    <greater-than>
+			    <property>/velocities/airspeed-kt</property>
+			    <value>479.99</value>
+		    </greater-than>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>asitape1</object-name>
+	    <property>/velocities/airspeed-kt</property>
+	    <factor>0.001665</factor>
+	    <min>0.0499</min>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>asitape2</object-name>
+	    <property>/velocities/airspeed-kt</property>
+	    <factor>0.001665</factor>
+	    <min>0.0499</min>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>alttapeindex1</object-name>
+	    <condition>
+		    <less-than>
+			    <property>/position/altitude-ft</property>
+			    <value>2100.01</value>
+		    </less-than>
+	    </condition>
+    </animation>
+    
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>alttapeindex2</object-name>
+	    <condition>
+		    <greater-than>
+			    <property>/position/altitude-ft</property>
+			    <value>2099.99</value>
+		    </greater-than>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>alttapeindex1</object-name>
+	    <property>/position/altitude-ft</property>
+	    <factor>0.0003333</factor>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>alttapeindex2</object-name>
+	    <property>/position/altitude-ft</property>
+	    <factor>0.0003333</factor>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>texmultiple</type>
+	    <object-name>alttape</object-name>
+	    <transform>
+		    <subtype>textranslate</subtype>
+		    <property>/position/altitude-ft</property>
+		    <factor>0.0003333</factor>
+		    <axis>
+			    <x>0</x>
+			    <y>1</y>
+			    <z>0</z>
+		    </axis>
+	    </transform>
+	    <transform>
+		    <subtype>textranslate</subtype>
+		    <property>/position/altitude-ft</property>
+		    <step>2100.0</step>
+		    <factor>0.0000186012</factor>
+		    <axis>
+			    <x>1</x>
+			    <y>0</y>
+			    <z>0</z>
+		    </axis>
+	    </transform>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>apalt1</object-name>
+	    <property>/autopilot/settings/altitude-ft</property>
+	    <factor>0.10</factor>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>apalt2</object-name>
+	    <property>/autopilot/settings/altitude-ft</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>apalt3</object-name>
+	    <property>/autopilot/settings/altitude-ft</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>apalt4</object-name>
+	    <property>/autopilot/settings/altitude-ft</property>
+	    <factor>0.0001</factor>
+	    <step>1000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>apalt5</object-name>
+	    <property>/autopilot/settings/altitude-ft</property>
+	    <factor>0.00001</factor>
+	    <step>10000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>aphdg1</object-name>
+	    <property>/autopilot/settings/heading-bug-deg</property>
+	    <factor>0.10</factor>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>aphdg2</object-name>
+	    <property>/autopilot/settings/heading-bug-deg</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>aphdg3</object-name>
+	    <property>/autopilot/settings/heading-bug-deg</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    -->
+    <animation>
+	    <type>select</type>
+	    <object-name>wp_id1</object-name>
+	    <object-name>wp_id2</object-name>
+	    <object-name>wp_id3</object-name>
+	    <object-name>wp_id4</object-name>
+	    <object-name>wp_id5</object-name>
+	    <object-name>wp_dme1</object-name>
+	    <object-name>wp_dme2</object-name>
+	    <object-name>wp_dme3</object-name>
+	    <object-name>wp_dme4</object-name>
+	    <object-name>wp_dme5</object-name>
+	    <object-name>wp_dot</object-name>
+	    <object-name>eta_dots</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <not-equals>
+				    <property>autopilot/route-manager/route/num</property>
+				    <value>0</value>
+			    </not-equals>
+			    <or>
+				    <equals>
+					    <property>instrumentation/wxradar/display-mode</property>
+					    <value>1</value>
+				    </equals>
+				    <equals>
+					    <property>instrumentation/wxradar/display-mode</property>
+					    <value>2</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_id1</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_id2</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_id3</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_id4</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_id5</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_dme1</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_dme2</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.10</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_dme3</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_dme4</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_dme5</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.0001</factor>
+	    <step>1000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>wp_eta1</object-name>
+	    <object-name>wp_eta2</object-name>
+	    <object-name>wp_eta3</object-name>
+	    <object-name>wp_eta4</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <not-equals>
+				    <property>autopilot/route-manager/route/num</property>
+				    <value>0</value>
+			    </not-equals>
+			    <or>
+				    <equals>
+					    <property>instrumentation/wxradar/display-mode</property>
+					    <value>1</value>
+				    </equals>
+				    <equals>
+					    <property>instrumentation/wxradar/display-mode</property>
+					    <value>2</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_eta1</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc4</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_eta2</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc3</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_eta3</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc2</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp_eta4</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc1</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+<!-- Flight Plan-->    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_title</object-name>
+	    <object-name>fp_trkarrow</object-name>
+	    <object-name>fp_trk</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n1</object-name>
+	    <object-name>fp1_id1</object-name>
+	    <object-name>fp1_id2</object-name>
+	    <object-name>fp1_id3</object-name>
+	    <object-name>fp1_id4</object-name>
+	    <object-name>fp1_id5</object-name>
+	    <object-name>fp1_dot</object-name>
+	    <object-name>fp1_dme1</object-name>
+	    <object-name>fp1_dme2</object-name>
+	    <object-name>fp1_dme3</object-name>
+	    <object-name>fp1_dme4</object-name>
+	    <object-name>fp1_dme5</object-name>
+	    <object-name>fp1_eta_dots</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>1</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>1</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_id1</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_id2</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_id3</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_id4</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_id5</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_dme1</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_dme2</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.10</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_dme3</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_dme4</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_dme5</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.0001</factor>
+	    <step>1000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp1_eta1</object-name>
+	    <object-name>fp1_eta2</object-name>
+	    <object-name>fp1_eta3</object-name>
+	    <object-name>fp1_eta4</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>1</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>1</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_eta1</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc4</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_eta2</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc3</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_eta3</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc2</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp1_eta4</object-name>
+	    <property>/autopilot/route-manager/wp/eta-asc1</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n2</object-name>
+	    <object-name>fp2_id1</object-name>
+	    <object-name>fp2_id2</object-name>
+	    <object-name>fp2_id3</object-name>
+	    <object-name>fp2_id4</object-name>
+	    <object-name>fp2_id5</object-name>
+	    <object-name>fp2_dot</object-name>
+	    <object-name>fp2_dme1</object-name>
+	    <object-name>fp2_dme2</object-name>
+	    <object-name>fp2_dme3</object-name>
+	    <object-name>fp2_dme4</object-name>
+	    <object-name>fp2_dme5</object-name>
+	    <object-name>fp2_eta_dots</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[1]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>2</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>2</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_id1</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_id2</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_id3</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_id4</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_id5</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_dme1</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_dme2</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.10</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_dme3</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_dme4</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_dme5</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.0001</factor>
+	    <step>1000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp2_eta1</object-name>
+	    <object-name>fp2_eta2</object-name>
+	    <object-name>fp2_eta3</object-name>
+	    <object-name>fp2_eta4</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[1]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>2</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>2</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_eta1</object-name>
+	    <property>/autopilot/route-manager/wp[1]/eta-asc4</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_eta2</object-name>
+	    <property>/autopilot/route-manager/wp[1]/eta-asc3</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_eta3</object-name>
+	    <property>/autopilot/route-manager/wp[1]/eta-asc2</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp2_eta4</object-name>
+	    <property>/autopilot/route-manager/wp[1]/eta-asc1</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n3</object-name>
+	    <object-name>fp3_id1</object-name>
+	    <object-name>fp3_id2</object-name>
+	    <object-name>fp3_id3</object-name>
+	    <object-name>fp3_id4</object-name>
+	    <object-name>fp3_id5</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[2]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>3</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>3</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp3_id1</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp3_id2</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp3_id3</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp3_id4</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp3_id5</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n4</object-name>
+	    <object-name>fp4_id1</object-name>
+	    <object-name>fp4_id2</object-name>
+	    <object-name>fp4_id3</object-name>
+	    <object-name>fp4_id4</object-name>
+	    <object-name>fp4_id5</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[3]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>4</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>4</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp4_id1</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp4_id2</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp4_id3</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp4_id4</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp4_id5</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n5</object-name>
+	    <object-name>fp5_id1</object-name>
+	    <object-name>fp5_id2</object-name>
+	    <object-name>fp5_id3</object-name>
+	    <object-name>fp5_id4</object-name>
+	    <object-name>fp5_id5</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[4]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>5</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>5</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp5_id1</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp5_id2</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp5_id3</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp5_id4</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp5_id5</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n6</object-name>
+	    <object-name>fp6_id1</object-name>
+	    <object-name>fp6_id2</object-name>
+	    <object-name>fp6_id3</object-name>
+	    <object-name>fp6_id4</object-name>
+	    <object-name>fp6_id5</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[5]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>6</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>6</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp6_id1</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp6_id2</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp6_id3</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp6_id4</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp6_id5</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n7</object-name>
+	    <object-name>fp7_id1</object-name>
+	    <object-name>fp7_id2</object-name>
+	    <object-name>fp7_id3</object-name>
+	    <object-name>fp7_id4</object-name>
+	    <object-name>fp7_id5</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[6]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+				    <greater-than>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>7</value>
+				    </greater-than>
+				    <equals>
+					    <property>/autopilot/route-manager/route/num</property>
+					    <value>7</value>
+				    </equals>
+			    </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp7_id1</object-name>
+	    <property>/autopilot/route-manager/route/wp[6]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp7_id2</object-name>
+	    <property>/autopilot/route-manager/route/wp[6]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp7_id3</object-name>
+	    <property>/autopilot/route-manager/route/wp[6]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp7_id4</object-name>
+	    <property>/autopilot/route-manager/route/wp[6]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp7_id5</object-name>
+	    <property>/autopilot/route-manager/route/wp[6]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_n8</object-name>
+	    <object-name>fp8_id1</object-name>
+	    <object-name>fp8_id2</object-name>
+	    <object-name>fp8_id3</object-name>
+	    <object-name>fp8_id4</object-name>
+	    <object-name>fp8_id5</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/autopilot/route-manager/wp[7]/id</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <or>
+			    <greater-than>
+				    <property>/autopilot/route-manager/route/num</property>
+				    <value>8</value>
+			    </greater-than>
+			    <equals>
+				    <property>/autopilot/route-manager/route/num</property>
+				    <value>8</value>
+			    </equals>
+		            </or>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp8_id1</object-name>
+	    <property>/autopilot/route-manager/route/wp[7]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp8_id2</object-name>
+	    <property>/autopilot/route-manager/route/wp[7]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp8_id3</object-name>
+	    <property>/autopilot/route-manager/route/wp[7]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp8_id4</object-name>
+	    <property>/autopilot/route-manager/route/wp[7]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp8_id5</object-name>
+	    <property>/autopilot/route-manager/route/wp[7]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_dest</object-name>
+	    <object-name>fpd_id1</object-name>
+	    <object-name>fpd_id2</object-name>
+	    <object-name>fpd_id3</object-name>
+	    <object-name>fpd_id4</object-name>
+	    <object-name>fpd_id5</object-name>
+	    <object-name>fpd_dot</object-name>
+	    <object-name>fpd_dme1</object-name>
+	    <object-name>fpd_dme2</object-name>
+	    <object-name>fpd_dme3</object-name>
+	    <object-name>fpd_dme4</object-name>
+	    <object-name>fpd_dme5</object-name>
+	    <object-name>fpd_eta_dots</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <greater-than>
+				    <property>/autopilot/route-manager/route/num</property>
+				    <value>2</value>
+			    </greater-than>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_id1</object-name>
+	    <property>/autopilot/route-manager/wp-last/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_id2</object-name>
+	    <property>/autopilot/route-manager/wp-last/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_id3</object-name>
+	    <property>/autopilot/route-manager/wp-last/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_id4</object-name>
+	    <property>/autopilot/route-manager/wp-last/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_id5</object-name>
+	    <property>/autopilot/route-manager/wp-last/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_dme1</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_dme2</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.10</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_dme3</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_dme4</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_dme5</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.0001</factor>
+	    <step>1000</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fpd_eta1</object-name>
+	    <object-name>fpd_eta2</object-name>
+	    <object-name>fpd_eta3</object-name>
+	    <object-name>fpd_eta4</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <greater-than>
+				    <property>/autopilot/route-manager/route/num</property>
+				    <value>2</value>
+			    </greater-than>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_eta1</object-name>
+	    <property>/autopilot/route-manager/wp-last/eta-asc4</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_eta2</object-name>
+	    <property>/autopilot/route-manager/wp-last/eta-asc3</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_eta3</object-name>
+	    <property>/autopilot/route-manager/wp-last/eta-asc2</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fpd_eta4</object-name>
+	    <property>/autopilot/route-manager/wp-last/eta-asc1</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>fp_trkfm1</object-name>
+	    <object-name>fp_trkfm2</object-name>
+	    <object-name>fp_trkfm3</object-name>
+	    <object-name>fp_trkfm4</object-name>
+	    <object-name>fp_trkfm5</object-name>
+	    <object-name>fp_trkto1</object-name>
+	    <object-name>fp_trkto2</object-name>
+	    <object-name>fp_trkto3</object-name>
+	    <object-name>fp_trkto4</object-name>
+	    <object-name>fp_trkto5</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </equals>
+			    <not-equals>
+				    <property>/instrumentation/gps/wp/wp/ID</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <not-equals>
+				    <property>/instrumentation/gps/wp/wp/ID</property>
+				    <value>0</value>
+			    </not-equals>
+			    <not-equals>
+				    <property>/instrumentation/gps/wp/wp[1]/ID</property>
+				    <value>nil</value>
+			    </not-equals>
+			    <not-equals>
+				    <property>/instrumentation/gps/wp/wp[1]/ID</property>
+				    <value>0</value>
+			    </not-equals>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkfm1</object-name>
+	    <property>/instrumentation/gps/wp/wp/ID-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkfm2</object-name>
+	    <property>/instrumentation/gps/wp/wp/ID-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkfm3</object-name>
+	    <property>/instrumentation/gps/wp/wp/ID-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkfm4</object-name>
+	    <property>/instrumentation/gps/wp/wp/ID-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkfm5</object-name>
+	    <property>/instrumentation/gps/wp/wp/ID-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkto1</object-name>
+	    <property>/instrumentation/gps/wp/wp[1]/ID-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkto2</object-name>
+	    <property>/instrumentation/gps/wp/wp[1]/ID-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkto3</object-name>
+	    <property>/instrumentation/gps/wp/wp[1]/ID-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkto4</object-name>
+	    <property>/instrumentation/gps/wp/wp[1]/ID-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>fp_trkto5</object-name>
+	    <property>/instrumentation/gps/wp/wp[1]/ID-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>degllabel</object-name>
+	    <condition>
+		    <and>
+			    <not-equals>
+				    <property>/instrumentation/efis/pfd-left-switch</property>
+				    <value>0</value>
+			    </not-equals>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>2</value>
+			    </equals>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>degrlabel</object-name>
+	    <condition>
+		    <and>
+			    <not-equals>
+				    <property>/instrumentation/efis/pfd-right-switch</property>
+				    <value>0</value>
+			    </not-equals>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>2</value>
+			    </equals>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>driftlabel</object-name>
+	    <object-name>driftdeg</object-name>
+	    <object-name>drift_dot</object-name>
+	    <object-name>drift.002</object-name>
+	    <object-name>drift.003</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <not-equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </not-equals>
+		    </and>
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>drift_minus</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <not-equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </not-equals>
+			    <less-than>
+				    <property>instrumentation/flightdirector/currUS-deg</property>
+				    <value>0</value>
+			    </less-than>
+			    <greater-than-equals>
+				    <property>instrumentation/flightdirector/abs-US-deg</property>
+				    <value>10</value>
+			    </greater-than-equals>
+		    </and>   
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>drift_minus1</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <not-equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </not-equals>
+			    <less-than>
+				    <property>instrumentation/flightdirector/currUS-deg</property>
+				    <value>0</value>
+			    </less-than>
+			    <less-than>
+				    <property>instrumentation/flightdirector/abs-US-deg</property>
+				    <value>10</value>
+			    </less-than>
+		    </and>   
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>select</type>
+	    <object-name>drift.001</object-name>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>sim/current-view/view-number</property>
+				    <value>0</value>
+			    </equals>
+			    <not-equals>
+				    <property>instrumentation/wxradar/display-mode</property>
+				    <value>3</value>
+			    </not-equals>
+			    <greater-than-equals>
+				    <property>instrumentation/flightdirector/abs-US-deg</property>
+				    <value>10</value>
+			    </greater-than-equals>
+		    </and>   
+	    </condition>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>drift.001</object-name>
+	    <property>instrumentation/flightdirector/abs-US-deg</property>
+	    <factor>0.01</factor>
+	    <step>10.0</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>drift.002</object-name>
+	    <property>instrumentation/flightdirector/abs-US-deg</property>
+	    <factor>0.1</factor>
+	    <step>1.0</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>drift.003</object-name>
+	    <property>instrumentation/flightdirector/abs-US-deg</property>
+	    <factor>1.0</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    
 </PropertyList>

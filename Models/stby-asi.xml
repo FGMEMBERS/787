@@ -8,13 +8,36 @@
  <animation>
    <type>select</type>
    <condition>
+   <!--and-->
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <!--greater-than>
+	   <property>/systems/electrical/volts</property>
+	   <value>12</value>
+   </greater-than>
+  </and-->
   </condition>
  </animation>
 
+ <animation>
+	 <type>select</type>
+	 <object-name>StbyAsibackground</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <less-than>
+				 <property>/systems/electrical/volts</property>
+				 <value>12</value>
+			 </less-than>
+		 </and>
+	 </condition>
+ </animation>
+ 
   <animation>
   <type>material</type>
   <object-name>StbyAsi</object-name>

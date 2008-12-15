@@ -15,18 +15,41 @@
   </condition>
  </animation>
 
-  <animation>
-  <type>material</type>
-  <object-name>StbyAlt</object-name>
-  <emission>
-    <red>0.3</red>
-    <green>0.25</green>
-    <blue>0.2</blue>
-    <factor-prop>/controls/switches/map-lights</factor-prop>	
-  </emission>
-</animation>
-
-  <animation>
+ <animation>
+	 <type>select</type>
+	 <object-name>StbyAltbackground</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <less-than>
+				 <property>/systems/electrical/volts</property>
+				 <value>12</value>
+			 </less-than>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+ <type>material</type>
+ <object-name>StbyAlt</object-name>
+ <!--condition>
+ <greater-than>
+   <property>/systems/electrical/volts</property>
+   <value>12</value>
+ </greater-than>
+ </condition-->
+ <emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>/controls/switches/map-lights</factor-prop>	
+ </emission>
+ </animation>
+ 
+ <animation>
    <type>textranslate</type>
    <object-name>atxt10000</object-name>
    <property>/instrumentation/altimeter/indicated-altitude-ft</property>

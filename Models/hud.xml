@@ -764,10 +764,10 @@
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
-       <equals>
+       <greater-than>
          <property>/instrumentation/flightdirector/vnav</property>
-         <value>1</value>
-       </equals>
+         <value>0</value>
+       </greater-than>
    </and>
    </condition>
  </animation>
@@ -785,10 +785,10 @@
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
-       <equals>
+       <greater-than>
          <property>/instrumentation/flightdirector/lnav</property>
-         <value>2</value>
-       </equals>
+         <value>0</value>
+       </greater-than>
    </and>
    </condition>
  </animation>
@@ -2145,20 +2145,11 @@
    </center>
  </animation>
 
- <animation>
+ <!--animation>
    <type>translate</type>
    <object-name>FDbars</object-name>
-   <property>sim/current-view/y-offset-m[0]</property>
- <interpolation>
-    <entry>
-      <ind>0.64</ind>
-      <dep>-2</dep>
-    </entry>
-    <entry>
-      <ind>4.64</ind>
-      <dep>2</dep>
-    </entry>
-  </interpolation>
+   <property>orientation/pitch-deg</property>
+   <factor>0.0014</factor>
     <axis>
      <x>0.0</x>
      <y>0.0</y>
@@ -2169,7 +2160,7 @@
  <animation>
    <type>rotate</type>
    <object-name>FDbars</object-name>
-   <property>instrumentation/flightdirector/vbar-roll</property>
+   <property>orientation/roll-deg</property>
    <axis>
      <x>1.0</x>
      <y>0.0</y>
@@ -2180,13 +2171,13 @@
      <y-m>0</y-m>
      <z-m>0</z-m>
    </center>
- </animation>
+ </animation-->
 
  <animation>
    <type>translate</type>
    <object-name>FDbars</object-name>
-   <property>instrumentation/flightdirector/vbar-pitch</property>
-<factor>0.000816667</factor>
+   <property>/instrumentation/flightdirector/vbar-pitch</property>
+<factor>0.00104</factor>
 <axis>
      <x>0.0</x>
      <y>0.0</y>
@@ -2198,6 +2189,23 @@
      <z-m>0</z-m>
    </center>
  </animation>
+ 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>FDbars</object-name>
+	 <property>/instrumentation/flightdirector/vbar-roll</property>
+	 <axis>
+		 <x>1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+	 </center>
+ </animation>
+ 
 
  <animation>
    <type>translate</type>

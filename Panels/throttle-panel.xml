@@ -162,6 +162,7 @@
      <binding>
        <command>nasal</command>
        <script>controls.flapsDown(1)</script>
+       <script>controls.stepSlats(1)</script>
      </binding>
    </action>
 
@@ -175,6 +176,7 @@
      <binding>
        <command>nasal</command>
        <script>controls.flapsDown(-1)</script>
+       <script>controls.stepSlats(-1)</script>
      </binding>
    </action>
 

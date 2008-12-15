@@ -63,6 +63,8 @@
   <object-name>Pushbtn.002</object-name>
   <object-name>Pushbtn.003</object-name>
   <object-name>Pushbtn.004</object-name>
+  <object-name>Pushbtn.005</object-name>
+  <object-name>Pushbtn.006</object-name>
   <object-name>radio</object-name>
   <object-name>radio.001</object-name>
   <condition>
@@ -96,8 +98,8 @@
   <object-name>Cube.058</object-name>
   <object-name>OHknob.013</object-name>
   <object-name>Plane.008</object-name>
-  <object-name>Plane.018</object-name>
-  <object-name>Plane.019</object-name>
+  <!--object-name>Plane.018</object-name>
+  <object-name>Plane.019</object-name-->
   <object-name>Plane.027</object-name>
    <condition>
    <equals>
@@ -125,8 +127,8 @@
    <object-name>Bezel.013</object-name>
    <object-name>Bezel.014</object-name>
    <object-name>CDuscreen.002</object-name>
-   <object-name>dmeface</object-name>
-   <object-name>dmebezel_0</object-name>
+   <!--object-name>dmeface</object-name>
+   <object-name>dmebezel_0</object-name-->
    <condition>
    <equals>
     <property>sim/current-view/view-number</property>
@@ -235,6 +237,25 @@
  </animation>
 
  <animation>
+	 <type>select</type>
+	 <object-name>ASBtn.001</object-name>
+	 <object-name>EecL.btn.001</object-name>
+	 <object-name>EecR.btn.001</object-name>
+	 <object-name>APUGENBtn.001</object-name>
+	 <object-name>BATBtn.001</object-name>
+	 <object-name>SecExtBtn.001</object-name>
+	 <object-name>PriExtBtn.001</object-name>
+	 <object-name>LBusBtn.001</object-name>
+	 <object-name>RBusBtn.001</object-name>
+	 <condition>
+		 <equals>
+			 <property>sim/current-view/view-number</property>
+			 <value>0</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
    <type>select</type>
    <object-name>Nav.btn</object-name>
    <condition>
@@ -278,18 +299,7 @@
   </condition>
  </animation>
 
- <animation>
-   <type>select</type>
-   <object-name>Panel</object-name>
-   <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
-  </condition>
- </animation>
-
- <animation>
+ <!--animation>
    <type>select</type>
    <object-name>DMEswitch</object-name>
    <condition>
@@ -298,7 +308,7 @@
     <value>0</value>
    </equals>
   </condition>
- </animation>
+ </animation-->
 
  <animation>
    <type>select</type>
@@ -344,40 +354,6 @@
    </equals>
   </condition>
  </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>DMEswitch</object-name>
-  <property>instrumentation/dme/switch-position</property>
-    <interpolation>
-      <entry>
-        <ind>0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>1</ind>
-        <dep>35.0</dep>
-      </entry>
-      <entry>
-        <ind>2</ind>
-        <dep>90.0</dep>
-      </entry>
-      <entry>
-        <ind>3</ind>
-        <dep>150.0</dep>
-      </entry>
-    </interpolation>   
- <axis>
-    <x>-0.985</x>
-    <y>0.0</y>
-    <z>-0.174</z>
-  </axis>
-  <center>
-    <x-m>-23.565</x-m>
-    <y-m>-0.2765</y-m>
-    <z-m>1.6225</z-m>
-  </center>
-</animation> 
 
  <animation>
    <type>translate</type>
@@ -505,10 +481,53 @@
    </axis>
   </animation>
 
- <animation>
+  <!--animation>
+  <type>rotate</type>
+  <object-name>DMEswitch</object-name>
+  <property>instrumentation/dme/switch-position</property>
+  <interpolation>
+	  <entry>
+		  <ind>0</ind>
+		  <dep>0.0</dep>
+	  </entry>
+	  <entry>
+		  <ind>1</ind>
+		  <dep>35.0</dep>
+	  </entry>
+	  <entry>
+		  <ind>2</ind>
+		  <dep>90.0</dep>
+	  </entry>
+	  <entry>
+		  <ind>3</ind>
+		  <dep>150.0</dep>
+	  </entry>
+  </interpolation>   
+  <axis>
+	  <x>-0.985</x>
+	  <y>0.0</y>
+	  <z>-0.174</z>
+  </axis>
+  <center>
+	  <x-m>-23.565</x-m>
+	  <y-m>-0.2765</y-m>
+	  <z-m>1.6225</z-m>
+  </center>
+</animation--> 
+ 
+<animation>
    <type>select</type>
    <object-name>APlettering</object-name>
   <object-name>OHlettering</object-name>
+  <object-name>ASletter</object-name>
+  <object-name>ASletterBtn</object-name>
+  <object-name>ENGletter</object-name>
+  <object-name>EECletter</object-name>
+  <object-name>IGNletter</object-name>
+  <object-name>EngRSletter</object-name>
+  <object-name>EngLSletter</object-name>
+  <object-name>EecRletter</object-name>
+  <object-name>EecLletter</object-name>
    <condition>
    <equals>
     <property>sim/current-view/view-number</property>
@@ -619,17 +638,6 @@
  <animation>
    <type>select</type>
    <object-name>PitchTrim</object-name>
-   <condition>
-   <equals>
-    <property>sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>FDtoggle</object-name>
    <condition>
    <equals>
     <property>sim/current-view/view-number</property>
@@ -874,7 +882,6 @@
 
  <animation>
    <type>select</type>
-   <object-name>Btn.051</object-name>
    <object-name>Btn.052</object-name>
    <object-name>Btn.053</object-name>
    <object-name>Btn.054</object-name>
@@ -954,6 +961,8 @@
   <object-name>Pushbtn.002</object-name>
   <object-name>Pushbtn.003</object-name>
   <object-name>Pushbtn.004</object-name>
+  <object-name>Pushbtn.005</object-name>
+  <object-name>Pushbtn.006</object-name>
   <object-name>radio</object-name>
   <object-name>radio.001</object-name>
   <emission>
@@ -1011,17 +1020,6 @@
  <animation>
   <type>material</type>
   <object-name>Cube.043</object-name>
-  <emission>
-    <red>0.3</red>
-    <green>0.25</green>
-    <blue>0.2</blue>
-    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
-  </emission>
- </animation>
-
- <animation>
-  <type>material</type>
-  <object-name>FDtoggle</object-name>
   <emission>
     <red>0.3</red>
     <green>0.25</green>
@@ -1229,6 +1227,24 @@
  </animation>
 
  <animation>
+	 <type>rotate</type>
+	 <object-name>toggle</object-name>
+	 <property>instrumentation/efis/pfd-left-switch</property>
+	 <factor>20.0</factor>
+	 <offset-deg>-20</offset-deg>
+	 <center>
+		 <x-m>-23.527</x-m>
+		 <y-m>-0.4615</y-m>
+		 <z-m>1.936</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation> 
+ 
+ <animation>
   <type>material</type>
   <object-name>toggle.001</object-name>
   <emission>
@@ -1239,6 +1255,24 @@
   </emission>
  </animation>
 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>toggle.001</object-name>
+	 <property>instrumentation/efis/pfd-right-switch</property>
+	 <factor>20.0</factor>
+	 <offset-deg>-20</offset-deg>
+	 <center>
+		 <x-m>-23.527</x-m>
+		 <y-m>-0.410</y-m>
+		 <z-m>1.936</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation> 
+ 
  <animation>
   <type>material</type>
   <object-name>toggle.002</object-name>
@@ -1665,6 +1699,10 @@
    <object-name>APvs.minus2</object-name>
    <condition>
    <and>
+	   <equals>
+		   <property>instrumentation/flightdirector/fpa-mode-on</property>
+		   <value>0</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
@@ -1681,7 +1719,12 @@
    <type>select</type>
    <object-name>APvsnegative</object-name>
    <condition>
+   <or>	   
    <and>
+   <equals>
+    <property>instrumentation/flightdirector/fpa-mode-on</property>
+    <value>0</value>
+   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
@@ -1691,6 +1734,21 @@
    <value>0</value>
    </less-than>
    </and>
+   <and>
+	   <equals>
+		   <property>instrumentation/flightdirector/fpa-mode-on</property>
+		   <value>1</value>
+	   </equals>
+	   <equals>
+		   <property>sim/current-view/view-number</property>
+		   <value>0</value>
+	   </equals>
+	   <less-than>
+		   <property>instrumentation/flightdirector/fpa-deg</property>
+		   <value>0</value>
+	   </less-than>
+   </and>
+   </or>
    </condition>
  </animation>
 
@@ -1698,7 +1756,11 @@
    <type>select</type>
    <object-name>APvs.minus1</object-name>
    <condition>
-<and>
+   <and>
+	<equals>
+		<property>instrumentation/flightdirector/fpa-mode-on</property>
+		<value>0</value>
+	</equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
@@ -1711,7 +1773,7 @@
    <property>autopilot/settings/vertical-speed-fpm</property>
    <value>-1000</value>
    </greater-than>
-</and>
+   </and>
    </condition>
  </animation>
 
@@ -1720,6 +1782,10 @@
    <object-name>APvs.10000</object-name>
    <condition>
    <and>
+	   <equals>
+		   <property>instrumentation/flightdirector/fpa-mode-on</property>
+		   <value>0</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
@@ -1751,6 +1817,10 @@
    <object-name>APvs.1000</object-name>
    <condition>
    <and>
+	   <equals>
+		   <property>instrumentation/flightdirector/fpa-mode-on</property>
+		   <value>0</value>
+	   </equals>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
@@ -1780,14 +1850,20 @@
    <type>select</type>
    <object-name>APvs.100</object-name>
    <condition>
+   <and>	   
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/flightdirector/fpa-mode-on</property>
+	   <value>0</value>
+   </equals>
+  </and>
   </condition>
  </animation>
 
-    <animation>
+  <animation>
    <type>textranslate</type>
    <object-name>APvs.100</object-name>
    <property>instrumentation/efis/fixed-vs</property>
@@ -1804,14 +1880,20 @@
    <type>select</type>
    <object-name>APvs.10</object-name>
    <condition>
+   <and>	   
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/flightdirector/fpa-mode-on</property>
+	   <value>0</value>
+   </equals>
+  </and>
   </condition>
  </animation>
 
-    <animation>
+ <animation>
    <type>textranslate</type>
    <object-name>APvs.10</object-name>
    <property>instrumentation/efis/fixed-vs</property>
@@ -1828,14 +1910,20 @@
    <type>select</type>
    <object-name>APvs.1</object-name>
    <condition>
+   <and>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+	   <property>instrumentation/flightdirector/fpa-mode-on</property>
+	   <value>0</value>
+   </equals>
+  </and>
   </condition>
  </animation>
 
-    <animation>
+ <animation>
    <type>textranslate</type>
    <object-name>APvs.1</object-name>
    <property>instrumentation/efis/fixed-vs</property>
@@ -1847,7 +1935,97 @@
      <z>0</z>
    </axis>
  </animation>
-
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APfpa.100</object-name>
+	 <condition>
+		 <and>	   
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <equals>
+				 <property>instrumentation/flightdirector/fpa-mode-on</property>
+				 <value>1</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>APfpa.100</object-name>
+	 <property>instrumentation/flightdirector/fpa-val-deg</property>
+	 <factor>0.001</factor>
+	 <step>100</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APfpa.10</object-name>
+	 <condition>
+		 <and>	   
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <equals>
+				 <property>instrumentation/flightdirector/fpa-mode-on</property>
+				 <value>1</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>APfpa.10</object-name>
+	 <property>instrumentation/flightdirector/fpa-val-deg</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APfpa.1</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <equals>
+				 <property>instrumentation/flightdirector/fpa-mode-on</property>
+				 <value>1</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>textranslate</type>
+	 <object-name>APfpa.1</object-name>
+	 <property>instrumentation/flightdirector/fpa-val-deg</property>
+	 <factor>0.1</factor>
+	 <step>1</step>
+	 <axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+ 
 <animation>
 <type>select</type>
 <object-name>APtoggle</object-name>
@@ -1862,7 +2040,29 @@
  </condition>
 </animation>
 
-    <animation>
+<animation>
+	<type>select</type>
+	<object-name>FDtoggle</object-name>
+	<condition>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>FDtoggle</object-name>
+	<emission>
+		<red>0.3</red>
+		<green>0.25</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+	</emission>
+</animation>
+
+<animation>
    <type>rotate</type>
    <object-name>FDtoggle</object-name>
    <property>instrumentation/flightdirector/fd-on</property>
@@ -1878,7 +2078,7 @@
      <y>1</y>
      <z>0</z>
    </axis>
- </animation> 
+</animation> 
 
     <animation>
    <type>select</type>
@@ -1895,10 +2095,20 @@
 <type>select</type>
 <object-name>LNAV.toggle</object-name>
 <condition>
+<or>	
 <equals>   
 <property>instrumentation/flightdirector/lnav</property>
 <value>2</value>
 </equals>
+<equals>   
+	<property>instrumentation/flightdirector/lnav</property>
+	<value>3</value>
+</equals>
+<equals>   
+	<property>instrumentation/flightdirector/lnav</property>
+	<value>5</value>
+</equals>
+</or>
 </condition>
  </animation>
 
@@ -1918,8 +2128,10 @@
 <object-name>ATtoggle</object-name>
 <condition>
 <equals>   
-<property>instrumentation/flightdirector/vnav</property>
-<value>4</value>
+<!--property>instrumentation/flightdirector/vnav</property>
+<value>4</value-->
+<property>instrumentation/flightdirector/at-on</property>
+<value>1</value>
 </equals>
 </condition>
  </animation>
@@ -1969,7 +2181,41 @@
 </condition>
  </animation>
 
-    <animation>
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Baro.knob.002</object-name>
+	 <property>instrumentation/wxradar/display-mode</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1</ind>
+			 <dep>30</dep>
+		 </entry>
+		 <entry>
+			 <ind>2</ind>
+			 <dep>60</dep>
+		 </entry>
+		 <entry>
+			 <ind>3</ind>
+			 <dep>90</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-23.527</x-m>
+		 <y-m>-0.4615</y-m>
+		 <z-m>1.936</z-m>
+	 </center>
+	 <axis>
+		 <x>-0.098</x>
+		 <y>0</y>
+		 <z>-0.017</z>
+	 </axis>
+ </animation>
+    
+ <animation>
    <type>rotate</type>
    <object-name>Baro.knob.003</object-name>
    <property>instrumentation/wxradar/range</property>
@@ -2015,6 +2261,32 @@
    </axis>
  </animation> 
 
+ <animation>
+	 <type>rotate</type>
+	 <object-name>Baro.knob</object-name>
+	 <property>instrumentation/efis/baro-mode</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep>0</dep>
+		 </entry>
+		 <entry>
+			 <ind>1</ind>
+			 <dep>90</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-23.741</x-m>
+ 		 <y-m>-0.387</y-m>
+		 <z-m>1.936</z-m>
+	 </center>
+	 <axis>
+		 <x>-0.098</x>
+		 <y>0</y>
+		 <z>-0.017</z>
+	 </axis>
+ </animation>
+ 
  <animation>
    <type>rotate</type>
    <object-name>L-Lnd.swtch</object-name>
@@ -2183,10 +2455,67 @@
    </axis>
  </animation>
 
+ <animation>
+	 <type>translate</type>
+	 <object-name>Btn.024</object-name>
+	 <property>/sim/model/Boeing-787-8/start-engines</property>
+	 <factor>0.01</factor>
+	 <axis>
+		 <x>-0.464</x>
+		 <y>0</y>
+		 <z>0.886</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>EecL.btn</object-name>
+	 <property>/sim/model/Boeing-787-8/eec-mode[0]</property>
+	 <factor>0.02</factor>
+	 <axis>
+		 <x>-0.464</x>
+		 <y>0</y>
+		 <z>0.886</z>
+	 </axis>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>EecR.btn</object-name>
+	 <property>/sim/model/Boeing-787-8/eec-mode[1]</property>
+	 <factor>0.02</factor>
+	 <axis>
+		 <x>-0.464</x>
+		 <y>0</y>
+		 <z>0.886</z>
+	 </axis>
+ </animation>
+ 
+ <!--animation>
+	 <type>translate</type>
+	 <object-name>Pushbtn.005</object-name>
+	 <property>/instrumentation/flightdirector/track-mode-on</property>
+	 <factor>0.003</factor>
+	 <axis>
+		 <x>0</x>
+		 <y>0.01</y>
+		 <z>0.05</z>
+	 </axis>
+ </animation-->
+ 
   <animation>
   <type>material</type>
   <object-name>APlettering</object-name>
   <object-name>OHlettering</object-name>
+  <object-name>ASletter</object-name>
+  <object-name>ASletterBtn</object-name>
+  <object-name>ENGletter</object-name>
+  <object-name>EECletter</object-name>
+  <object-name>IGNletter</object-name>
+  <object-name>EngRSletter</object-name>
+  <object-name>EngLSletter</object-name>
+  <object-name>EecRletter</object-name>
+  <object-name>EecLletter</object-name>
   <emission>
     <red>0.4</red>
     <green>1</green>
@@ -2245,16 +2574,22 @@
      <y>1</y>
      <z>0</z>
    </axis>
- </animation> 
+ </animation>
 
- <animation>
+ <!--animation>
    <type>select</type>
    <object-name>Exhaust1</object-name>
    <condition>
+   <and>
    <greater-than>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </greater-than>
+   <greater-than>
+    <property>sim/model/Boeing-787-8/n1[0]</property>
+    <value>20</value>
+   </greater-than>
+   </and>
   </condition>
  </animation>
 
@@ -2262,10 +2597,33 @@
    <type>select</type>
    <object-name>Exhaust2</object-name>
    <condition>
+   <and>
    <greater-than>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </greater-than>
+   <greater-than>
+    <property>sim/model/Boeing-787-8/n1[1]</property>
+    <value>20</value>
+   </greater-than>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>apuexhaust</object-name>
+   <condition>
+   <and>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </greater-than>
+   <greater-than>
+    <property>sim/model/Boeing-787-8/apu-n1</property>
+    <value>20</value>
+   </greater-than>
+   </and>
   </condition>
  </animation>
 
@@ -2279,12 +2637,17 @@
  <object-name>Exhaust2</object-name>
  </animation>
 
+<animation>
+ <type>noshadow</type>
+ <object-name>apuexhaust</object-name>
+ </animation>
+
  <animation>
  <type>shader</type>
  <shader>heat-haze</shader>
  <object-name>Exhaust1</object-name>
  <factor>0.12</factor>
- <speed-prop>engines/engine[0]/n1</speed-prop>
+ <speed-prop>sim/model/Boeing-787-8/n1[0]</speed-prop>
  </animation>
 
  <animation>
@@ -2292,8 +2655,16 @@
  <shader>heat-haze</shader>
  <object-name>Exhaust2</object-name>
  <factor>0.12</factor>
- <speed-prop>engines/engine[1]/n1</speed-prop>
- </animation> 
+ <speed-prop>sim/model/Boeing-787-8/n1[1]</speed-prop>
+ </animation>
+
+ <animation>
+ <type>shader</type>
+ <shader>heat-haze</shader>
+ <object-name>apuexhaust</object-name>
+ <factor>0.12</factor>
+ <speed-prop>sim/model/Boeing-787-8/apu-n1</speed-prop>
+ </animation--> 
 
  <animation>
   <type>select</type>
@@ -2413,5 +2784,499 @@
      <z>1</z>
    </axis>
  </animation>
+
+ <animation>
+	 <type>select</type>
+	 <object-name>Plane.018</object-name>
+ <condition>
+	 <and>
+	 <equals>
+		 <property>sim/current-view/view-number</property>
+		 <value>0</value>
+	 </equals>
+	 <equals>
+		 <property>instrumentation/flightdirector/track-mode-on</property>
+		 <value>0</value>
+	 </equals>
+ 	 </and>	 
+ </condition>
+</animation>
+ 
+<animation>
+	<type>select</type>
+	<object-name>Plane.019</object-name>
+<condition>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<equals>
+			<property>instrumentation/flightdirector/fpa-mode-on</property>
+			<value>0</value>
+		</equals>
+	</and>	 
+</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>Plane.trk</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>instrumentation/flightdirector/track-mode-on</property>
+				<value>1</value>
+			</equals>
+		</and>	 
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>Plane.fpa</object-name>
+	<condition>
+		<and>
+			<equals>
+				<property>sim/current-view/view-number</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>instrumentation/flightdirector/fpa-mode-on</property>
+				<value>1</value>
+			</equals>
+		</and>	 
+	</condition>
+</animation>
+
+<!--animation>
+	<type>select</type>
+	<object-name>Cylinder.005</object-name>
+	<condition>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>Cylinder.006</object-name>
+	<condition>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>Cylinder.005</object-name>
+	<emission>
+		<red>0.3</red>
+		<green>0.25</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>Cylinder.006</object-name>
+	<emission>
+		<red>0.3</red>
+		<green>0.25</green>
+		<blue>0.2</blue>
+		<factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+	</emission>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Cylinder.005</object-name>
+	<property>controls/engines/engine/condition</property>
+	<factor>-10</factor>
+	<offset>-10</offset>
+	<center>
+		<x-m>-23.177</x-m>
+		<y-m>0</y-m>
+		<z-m>1.379</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Cylinder.006</object-name>
+	<property>controls/engines/engine[1]/condition</property>
+	<factor>-10</factor>
+	<offset>-10</offset>
+	<center>
+		<x-m>-23.177</x-m>
+		<y-m>0</y-m>
+		<z-m>1.379</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation-->
+<!--animation>
+	<type>rotate</type>
+	<object-name>OHknob.017</object-name>
+	<property>/sim/model/Boeing-787-8/start-cycle[0]</property>
+	<interpolation>
+		<entry>
+			<ind>0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>1</ind>
+			<dep>-1</dep>
+		</entry>
+	</interpolation>
+	<center>
+		<x-m>2.739</x-m>
+		<y-m>1.9715</y-m>
+		<z-m>1.936</z-m>
+	</center>
+	<axis>
+		<x>-0.098</x>
+		<y>0</y>
+		<z>-0.017</z>
+	</axis>
+</animation-->
+
+<!--animation>
+	<type>rotate</type>
+	<object-name>OHknob.018</object-name>
+	<property>/sim/model/Boeing-787-8/start-cycle[1]</property>
+	<interpolation>
+		<entry>
+			<ind>0</ind>
+			<dep>0</dep>
+		</entry>
+		<entry>
+			<ind>1</ind>
+			<dep>-30</dep>
+		</entry>
+	</interpolation>
+	<center>
+		<x-m>-23.527</x-m>
+		<y-m>-0.4615</y-m>
+		<z-m>1.936</z-m>
+	</center>
+	<axis>
+		<x>-0.098</x>
+		<y>0</y>
+		<z>-0.017</z>
+	</axis>
+</animation-->
+
+<!--animation>
+<type>rotate</type>
+<object-name>OHknob.015</object-name>
+<property>/controls/APU/off-start-run</property>
+<interpolation>
+	<entry>
+		<ind>0</ind>
+		<dep>-1</dep>
+	</entry>
+	<entry>
+		<ind>1</ind>
+		<dep>1</dep>
+	</entry>
+	<entry>
+		<ind>2</ind>
+		<dep>0</dep>
+	</entry>
+</interpolation>
+<center>
+	<x-m>-23.0</x-m>
+	<y-m>0.32</y-m>
+	<z-m>2.64</z-m>
+</center>
+<axis>
+	<x>-0.01</x>
+	<y>0</y>
+	<z>-0.01</z>
+</axis>
+</animation-->
+
+<animation>
+	<type>select</type>
+	<object-name>ELECletter</object-name>
+	<object-name>BATletter</object-name>
+	<object-name>BATBtnletter</object-name>
+	<object-name>APUletter</object-name>
+	<object-name>APUletter.1</object-name>
+	<object-name>APUGENletter</object-name>
+	<object-name>APUGENBtnletter</object-name>
+	<object-name>RGENletter</object-name>
+	<object-name>LGENletter</object-name>
+	<object-name>LBusletter</object-name>
+	<object-name>LBusBtnletter</object-name>
+	<object-name>RBusletter</object-name>
+	<object-name>RBusBtnletter</object-name>
+	<object-name>SecExtletter</object-name>
+	<object-name>SecExtBtnletter</object-name>
+	<object-name>PriExtletter</object-name>
+	<object-name>PriExtBtnletter</object-name>
+	<object-name>BkpGenletter</object-name>
+	<object-name>DrvDiscletter</object-name>
+	<object-name>GenLBtnletter</object-name>
+	<object-name>DrvLBtnletter</object-name>
+	<object-name>GenRBtnletter</object-name>
+	<object-name>DrvRBtnletter</object-name>
+	<condition>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>ELECletter</object-name>
+	<object-name>BATletter</object-name>
+	<object-name>BATBtnletter</object-name>
+	<object-name>APUletter</object-name>
+	<object-name>APUletter.1</object-name>
+	<object-name>APUGENletter</object-name>
+	<object-name>APUGENBtnletter</object-name>
+	<object-name>RGENletter</object-name>
+	<object-name>LGENletter</object-name>
+	<object-name>LBusletter</object-name>
+	<object-name>LBusBtnletter</object-name>
+	<object-name>RBusletter</object-name>
+	<object-name>RBusBtnletter</object-name>
+	<object-name>SecExtletter</object-name>
+	<object-name>SecExtBtnletter</object-name>
+	<object-name>PriExtletter</object-name>
+	<object-name>PriExtBtnletter</object-name>
+	<object-name>BkpGenletter</object-name>
+	<object-name>DrvDiscletter</object-name>
+	<object-name>GenLBtnletter</object-name>
+	<object-name>DrvLBtnletter</object-name>
+	<object-name>GenRBtnletter</object-name>
+	<object-name>DrvRBtnletter</object-name>
+	<emission>
+		<red>0.4</red>
+		<green>1</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm[0]</factor-prop>	
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>ASBtn.001</object-name>
+	<object-name>EecL.btn.001</object-name>
+	<object-name>EecR.btn.001</object-name>
+	<object-name>APUGENBtn.001</object-name>
+	<object-name>BATBtn.001</object-name>
+	<object-name>SecExtBtn.001</object-name>
+	<object-name>PriExtBtn.001</object-name>
+	<object-name>LBusBtn.001</object-name>
+	<object-name>RBusBtn.001</object-name>
+	<object-name>GenLBtn.001</object-name>
+	<object-name>DrvLBtn.001</object-name>
+	<object-name>GenRBtn.001</object-name>
+	<object-name>DrvRBtn.001</object-name>
+	<object-name>BkGenRBtn.001</object-name>
+	<object-name>BkGenLBtn.001</object-name>
+	<!--object-name>APUfault.1</object-name-->
+	<emission>
+		<red>0.4</red>
+		<green>1</green>
+		<blue>0.3</blue>
+		<factor-prop>controls/lighting/instruments-norm[0]</factor-prop>	
+	</emission>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.048</object-name>
+	<property>/controls/electric/battery-switch</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.052</object-name>
+	<property>/controls/electric/engine[2]/generator</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.060</object-name>
+	<property>/controls/electric/pri-external-power</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.059</object-name>
+	<property>/controls/electric/sec-external-power</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.049</object-name>
+	<property>/controls/electric/engine/bus-tie</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.050</object-name>
+	<property>/controls/electric/engine[1]/bus-tie</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.053</object-name>
+	<property>/controls/electric/engine/generator</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.056</object-name>
+	<property>/controls/electric/engine[1]/generator</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.054</object-name>
+	<property>/controls/electric/engine/drive</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.055</object-name>
+	<property>/controls/electric/engine[1]/drive</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.057</object-name>
+	<property>/controls/electric/engine/bkp-generator</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>Btn.058</object-name>
+	<property>/controls/electric/engine[1]/bkp-generator</property>
+	<factor>0.01</factor>
+	<axis>
+		<x>-0.464</x>
+		<y>0</y>
+		<z>0.886</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>APUfault.1</object-name>
+	<condition>
+	<and>
+		<equals>
+			<property>sim/current-view/view-number</property>
+			<value>0</value>
+		</equals>
+		<greater-than>
+			<property>/systems/electrical/apu-test</property>
+			<value>0.1</value>
+		</greater-than>
+	</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>APUfault.1</object-name>
+<emission>
+	<red>1</red>
+	<green>1</green>
+	<blue>1</blue>
+	<factor-prop>controls/lighting/instruments-norm[0]</factor-prop>	
+</emission>
+</animation>
+
 
 </PropertyList>

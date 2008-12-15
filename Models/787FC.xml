@@ -106,7 +106,7 @@
     </offsets>
   </model>
 
-   <model>
+  <model>
     <name>Pclock</name>
     <path>Aircraft/787/Models/chronometer.xml</path>
     <offsets>
@@ -116,7 +116,6 @@
       <pitch-deg>-10</pitch-deg>
     </offsets>
   </model>
-
    <model>
     <name>CPclock</name>
     <path>Aircraft/787/Models/chronometer.xml</path>
@@ -163,6 +162,50 @@
     </offsets>
   </model>
 
+  <model>
+	  <name>GPWS warning lamp/button (captain)</name>
+	  <path>Aircraft/Instruments-3d/mk-viii/warning0.xml</path>
+	  <offsets>
+		  <x-m>-23.44</x-m>
+		  <y-m>-0.605</y-m>
+		  <z-m>1.985</z-m>
+		  <pitch-deg>-10</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>GPWS caution lamp/button (captain)</name>
+	  <path>Aircraft/Instruments-3d/mk-viii/caution0.xml</path>
+	  <offsets>
+		  <x-m>-23.44</x-m>
+		  <y-m>-0.585</y-m>
+		  <z-m>1.985</z-m>
+		  <pitch-deg>-10</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>GPWS warning lamp/button (co-pilot)</name>
+	  <path>Aircraft/Instruments-3d/mk-viii/warning0.xml</path>
+	  <offsets>
+		  <x-m>-23.44</x-m>
+		  <y-m>0.515</y-m>
+		  <z-m>1.985</z-m>
+		  <pitch-deg>-10</pitch-deg>
+	  </offsets>
+  </model>
+  
+  <model>
+	  <name>GPWS caution lamp/button (co-pilot)</name>
+	  <path>Aircraft/Instruments-3d/mk-viii/caution0.xml</path>
+	  <offsets>
+		  <x-m>-23.44</x-m>
+		  <y-m>0.495</y-m>
+		  <z-m>1.985</z-m>
+		  <pitch-deg>-10</pitch-deg>
+	  </offsets>
+  </model>
+  
 <!-- 3d hotspot panels-->
 
   <panel>
@@ -202,7 +245,7 @@
       <z-m>2.05</z-m>
     </top-left>
   </panel>
-
+  
   <panel>
     <path>Aircraft/787/Panels/oh-panel.xml</path>
     <bottom-left>
@@ -259,6 +302,160 @@
       <z-m>1.62</z-m>
     </top-left>
   </panel>
+<!--  Chrome  -->
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>chrome</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>nosegearutorque</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>nosegearltorque</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>nosegear_</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>Lstrut</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>lhgearltorque</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>lhgearutorque</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>Lknuckle</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>Rstrut</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>rhgearltorque</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>rhgearutorque</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>Rknuckle</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>lstab_</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>rstab_</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>lhibslat_</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>lhobslat_a</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>lhobslat_b</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>lhobslat_c</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>rhibslat_</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>rhobslat_a</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>rhobslat_b</object-name>
+    </animation>
+
+    <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>chrome.rgb</texture>
+        <object-name>rhobslat_c</object-name>
+    </animation>
 
  <animation>
   <type>material</type>
@@ -677,8 +874,44 @@
  </animation>
 
  <animation>
+  <type>select</type>
+  <object-name>nosegear_</object-name>
+   <condition>
+   <greater-than>
+    <property>gear/gear[1]/position-norm</property>
+    <value>0</value>
+   </greater-than>
+   </condition>
+ </animation>
+
+ <animation>
   <type>translate</type>
   <object-name>nosegear</object-name>
+  <property>gear/gear/compression-norm</property>
+   <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>-0.3</dep>
+    </entry>
+    <entry>
+      <ind>0.506</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>0.3</dep>
+    </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>nosegear_</object-name>
   <property>gear/gear/compression-norm</property>
    <interpolation>
     <entry>
@@ -718,9 +951,52 @@
   </axis>
  </animation>
 
+ <animation>
+  <type>rotate</type>
+  <object-name>nosegear_</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-35</factor>
+  <center>
+   <x-m>-20.65</x-m>
+   <y-m>0</y-m>
+   <z-m>-1</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
   <animation>
   <type>rotate</type>
   <object-name>nosegear</object-name>
+  <property>gear/gear[0]/position-norm</property>
+   <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>135.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>-20.65</x-m>
+   <y-m>0</y-m>
+   <z-m>-1</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>nosegear_</object-name>
   <property>gear/gear[0]/position-norm</property>
    <interpolation>
     <entry>
@@ -2563,6 +2839,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_a</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhlightedslata</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
@@ -2833,6 +3139,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_b</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobspoilerb</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
@@ -2924,6 +3260,36 @@
  <animation>
   <type>rotate</type>
   <object-name>rhobslatc</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhobslat_c</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
     <entry>
@@ -3489,6 +3855,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_a</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhibspoilera</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
@@ -3729,6 +4125,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_b</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhobspoilerb</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
@@ -3820,6 +4246,36 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslatc</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhobslat_c</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -4179,6 +4635,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_b</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>2</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobspoilerb</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
@@ -4270,6 +4756,36 @@
  <animation>
   <type>rotate</type>
   <object-name>rhobslatc</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>2</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhobslat_c</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
     <entry>
@@ -4629,6 +5145,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_b</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>-15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>-2</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhobspoilerb</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
@@ -4720,6 +5266,36 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslatc</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>-15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>-2</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhobslat_c</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -5079,6 +5655,36 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_c</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>1.6</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobaileron</object-name>
   <property>gear/gear[2]/compression-norm</property>
   <interpolation>
@@ -5350,6 +5956,36 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslatc</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>1.8</dep>
+    </entry>
+    <entry>
+      <ind>0.333</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1</ind>
+      <dep>-1.5</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>-21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>-1.6</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhobslat_c</object-name>
   <property>gear/gear[1]/compression-norm</property>
   <interpolation>
     <entry>
@@ -5691,6 +6327,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_a</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhlightedslata</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -5853,6 +6507,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_b</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobspoilerb</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -5908,6 +6580,24 @@
  <animation>
   <type>rotate</type>
   <object-name>rhobslatc</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>4</x>
+   <y>-1</y>
+   <z>-0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhobslat_c</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -6215,6 +6905,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_a</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhibspoilera</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -6359,6 +7067,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_b</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhobspoilerb</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -6414,6 +7140,24 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslatc</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-9.5</y-m>
+   <z-m>1.0</z-m>
+  </center>
+  <axis>
+   <x>-4</x>
+   <y>-1</y>
+   <z>0.25</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhobslat_c</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -6629,6 +7373,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_b</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>2</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobspoilerb</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -6684,6 +7446,24 @@
  <animation>
   <type>rotate</type>
   <object-name>rhobslatc</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>2</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhobslat_c</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -6899,6 +7679,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_b</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>-15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>-2</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhobspoilerb</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -6954,6 +7752,24 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslatc</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>3.6</x-m>
+   <y-m>-15.7</y-m>
+   <z-m>1.6</z-m>
+  </center>
+  <axis>
+   <x>-2</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhobslat_c</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -7169,6 +7985,24 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_c</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>1.6</x>
+   <y>-1</y>
+   <z>-0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobaileron</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
@@ -7332,6 +8166,24 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobslatc</object-name>
+  <property>accelerations/pilot-g[0]</property>
+  <factor>1</factor>
+  <offset-deg>-1</offset-deg>
+  <center>
+   <x-m>7.5</x-m>
+   <y-m>-21.7</y-m>
+   <z-m>2.6</z-m>
+  </center>
+  <axis>
+   <x>-1.6</x>
+   <y>-1</y>
+   <z>0.2</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhobslat_c</object-name>
   <property>accelerations/pilot-g[0]</property>
   <factor>1</factor>
   <offset-deg>-1</offset-deg>
@@ -7619,7 +8471,43 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lstab_</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <factor>15</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>24.5</x-m>
+   <y-m>0</y-m>
+   <z-m>2</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rstab</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <factor>15</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>24.5</x-m>
+   <y-m>0</y-m>
+   <z-m>2</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rstab_</object-name>
   <property>controls/flight/elevator-trim</property>
   <factor>15</factor>
   <offset-deg>0</offset-deg>   
@@ -7801,6 +8689,44 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_a</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-45.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-45.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.8</x-m>
+   <y-m>-18.25</y-m>
+   <z-m>1.9</z-m>
+  </center>
+  <axis>
+   <x>-4.1</x>
+   <y>6</y>
+   <z>-0.7</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhlightedslata</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
@@ -7877,6 +8803,44 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_b</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-45.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-45.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.8</x-m>
+   <y-m>-18.25</y-m>
+   <z-m>1.9</z-m>
+  </center>
+  <axis>
+   <x>-4.1</x>
+   <y>6</y>
+   <z>-0.7</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhobslatc</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
@@ -7915,7 +8879,83 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>lhobslat_c</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-45.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-45.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>8.08</x-m>
+   <y-m>-24.5</y-m>
+   <z-m>2.7</z-m>
+  </center>
+  <axis>
+   <x>-4.1</x>
+   <y>6</y>
+   <z>-0.9</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>lhibslat</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-40.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-40.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>-4.35</x-m>
+   <y-m>-5.8</y-m>
+   <z-m>0.2</z-m>
+  </center>
+  <axis>
+   <x>-3.7</x>
+   <y>6</y>
+   <z>-0.85</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhibslat_</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry>
@@ -8493,6 +9533,44 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_a</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-45.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-45.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.8</x-m>
+   <y-m>18.25</y-m>
+   <z-m>1.9</z-m>
+  </center>
+  <axis>
+   <x>4.1</x>
+   <y>6</y>
+   <z>0.7</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhlightedslata</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
@@ -8569,6 +9647,44 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_b</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-45.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-45.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>3.8</x-m>
+   <y-m>18.25</y-m>
+   <z-m>1.9</z-m>
+  </center>
+  <axis>
+   <x>4.1</x>
+   <y>6</y>
+   <z>0.7</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhobslatc</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
@@ -8607,7 +9723,83 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>rhobslat_c</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-45.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-45.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>8.08</x-m>
+   <y-m>24.5</y-m>
+   <z-m>2.7</z-m>
+  </center>
+  <axis>
+   <x>4.1</x>
+   <y>6</y>
+   <z>0.9</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
   <object-name>rhibslat</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>0.033</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.500</ind>
+      <dep>-30.0</dep>
+    </entry>
+    <entry>
+      <ind>0.666</ind>
+      <dep>-40.0</dep>
+    </entry>
+    <entry>
+      <ind>1.0</ind>
+      <dep>-40.0</dep>
+    </entry>
+  </interpolation>
+  <center>
+   <x-m>-4.35</x-m>
+   <y-m>5.8</y-m>
+   <z-m>0.2</z-m>
+  </center>
+  <axis>
+   <x>3.7</x>
+   <y>6</y>
+   <z>0.85</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhibslat_</object-name>
   <property>surface-positions/flap-pos-norm</property>
   <interpolation>
     <entry>
@@ -9114,7 +10306,7 @@
   <object-name>eng1fan</object-name>
    <condition>
     <less-than>
-     <property>engines/engine[0]/n1</property>
+	    <property>sim/model/Boeing-787-8/n1[0]</property>
      <value>65</value>
     </less-than>
    </condition>
@@ -9125,7 +10317,7 @@
   <object-name>eng2fan</object-name>
    <condition>
     <less-than>
-     <property>engines/engine[1]/n1</property>
+	    <property>sim/model/Boeing-787-8/n1[1]</property>
      <value>65</value>
     </less-than>
    </condition>
@@ -9136,7 +10328,7 @@
   <object-name>eng1fanb</object-name>
    <condition>
     <greater-than>
-     <property>engines/engine[0]/n1</property>
+	    <property>sim/model/Boeing-787-8/n1[0]</property>
      <value>65</value>
     </greater-than>
    </condition>
@@ -9147,7 +10339,7 @@
   <object-name>eng2fanb</object-name>
    <condition>
     <greater-than>
-     <property>engines/engine[1]/n1</property>
+	    <property>sim/model/Boeing-787-8/n1[1]</property>
      <value>65</value>
     </greater-than>
    </condition>
@@ -9156,7 +10348,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>eng1fanb</object-name>
-     <property>engines/engine[0]/n1</property>
+  <property>sim/model/Boeing-787-8/n1[0]</property>
    <interpolation>
     <entry>
       <ind>0</ind>
@@ -9185,7 +10377,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>eng2fanb</object-name>
-     <property>engines/engine[1]/n1</property>
+  <property>sim/model/Boeing-787-8/n1[1]</property>
    <interpolation>
     <entry>
       <ind>0</ind>
@@ -9214,7 +10406,7 @@
  <animation>
   <type>spin</type>
   <object-name>eng1fan</object-name>
-  <property>engines/engine[0]/n1</property>
+  <property>sim/model/Boeing-787-8/n1[0]</property>
   <factor>10</factor>
   <center>
    <x-m>-6.63</x-m>
@@ -9231,7 +10423,7 @@
  <animation>
   <type>spin</type>
   <object-name>eng2fan</object-name>
-  <property>engines/engine[1]/n1</property>
+  <property>sim/model/Boeing-787-8/n1[1]</property>
   <factor>10</factor>   
   <center>
    <x-m>-6.63</x-m>
@@ -9248,7 +10440,7 @@
  <animation>
   <type>spin</type>
   <object-name>eng1fanb</object-name>
-  <property>engines/engine[0]/n1</property>
+  <property>sim/model/Boeing-787-8/n1[0]</property>
   <factor>10</factor>   
   <center>
    <x-m>-6.63</x-m>
@@ -9265,7 +10457,7 @@
  <animation>
   <type>spin</type>
   <object-name>eng2fanb</object-name>
-  <property>engines/engine[1]/n1</property>
+  <property>sim/model/Boeing-787-8/n1[1]</property>
   <factor>10</factor>   
   <center>
    <x-m>-6.63</x-m>
@@ -10490,7 +11682,7 @@
   <type>flash</type>
   <object-name>lwnavlight</object-name>
   <center>
-   <x-m>13.5</x-m>
+   <x-m>13.95</x-m>
    <y-m>-29.75</y-m>
    <z-m>3.925</z-m>
   </center>
@@ -10511,7 +11703,7 @@
   <type>flash</type>
   <object-name>rwnavlight</object-name>
   <center>
-   <x-m>13.5</x-m>
+   <x-m>13.95</x-m>
    <y-m>29.75</y-m>
    <z-m>3.925</z-m>
   </center>

@@ -123,7 +123,7 @@ override those by providing <w>..</w> and <h>..</h> properties with the
    <w>34</w>
    <h>34</h>
   </instrument>
-  
+
   <instrument include="../Instruments/autopilot-panel.xml">
    <name>autopilot-panel</name>
    <x>890</x>

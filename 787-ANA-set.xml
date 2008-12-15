@@ -3,14 +3,14 @@
 <description>ANA 787-8</description>
 <author>Joshua Wilson</author>
 <status>Development</status>
-<aircraft-version>08_2007</aircraft-version>
+<aircraft-version>02_2008</aircraft-version>
 <flight-model>yasim</flight-model>
 <aero>787</aero>
-<fuel-fraction>0.8</fuel-fraction>
+<fuel-fraction>0.10</fuel-fraction>
 <startup>
 <splash-texture>Aircraft/787/787-8AN-splash.rgb</splash-texture>
 </startup>
-    
+
 <panel>
 <path>Aircraft/787/Panels/787-ifr-panel.xml</path>
 <visibility>false</visibility>
@@ -18,6 +18,25 @@
 
 <model>
 <path>Aircraft/787/Models/787ANA.xml</path>
+<start-idling type="bool">0</start-idling>
+<variant type="int">0</variant>
+<Boeing-787-8>
+	<n1 n="0" type="double">0</n1>
+	<n1 n="1" type="double">0</n1>
+	<n2 n="0" type="double">0</n2>
+	<n2 n="1" type="double">0</n2>
+	<egt n="0" type="double">0</egt>
+	<egt n="1" type="double">0</egt>
+	<eec-mode n="0" type="bool">1</eec-mode>
+	<eec-mode n="1" type="bool">1</eec-mode>
+	<start-cycle n="0" type="bool">0</start-cycle>
+	<start-cycle n="1" type="bool">0</start-cycle>
+	<start-engines type="bool">0</start-engines>
+	<apu-n1 type="double">0</apu-n1>
+	<apu-n2 type="double">0</apu-n2>
+	<apu-egt type="double">0</apu-egt>
+	<apu-start n="0" type="bool">0</apu-start>
+</Boeing-787-8>
 </model>
 
     <view n="0">
@@ -59,6 +78,7 @@
 	      <path>Aircraft/787/787-autopilot.xml</path>
       </autopilot>
     </systems>
+    
     <sound>
      <path>Aircraft/787/Sounds/787-sound.xml</path>
 	 <switch type = "bool"></switch>
@@ -89,12 +109,14 @@
   </sim>
   <engines>
     <engine n="0">
-      <rpm>1000</rpm>
+      <rpm>0</rpm>
       <reverser-position type="double">0.000000</reverser-position>
+      <running>0</running>
     </engine>
     <engine n="1">
-      <rpm>1000</rpm>
+      <rpm>0</rpm>
       <reverser-position type="double">0.000000</reverser-position>
+      <running>0</running>
     </engine>
   </engines>
 
@@ -129,9 +151,19 @@
 <switches>
 <cabin-lights>0.2</cabin-lights>
 <logo-lights>1</logo-lights>
-<taxi-lights>1</taxi-lights><strobe>1</strobe><turn-off-lights-l>1</turn-off-lights-l>
+<taxi-lights>1</taxi-lights>
+<strobe>1</strobe>
+<turn-off-lights-l>1</turn-off-lights-l>
 <turn-off-lights-r>1</turn-off-lights-r>
 </switches>
+<engines>
+	<engine n="0">
+		<cutoff>1</cutoff>
+	</engine>
+	<engine n="1">
+		<cutoff>1</cutoff>
+	</engine>
+</engines>
 </controls>
 
 <instrumentation>
@@ -139,7 +171,7 @@
  <serviceable>true</serviceable>
   <range type="int" archive="y">20</range>
   <minimized type="bool" archive="y">false</minimized>
-  <switch archive="y">on</switch>
+  <switch archive="y">off</switch>
   <mode archive="y">wx</mode>
   <lightning type="bool" archive="y">true</lightning>
   <display-mode archive="y">arc</display-mode>
@@ -149,14 +181,15 @@
 	</radar>
 </instrumentation>
 
-<nasal>
+  <nasal>
     <Boeing-787>
       <file>Aircraft/787/Nasal/electrical.nas</file>
       <file>Aircraft/787/Nasal/system.nas</file>
       <file>Aircraft/787/Nasal/flightdirector.nas</file>
     </Boeing-787>
     <reversethrust>
-    <file>Aircraft/787/Nasal/reverse-thrust.nas</file>
-</reversethrust>
+      <file>Aircraft/787/Nasal/reverse-thrust.nas</file>
+    </reversethrust>
   </nasal>
+  
 </PropertyList>

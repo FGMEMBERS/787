@@ -12,13 +12,107 @@
   <x>128</x>
   <y>256</y>
   <w>256</w>
-  <h>512</h>
+  <h>1024</h>
   <w-base>256</w-base>
-  <h-base>512</h-base>
+  <h-base>1024</h-base>
 
  <actions> 
 
   
+	 <action>
+		 <name>Autostart Switch</name>
+		 <button>0</button>
+		 <x>22</x>
+		 <y>262</y>
+		 <!--y>152</y-->
+		 <w>8</w>
+		 <h>18</h>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/sim/model/Boeing-787-8/start-engines</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/sim/sound/switch</property>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>/controls/engines/start-engines</property>
+		 </binding>
+	 </action>
+	 
+	 <action>
+		 <name>Left Engine Start Switch</name>
+		 <button>0</button>
+		 <x>10</x>
+		 <y>278</y>
+		 <!--y>152</y-->
+	 <w>8</w>
+	 <h>18</h>
+	 <binding>
+		 <command>property-toggle</command>
+		 <property>/sim/model/Boeing-787-8/start-cycle[0]</property>
+	 </binding>
+	 <binding>
+		 <command>property-toggle</command>
+		 <property>/sim/sound/switch</property>
+	 </binding>
+ </action>
+ 
+ <action>
+	 <name>Right Engine Start Switch</name>
+	 <button>0</button>
+	 <x>46</x>
+	 <y>278</y>
+	 <!--y>152</y-->
+ <w>8</w>
+ <h>18</h>
+ <binding>
+	 <command>property-toggle</command>
+	 <property>/sim/model/Boeing-787-8/start-cycle[1]</property>
+ </binding>
+ <binding>
+	 <command>property-toggle</command>
+	 <property>/sim/sound/switch</property>
+ </binding>
+</action>
+
+<action>
+	<name>Left EEC Switch</name>
+	<button>0</button>
+	<x>2</x>
+	<y>338</y>
+	<!--y>152</y-->
+<w>8</w>
+<h>18</h>
+<binding>
+	<command>property-toggle</command>
+	<property>/sim/model/Boeing-787-8/eec-mode[0]</property>
+</binding>
+<binding>
+	<command>property-toggle</command>
+	<property>/sim/sound/switch</property>
+</binding>
+</action>
+
+<action>
+	<name>Right EEC Switch</name>
+	<button>0</button>
+	<x>38</x>
+	<y>338</y>
+	<!--y>152</y-->
+<w>8</w>
+<h>18</h>
+<binding>
+	<command>property-toggle</command>
+	<property>/sim/model/Boeing-787-8/eec-mode[1]</property>
+</binding>
+<binding>
+	<command>property-toggle</command>
+	<property>/sim/sound/switch</property>
+</binding>
+</action>
+
 <!-- ********************* Master Switches    *************************  -->
 <!--
 <action>
@@ -400,9 +494,228 @@
      </binding>
    </action>
 
+<!-- ELECTRICAL -->
+<action>
+	<name>Battery switch</name>
+	<button>0</button>
+	<x>-128</x>
+	<y>209</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/battery-switch</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
 
+<action>
+	<name>APU Generator switch</name>
+	<button>0</button>
+	<x>-109</x>
+	<y>186</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<!--property>/controls/electric/APU-generator</property-->
+	       <property>/controls/electric/engine[2]/generator</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
 
+<action>
+	<name>APU Start switch</name>
+	<button>0</button>
+	<x>-87</x>
+	<y>191</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/APU/off-start-run</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
 
+<action>
+	<name>Left Bus-tie switch</name>
+	<button>0</button>
+	<x>-130</x>
+	<y>139</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine/bus-tie</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Right Bus-tie switch</name>
+	<button>0</button>
+	<x>-88</x>
+	<y>137</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine[1]/bus-tie</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Secondary external power switch</name>
+	<button>0</button>
+	<x>-117</x>
+	<y>105</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/sec-external-power</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Primary external power switch</name>
+	<button>0</button>
+	<x>-102</x>
+	<y>105</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/pri-external-power</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Left Generator switch</name>
+	<button>0</button>
+	<x>-128</x>
+	<y>50</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine/generator</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Right Generator switch</name>
+	<button>0</button>
+	<x>-88</x>
+	<y>57</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine[1]/generator</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Left Drive switch</name>
+	<button>0</button>
+	<x>-128</x>
+	<y>25</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine/drive</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Right Drive switch</name>
+	<button>0</button>
+	<x>-88</x>
+	<y>32</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine[1]/drive</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Left Backup Generator switch</name>
+	<button>0</button>
+	<x>-112</x>
+	<y>38</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine/bkp-generator</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
+
+<action>
+	<name>Right Backup Generator switch</name>
+	<button>0</button>
+	<x>-104</x>
+	<y>39</y>
+	<w>8</w>
+	<h>18</h>
+	<binding>
+		<command>property-toggle</command>
+		<property>/controls/electric/engine[1]/bkp-generator</property>
+	</binding>
+	<binding>
+		<command>property-toggle</command>
+		<property>/sim/sound/switch</property>
+	</binding>
+</action>
 
 </actions>
 </instrument>

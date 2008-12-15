@@ -8,13 +8,29 @@ Syd Adams, Josh Wilson
  <path>pfd.ac</path>
 
  <animation>
+ <type>select</type>
+<condition>
+<and>
+	<equals>
+		<property>sim/current-view/view-number</property>
+		<value>0</value>
+	</equals>
+	<greater-than>
+		<property>/systems/electrical/volts</property>
+		<value>12</value>
+	</greater-than>
+</and>	
+</condition>
+</animation>
+
+ <animation>
    <type>select</type>
-   <object-name>APspeed</object-name>
+    <!--object-name>APspeed</object-name-->
     <object-name>Alt10.001</object-name>
     <object-name>AIroll</object-name>
-    <object-name>APlnav</object-name>
-    <object-name>APvnav</object-name>
-    <object-name>dmetxt</object-name>
+    <!--object-name>APlnav</object-name>
+    <object-name>APvnav.001</object-name-->
+    <!--object-name>dmetxt</object-name-->
     <object-name>hdgmode</object-name>
     <object-name>mach</object-name>
     <object-name>pointer</object-name>
@@ -289,7 +305,7 @@ Syd Adams, Josh Wilson
      <z-m>-0.135</z-m>
    </center>
  </animation>
-
+<!--
  <animation>
    <type>select</type>
    <object-name>FDbars</object-name>
@@ -300,11 +316,12 @@ Syd Adams, Josh Wilson
    </equals>
   </condition>
  </animation>
-
+-->
  <animation>
    <type>rotate</type>
    <object-name>FDbars</object-name>
    <property>/instrumentation/flightdirector/vbar-roll</property>
+   <!--property>/autopilot/internal/target-roll-deg</property-->
    <axis>
      <x>1.0</x>
      <y>0.0</y>
@@ -321,6 +338,8 @@ Syd Adams, Josh Wilson
    <type>translate</type>
    <object-name>FDbars</object-name>
    <property>/instrumentation/flightdirector/vbar-pitch</property>
+   <!--property>/autopilot/settings/target-pitch-deg</property-->
+<!--factor>0.0014</factor-->
 <factor>0.0014</factor>
 <axis>
      <x>0.0</x>
@@ -333,6 +352,39 @@ Syd Adams, Josh Wilson
      <z-m>0.005</z-m>
    </center>
  </animation>
+ 
+ <!--animation>
+	 <type>rotate</type>
+	 <object-name>FDbars</object-name>
+	 <property>orientation/roll-deg</property>
+	 <axis>
+		 <x>-1.0</x>
+		 <y>0.0</y>
+		 <z>0.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>-0.014</y-m>
+		 <z-m>0.005</z-m>
+	 </center>
+ </animation>
+ 
+ <animation>
+	 <type>translate</type>
+	 <object-name>FDbars</object-name>
+	 <property>/orientation/pitch-deg</property>
+	 <factor>0.0014</factor>
+	 <axis>
+		 <x>0.0</x>
+		 <y>0.0</y>
+		 <z>-1.0</z>
+	 </axis>
+	 <center>
+		 <x-m>0.007</x-m>
+		 <y-m>-0.014</y-m>
+		 <z-m>0.005</z-m>
+	 </center>
+ </animation-->
 
  <animation>
    <type>select</type>
@@ -918,6 +970,23 @@ Syd Adams, Josh Wilson
  </animation>
 
  <animation>
+	 <type>select</type>
+	 <object-name>pitch.003</object-name>
+	 <condition>
+		 <and> 
+		 <equals>
+			 <property>sim/current-view/view-number</property>
+			 <value>0</value>
+		 </equals>
+		 <less-than>
+			 <property>orientation/pitch-deg</property>
+			 <value>0</value>
+		 </less-than>	 
+	         </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
    <type>select</type>
    <object-name>pitch.001</object-name>
    <condition>
@@ -969,13 +1038,36 @@ Syd Adams, Josh Wilson
    <type>select</type>
    <object-name>inhg</object-name>
    <condition>
+<and>	   
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+    <property>/instrumentation/efis/baro-mode</property>
+    <value>0</value>
+   </equals>
+</and>   
   </condition>
  </animation>
 
+ <animation>
+	 <type>select</type>
+	 <object-name>kpa</object-name>
+	 <condition>
+		 <and>	   
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <equals>
+			  <property>/instrumentation/efis/baro-mode</property>
+			  <value>1</value>
+			 </equals>
+		 </and>   
+	 </condition>
+ </animation>
+ 
  <animation>
    <type>textranslate</type>
    <object-name>inhg</object-name>
@@ -1355,12 +1447,22 @@ Syd Adams, Josh Wilson
 
  <animation>
    <type>select</type>
+   <object-name>dmetxt</object-name>
    <object-name>dmetxt.001</object-name>
+   <object-name>dmetxt.002</object-name>
+   <object-name>dmetxt.003</object-name>
+   <object-name>dmetxt.004</object-name>
    <condition>
+   <and>
    <equals>
     <property>sim/current-view/view-number</property>
     <value>0</value>
    </equals>
+   <equals>
+    <property>instrumentation/dme/in-range</property>
+    <value>1</value>
+   </equals>
+  </and>   
   </condition>
  </animation>
 
@@ -1377,7 +1479,7 @@ Syd Adams, Josh Wilson
    </axis>
  </animation>
 
- <animation>
+ <!--animation>
    <type>select</type>
    <object-name>dmetxt.002</object-name>
    <condition>
@@ -1386,7 +1488,7 @@ Syd Adams, Josh Wilson
     <value>0</value>
    </equals>
   </condition>
- </animation>
+ </animation-->
 
   <animation>
    <type>textranslate</type>
@@ -1401,7 +1503,7 @@ Syd Adams, Josh Wilson
    </axis>
  </animation>
 
- <animation>
+ <!--animation>
    <type>select</type>
    <object-name>dmetxt.003</object-name>
    <condition>
@@ -1410,7 +1512,7 @@ Syd Adams, Josh Wilson
     <value>0</value>
    </equals>
   </condition>
- </animation>
+ </animation-->
 
   <animation>
    <type>textranslate</type>
@@ -1425,7 +1527,7 @@ Syd Adams, Josh Wilson
    </axis>
  </animation>
 
- <animation>
+ <!--animation>
    <type>select</type>
    <object-name>dmetxt.004</object-name>
    <condition>
@@ -1434,7 +1536,7 @@ Syd Adams, Josh Wilson
     <value>0</value>
    </equals>
   </condition>
- </animation>
+ </animation-->
 
   <animation>
    <type>textranslate</type>
@@ -1449,6 +1551,218 @@ Syd Adams, Josh Wilson
    </axis>
  </animation>
 
+ <animation>
+	 <type>select</type>
+	 <object-name>APlnav</object-name>
+	 <condition>
+		 <equals>
+			 <property>/instrumentation/flightdirector/lnav</property>
+			 <value>0</value>
+		 </equals>
+	 </condition>
+ </animation>
 
+ <animation>
+	 <type>select</type>
+	 <object-name>APlnav.trk</object-name>
+	 <condition>
+		 <and>
+		 <equals>
+			 <property>instrumentation/flightdirector/lnav</property>
+			 <value>5</value>
+		 </equals>
+		 <equals>
+			 <property>instrumentation/flightdirector/track-mode-on</property>
+			 <value>1</value>
+		 </equals>
+	         </and>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APlnav.hdg</object-name>
+	 <condition>
+		 <equals>
+			 <property>instrumentation/flightdirector/lnav</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APlnav.lnav</object-name>
+	 <condition>
+		 <equals>
+			 <property>instrumentation/flightdirector/lnav</property>
+			 <value>5</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APlnav.app</object-name>
+	 <condition>
+		 <equals>
+			 <property>instrumentation/flightdirector/lnav</property>
+			 <value>3</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APvnav.001</object-name>
+	 <condition>
+		 <equals>
+			 <property>/instrumentation/flightdirector/vnav</property>
+			 <value>0</value>
+		 </equals>
+	 </condition>
+ </animation>
+
+ <animation>
+	 <type>select</type>
+	 <object-name>APvnav.alt</object-name>
+	 <condition>
+		 <equals>
+			 <property>instrumentation/flightdirector/vnav</property>
+			 <value>2</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APvnav.gs</object-name>
+	 <condition>
+		 <equals>
+			 <property>instrumentation/flightdirector/vnav</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APvnav.vnav</object-name>
+	 <condition>
+		 <equals>
+			 <property>instrumentation/flightdirector/vnav</property>
+			 <value>3</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>APspeed</object-name>
+	 <condition>
+		 <equals>
+			 <property>instrumentation/flightdirector/at-on</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>alfa_minus</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <less-than>
+				 <property>orientation/alpha-deg</property>
+				 <value>0</value>
+			 </less-than>
+			 <greater-than-equals>
+				 <property>instrumentation/efis/abs-alpha-deg</property>
+				 <value>10</value>
+			 </greater-than-equals>
+		 </and>   
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>alfa_minus1</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <less-than>
+				 <property>orientation/alpha-deg</property>
+				 <value>0</value>
+			 </less-than>
+			 <less-than>
+				 <property>instrumentation/efis/abs-alpha-deg</property>
+				 <value>10</value>
+			 </less-than>
+		 </and>   
+	 </condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>alfa.001</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <greater-than-equals>
+				 <property>instrumentation/efis/abs-alpha-deg</property>
+				 <value>10</value>
+			 </greater-than-equals>
+		 </and>   
+	 </condition>
+ </animation>
+ 
+<animation>
+	<type>textranslate</type>
+	<object-name>alfa.001</object-name>
+	<property>/instrumentation/efis/abs-alpha-deg</property>
+	<factor>0.01</factor>
+	<step>10.0</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>alfa.002</object-name>
+	<property>/instrumentation/efis/abs-alpha-deg</property>
+	<factor>0.1</factor>
+	<step>1.0</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>textranslate</type>
+	<object-name>alfa.003</object-name>
+	<property>/instrumentation/efis/abs-alpha-deg</property>
+	<factor>1.0</factor>
+	<step>0.1</step>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
 
 </PropertyList>

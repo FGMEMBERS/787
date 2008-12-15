@@ -290,7 +290,10 @@ properties' values.
    <type>switch</type>
    <layer>
     <condition>
-     <property>/controls/autoflight/autopilot/engage[0]</property>     
+    <equals>
+     <property>/controls/autoflight/autopilot/engage</property>     
+     <value type="bool">false</value>
+    </equals>
     </condition>
     <name>autopilot select on</name>
     <texture>
@@ -951,6 +954,7 @@ properties' values.
 
  <action>
    <name>autopilot engage</name>
+   <type>switch</type>
    <button>0</button>
    <x>57</x>
    <y>13</y>
@@ -980,6 +984,7 @@ properties' values.
 
   <action>
    <name>autopilot disengage</name>
+   <type>switch</type>
    <button>0</button>
    <x>64</x>
    <y>-54</y>

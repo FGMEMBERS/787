@@ -28,48 +28,86 @@ Autopilot Controls
     <name>AP on</name>
     <button>0</button>
     <x>-167</x>
-    <y>5</y>
-    <w>12</w>
+    <y>4</y>
+    <w>14</w>
     <h>12</h>
     <binding>
-    <command>property-toggle</command>
+    <command>nasal</command>
+    <script>
+    if(getprop("/instrumentation/flightdirector/autopilot-on") == 0){
+     setprop("/instrumentation/flightdirector/autopilot-on",1);
+     setprop("/instrumentation/flightdirector/lnav",getprop("/instrumentation/flightdirector/lnav"));
+     setprop("/instrumentation/flightdirector/vnav",getprop("/instrumentation/flightdirector/vnav"));
+    }
+    else {
+     setprop("/instrumentation/flightdirector/autopilot-on",0);
+     if(getprop("/instrumentation/flightdirector/fd-on") == 0){
+      setprop("/instrumentation/flightdirector/lnav",0);
+      setprop("/instrumentation/flightdirector/vnav",0);
+      setprop("/instrumentation/flightdirector/at-on",0);
+     }
+    };
+    </script>
+    <!--command>property-toggle</command>
     <property>/instrumentation/flightdirector/autopilot-on</property>
-    <value>1.0</value>
+    <value>1.0</value-->
     </binding>
   </action>
 
   <action>
     <name>FD Toggle</name>
     <button>0</button>
-    <x>-164</x>
-    <y>-15</y>
+    <x>-162</x>
+    <y>-14</y>
     <w>8</w>
     <h>8</h>
     <binding>
-    <command>property-toggle</command>
-     <property>/instrumentation/flightdirector/fd-on</property>
+    <command>nasal</command>
+    <script>
+    if(getprop("/instrumentation/flightdirector/fd-on") == 0){
+     setprop("/instrumentation/flightdirector/fd-on",1);
+    }
+    else {
+     setprop("/instrumentation/flightdirector/fd-on",0);
+     if(getprop("/instrumentation/flightdirector/autopilot-on") == 0){
+     setprop("/instrumentation/flightdirector/lnav",0);
+     setprop("/instrumentation/flightdirector/vnav",0);
+     }
+    };
+    </script>
+    <!--command>property-toggle</command>
+     <property>/instrumentation/flightdirector/fd-on</property-->
     </binding>
   </action>
 
   <action>
     <name>AP off</name>
     <button>0</button>
-    <x>-74</x>
-    <y>-27</y>
-    <w>26</w>
+    <x>-73</x>
+    <y>-22</y>
+    <w>28</w>
     <h>10</h>
     <binding>
-    <command>property-assign</command>
+    <command>nasal</command>
+    <script>
+    setprop("/instrumentation/flightdirector/autopilot-on",0);
+    if(getprop("/instrumentation/flightdirector/fd-on") == 0){
+     setprop("/instrumentation/flightdirector/lnav",0);
+     setprop("/instrumentation/flightdirector/vnav",0);
+     setprop("/instrumentation/flightdirector/at-on",0);
+    }
+    </script>
+    <!--command>property-assign</command>
     <property>/instrumentation/flightdirector/autopilot-on</property>
-    <value>0.0</value>
+    <value>0.0</value-->
     </binding>
   </action>
 
 
-  <action>
+  <!--action>
     <name>VS up 100</name>
     <button>0</button>
-    <x>1</x>
+    <x>2</x>
     <y>-23</y>
     <w>12</w>
     <h>12</h>
@@ -86,7 +124,7 @@ Autopilot Controls
   <action>
     <name>VS down 100</name>
     <button>0</button>
-    <x>1</x>
+    <x>2</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -98,12 +136,86 @@ Autopilot Controls
     <max>99000</max>
     <wrap>false</wrap>
     </binding>
-  </action>
+  </action-->
+
+  <action>
+  <name>VS up 100</name>
+  <button>0</button>
+  <x>2</x>
+  <y>-23</y>
+  <w>12</w>
+  <h>12</h>
+  <binding>
+	  <condition>
+	   <equals>
+	    <property>instrumentation/flightdirector/fpa-mode-on</property>
+	    <value>0</value>
+	   </equals>
+	  </condition>
+	  <command>property-adjust</command>
+	  <property>/autopilot/settings/vertical-speed-fpm</property>
+	  <step>100.0</step>
+	  <min>-99000</min>
+	  <max>99000</max>
+	  <wrap>false</wrap>
+  </binding>
+  <binding>
+	  <condition>
+		  <equals>
+			  <property>instrumentation/flightdirector/fpa-mode-on</property>
+			  <value>1</value>
+		  </equals>
+	  </condition>
+	  <command>property-adjust</command>
+	  <property>/instrumentation/flightdirector/fpa-deg</property>
+	  <step>1.0</step>
+	  <min>-20</min>
+	  <max>20</max>
+	  <wrap>false</wrap>
+  </binding>
+</action>
+
+<action>
+	<name>VS down 100</name>
+	<button>0</button>
+	<x>2</x>
+	<y>-11</y>
+	<w>12</w>
+	<h>12</h>
+	<binding>
+		<condition>
+			<equals>
+				<property>instrumentation/flightdirector/fpa-mode-on</property>
+				<value>0</value>
+			</equals>
+		</condition>
+		<command>property-adjust</command>
+		<property>/autopilot/settings/vertical-speed-fpm</property>
+		<step>-100.0</step>
+		<min>-99000</min>
+		<max>99000</max>
+		<wrap>false</wrap>
+	</binding>
+	<binding>
+		<condition>
+			<equals>
+				<property>instrumentation/flightdirector/fpa-mode-on</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<command>property-adjust</command>
+		<property>/instrumentation/flightdirector/fpa-deg</property>
+		<step>-1.0</step>
+		<min>-20</min>
+		<max>20</max>
+		<wrap>false</wrap>
+	</binding>
+</action>
 
   <action>
     <name>ALT down 100</name>
     <button>0</button>
-    <x>40</x>
+    <x>44</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -120,7 +232,7 @@ Autopilot Controls
   <action>
     <name>ALT down 1000</name>
     <button>1</button>
-    <x>40</x>
+    <x>44</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -137,7 +249,7 @@ Autopilot Controls
   <action>
     <name>ALT up 100</name>
     <button>0</button>
-    <x>52</x>
+    <x>54</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -154,7 +266,7 @@ Autopilot Controls
   <action>
     <name>ALT up 1000</name>
     <button>1</button>
-    <x>52</x>
+    <x>54</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -171,7 +283,7 @@ Autopilot Controls
   <action>
     <name>IAS decrease</name>
     <button>0</button>
-    <x>-126</x>
+    <x>-124</x>
     <y>-17</y>
     <w>12</w>
     <h>12</h>
@@ -180,7 +292,7 @@ Autopilot Controls
     <property>/autopilot/settings/target-speed-kt</property>
     <step>-1.0</step>
 	<min>0</min>
-    <max>400</max>
+    <max>310</max>
     <wrap>false</wrap>
     </binding>
   </action>
@@ -188,7 +300,7 @@ Autopilot Controls
   <action>
     <name>IAS increase</name>
     <button>0</button>
-    <x>-114</x>
+    <x>-112</x>
     <y>-17</y>
     <w>12</w>
     <h>12</h>
@@ -196,8 +308,8 @@ Autopilot Controls
     <command>property-adjust</command>
     <property>/autopilot/settings/target-speed-kt</property>
     <step>1.0</step>
-	<min>0</min>
-    <max>400</max>
+    <min>0</min>
+    <max>310</max>
     <wrap>false</wrap>
     </binding>
   </action>
@@ -206,7 +318,7 @@ Autopilot Controls
   <action>
     <name>IAS decrease 10</name>
     <button>1</button>
-    <x>-126</x>
+    <x>-124</x>
     <y>-17</y>
     <w>12</w>
     <h>12</h>
@@ -214,8 +326,8 @@ Autopilot Controls
     <command>property-adjust</command>
     <property>/autopilot/settings/target-speed-kt</property>
     <step>-10.0</step>
-	<min>0</min>
-    <max>400</max>
+    <min>0</min>
+    <max>310</max>
     <wrap>false</wrap>
     </binding>
   </action>
@@ -223,7 +335,7 @@ Autopilot Controls
   <action>
     <name>IAS increase 10</name>
     <button>1</button>
-    <x>-114</x>
+    <x>-112</x>
     <y>-17</y>
     <w>12</w>
     <h>12</h>
@@ -231,8 +343,8 @@ Autopilot Controls
     <command>property-adjust</command>
     <property>/autopilot/settings/target-speed-kt</property>
     <step>10.0</step>
-	<min>0</min>
-    <max>400</max>
+    <min>0</min>
+    <max>310</max>
     <wrap>false</wrap>
     </binding>
   </action>
@@ -242,7 +354,7 @@ Autopilot Controls
   <action>
     <name>HDG decrease</name>
     <button>0</button>
-    <x>-48</x>
+    <x>-46</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -259,7 +371,7 @@ Autopilot Controls
   <action>
     <name>HDG increase</name>
     <button>0</button>
-    <x>-36</x>
+    <x>-34</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -276,7 +388,7 @@ Autopilot Controls
  <action>
     <name>HDG decrease 10</name>
     <button>1</button>
-    <x>-48</x>
+    <x>-46</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -293,7 +405,7 @@ Autopilot Controls
   <action>
     <name>HDG increase 10</name>
     <button>1</button>
-    <x>-36</x>
+    <x>-34</x>
     <y>-11</y>
     <w>12</w>
     <h>12</h>
@@ -314,9 +426,9 @@ Autopilot Controls
   <action>
     <name>Heading Toggle</name>
     <button>0</button>
-    <x>-43</x>
-    <y>-26</y>
-    <w>12</w>
+    <x>-39</x>
+    <y>-25</y>
+    <w>13</w>
     <h>12</h>
     <binding>
     <command>nasal</command>
@@ -333,13 +445,13 @@ Autopilot Controls
     <button>0</button>
     <x>-91</x>
     <y>5</y>
-    <w>12</w>
+    <w>14</w>
     <h>12</h>
     <binding>
     <command>nasal</command>
     <script>
-    if(getprop("/instrumentation/flightdirector/lnav") != 2){
-    setprop("/instrumentation/flightdirector/lnav",2);}else{
+    if(getprop("/instrumentation/flightdirector/lnav") != 5){
+    setprop("/instrumentation/flightdirector/lnav",5);}else{
     setprop("/instrumentation/flightdirector/lnav",0);}
     </script>
     </binding>
@@ -348,8 +460,8 @@ Autopilot Controls
    <action>
      <name>Appr Toggle</name>
      <button>0</button>
-     <x>74</x>
-     <y>-26</y>
+     <x>76</x>
+     <y>-25</y>
      <w>12</w>
      <h>12</h>
      <binding>
@@ -358,6 +470,9 @@ Autopilot Controls
     if(getprop("/instrumentation/flightdirector/lnav") != 3){
     setprop("/instrumentation/flightdirector/lnav",3);}else{
     setprop("/instrumentation/flightdirector/lnav",0);}
+    if(getprop("/instrumentation/flightdirector/vnav") != 1){
+    setprop("/instrumentation/flightdirector/vnav",1);}else{
+    setprop("/instrumentation/flightdirector/vnav",0);}
     </script>
      </binding>
    </action>
@@ -367,9 +482,9 @@ Autopilot Controls
  <action>
     <name>VS Hold Toggle </name>
     <button>0</button>
-    <x>23</x>
-    <y>-26</y>
-    <w>12</w>
+    <x>25</x>
+    <y>-24</y>
+    <w>14</w>
     <h>12</h>
     <binding>
     <command>nasal</command>
@@ -385,8 +500,8 @@ Autopilot Controls
 <action>
     <name>Altitude Select Toggle</name>
     <button>0</button>
-    <x>45</x>
-    <y>-26</y>
+    <x>47</x>
+    <y>-25</y>
     <w>12</w>
     <h>12</h>
     <binding>
@@ -404,8 +519,8 @@ Autopilot Controls
     <name>GS Hold Toggle </name>
     <button>0</button>
     <x>-91</x>
-    <y>-10</y>
-    <w>12</w>
+    <y>-9</y>
+    <w>14</w>
     <h>12</h>
     <binding>
     <command>nasal</command>
@@ -422,17 +537,26 @@ Autopilot Controls
   <action>
     <name>AT Toggle </name>
     <button>0</button>
-    <x>-149</x>
-    <y>-26</y>
-    <w>12</w>
+    <x>-147</x>
+    <y>-23</y>
+    <w>14</w>
     <h>12</h>
     <binding>
     <command>nasal</command>
     <script>
-    if(getprop("/instrumentation/flightdirector/vnav") != 4){
+<!--    if(getprop("/instrumentation/flightdirector/vnav") != 4){
     setprop("/instrumentation/flightdirector/vnav",4);
     }else{
     setprop("/instrumentation/flightdirector/vnav",0);}
+-->
+    if(getprop("/instrumentation/flightdirector/autopilot-on")==1) {
+     if(getprop("/instrumentation/flightdirector/at-on")==0) {
+      setprop("/instrumentation/flightdirector/at-on",1);
+     }
+     else {
+      setprop("/instrumentation/flightdirector/at-on",0);
+     }
+    }
     </script>
     </binding>
   </action>
@@ -440,8 +564,8 @@ Autopilot Controls
   <action>
     <name>WXRADAR Toggle </name>
     <button>0</button>
-    <x>-255</x>
-    <y>-16</y>
+    <x>-253</x>
+    <y>-15</y>
     <w>10</w>
     <h>6</h>
     <binding>
@@ -497,5 +621,266 @@ Autopilot Controls
     </binding>
   </action>
 
- </actions>
+  <action>
+	  <name>WXRADAR mode up </name>
+	  <button>0</button>
+	  <x>-229</x>
+	  <y>-6</y>
+	  <w>12</w>
+	  <h>12</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  test=getprop("/instrumentation/wxradar/display-mode");
+			  if(test ==0){setprop("/instrumentation/wxradar/display-mode",1);}
+			  elsif(test ==1){setprop("/instrumentation/wxradar/display-mode",2);}
+			  elsif(test ==2){setprop("/instrumentation/wxradar/display-mode",3);}
+		  </script>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>WXRADAR mode down </name>
+	  <button>0</button>
+	  <x>-241</x>
+	  <y>-6</y>
+	  <w>12</w>
+	  <h>12</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  test=getprop("/instrumentation/wxradar/display-mode");
+			  if(test ==3){setprop("/instrumentation/wxradar/display-mode",2);}
+			  elsif(test ==2){setprop("/instrumentation/wxradar/display-mode",1);}
+			  elsif(test ==1){setprop("/instrumentation/wxradar/display-mode",0);}
+		  </script>
+	  </binding>
+  </action>
+  
+  <!--
+  <action>
+	  <name>STA Toggle </name>
+	  <button>0</button>
+	  <x>-241</x>
+	  <y>-15</y>
+	  <w>10</w>
+	  <h>6</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  if(getprop("/instrumentation/wxradar/switch") != "on"){
+			  setprop("/instrumentation/wxradar/switch","on");
+			  }else{
+			  setprop("/instrumentation/wxradar/switch","off");}
+		  </script>
+	  </binding>
+  </action>
+  <action>
+	  <name>WPT Toggle </name>
+	  <button>0</button>
+	  <x>-228</x>
+	  <y>-15</y>
+	  <w>10</w>
+	  <h>6</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			   if(getprop("/instrumentation/flightdirector/lnav") != 5) {
+			    setprop("/instrumentation/flightdirector/lnav",5);
+			   }
+			   else{
+			    setprop("/instrumentation/flightdirector/lnav",0);
+			   }
+		  </script>
+	  </binding>
+  </action>
+  <action>
+	  <name>ARPT Toggle </name>
+	  <button>0</button>
+	  <x>-214</x>
+	  <y>-15</y>
+	  <w>10</w>
+	  <h>6</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  if(getprop("/instrumentation/wxradar/switch") != "on"){
+			  setprop("/instrumentation/wxradar/switch","on");
+			  }else{
+			  setprop("/instrumentation/wxradar/switch","off");}
+		  </script>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>DATA Toggle </name>
+	  <button>0</button>
+	  <x>-201</x>
+	  <y>-15</y>
+	  <w>10</w>
+	  <h>6</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  if(getprop("/instrumentation/wxradar/switch") != "on"){
+			  setprop("/instrumentation/wxradar/switch","on");
+			  }else{
+			  setprop("/instrumentation/wxradar/switch","off");}
+		  </script>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>POS Toggle </name>
+	  <button>0</button>
+	  <x>-188</x>
+	  <y>-15</y>
+	  <w>10</w>
+	  <h>6</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  if(getprop("/instrumentation/wxradar/switch") != "on"){
+			  setprop("/instrumentation/wxradar/switch","on");
+			  }else{
+			  setprop("/instrumentation/wxradar/switch","off");}
+		  </script>
+	  </binding>
+  </action>
+-->  
+  <action>
+	  <name>Baro-mode up </name>
+	  <button>0</button>
+	  <x>-190</x>
+	  <y>10</y>
+	  <w>12</w>
+	  <h>12</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  test=getprop("/instrumentation/efis/baro-mode");
+			  if(test ==0){setprop("/instrumentation/efis/baro-mode",1);};
+		  </script>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>Baro-mode down </name>
+	  <button>0</button>
+	  <x>-202</x>
+	  <y>10</y>
+	  <w>12</w>
+	  <h>12</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  test=getprop("/instrumentation/efis/baro-mode");
+			  if(test ==1){setprop("/instrumentation/efis/baro-mode",0);};
+		  </script>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>Track Toggle</name>
+	  <button>0</button>
+	  <x>-38</x>
+	  <y>20</y>
+	  <w>8</w>
+	  <h>8</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  if(getprop("/instrumentation/flightdirector/track-mode-on") != 1){
+			  setprop("/instrumentation/flightdirector/track-mode-on",1);}else{
+			  setprop("/instrumentation/flightdirector/track-mode-on",0);}
+		  </script>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>FPA Toggle</name>
+	  <button>0</button>
+	  <x>6</x>
+	  <y>20</y>
+	  <w>8</w>
+	  <h>8</h>
+	  <binding>
+		  <command>nasal</command>
+		  <script>
+			  if(getprop("/instrumentation/flightdirector/fpa-mode-on") != 1){
+			  setprop("/instrumentation/flightdirector/fpa-mode-on",1);}else{
+			  setprop("/instrumentation/flightdirector/fpa-mode-on",0);}
+		  </script>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>PFDleft switch up</name>
+	  <button>0</button>
+	  <x>-250</x>
+	  <y>1</y>
+	  <w>6</w>
+	  <h>6</h>
+	  <binding>
+		  <command>property-adjust</command>
+		  <property>/instrumentation/efis/pfd-left-switch</property>
+		  <step>-1</step>
+		  <min>-1</min>
+		  <max>1</max>
+		  <wrap>false</wrap>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>PFDleft switch down</name>
+	  <button>0</button>
+	  <x>-250</x>
+	  <y>-6</y>
+	  <w>6</w>
+	  <h>6</h>
+	  <binding>
+		  <command>property-adjust</command>
+		  <property>/instrumentation/efis/pfd-left-switch</property>
+		  <step>1</step>
+		  <min>-1</min>
+		  <max>1</max>
+		  <wrap>false</wrap>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>PFDright switch up</name>
+	  <button>0</button>
+	  <x>-188</x>
+	  <y>1</y>
+	  <w>6</w>
+	  <h>6</h>
+	  <binding>
+		  <command>property-adjust</command>
+		  <property>/instrumentation/efis/pfd-right-switch</property>
+		  <step>-1</step>
+		  <min>-1</min>
+		  <max>1</max>
+		  <wrap>false</wrap>
+	  </binding>
+  </action>
+  
+  <action>
+	  <name>PFDright switch down</name>
+	  <button>0</button>
+	  <x>-188</x>
+	  <y>-6</y>
+	  <w>6</w>
+	  <h>6</h>
+	  <binding>
+		  <command>property-adjust</command>
+		  <property>/instrumentation/efis/pfd-right-switch</property>
+		  <step>1</step>
+		  <min>-1</min>
+		  <max>1</max>
+		  <wrap>false</wrap>
+	  </binding>
+  </action>
+  
+</actions>
 </PropertyList>

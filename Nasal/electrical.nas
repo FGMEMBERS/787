@@ -15,18 +15,50 @@ Rmain_bus_volts = 0.0;
 AC_bus_amps = 0.0;
 ammeter_ave = 0.0;
 
+external_volts = 0.0;
+load = 0.0;
 
 init_electrical = func {
     print("Initializing Nasal Electrical System");
     battery = BatteryClass.new();
     alternator = AlternatorClass.new();
     setprop("/controls/switches/master-avionics", 1);
-    setprop("/controls/electric/battery-switch", 1.0);
-    setprop("/controls/electric/external-power", 0);
-    setprop("/controls/electric/engine[0]/generator", 1);
-    setprop("/controls/electric/engine[1]/generator", 1);
     setprop("/controls/switches/inverter", 1);
- 
+    
+    if(getprop("/sim/model/start-idling")) {
+     setprop("/controls/electric/battery-switch", 0);
+     setprop("/controls/electric/pri-external-power", 0);
+     setprop("/controls/electric/sec-external-power", 0);
+     setprop("/controls/electric/engine[0]/bus-tie", 1);
+     setprop("/controls/electric/engine[1]/bus-tie", 1);
+     setprop("/controls/electric/engine[0]/generator", 1);
+     setprop("/controls/electric/engine[1]/generator", 1);
+     setprop("/controls/electric/engine[0]/drive", 1);
+     setprop("/controls/electric/engine[1]/drive", 1);
+     setprop("/controls/electric/engine[0]/bkp-generator", 1);
+     setprop("/controls/electric/engine[1]/bkp-generator", 1);
+     setprop("/controls/electric/engine[2]/bus-tie", 1);
+     setprop("/controls/electric/engine[2]/generator", 0);
+     setprop("/systems/electrical/outputs/eec-Lbus", 30);
+     setprop("/systems/electrical/outputs/eec-Rbus", 30);
+    }
+    else {
+     setprop("/controls/electric/battery-switch", 1.0);
+     setprop("/controls/electric/pri-external-power", 0);
+     setprop("/controls/electric/sec-external-power", 0);
+     setprop("/controls/electric/engine[0]/bus-tie", 1);
+     setprop("/controls/electric/engine[1]/bus-tie", 1);
+     setprop("/controls/electric/engine[0]/generator", 0);
+     setprop("/controls/electric/engine[1]/generator", 0);
+     setprop("/controls/electric/engine[0]/drive", 1);
+     setprop("/controls/electric/engine[1]/drive", 1);
+     setprop("/controls/electric/engine[0]/bkp-generator", 0);
+     setprop("/controls/electric/engine[1]/bkp-generator", 0);
+     setprop("/controls/electric/engine[2]/bus-tie", 1);
+     setprop("/controls/electric/engine[2]/generator", 0);
+     setprop("/systems/electrical/outputs/eec-Lbus", 0);
+     setprop("/systems/electrical/outputs/eec-Rbus", 0);
+    };
     settimer(update_electrical, 0);
 }
 
@@ -74,7 +106,7 @@ AlternatorClass = {};
 
 AlternatorClass.new = func {
     obj = { parents : [AlternatorClass],
-            rpm_source : "/engines/engine[0]/n2",
+            rpm_source : "/sim/model/Boeing-787-8/n2",
             rpm_threshold : 40.0,
             ideal_volts : 28.0,
             ideal_amps : 60.0 };
@@ -128,71 +160,128 @@ update_electrical = func {
 }
 
 update_virtual_bus = func( dt ) {
+#Battery
     battery_volts = battery.get_output_volts();
-    alternator_volts = alternator.get_output_volts("/engines/engine[0]/n2");
-    alternator1_volts = alternator.get_output_volts("/engines/engine[1]/n2");
-    external_volts = 0.0;
+#Main generators
+    if(getprop("/controls/electric/engine/drive") and getprop("/controls/electric/engine/generator")) {
+      alternator_volts = alternator.get_output_volts("/sim/model/Boeing-787-8/n2");
+    }
+    else {alternator_volts = 0;};
+    if(getprop("/controls/electric/engine[1]/drive") and getprop("/controls/electric/engine[1]/generator")) {
+      alternator1_volts = alternator.get_output_volts("/sim/model/Boeing-787-8/n2[1]");
+    }
+    else {alternator1_volts = 0;};
+#Backup generators
+    if(getprop("/controls/electric/engine/bkp-generator")) {
+      bkpalt_volts = alternator.get_output_volts("/sim/model/Boeing-787-8/n2");
+    }
+    else {bkpalt_volts = 0;};
+    if(getprop("/controls/electric/engine[1]/bkp-generator")) {
+      bkpalt1_volts = alternator.get_output_volts("/sim/model/Boeing-787-8/n2[1]");
+    }
+    else {bkpalt1_volts = 0;};
+#APU generator
+    if(getprop("/controls/electric/engine[2]/generator")) {
+      apu_volts = alternator.get_output_volts("/sim/model/Boeing-787-8/apu-n2");
+    }
+    else {apu_volts = 0;}; 
+#external sources
+    priext = getprop("/controls/electric/pri-external-power");
+    secext = getprop("/controls/electric/sec-external-power");
+    if(priext or secext) {
+      external_volts = 27.0;
+    }
+    else {external_volts = 0;}; 
+
     load = 0.0;
 
     master_bat = getprop("/controls/electric/battery-switch");
     master_alt = getprop("/controls/electric/engine[0]/generator");
-    master_alt1 = getprop("/controls/electric/engine[0]/generator");
+    master_alt1 = getprop("/controls/electric/engine[1]/generator");
+    master_bkpalt = getprop("/controls/electric/engine[0]/bkp-generator");
+    master_bkpalt1 = getprop("/controls/electric/engine[1]/bkp-generator");
+    master_apu = getprop("/controls/electric/engine[2]/generator");
+    lbus_tie = getprop("/controls/electric/engine[0]/bus-tie");
+    rbus_tie = getprop("/controls/electric/engine[1]/bus-tie");
 
     # determine power source
     bat_bus_volts = 0.0;
-  Lmain_bus_volts = 0.0;
-  Rmain_bus_volts = 0.0;
+    Lmain_bus_volts = 0.0;
+    Rmain_bus_volts = 0.0;
     power_source = nil;
 
     if ( master_bat == 1.0 ) {
         bat_bus_volts = battery_volts;
-  Lmain_bus_volts = bat_bus_volts;
-  Rmain_bus_volts = bat_bus_volts;
+        if(lbus_tie) Lmain_bus_volts = bat_bus_volts;
+        if(rbus_tie) Rmain_bus_volts = bat_bus_volts;
         emerg_bus_volts = bat_bus_volts;
         power_source = "battery";
-    }else{
-    if ( master_bat == 2.0 ) {
-        emerg_bus_volts = battery_volts;
-        power_source = "battery";
-}}
+    };
+#    else{
+#     if ( master_bat == 2.0 ) {
+#        emerg_bus_volts = battery_volts;
+#        power_source = "battery";
+#     }
+#   }
+
+    if (master_alt) {Lmain_bus_volts = alternator_volts;};
+    if (master_alt1) {Rmain_bus_volts = alternator1_volts;};
+    if (master_bkpalt and (bkpalt_volts > alternator_volts)) {Lmain_bus_volts = bkpalt_volts;};
+    if (master_bkpalt1 and (bkpalt1_volts > alternator1_volts)) {Rmain_bus_volts = bkpalt1_volts;};
 
     if ( master_alt and (alternator_volts > bat_bus_volts) ) {
-        Lmain_bus_volts = alternator_volts;
         bat_bus_volts = alternator_volts;
-
+        emerg_bus_volts = alternator_volts;
         power_source = "alternator";
     }
     if ( master_alt1 and (alternator1_volts > bat_bus_volts) ) {
-        Rmain_bus_volts = alternator1_volts;
-        bat_bus_volts = alternator_volts;
+        bat_bus_volts = alternator1_volts;
+        emerg_bus_volts = alternator1_volts;
+        power_source = "alternator";
+    }
+    if (master_bkpalt and (bkpalt_volts > bat_bus_volts) ) {
+        bat_bus_volts = bkpalt_volts;
+        emerg_bus_volts = bkpalt_volts;
+        power_source = "alternator";
+    }
+    if (master_bkpalt1 and (bkpalt1_volts > bat_bus_volts) ) {
+        bat_bus_volts = bkpalt1_volts;
+        emerg_bus_volts = bkpalt1_volts;
+        power_source = "alternator";
+    }
+    if ( master_apu and (apu_volts > bat_bus_volts) ) {
+        if(rbus_tie) {Rmain_bus_volts = apu_volts;};
+        if(lbus_tie) {Lmain_bus_volts = apu_volts;};
+        bat_bus_volts = apu_volts;
+        emerg_bus_volts = apu_volts;
         power_source = "alternator";
     }
     if ( external_volts > bat_bus_volts ) {
         bat_bus_volts = external_volts;
+        if(priext or (secext and rbus_tie)) {Rmain_bus_volts = external_volts;};
+        if((secext and lbus_tie) or (priext and lbus_tie and rbus_tie)) {Lmain_bus_volts = external_volts;}
+        emerg_bus_volts = external_volts;
         power_source = "external";
     }
 
-    # left starter motor
-    starter_switch = getprop("/controls/engines/engine[0]/starter");
-    starter_volts = 0.0;
-    if ( starter_switch ) {
-        starter_volts = bat_bus_volts;
-    }
-    setprop("/systems/electrical/outputs/starter[0]", starter_volts);
-
-    # right starter motor
-    starter_switch = getprop("/controls/engines/engine[1]/starter");
-    starter_volts = 0.0;
-    if ( starter_switch ) {
-        starter_volts = bat_bus_volts;
-    }
-    setprop("/systems/electrical/outputs/starter[1]", starter_volts);
+#    starter_switch = getprop("/controls/APU/off-start-run");
+#    starter_volts = 0.0;
+#    if ( starter_switch == 1) {#start APU
+#        starter_volts = bat_bus_volts;
+#    }
+#    setprop("/systems/electrical/outputs/starter", starter_volts);
+     starter_volts = bat_bus_volts;
 
     load += emergency_bus();
-    load += cross_feed_bus();
+    if(lbus_tie and rbus_tie) {load += cross_feed_bus();};
     load += Left_Main_bus();
     load += Right_Main_bus();
     load += AC_bus();
+
+    setprop("/systems/electrical/outputs/starter", starter_volts);
+    setprop("/systems/electrical/outputs/eec-Lbus", Lmain_bus_volts);
+    setprop("/systems/electrical/outputs/eec-Rbus", Rmain_bus_volts);
+    setprop("/systems/electrical/outputs/apu-bus", emerg_bus_volts);
 
     ammeter = 0.0;
     if ( bat_bus_volts > 1.0 ) {
@@ -243,7 +332,7 @@ emergency_bus = func() {
 }
 
 cross_feed_bus = func() {
-    if (Lmain_bus_volts > Rmain_bus_volts ) {
+    if (Lmain_bus_volts >= Rmain_bus_volts ) {
         Rmain_bus_volts = Lmain_bus_volts;
     } else {
      Lmain_bus_volts = Rmain_bus_volts;

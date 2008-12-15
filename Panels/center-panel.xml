@@ -48,7 +48,6 @@
     <h>22</h>
   </instrument>
 
- -->
   <instrument include="dme.xml">
     <name>DME</name>
     <x>340</x>
@@ -56,6 +55,7 @@
     <w>60</w>
     <h>22</h>
   </instrument>
+  -->
 
 <instrument>
   <name>panel hotspots</name>

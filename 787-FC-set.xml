@@ -3,7 +3,7 @@
 <description>First Choice 787-8</description>
 <author>Joshua Wilson</author>
 <status>Development</status>
-<aircraft-version>08_2007</aircraft-version>
+<aircraft-version>02_2008</aircraft-version>
 <flight-model>yasim</flight-model>
 <aero>787</aero>
 <fuel-fraction>0.8</fuel-fraction>
@@ -18,6 +18,25 @@
 
 <model>
 <path>Aircraft/787/Models/787FC.xml</path>
+<start-idling type="bool">0</start-idling>
+<variant type="int">0</variant>
+<Boeing-787-8>
+	<n1 n="0" type="double">0</n1>
+	<n1 n="1" type="double">0</n1>
+	<n2 n="0" type="double">0</n2>
+	<n2 n="1" type="double">0</n2>
+	<egt n="0" type="double">0</egt>
+	<egt n="1" type="double">0</egt>
+	<eec-mode n="0" type="bool">1</eec-mode>
+	<eec-mode n="1" type="bool">1</eec-mode>
+	<start-cycle n="0" type="bool">0</start-cycle>
+	<start-cycle n="1" type="bool">0</start-cycle>
+	<start-engines type="bool">0</start-engines>
+	<apu-n1 type="double">0</apu-n1>
+	<apu-n2 type="double">0</apu-n2>
+	<apu-egt type="double">0</apu-egt>
+	<apu-start n="0" type="bool">0</apu-start>
+</Boeing-787-8>
 </model>
 
     <view n="0">
@@ -139,7 +158,7 @@
  <serviceable>true</serviceable>
   <range type="int" archive="y">20</range>
   <minimized type="bool" archive="y">false</minimized>
-  <switch archive="y">on</switch>
+  <switch archive="y">off</switch>
   <mode archive="y">wx</mode>
   <lightning type="bool" archive="y">true</lightning>
   <display-mode archive="y">arc</display-mode>
