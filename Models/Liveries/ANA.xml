@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+<sim>
+    
+<model>
+        
+<livery>
+            
+<name type="string">All Nippon Airways</name>
+            
+<texture>ANA-Livery.rgb</texture>
+        
+</livery>
+        
+<lights>
+            
+<texture>ANA-Lights.rgb</texture>
+        
+</lights>
+   
+<lights-r>
+            
+<texture>ANA-Lights-r.rgb</texture>
+        
+</lights-r>
+  
+</model>
+
+</sim>
+
+</PropertyList>

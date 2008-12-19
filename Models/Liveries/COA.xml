@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+<sim>
+    
+<model>
+        
+<livery>
+            
+<name type="string">Continental Airlines</name>
+            
+<texture>COA-Livery.rgb</texture>
+        
+</livery>
+        
+<lights>
+            
+<texture>COA-Lights.rgb</texture>
+        
+</lights>
+    
+<lights-r>
+            
+<texture>COA-Lights-r.rgb</texture>
+        
+</lights-r>
+  
+</model>
+
+</sim>
+
+</PropertyList>

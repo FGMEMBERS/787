@@ -1,6 +1,9 @@
 # 787-8 systems
 #
 #
+
+aircraft.livery.init("Aircraft/787/Models/Liveries");
+
 baro =0.0;
 inhg = 0;
 kpa= 0;

@@ -35,7 +35,7 @@ OBJECT poly
 name "fin_0"
 data 4
 Mesh
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -61,7 +61,7 @@ OBJECT poly
 name "fin_1"
 data 8
 Mesh.002
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 77
@@ -11803,7 +11803,7 @@ OBJECT poly
 name "Lgear"
 data 8
 Mesh.010
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 45.000000
 numvert 41
@@ -30878,7 +30878,7 @@ OBJECT poly
 name "Rgear"
 data 8
 Mesh.018
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 45.000000
 numvert 41
@@ -35571,7 +35571,7 @@ OBJECT poly
 name "bodyfairing"
 data 8
 Mesh.026
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 241
@@ -42545,7 +42545,7 @@ OBJECT poly
 name "eng1fan"
 data 8
 Mesh.030
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 1321
@@ -50332,7 +50332,7 @@ OBJECT poly
 name "eng1fanb"
 data 8
 Mesh.031
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 87
@@ -50981,7 +50981,7 @@ OBJECT poly
 name "eng2fan"
 data 10
 Mesh.12018
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 1321
@@ -58768,7 +58768,7 @@ OBJECT poly
 name "eng2fanb"
 data 10
 Mesh.12019
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 87
@@ -59417,7 +59417,7 @@ OBJECT poly
 name "fuselage"
 data 10
 Mesh.12020
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 726
@@ -64945,7 +64945,7 @@ OBJECT poly
 name "fuselage.002"
 data 10
 Mesh.12021
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 13
@@ -65552,7 +65552,7 @@ OBJECT poly
 name "lgearustrut"
 data 10
 Mesh.12026
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 45.000000
 numvert 16
@@ -65648,7 +65648,7 @@ OBJECT poly
 name "lhelevator"
 data 10
 Mesh.12027
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 54
@@ -65936,7 +65936,7 @@ OBJECT poly
 name "lhfdoor"
 data 10
 Mesh.12028
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 3
@@ -65955,7 +65955,7 @@ OBJECT poly
 name "lhfnosedoor"
 data 10
 Mesh.12029
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 28
@@ -66113,7 +66113,7 @@ OBJECT poly
 name "lhgearibdoor"
 data 10
 Mesh.12030
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 20
@@ -66563,7 +66563,7 @@ OBJECT poly
 name "lhibaileron"
 data 10
 Mesh.12033
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 71
@@ -66999,7 +66999,7 @@ OBJECT poly
 name "lhibdoor"
 data 10
 Mesh.12034
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 41
@@ -67197,7 +67197,7 @@ OBJECT poly
 name "lhibfairing"
 data 10
 Mesh.12035
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 33
@@ -67377,7 +67377,7 @@ OBJECT poly
 name "lhibflap1"
 data 10
 Mesh.12036
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 32
@@ -67517,7 +67517,7 @@ OBJECT poly
 name "lhibflap1a"
 data 10
 Mesh.12037
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 53
@@ -67767,7 +67767,7 @@ OBJECT poly
 name "lhibslat"
 data 10
 Mesh.12038
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 67
@@ -68162,7 +68162,7 @@ OBJECT poly
 name "lhibspoiler"
 data 10
 Mesh.12040
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -68212,7 +68212,7 @@ OBJECT poly
 name "lhibspoilera"
 data 10
 Mesh.12041
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -68244,7 +68244,7 @@ OBJECT poly
 name "lhkflap"
 data 10
 Mesh.12043
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 10
@@ -69432,7 +69432,7 @@ OBJECT poly
 name "lhmfairing"
 data 10
 Mesh.12053
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 40
@@ -69726,7 +69726,7 @@ OBJECT poly
 name "lhnosedoor"
 data 10
 Mesh.12055
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -69776,7 +69776,7 @@ OBJECT poly
 name "lhobaileron"
 data 10
 Mesh.12056
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -69906,7 +69906,7 @@ OBJECT poly
 name "lhobaileronh"
 data 10
 Mesh.12057
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -70036,7 +70036,7 @@ OBJECT poly
 name "lhobdoor"
 data 10
 Mesh.12058
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -70057,7 +70057,7 @@ OBJECT poly
 name "lhobfairing"
 data 10
 Mesh.12059
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 40
@@ -70279,7 +70279,7 @@ OBJECT poly
 name "lhobflapa"
 data 10
 Mesh.12060
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 45
@@ -70499,7 +70499,7 @@ OBJECT poly
 name "lhobflapb"
 data 10
 Mesh.12061
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -70956,7 +70956,7 @@ OBJECT poly
 name "lhobslata"
 data 10
 Mesh.12065
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 48
@@ -71201,7 +71201,7 @@ OBJECT poly
 name "lhobslatb"
 data 10
 Mesh.12066
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 36
@@ -71394,7 +71394,7 @@ OBJECT poly
 name "lhobslatc"
 data 10
 Mesh.12067
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -71523,7 +71523,7 @@ OBJECT poly
 name "lhobspoilera"
 data 10
 Mesh.12068
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -71555,7 +71555,7 @@ OBJECT poly
 name "lhobspoilerb"
 data 10
 Mesh.12069
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -71587,7 +71587,7 @@ OBJECT poly
 name "lhreverser"
 data 10
 Mesh.12070
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 301
@@ -73405,7 +73405,7 @@ OBJECT poly
 name "lhspoilera"
 data 10
 Mesh.12071
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -73517,7 +73517,7 @@ OBJECT poly
 name "lhvortexdev"
 data 10
 Mesh.12073
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -74209,7 +74209,7 @@ OBJECT poly
 name "lreverse"
 data 10
 Mesh.12083
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 13
@@ -74304,7 +74304,7 @@ OBJECT poly
 name "lstab"
 data 10
 Mesh.12084
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 75
@@ -75538,7 +75538,7 @@ OBJECT poly
 name "lwing"
 data 10
 Mesh.12088
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 172
@@ -76465,7 +76465,7 @@ OBJECT poly
 name "lwinga"
 data 10
 Mesh.12089
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 149
@@ -77226,7 +77226,7 @@ OBJECT poly
 name "lwingb"
 data 10
 Mesh.12090
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 92
@@ -77715,7 +77715,7 @@ OBJECT poly
 name "lwingc"
 data 10
 Mesh.12091
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 223
@@ -79094,7 +79094,7 @@ OBJECT poly
 name "mgearbay"
 data 10
 Mesh.12093
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 186
@@ -80179,7 +80179,7 @@ OBJECT poly
 name "no1enge"
 data 10
 Mesh.12094
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 461
@@ -82956,7 +82956,7 @@ OBJECT poly
 name "no1engl"
 data 10
 Mesh.12095
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 85
@@ -83387,7 +83387,7 @@ OBJECT poly
 name "no1pylon"
 data 10
 Mesh.12096
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 150
@@ -84464,7 +84464,7 @@ OBJECT poly
 name "no2enge"
 data 10
 Mesh.12097
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 461
@@ -87241,7 +87241,7 @@ OBJECT poly
 name "no2engl"
 data 10
 Mesh.12098
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 85
@@ -87672,7 +87672,7 @@ OBJECT poly
 name "no2pylon"
 data 10
 Mesh.12099
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 150
@@ -88749,7 +88749,7 @@ OBJECT poly
 name "nosegear"
 data 10
 Mesh.12100
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 276
@@ -93128,7 +93128,7 @@ OBJECT poly
 name "rgearustrut"
 data 10
 Mesh.12110
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 45.000000
 numvert 16
@@ -93224,7 +93224,7 @@ OBJECT poly
 name "rhelevator"
 data 10
 Mesh.12111
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 44
@@ -93502,7 +93502,7 @@ OBJECT poly
 name "rhfdoor"
 data 10
 Mesh.12112
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 3
@@ -93521,7 +93521,7 @@ OBJECT poly
 name "rhfnosedoor"
 data 10
 Mesh.12113
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 28
@@ -93679,7 +93679,7 @@ OBJECT poly
 name "rhgearibdoor"
 data 10
 Mesh.12114
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 20
@@ -94129,7 +94129,7 @@ OBJECT poly
 name "rhibaileron"
 data 10
 Mesh.12117
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 71
@@ -94565,7 +94565,7 @@ OBJECT poly
 name "rhibdoor"
 data 10
 Mesh.12118
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 41
@@ -94763,7 +94763,7 @@ OBJECT poly
 name "rhibfairing"
 data 10
 Mesh.12119
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 33
@@ -94943,7 +94943,7 @@ OBJECT poly
 name "rhibflap1"
 data 10
 Mesh.12120
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 32
@@ -95083,7 +95083,7 @@ OBJECT poly
 name "rhibflap1a"
 data 10
 Mesh.12121
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 53
@@ -95333,7 +95333,7 @@ OBJECT poly
 name "rhibslat"
 data 10
 Mesh.12122
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 61
@@ -95725,7 +95725,7 @@ OBJECT poly
 name "rhibspoiler"
 data 10
 Mesh.12124
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -95757,7 +95757,7 @@ OBJECT poly
 name "rhibspoilera"
 data 10
 Mesh.12125
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -95789,7 +95789,7 @@ OBJECT poly
 name "rhkflap"
 data 10
 Mesh.12127
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 10
@@ -96977,7 +96977,7 @@ OBJECT poly
 name "rhmfairing"
 data 10
 Mesh.12137
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 40
@@ -97272,7 +97272,7 @@ OBJECT poly
 name "rhnosedoor"
 data 10
 Mesh.12139
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -97322,7 +97322,7 @@ OBJECT poly
 name "rhobaileron"
 data 10
 Mesh.12140
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -97452,7 +97452,7 @@ OBJECT poly
 name "rhobaileronh"
 data 10
 Mesh.12141
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -97582,7 +97582,7 @@ OBJECT poly
 name "rhobdoor"
 data 10
 Mesh.12142
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 4
@@ -97603,7 +97603,7 @@ OBJECT poly
 name "rhobfairing"
 data 10
 Mesh.12143
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 40
@@ -97825,7 +97825,7 @@ OBJECT poly
 name "rhobflapa"
 data 10
 Mesh.12144
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 45
@@ -98045,7 +98045,7 @@ OBJECT poly
 name "rhobflapb"
 data 10
 Mesh.12145
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -98502,7 +98502,7 @@ OBJECT poly
 name "rhobslata"
 data 10
 Mesh.12149
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 48
@@ -98747,7 +98747,7 @@ OBJECT poly
 name "rhobslatb"
 data 10
 Mesh.12150
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 36
@@ -98940,7 +98940,7 @@ OBJECT poly
 name "rhobslatc"
 data 10
 Mesh.12151
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 30
@@ -99069,7 +99069,7 @@ OBJECT poly
 name "rhobspoilera"
 data 10
 Mesh.12152
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -99101,7 +99101,7 @@ OBJECT poly
 name "rhobspoilerb"
 data 10
 Mesh.12153
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -99133,7 +99133,7 @@ OBJECT poly
 name "rhreverser"
 data 10
 Mesh.12154
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 302
@@ -100952,7 +100952,7 @@ OBJECT poly
 name "rhspoilera"
 data 10
 Mesh.12155
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -101064,7 +101064,7 @@ OBJECT poly
 name "rhvortexdev"
 data 10
 Mesh.12157
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -101188,7 +101188,7 @@ OBJECT poly
 name "rreverse"
 data 10
 Mesh.12160
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 13
@@ -101283,7 +101283,7 @@ OBJECT poly
 name "rstab"
 data 10
 Mesh.12161
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 75
@@ -102517,7 +102517,7 @@ OBJECT poly
 name "rudder"
 data 10
 Mesh.12164
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 70
@@ -102908,7 +102908,7 @@ OBJECT poly
 name "rwing"
 data 10
 Mesh.12166
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 172
@@ -103835,7 +103835,7 @@ OBJECT poly
 name "rwinga"
 data 10
 Mesh.12167
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 149
@@ -104596,7 +104596,7 @@ OBJECT poly
 name "rwingb"
 data 10
 Mesh.12168
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 92
@@ -105085,7 +105085,7 @@ OBJECT poly
 name "rwingc"
 data 10
 Mesh.12185
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 223
@@ -107070,7 +107070,7 @@ OBJECT poly
 name "windows"
 data 10
 Mesh.12180
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 30.000000
 numvert 1429
@@ -113209,7 +113209,7 @@ OBJECT poly
 name "wipers"
 data 10
 Mesh.12183
-texture "787.rgb"
+texture "ANA-Livery.rgb"
 texrep 1 1
 crease 45.000000
 numvert 100
