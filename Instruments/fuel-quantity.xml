@@ -60,7 +60,7 @@ properties' values.
     <chunks>
      <chunk>
       <type>number-value</type>
-      <property>/consumables/fuel/tank[2]/level-lb</property>
+      <property>/consumables/fuel/tank[2]/level-lbs</property>
       <format>%5.0f</format>
      </chunk>
     </chunks>
@@ -89,7 +89,7 @@ properties' values.
     <chunks>
      <chunk>
       <type>number-value</type>
-      <property>/consumables/fuel/tank[0]/level-lb</property>
+      <property>/consumables/fuel/tank[0]/level-lbs</property>
       <format>%5.0f</format>
      </chunk>
     </chunks>
@@ -118,7 +118,7 @@ properties' values.
     <chunks>
      <chunk>
       <type>number-value</type>
-      <property>/consumables/fuel/tank[1]/level-lb</property>
+      <property>/consumables/fuel/tank[1]/level-lbs</property>
       <format>%5.0f</format>
      </chunk>
     </chunks>
