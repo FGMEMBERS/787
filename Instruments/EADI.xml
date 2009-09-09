@@ -105,10 +105,8 @@ properties' values.
     </transformation>
     <transformation>
      <type>y-shift</type>
-     <property>/instrumentation/nav/gs-needle-deflection</property>
-     <min>-10</min>
-     <max>10</max>
-     <scale>3.0</scale>
+     <property>/instrumentation/nav/gs-needle-deflection-norm</property>
+     <scale>30.0</scale>
      <offset>106</offset>
     </transformation>
    </transformations>

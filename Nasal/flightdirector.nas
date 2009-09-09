@@ -824,11 +824,9 @@ desired_course = getprop("/instrumentation/nav/radials/selected-deg");
 course_offset = getprop("/instrumentation/nav/heading-needle-deflection");
 nav_mag_brg = getprop("/instrumentation/nav/heading-deg");
 if (getprop("/instrumentation/nav/has-gs") != 0){
-gs_offset=getprop("/instrumentation/nav/gs-needle-deflection");
+gs_offset=getprop("/instrumentation/nav/gs-needle-deflection-norm");
 if(gs_offset == nil){gs_offset = 0};
-gs_active = gs_offset *1.0; 
-if(gs_active > 30.0){gs_active = 30.0};
-if(gs_active < -30.0){gs_active = -30.0};
+gs_active = gs_offset * 30.0; 
 setprop("/instrumentation/flightdirector/gs-pitch",gs_active * 100);}
 }
 else

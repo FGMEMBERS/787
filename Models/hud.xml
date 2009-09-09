@@ -1112,7 +1112,7 @@
     <property>sim/hud/visibility[0]</property>
     <not>
     <equals>
-     <property>instrumentation/nav/gs-needle-deflection</property>
+     <property>instrumentation/nav/gs-needle-deflection-norm</property>
      <value>0</value>
     </equals>
     </not>
@@ -3879,10 +3879,10 @@
  <animation>
    <type>translate</type>
    <object-name>gs</object-name>
-   <property>instrumentation/nav/gs-needle-deflection</property>
+   <property>instrumentation/nav/gs-needle-deflection-norm</property>
 <interpolation>
      <entry>
-       <ind>-10.0</ind>
+       <ind>-1.0</ind>
        <dep>-0.02</dep>
      </entry>
      <entry>
@@ -3890,7 +3890,7 @@
        <dep>0.0</dep>
      </entry>
      <entry>
-       <ind>10.0</ind>
+       <ind>1.0</ind>
        <dep>0.02</dep>
      </entry>
 </interpolation>

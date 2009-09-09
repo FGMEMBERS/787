@@ -4507,8 +4507,8 @@ Syd Adams, Josh Wilson
 <animation>
 	<type>translate</type>
 	<object-name>vor_gsarrow</object-name>
-	<property>/instrumentation/nav[0]/gs-needle-deflection</property>
-	<factor>0.003372</factor>
+	<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+	<factor>0.03372</factor>
 	<min-m>-0.03372</min-m>
 	<max-m>0.03372</max-m>
 	<axis>

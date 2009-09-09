@@ -128,10 +128,10 @@ Syd Adams, Josh Wilson
  <animation>
    <type>translate</type>
    <object-name>GSneedle</object-name>
-   <property>/instrumentation/nav/gs-needle-deflection</property>
+   <property>/instrumentation/nav/gs-needle-deflection-norm</property>
 <interpolation>
      <entry>
-       <ind> -10.0</ind>
+       <ind> -1.0</ind>
        <dep>-0.0308</dep>
      </entry>
      <entry>
@@ -139,7 +139,7 @@ Syd Adams, Josh Wilson
        <dep>0.0</dep>
      </entry>
      <entry>
-       <ind> 10.0</ind>
+       <ind> 1.0</ind>
        <dep>0.0308</dep>
      </entry>
 </interpolation>
@@ -498,10 +498,10 @@ Syd Adams, Josh Wilson
   <animation>
    <type>translate</type>
    <object-name>GSneedle</object-name>
-   <property>/instrumentation/nav/gs-needle-deflection</property>
+   <property>/instrumentation/nav/gs-needle-deflection-norm</property>
    <interpolation>
      <entry>
-       <ind>-10.0</ind>
+       <ind>-1.0</ind>
        <dep>-0.0160</dep>
      </entry>
      <entry>
@@ -509,7 +509,7 @@ Syd Adams, Josh Wilson
        <dep>0.0</dep>
      </entry>
      <entry>
-       <ind>10.0</ind>
+       <ind>1.0</ind>
        <dep>0.0160</dep>
      </entry>
    </interpolation>
