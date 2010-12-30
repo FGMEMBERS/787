@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<PropertyList>
+<sim>
+	<description>Boeing 787-8</description>
+	<author>Joshua Wilson (3D) Nick I (FDM, Systems) Dany93 (FDM, AP)</author>
+	<status>Front Page Release</status>
+	<flight-model>yasim</flight-model>
+	<aero>787-8</aero>
+	<fuel-fraction>0.8</fuel-fraction>
+
+	<startup>
+		<splash-texture>Aircraft/787/splash.png</splash-texture>
+	</startup>
+
+	<model>
+		<path>Aircraft/787/Models/787.xml</path>
+		<start-idling type="bool">1</start-idling>
+		<variant type="int">0</variant>
+		<Boeing-787-8>
+			<n1 n="0" type="double">0</n1>
+			<n1 n="1" type="double">0</n1>
+			<n2 n="0" type="double">0</n2>
+			<n2 n="1" type="double">0</n2>
+			<egt n="0" type="double">0</egt>
+			<egt n="1" type="double">0</egt>
+			<eec-mode n="0" type="bool">1</eec-mode>
+			<eec-mode n="1" type="bool">1</eec-mode>
+			<start-cycle n="0" type="bool">0</start-cycle>
+			<start-cycle n="1" type="bool">0</start-cycle>
+			<start-engines type="bool">0</start-engines>
+			<apu-n1 type="double">0</apu-n1>
+			<apu-n2 type="double">0</apu-n2>
+			<apu-egt type="double">0</apu-egt>
+			<apu-start n="0" type="bool">0</apu-start>
+		</Boeing-787-8>
+		<livery>
+			<file type="string">BCA</file>
+		</livery>
+	</model>
+
+	<current-view>
+		<cockpit type="bool">1</cockpit>
+	</current-view>
+
+	<view n="0">
+		<name>Cockpit</name>
+		<type>lookfrom</type>
+		<internal type="bool">true</internal>
+		<cockpit type="bool">true</cockpit>
+		<config>
+			<x-offset-m type="double">-0.603</x-offset-m>
+			<y-offset-m type="double">2.242</y-offset-m>
+			<z-offset-m type="double">-22.612</z-offset-m>
+			<pitch-offset-deg>-10.3</pitch-offset-deg>
+			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+		</config>
+	</view>
+
+	<view n="1">
+		<internal type="bool">0</internal>
+		<cockpit type="bool">0</cockpit>
+	</view>
+
+	<view n="2">
+		<internal type="bool">0</internal>
+		<cockpit type="bool">0</cockpit>
+	</view>
+
+	<view n="3">
+		<internal type="bool">0</internal>
+		<cockpit type="bool">0</cockpit>
+	</view>
+
+	<view n="4">
+		<internal type="bool">0</internal>
+		<cockpit type="bool">0</cockpit>
+	</view>
+
+	<view n="5">
+		<internal type="bool">0</internal>
+		<cockpit type="bool">0</cockpit>
+	</view>
+
+	<view n="6">
+		<internal type="bool">0</internal>
+		<cockpit type="bool">0</cockpit>
+		<config>
+			<z-offset-m archive="y" type="double">125.0</z-offset-m>
+		</config>
+	</view>
+
+	<view n="101">
+		<name>Cabin Business Class View</name>
+		<type>lookfrom</type>
+		<internal type="bool">1</internal>
+		<cockpit type="bool">0</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+			<default-pitch-deg type="double">0</default-pitch-deg>
+			<default-heading-deg type="double">230</default-heading-deg>
+			<front-direction-deg type="double">0</front-direction-deg>
+			<front-left-direction-deg type="double">45</front-left-direction-deg>
+			<left-direction-deg type="double">90</left-direction-deg>
+			<back-left-direction-deg type="double">135</back-left-direction-deg>
+			<back-direction-deg type="double">180</back-direction-deg>
+			<back-right-direction-deg type="double">225</back-right-direction-deg>
+			<right-direction-deg type="double">270</right-direction-deg>
+			<front-right-direction-deg type="double">315</front-right-direction-deg>
+			<x-offset-m type="double">2.6</x-offset-m>
+			<y-offset-m type="double">2.24</y-offset-m>
+			<z-offset-m type="double">-7.6</z-offset-m>
+			<pitch-offset-deg>0</pitch-offset-deg>
+		</config>
+		<dynamic>
+			<enabled type="bool" userarchive="y">false</enabled>
+		</dynamic>
+	</view>
+
+	<view n="102">
+		<name>Cabin Coach Class View</name>
+		<type>lookfrom</type>
+		<internal type="bool">1</internal>
+		<cockpit type="bool">0</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+			<default-pitch-deg type="double">0</default-pitch-deg>
+			<default-heading-deg type="double">0</default-heading-deg>
+			<front-direction-deg type="double">0</front-direction-deg>
+			<front-left-direction-deg type="double">45</front-left-direction-deg>
+			<left-direction-deg type="double">90</left-direction-deg>
+			<back-left-direction-deg type="double">135</back-left-direction-deg>
+			<back-direction-deg type="double">180</back-direction-deg>
+			<back-right-direction-deg type="double">225</back-right-direction-deg>
+			<right-direction-deg type="double">270</right-direction-deg>
+			<front-right-direction-deg type="double">315</front-right-direction-deg>
+			<x-offset-m type="double">-2.44</x-offset-m>
+			<y-offset-m type="double">2.24</y-offset-m>
+			<z-offset-m type="double">4.6</z-offset-m>
+			<pitch-offset-deg>0</pitch-offset-deg>
+		</config>
+		<dynamic>
+			<enabled type="bool" userarchive="y">false</enabled>
+		</dynamic>
+	</view>
+
+	<view n="103">
+		<name>Copilot</name>
+		<type>lookfrom</type>
+		<internal type="bool">true</internal>
+		<cockpit type="bool">1</cockpit>
+		<config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			<default-pitch-deg type="double">0</default-pitch-deg>
+			<default-heading-deg type="double">0</default-heading-deg>
+			<front-direction-deg type="double">0</front-direction-deg>
+			<front-left-direction-deg type="double">45</front-left-direction-deg>
+			<left-direction-deg type="double">90</left-direction-deg>
+			<back-left-direction-deg type="double">135</back-left-direction-deg>
+			<back-direction-deg type="double">180</back-direction-deg>
+			<back-right-direction-deg type="double">225</back-right-direction-deg>
+			<right-direction-deg type="double">270</right-direction-deg>
+			<front-right-direction-deg type="double">315</front-right-direction-deg>
+			<x-offset-m type="double">0.603</x-offset-m>
+			<y-offset-m type="double">2.242</y-offset-m>
+			<z-offset-m type="double">-22.612</z-offset-m>
+			<pitch-offset-deg>-10.3</pitch-offset-deg>
+		</config>
+		<dynamic>
+			<enabled type="bool" userarchive="y">false</enabled>
+		</dynamic>
+	</view>
+
+	<chase-distance-m type="double" archive="y">-100.0</chase-distance-m>
+
+	<flaps>
+		<setting>0.000</setting>  <!-- flaps up -->
+		<setting>0.033</setting>  <!-- flaps 1  -->
+		<setting>0.220</setting>  <!-- flaps 5  -->
+		<setting>0.500</setting>  <!-- flaps 15 --> 
+		<setting>0.666</setting>  <!-- flaps 20 -->
+		<setting>0.833</setting>  <!-- flaps 25 -->
+		<setting>1.000</setting>  <!-- flaps 30 -->
+	</flaps>
+  
+	<systems>
+		<electrical>
+			<path></path>
+		</electrical>
+		<autopilot>
+			<path>Aircraft/787/Systems/787-autopilot.xml</path>
+		</autopilot>
+	</systems>
+    
+	<sound>
+		<path>Aircraft/787/Sounds/787-sound.xml</path>
+		<switch type = "bool"></switch>
+	</sound>
+
+	<hud>
+		<enable3d>false</enable3d>
+	</hud>
+
+	<!--virtual-cockpit archive="y">true</virtual-cockpit-->
+
+	<allow-toggle-cockpit>true</allow-toggle-cockpit>
+  
+	<help>
+		<title>787</title>
+		<key>
+			<name>Delete</name>
+			<desc>toggle thrust reversers</desc>
+		</key>
+		<key>
+			<name>ctrl-b</name>
+			<desc>Toggle speedbrakes none/full</desc>
+		</key>
+		<key>
+			<name>k</name>
+			<desc>Step speedbrakes setting up</desc>
+		</key>
+		<key>
+			<name>j</name>
+			<desc>Step speedbrakes setting down</desc>
+		</key>
+		<key>
+			<name>Tab</name>
+			<desc>Cycle autobrake settings</desc>
+		</key>
+		<key>
+			<name>Shift-tab</name>
+			<desc>Set autobrakes to 0</desc>
+		</key>
+		<line>If buttons do not work on startup, press shift-v to go to copilot mode.</line>
+		<line>Press v to go to cockpit mode, buttons should work. Test by clicking</line>
+		<line>on the HUD.</line>
+		<line>Speedbrakes:</line>
+		<line>The speedbrakes have 3 settings. At 0, they never extend.</line>
+		<line>At 1, they will only fully extend on the ground.</line>
+		<line>With the setting at 2, they will extend to about a third</line>
+		<line>out, and will go to full if the left gear compresses.</line>
+		<line>At 3, they are out fully.</line>
+	</help>
+
+	<multiplay>
+		<chat_display>1</chat_display>
+	</multiplay>
+
+	<menubar>
+		<default>
+			<menu n="100">
+				<label>Boeing 787-8</label>
+				<enabled type="bool">true</enabled>
+				<item>
+					<label>Select Livery</label>
+					<binding>
+						<command>nasal</command>
+						<script>aircraft.livery.dialog.toggle()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Pushback</label>
+					<name>pushback</name>
+					<binding>
+						<command>dialog-show</command>
+						<dialog-name>pushback</dialog-name>
+					</binding>
+				</item>
+				<item>
+					<label>Toggle Contrails</label>
+					<binding>
+						<command>property-toggle</command>
+						<property>controls/switches/contrails</property>
+					</binding>
+				</item>
+			</menu>
+		</default>
+	</menubar>
+
+	<weight n="0">
+		<name>Crew</name>
+		<weight-lb>350</weight-lb> 
+		<max-lb>500</max-lb>
+		<min-lb>350</min-lb>
+	</weight>
+
+	<!--224 pax max @ 180 lbs-->
+
+	<!--first class adds 360 for 12 sets of 30 lb seat accesories-->
+	<weight n="1">
+		<name>First Class</name>
+		<weight-lb>1800</weight-lb>
+		<max-lb>2160</max-lb>
+		<min-lb>360</min-lb>
+	</weight>
+
+	<!--42 business class seats-->
+	<weight n="2">
+		<name>Business Class</name>
+		<weight-lb>6400</weight-lb>
+		<max-lb>7560</max-lb>
+		<min-lb>0</min-lb>
+	</weight>
+
+	<weight n="3">
+		<name>Economy Class</name>
+		<weight-lb>25000</weight-lb>
+		<max-lb>30600</max-lb>
+		<min-lb>0</min-lb>
+	</weight>
+
+	<weight n="4">
+		<name>Forward Cargo</name>
+		<weight-lb>10000</weight-lb>
+		<max-lb>10000</max-lb>
+		<min-lb>0</min-lb>
+	</weight>
+
+	<weight n="5">
+		<name>Rear Cargo</name>
+		<weight-lb>5000</weight-lb>
+		<max-lb>10000</max-lb>
+		<min-lb>0</min-lb>
+	</weight>
+
+</sim>
+
+<aircraft>
+	<jetway-pos>
+		<x-tra>-1</x-tra>
+		<z-rot>18</z-rot>
+		<y-rot>2</y-rot>
+		<hood-rot>0</hood-rot>
+	</jetway-pos>
+	<jetway2-pos>
+		<x-tra>2.1</x-tra>
+		<z-rot>52</z-rot>
+		<y-rot>3</y-rot>
+		<hood-rot>0</hood-rot>
+	</jetway2-pos>
+</aircraft>
+
+<engines>
+	<engine n="0">
+		<rpm>0</rpm>
+		<reverser-position type="double">0.000000</reverser-position>
+		<running>0</running>
+	</engine>
+	<engine n="1">
+		<rpm>0</rpm>
+		<reverser-position type="double">0.000000</reverser-position>
+		<running>0</running>
+	</engine>
+</engines>
+
+<input>
+	<keyboard>
+		<key n="127">
+			<name>Delete</name>
+			<desc>Toggle Reversers</desc>
+			<binding>
+				<command>nasal</command>
+				<script>reversethrust.togglereverser()</script>
+			</binding>
+		</key>
+		<key n="9">
+			<name>Tab</name>
+			<desc>switch autobrake</desc>
+			<binding>
+				<command>property-cycle</command>
+				<property>/controls/gear/autobrakes</property>
+				<value>0</value>
+				<value>0.2</value>
+				<value>0.4</value>
+				<value>0.6</value>
+				<value>0.8</value>
+				<value>1</value>
+				<value>1.2</value>
+			</binding>
+			<mod-shift>
+				<binding>
+					<command>nasal</command>
+					<script>autobrakes.resetabrakes()</script>
+				</binding>
+			</mod-shift>
+		</key>
+		<key n="2">
+			<name>Ctrl-B</name>	
+			<desc>Toggle speedbrake</desc>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/flight/spoiler</property>
+				<value>0</value>
+				<value>3</value>
+			</binding>
+		</key>
+		<key n="107">
+			<name>k</name>
+			<desc>Extend speedbrakes</desc>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/flight/spoiler</property>
+				<step>1</step>
+				<min>0</min>
+				<max>3</max>
+			</binding>
+		</key>
+		<key n="106">
+			<name>j</name>
+			<desc>retract speedbrakes</desc>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/flight/spoiler</property>
+				<step>-1</step>
+				<min>0</min>
+				<max>3</max>
+			</binding>
+		</key>
+	</keyboard>
+</input>
+  
+<surface-positions>
+	<speedbrake-pos-norm type="float">0.0</speedbrake-pos-norm>
+	<lreverser-pos-norm type="float">0.0</lreverser-pos-norm>
+	<rreverser-pos-norm type="float">0.0</rreverser-pos-norm>
+</surface-positions>
+
+<controls>
+	<lighting>
+		<beacon>1</beacon>
+		<instruments-norm>0.6</instruments-norm>
+		<landing-light-c type = "bool">1</landing-light-c> 
+		<landing-light-l type = "bool">1</landing-light-l> 
+		<landing-light-r type = "bool">1</landing-light-r>
+		<wing-lights>1</wing-lights>
+		<nav-lights>1</nav-lights>
+		<logo-lights>1</logo-lights>
+		<taxi-lights>1</taxi-lights>
+		<strobe>1</strobe>
+		<turn-off-lights-l>0</turn-off-lights-l>
+		<turn-off-lights-r>0</turn-off-lights-r>
+		<panel-norm>0.2</panel-norm>
+	</lighting>
+	<switches>
+		<cabin-lights>0.2</cabin-lights>
+		<cabin-red>0.9</cabin-red>
+		<cabin-green>0.75</cabin-green>
+		<cabin-blue>0.6</cabin-blue>
+		<ife type="bool">0</ife>
+		<utility type="bool">0</utility>
+	</switches>
+	<engines>
+		<engine n="0">
+			<cutoff>0</cutoff>
+		</engine>
+		<engine n="1">
+			<cutoff>0</cutoff>
+		</engine>
+	</engines>
+	<gear>
+		<autobrakes>0</autobrakes>
+		<brake-parking>1</brake-parking>
+		<autobrake>0</autobrake>
+	</gear>
+</controls>
+
+<instrumentation>
+	<wxradar>
+		<serviceable>true</serviceable>
+		<range type="int" archive="y">20</range>
+		<minimized type="bool" archive="y">false</minimized>
+		<switch archive="y">off</switch>
+		<mode archive="y">wx</mode>
+		<lightning type="bool" archive="y">true</lightning>
+		<display-mode archive="y">arc</display-mode>
+	</wxradar>
+ 	<radar>
+		<range type="int" archive="y">20</range>
+	</radar>
+	<flightdirector>
+		<to-flag alias="/instrumentation/nav/to-flag"/>
+	</flightdirector>
+</instrumentation>
+
+<nasal>
+	<Boeing-787>
+		<file>Aircraft/787/Nasal/electrical.nas</file>
+		<file>Aircraft/787/Nasal/system.nas</file>
+		<file>Aircraft/787/Nasal/flightdirector.nas</file>
+		<file>Aircraft/787/Nasal/contrail.nas</file>
+	</Boeing-787>
+	<reversethrust>
+		<file>Aircraft/787/Nasal/reverse-thrust.nas</file>
+	</reversethrust>
+	<tyresmoke>
+		<file>Aircraft/787/Nasal/tyresmoke.nas</file>
+	</tyresmoke>
+	<autobrakes>
+		<file>Aircraft/787/Nasal/autobrakes.nas</file>
+	</autobrakes>
+</nasal>
+
+<gear>
+	<gear n="0">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+		<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+	</gear>
+	<gear n="1">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+	</gear>
+	<gear n="2">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+	</gear>
+</gear>
+  
+</PropertyList>

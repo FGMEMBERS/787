@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <path>cabin.ac</path>
+
+ <animation>
+   <type>select</type>
+   <object-name>ceiling</object-name>
+   <object-name>Seats</object-name>
+   <object-name>wall</object-name>
+   <condition>
+       <equals>
+         <property>sim/current-view/internal</property>
+         <value>1</value>
+       </equals>
+   </condition>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>ceiling</object-name>
+   <object-name>Seats</object-name>
+   <object-name>wall</object-name>
+  <emission>
+    <red>0.9</red>
+    <green>0.75</green>
+    <blue>0.6</blue>
+    <factor-prop>controls/switches/cabin-lights</factor-prop>	
+  </emission>
+ </animation>
+
+</PropertyList>
