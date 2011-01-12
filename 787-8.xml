@@ -111,7 +111,9 @@ fully, on the ground.-->
 
 		<control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
 		<control-output control="SLAT" prop="/surface-positions/slats"/>
+		<control-output control="SLAT" prop="sim/multiplay/generic/float[5]"/>
 		<control-output control="SPOILER" prop="/surface-positions/ib-speedbrake-pos-norm"/>
+		<control-output control="SPOILER" prop="sim/multiplay/generic/float[7]"/>
 
 		<control-speed control="FLAP0" transition-time="80"/>
 		<control-speed control="SPOILER" transition-time="1"/>
@@ -132,8 +134,11 @@ fully, on the ground.-->
 		<control-input axis="/controls/flight/slats" control="SLAT"/>
 
 		<control-output control="FLAP0" side ="left" prop="/surface-positions/lminiflap-pos-norm"/>
+		<control-output control="FLAP0" side ="left" prop="/sim/multiplay/generic/float[8]"/>
 		<control-output control="FLAP0" side ="right" prop="/surface-positions/rminiflap-pos-norm"/>
+		<control-output control="FLAP0" side ="right" prop="/sim/multiplay/generic/float[9]"/>
 		<control-output control="SPOILER" prop="/surface-positions/minispoiler-pos-norm"/>
+		<control-output control="SPOILER" prop="/sim/multiplay/generic/float[6]"/>
 
 		<control-speed control="FLAP0" transition-time="1"/>
 		<control-speed control="SPOILER" transition-time="1"/>
@@ -159,7 +164,6 @@ fully, on the ground.-->
 		<control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
 		<control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
 		<control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>
-		<control-output control="SLAT" prop="/surface-positions/slats"/>
 
 		<control-speed control="FLAP0" transition-time="80"/>
 		<control-speed control="FLAP1" transition-time=".4"/>
@@ -204,6 +208,7 @@ before.-->
 		<control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
 		<control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
 		<control-output control="REVERSE_THRUST" prop="/surface-positions/lreverser-pos-norm"/>
+		<control-output control="REVERSE_THRUST" prop="sim/multiplay/generic/float[10]"/>
 		<control-speed control="REVERSE_THRUST" transition-time="1.4"/>
 		<actionpt x="2" y="9.63" z="-0.85"/>
 	</jet>
@@ -213,6 +218,7 @@ before.-->
 		<control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
 		<control-output control="REVERSE_THRUST" prop="/surface-positions/rreverser-pos-norm"/>
 		<control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-pos-norm"/>
+		<control-output control="REVERSE_THRUST" prop="sim/multiplay/generic/float[11]"/>
 		<control-speed control="REVERSE_THRUST" transition-time="1.4"/>
 		<actionpt x="2" y="-9.63" z="-0.85"/>
 	</jet>
@@ -322,5 +328,13 @@ available.-->
 	<thruster x="20.56"  y="0.00" z="-3.35" vx="1" vy="0" vz="0" thrust="15000">
 		<control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
 	</thruster>
+
+	<!--Eventually may operate with pushback over MP-->
+
+	<hitch name="aerotow" x="20.56" y="0.00" z="-3.65" force-is-calculated-by-other="0">
+		<tow length="5" weight-per-meter="0.035" elastic-constant="1" break-force="100000" mp-auto-connect-period="0.0"/>
+		<winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+		<control-input axis="controls/aerotow/find-aircraft" control="FINDAITOW"/>
+	</hitch>
 
     </airplane>

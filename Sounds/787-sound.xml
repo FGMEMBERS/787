@@ -42,7 +42,7 @@
 	<value>0</value>
 	</equals>
       <greater-than>
-        <property>/sim/model/Boeing-787-8/n1[0]</property>
+        <property>sim/multiplay/generic/float[13]</property>
         <value>0.1</value>
       </greater-than>
       <not>
@@ -54,7 +54,7 @@
     <factor>0.4</factor>
   </volume>
   <pitch>
-    <property>/sim/model/Boeing-787-8/n1[0]</property>
+    <property>sim/multiplay/generic/float[13]</property>
     <offset>0</offset>
     <factor>0.01</factor>
     <min>0.0</min>
@@ -127,7 +127,7 @@
   </volume>
   <pitch>
     <!--property>/engines/engine[1]/n1</property-->
-    <property>/sim/model/Boeing-787-8/n1[1]</property>
+    <property>sim/multiplay/generic/float[14]</property>
     <offset>0</offset>
     <factor>0.01</factor>
     <min>0.0</min>
@@ -261,7 +261,7 @@
   </volume>
   <pitch>
     <!--property>/engines/engine[0]/n1</property-->
-    <property>/sim/model/Boeing-787-8/n1[0]</property>
+    <property>sim/multiplay/generic/float[13]</property>
     <factor>0.01</factor>
     <offset>0</offset>
     <!--min>0.0</min>
@@ -328,7 +328,7 @@
   </volume>
   <pitch>
     <!--property>/engines/engine[1]/n1</property-->
-    <property>/sim/model/Boeing-787-8/n1[1]</property>
+    <property>sim/multiplay/generic/float[14]</property>
     <offset>0</offset>
     <factor>0.01</factor>
     <!--min>0.0</min>

@@ -1,6 +1,6 @@
 # 787-8 systems
-#
-#
+#sim/multiplay/generic/float[13]
+#/sim/model/Boeing-787-8/n1[0]
 
 aircraft.livery.init("Aircraft/787/Models/Liveries");
 
@@ -44,11 +44,11 @@ beacon_switch = props.globals.getNode("controls/lighting/beacon", 1);
 aircraft.light.new("sim/model/Boeing-787-8/lighting/beacon", [0.05, 1.25], beacon_switch);
 
 strobe_on = func {
-setprop("/sim/model/Boeing-787-8/lighting/strobe/state",1);
+setprop("sim/multiplay/generic/int[8]",1);
 }
 
 strobe_off = func {
-setprop("/sim/model/Boeing-787-8/lighting/strobe/state",0);
+setprop("sim/multiplay/generic/int[8]",0);
 }
 
 init_controls = func {
@@ -94,8 +94,8 @@ if(getprop("/sim/model/start-idling")) {
  setprop("/controls/engines/engine[1]/cutoff",0);
 }
 else {
- setprop("/sim/model/Boeing-787-8/n1[0]",0);
- setprop("/sim/model/Boeing-787-8/n1[1]",0);
+ setprop("sim/multiplay/generic/float[13]",0);
+ setprop("sim/multiplay/generic/float[14]",0);
  setprop("/sim/model/Boeing-787-8/n2[0]",0);
  setprop("/sim/model/Boeing-787-8/n2[1]",0);
  setprop("/sim/model/Boeing-787-8/egt[0]",0);
@@ -309,8 +309,8 @@ flaps_pos = getprop("controls/flight/flaps");
 gear_dwn = getprop("controls/gear/gear-down");
 aoa = getprop("/orientation/alpha-deg");
 abs_aoa = getprop("/instrumentation/efis/abs-alpha-deg");
-cur_n1_l = getprop("/sim/model/Boeing-787-8/n1[0]");
-cur_n1_r = getprop("/sim/model/Boeing-787-8/n1[1]");
+cur_n1_l = getprop("sim/multiplay/generic/float[13]");
+cur_n1_r = getprop("sim/multiplay/generic/float[14]");
 #print("gear_dwn=", gear_dwn);
 #angle of attack limit
 if(aoa > 0 and abs_aoa > 8) {setprop("/instrumentation/annunciator/master-caution",1);}
@@ -337,38 +337,38 @@ if(!getprop("/sim/model/Boeing-787-8/start-engines") and rengine_running) {
 }
 
 if(!getprop("/controls/engines/engine/cutoff") and lengine_running){
-    setprop("/sim/model/Boeing-787-8/n1[0]",getprop("/engines/engine/n1"));
+    setprop("sim/multiplay/generic/float[13]",getprop("/engines/engine/n1"));
     setprop("/sim/model/Boeing-787-8/n2[0]",getprop("/engines/engine/n2"));
     setprop("/sim/model/Boeing-787-8/egt[0]",getprop("/engines/engine[0]/egt-degf"));
 }else{
     setprop("controls/engines/engine/throttle",0);
-    interpolate("/sim/model/Boeing-787-8/n1[0]",0,10);
+    interpolate("sim/multiplay/generic/float[13]",0,10);
     interpolate("/sim/model/Boeing-787-8/n2[0]",0,10);
     interpolate("/sim/model/Boeing-787-8/egt[0]",0,10);
-    if(getprop("/sim/model/Boeing-787-8/n1[0]") < 5.0){
+    if(getprop("sim/multiplay/generic/float[13]") < 5.0){
         lengine_running  = 0;
     }
 }
 
 if(!getprop("/controls/engines/engine[1]/cutoff") and rengine_running){
-    setprop("/sim/model/Boeing-787-8/n1[1]",getprop("/engines/engine[1]/n1"));
+    setprop("sim/multiplay/generic/float[14]",getprop("/engines/engine[1]/n1"));
     setprop("/sim/model/Boeing-787-8/n2[1]",getprop("/engines/engine[1]/n2"));
     setprop("/sim/model/Boeing-787-8/egt[1]",getprop("/engines/engine[1]/egt-degf"));
 }else{
     setprop("/controls/engines/engine[1]/throttle",0);
-    interpolate("/sim/model/Boeing-787-8/n1[1]",0,10);
+    interpolate("sim/multiplay/generic/float[14]",0,10);
     interpolate("/sim/model/Boeing-787-8/n2[1]",0,10);
     interpolate("/sim/model/Boeing-787-8/egt[1]",0,10);
-    if(getprop("/sim/model/Boeing-787-8/n1[1]") < 5.0){
+    if(getprop("sim/multiplay/generic/float[14]") < 5.0){
         rengine_running  = 0;
     }
 }
 
-if(getprop("/sim/model/Boeing-787-8/start-cycle[0]") and (rengine_running or apu_running or (getprop("/sim/model/Boeing-787-8/n1[0]") > 35.0))){
-    interpolate("/sim/model/Boeing-787-8/n1[0]",56.0,10);
+if(getprop("/sim/model/Boeing-787-8/start-cycle[0]") and (rengine_running or apu_running or (getprop("sim/multiplay/generic/float[13]") > 35.0))){
+    interpolate("sim/multiplay/generic/float[13]",56.0,10);
     interpolate("/sim/model/Boeing-787-8/n2[0]",70.0,10);
     interpolate("/sim/model/Boeing-787-8/egt[0]",60.0,10);
-    if(getprop("/sim/model/Boeing-787-8/n1[0]") > 55.0) {
+    if(getprop("sim/multiplay/generic/float[13]") > 55.0) {
         setprop("/sim/model/Boeing-787-8/start-cycle[0]",0);
         if(getprop("/systems/electrical/outputs/eec-Lbus") > 12.0) {
          setprop("/controls/engines/engine[0]/cutoff",0);
@@ -377,11 +377,11 @@ if(getprop("/sim/model/Boeing-787-8/start-cycle[0]") and (rengine_running or apu
     }
 }
 
-if(getprop("/sim/model/Boeing-787-8/start-cycle[1]") and (lengine_running or apu_running or (getprop("/sim/model/Boeing-787-8/n1[1]") > 35.0))) {
-    interpolate("/sim/model/Boeing-787-8/n1[1]",56.0,10);
+if(getprop("/sim/model/Boeing-787-8/start-cycle[1]") and (lengine_running or apu_running or (getprop("sim/multiplay/generic/float[14]") > 35.0))) {
+    interpolate("sim/multiplay/generic/float[14]",56.0,10);
     interpolate("/sim/model/Boeing-787-8/n2[1]",70.0,10);
     interpolate("/sim/model/Boeing-787-8/egt[1]",60.0,10);
-    if(getprop("/sim/model/Boeing-787-8/n1[1]") > 55.0) {
+    if(getprop("sim/multiplay/generic/float[14]") > 55.0) {
         setprop("/sim/model/Boeing-787-8/start-cycle[1]",0);
         if(getprop("/systems/electrical/outputs/eec-Rbus") > 12.0) {
          setprop("/controls/engines/engine[1]/cutoff",0);
@@ -451,6 +451,13 @@ if(getprop("/sim/current-view/cockpit") == 1) {
 if(getprop("/sim/current-view/cockpit") == 0) {
  setprop("/instrumentation/mk-viii/speaker/volume",0);
 }
+
+setprop("sim/multiplay/generic/float[0]",getprop("gear/gear[0]/compression-m"));
+setprop("sim/multiplay/generic/float[1]",getprop("gear/gear[1]/compression-m"));
+setprop("sim/multiplay/generic/float[2]",getprop("gear/gear[2]/compression-m"));
+setprop("sim/multiplay/generic/float[3]",getprop("gear/gear[3]/compression-norm"));
+setprop("sim/multiplay/generic/float[4]",getprop("gear/gear[4]/compression-norm"));
+setprop("sim/multiplay/generic/int[0]",getprop("sim/model/Boeing-787-8/lighting/beacon/state"));
 
 settimer(update_systems,0);
 }

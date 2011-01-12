@@ -54,7 +54,7 @@ Syd Adams
 	 <object-name>lfail.annun</object-name>
 	 <condition>
 			 <less-than>
-				 <property>/sim/model/Boeing-787-8/n1[0]</property>
+				 <property>sim/multiplay/generic/float[13]</property>
 				 <value>54.5</value>
 			 </less-than>
 	 </condition>
@@ -65,7 +65,7 @@ Syd Adams
 	 <object-name>rfail.annun</object-name>
 	 <condition>
 			 <less-than>
-				 <property>/sim/model/Boeing-787-8/n1[1]</property>
+				 <property>sim/multiplay/generic/float[14]</property>
 				 <value>54.5</value>
 			 </less-than>
 	 </condition>
@@ -96,7 +96,7 @@ Syd Adams
  <animation>
    <type>rotate</type>
    <object-name>L-N1.needle</object-name>
-<property>/sim/model/Boeing-787-8/n1[0]</property>
+<property>sim/multiplay/generic/float[13]</property>
    <interpolation>
      <entry>
        <ind> 0.0</ind>
@@ -124,7 +124,7 @@ Syd Adams
    <object-name>N1.001</object-name>
 <condition>
 <greater-than>
-	<property>/sim/model/Boeing-787-8/n1[0]</property>
+	<property>sim/multiplay/generic/float[13]</property>
 <value>99.99</value>
 </greater-than>
 </condition>
@@ -133,7 +133,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.001</object-name>
-   <property>/sim/model/Boeing-787-8/n1[0]</property>
+   <property>sim/multiplay/generic/float[13]</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -146,7 +146,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.002</object-name>
-   <property>/sim/model/Boeing-787-8/n1[0]</property>
+   <property>sim/multiplay/generic/float[13]</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -159,7 +159,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.003</object-name>
-   <property>/sim/model/Boeing-787-8/n1[0]</property>
+   <property>sim/multiplay/generic/float[13]</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
@@ -172,7 +172,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.004</object-name>
-   <property>/sim/model/Boeing-787-8/n1[0]</property>
+   <property>sim/multiplay/generic/float[13]</property>
    <factor>1.0</factor>
    <step>0.1</step>
    <axis>
@@ -266,7 +266,7 @@ Syd Adams
  <animation>
    <type>rotate</type>
    <object-name>R-N1.needle</object-name>
-   <property>/sim/model/Boeing-787-8/n1[1]</property>
+   <property>sim/multiplay/generic/float[14]</property>
    <interpolation>
      <entry>
        <ind> 0.0</ind>
@@ -294,7 +294,7 @@ Syd Adams
    <object-name>N1.101</object-name>
 <condition>
 <greater-than>
-	<property>/sim/model/Boeing-787-8/n1[1]</property>
+	<property>sim/multiplay/generic/float[14]</property>
 <value>99.99</value>
 </greater-than>
 </condition>
@@ -303,7 +303,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.101</object-name>
-   <property>/sim/model/Boeing-787-8/n1[1]</property>
+   <property>sim/multiplay/generic/float[14]</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -316,7 +316,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.102</object-name>
-   <property>/sim/model/Boeing-787-8/n1[1]</property>
+   <property>sim/multiplay/generic/float[14]</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -329,7 +329,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.103</object-name>
-   <property>/sim/model/Boeing-787-8/n1[1]</property>
+   <property>sim/multiplay/generic/float[14]</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
@@ -342,7 +342,7 @@ Syd Adams
  <animation>
    <type>textranslate</type>
    <object-name>N1.104</object-name>
-   <property>/sim/model/Boeing-787-8/n1[1]</property>
+   <property>sim/multiplay/generic/float[14]</property>
    <factor>1.0</factor>
    <step>0.1</step>
    <axis>

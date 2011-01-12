@@ -2,7 +2,7 @@
 <PropertyList>
 <sim>
 	<description>Boeing 787-8</description>
-	<author>Joshua Wilson (3D) Nick I (FDM, Systems) Dany93 (FDM, AP)</author>
+	<author>Joshua Wilson (3D, Systems) Nick I (FDM, Systems) Dany93 (FDM, AP)</author>
 	<status>Front Page Release</status>
 	<flight-model>yasim</flight-model>
 	<aero>787-8</aero>
@@ -331,6 +331,38 @@
 		<min-lb>0</min-lb>
 	</weight>
 
+	<multiplay n="0">
+		<generic>
+			<int n="0">1</int><!--beacon-->
+			<int n="1">1</int><!--Landing light L-->
+			<int n="2">1</int><!--Landing light C-->
+			<int n="3">1</int><!--Landing light R-->
+			<int n="4">0</int><!--wing lights-->
+			<int n="5">1</int><!--Nav lights-->
+			<int n="6">1</int><!--Logo lights-->
+			<int n="7">1</int><!--Taxi lights-->
+			<int n="8">1</int><!--Strobe-->
+			<int n="9">0</int><!--Left turnoff light-->
+			<int n="10">0</int><!--Right turnoff light-->
+
+			<!--float n="0"/>< alias="/gear/gear[0]/compression-m"-->
+			<!--float n="1" alias="/gear/gear[1]/compression-m"/>
+			<float n="2" alias="/gear/gear[2]/compression-m"/>
+			<float n="3" alias="/gear/gear[3]/compression-norm"/>
+			<float n="4" alias="/gear/gear[4]/compression-norm"/>
+			<float n="5" alias="/surface-positions/slats"/>
+			<float n="6" alias="/surface-positions/minispoiler-norm"/>
+			<float n="7" alias="/surface-positions/ib-speedbrake-pos-norm"/>
+			<float n="8" alias="/surface-positions/lminiflap-pos-norm"/>
+			<float n="9" alias="/surface-positions/rminiflap-pos-norm"/>
+			<float n="10" alias="/surface-positions/lreverser-pos-norm"/>
+			<float n="11" alias="/surface-positions/rreverser-pos-norm"/-->
+			<!--float n="12">0</float><cabin lights-->
+			<float n="13">0</float><!--left n1-->
+			<float n="14">0</float><!--right n1-->
+		</generic>
+	</multiplay>
+
 </sim>
 
 <aircraft>
@@ -451,9 +483,6 @@
 	</lighting>
 	<switches>
 		<cabin-lights>0.2</cabin-lights>
-		<cabin-red>0.9</cabin-red>
-		<cabin-green>0.75</cabin-green>
-		<cabin-blue>0.6</cabin-blue>
 		<ife type="bool">0</ife>
 		<utility type="bool">0</utility>
 	</switches>
@@ -470,6 +499,12 @@
 		<brake-parking>1</brake-parking>
 		<autobrake>0</autobrake>
 	</gear>
+		<winch>
+			<place type="bool">false</place>
+		</winch>
+		<aerotow>
+			<find-aircraft type="bool">false</find-aircraft>
+		</aerotow>
 </controls>
 
 <instrumentation>

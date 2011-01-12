@@ -1613,7 +1613,7 @@
  <animation>
    <type>rotate</type>
    <object-name>L-Lnd.swtch</object-name>
-   <property>controls/lighting/landing-light-l</property>
+   <property>sim/multiplay/generic/int[1]</property>
    <factor>30</factor>
    <center>
      <x-m>-23.551</x-m>
@@ -1630,7 +1630,7 @@
  <animation>
    <type>rotate</type>
    <object-name>C-Lnd.swtch</object-name>
-   <property>controls/lighting/landing-light-c</property>
+   <property>sim/multiplay/generic/int[2]</property>
    <factor>30</factor>
    <center>
      <x-m>-23.565</x-m>
@@ -1647,7 +1647,7 @@
  <animation>
    <type>rotate</type>
    <object-name>R-Lnd.swtch</object-name>
-   <property>controls/lighting/landing-light-r</property>
+   <property>sim/multiplay/generic/int[3]</property>
    <factor>30</factor>
    <center>
      <x-m>-23.551</x-m>
@@ -1664,7 +1664,7 @@
  <animation>
    <type>rotate</type>
    <object-name>Taxi.swtch</object-name>
-   <property>controls/lighting/taxi-lights</property>
+   <property>sim/multiplay/generic/int[7]</property>
    <factor>30</factor>
    <center>
      <x-m>-23.551</x-m>
@@ -1681,7 +1681,7 @@
  <animation>
    <type>rotate</type>
    <object-name>OHtoggle.003</object-name>
-   <property>controls/lighting/turn-off-lights-l</property>
+   <property>sim/multiplay/generic/int[9]</property>
    <factor>30</factor>
    <center>
      <x-m>-23.551</x-m>
@@ -1698,7 +1698,7 @@
  <animation>
    <type>rotate</type>
    <object-name>OHtoggle.004</object-name>
-   <property>controls/lighting/turn-off-lights-r</property>
+   <property>sim/multiplay/generic/int[10]</property>
    <factor>30</factor>
    <center>
      <x-m>-23.551</x-m>
@@ -1744,7 +1744,7 @@
  <animation>
    <type>translate</type>
    <object-name>Nav.btn</object-name>
-   <property>controls/lighting/nav-lights</property>
+   <property>sim/multiplay/generic/int[5]</property>
    <factor>0.003</factor>
    <axis>
      <x>-0.464</x>
@@ -1757,7 +1757,7 @@
  <animation>
    <type>translate</type>
    <object-name>Logo.btn</object-name>
-   <property>controls/lighting/logo-lights</property>
+   <property>sim/multiplay/generic/int[6]</property>
    <factor>0.003</factor>
    <axis>
      <x>-0.464</x>
@@ -1769,7 +1769,7 @@
  <animation>
    <type>translate</type>
    <object-name>Wing.btn</object-name>
-   <property>controls/lighting/wing-lights</property>
+   <property>sim/multiplay/generic/int[4]</property>
    <factor>0.003</factor>
    <axis>
      <x>-0.464</x>
@@ -2632,7 +2632,7 @@
   <button>0</button>
   <binding>
    <command>property-toggle</command>
-    <property>controls/lighting/landing-light-l</property>
+    <property>sim/multiplay/generic/int[1]</property>
   </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2648,7 +2648,7 @@
   <button>0</button>
   <binding>
    <command>property-toggle</command>
-    <property>controls/lighting/landing-light-c</property>
+    <property>sim/multiplay/generic/int[2]</property>
   </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2664,7 +2664,7 @@
   <button>0</button>
   <binding>
    <command>property-toggle</command>
-    <property>controls/lighting/landing-light-r</property>
+    <property>sim/multiplay/generic/int[3]</property>
   </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2762,14 +2762,14 @@
    <button>0</button>
      <binding>
        <command>nasal</command>
-       <script>setprop("/controls/switches/cabin-lights",1);</script>
+       <script>setprop("sim/multiplay/generic/float[12]",1);</script>
      </binding>
    </action>
    <action>
    <button>1</button>
      <binding>
        <command>nasal</command>
-       <script>setprop("/controls/switches/cabin-lights",0);</script>
+       <script>setprop("sim/multiplay/generic/float[12]",0);</script>
      </binding>
    </action>
   <action>
@@ -2777,7 +2777,7 @@
    <repeatable>false</repeatable>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/switches/cabin-lights</property>
+    <property>sim/multiplay/generic/float[12]</property>
     <step>0.1</step>
     <min>0</min>
     <max>1</max>
@@ -2788,7 +2788,7 @@
    <repeatable>false</repeatable>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/switches/cabin-lights</property>
+    <property>sim/multiplay/generic/float[12]</property>
     <step>-0.1</step>
     <min>0</min>
     <max>1</max>
@@ -2819,7 +2819,7 @@
   <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/nav-lights</property>
+        <property>sim/multiplay/generic/int[5]</property>
       </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2835,7 +2835,7 @@
   <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/logo-lights</property>
+        <property>sim/multiplay/generic/int[6]</property>
       </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2851,7 +2851,7 @@
   <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/wing-lights</property>
+        <property>sim/multiplay/generic/int[4]</property>
       </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2867,7 +2867,7 @@
   <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/turn-off-lights-l</property>
+        <property>sim/multiplay/generic/int[9]</property>
       </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2883,7 +2883,7 @@
   <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/turn-off-lights-r</property>
+        <property>sim/multiplay/generic/int[10]</property>
       </binding>
 	<binding>
 		<command>property-toggle</command>
@@ -2899,7 +2899,7 @@
   <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/taxi-lights</property>
+        <property>sim/multiplay/generic/int[7]</property>
       </binding>
 	<binding>
 		<command>property-toggle</command>
