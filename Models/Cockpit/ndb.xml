@@ -9,16 +9,16 @@
  <animation>
 	 <type>select</type>
 	 <condition>
-		 <and>
+		 <!--and-->
 			 <equals>
 				 <property>sim/current-view/cockpit</property>
 				 <value>1</value>
 			 </equals>
-			 <greater-than>
+			 <!--greater-than>
 				 <property>/systems/electrical/volts</property>
 				 <value>12</value>
 			 </greater-than>
-		 </and>	
+		 </and-->	
 	 </condition>
  </animation>
  
