@@ -1,4 +1,4 @@
-<?xml version = '1.0' encoding = 'UTF-8' ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PropertyList>
   
   <path>787-8.ac</path>
@@ -878,7 +878,7 @@
 <animation>
   <type>rotate</type>
   <object-name>nosegearutorque</object-name>
-  <property>gear/gear[0]/compression-m</property>
+  <property>sim/multiplay/generic/float[0]</property>
    <!--interpolation>
     <entry>
       <ind>0</ind>
@@ -1532,55 +1532,18 @@
   <object-name>R.Wheels.F</object-name>
   <object-name>R.Wheels.B</object-name>
   <property>sim/multiplay/generic/float[4]</property>
+	<factor>-1</factor>
   <center>
    <x-m>1.96</x-m>
    <y-m>4.88</y-m>
    <z-m>-3.34</z-m>
   </center>
-	<interpolation>
-		<entry>
-			<ind>0</ind>
-			<dep>0</dep>
-		</entry>
-		<entry>
-			<ind>0.25</ind>
-			<dep>-20</dep>
-		</entry>
-	</interpolation>
   <axis>
    <x>0</x>
    <y>1</y>
    <z>0</z>
   </axis>
 </animation>
-
-<!--animation>
-  <type>rotate</type>
-  <object-name>Raxle</object-name>
-  <object-name>R.Wheels.F</object-name>
-  <object-name>R.Wheels.B</object-name>
-  <property>gear/gear[2]/compression-m</property>
-  <center>
-   <x-m>1.96</x-m>
-   <y-m>4.88</y-m>
-   <z-m>-3.34</z-m>
-  </center>
-	<interpolation>
-		<entry>
-			<ind>0</ind>
-			<dep>0</dep>
-		</entry>
-		<entry>
-			<ind>0.25</ind>
-			<dep>20</dep>
-		</entry>
-	</interpolation>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
-</animation-->
 
 <animation>
   <type>translate</type>
@@ -2171,16 +2134,7 @@
   <object-name>L.Wheels.F</object-name>
   <object-name>L.Wheels.B</object-name>
   <property>sim/multiplay/generic/float[3]</property>
-	<interpolation>
-		<entry>
-			<ind>0</ind>
-			<dep>0</dep>
-		</entry>
-		<entry>
-			<ind>0.25</ind>
-			<dep>-20</dep>
-		</entry>
-	</interpolation>
+	<factor>-1</factor>
   <center>
    <x-m>1.96</x-m>
    <y-m>-4.88</y-m>
@@ -2192,34 +2146,6 @@
    <z>0</z>
   </axis>
 </animation>
-
-<!--animation>
-  <type>rotate</type>
-  <object-name>Laxle</object-name>
-  <object-name>L.Wheels.F</object-name>
-  <object-name>L.Wheels.B</object-name>
-  <property>gear/gear[1]/compression-m</property>
-	<interpolation>
-		<entry>
-			<ind>0</ind>
-			<dep>0</dep>
-		</entry>
-		<entry>
-			<ind>0.25</ind>
-			<dep>20</dep>
-		</entry>
-	</interpolation>
-  <center>
-   <x-m>1.96</x-m>
-   <y-m>-4.88</y-m>
-   <z-m>-3.34</z-m>
-  </center>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
-</animation-->
 
 <animation>
   <type>translate</type>
@@ -2535,11 +2461,11 @@
   <object-name>rwhiteflash</object-name>
   <object-name>rhobfairing</object-name>
   <object-name>rchrome</object-name>
-  <property>gear/gear[2]/compression-norm</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>1.8</dep>
+      <dep>1</dep>
     </entry>
     <entry>
       <ind>0.333</ind>
@@ -2547,7 +2473,7 @@
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>-1.5</dep>
+      <dep>-1</dep>
     </entry>
   </interpolation>
   <center>
@@ -2593,11 +2519,11 @@
   <object-name>lwhiteflash</object-name>
   <object-name>lhobfairing</object-name>
   <object-name>lchrome</object-name>
-  <property>gear/gear[1]/compression-norm</property>
+  <property>sim/multiplay/generic/float[1]</property>
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>1.8</dep>
+      <dep>1</dep>
     </entry>
     <entry>
       <ind>0.333</ind>
@@ -2605,7 +2531,7 @@
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>-1.5</dep>
+      <dep>-1</dep>
     </entry>
   </interpolation>
   <center>
@@ -2639,11 +2565,11 @@
   <object-name>rwhiteflash</object-name>
   <object-name>rhobfairing</object-name>
   <object-name>rchrome</object-name>
-  <property>gear/gear[2]/compression-norm</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>1.8</dep>
+      <dep>1</dep>
     </entry>
     <entry>
       <ind>0.333</ind>
@@ -2651,7 +2577,7 @@
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>-1.5</dep>
+      <dep>-1</dep>
     </entry>
   </interpolation>
   <center>
@@ -2685,11 +2611,11 @@
   <object-name>lwhiteflash</object-name>
   <object-name>lhobfairing</object-name>
   <object-name>lchrome</object-name>
-  <property>gear/gear[1]/compression-norm</property>
+  <property>sim/multiplay/generic/float[1]</property>
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>1.8</dep>
+      <dep>1</dep>
     </entry>
     <entry>
       <ind>0.333</ind>
@@ -2697,7 +2623,7 @@
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>-1.5</dep>
+      <dep>-1</dep>
     </entry>
   </interpolation>
   <center>
@@ -2725,11 +2651,11 @@
   <object-name>lights.003</object-name>
   <object-name>rwhiteflash</object-name>
   <object-name>rchrome</object-name>
-  <property>gear/gear[2]/compression-norm</property>
+  <property>sim/multiplay/generic/float[2]</property>
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>1.8</dep>
+      <dep>1</dep>
     </entry>
     <entry>
       <ind>0.333</ind>
@@ -2737,7 +2663,7 @@
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>-1.5</dep>
+      <dep>-1</dep>
     </entry>
   </interpolation>
   <center>
@@ -2746,13 +2672,14 @@
    <z-m>2.6</z-m>
   </center>
   <axis>
-   <x>-1.6</x>
+   <x>1.6</x>
    <y>-1</y>
    <z>0.2</z>
   </axis>
 </animation>
 
 <animation>
+  <type>rotate</type>
   <object-name>lwingc</object-name>
   <object-name>lhobslatc</object-name>
   <object-name>lhobslat_c</object-name>
@@ -2764,11 +2691,11 @@
   <object-name>lights.001</object-name>
   <object-name>lwhiteflash</object-name>
   <object-name>lchrome</object-name>
-  <property>gear/gear[1]/compression-norm</property>
+  <property>sim/multiplay/generic/float[1]</property>
   <interpolation>
     <entry>
       <ind>0</ind>
-      <dep>1.8</dep>
+      <dep>1</dep>
     </entry>
     <entry>
       <ind>0.333</ind>
@@ -2776,7 +2703,7 @@
     </entry>
     <entry>
       <ind>1</ind>
-      <dep>-1.5</dep>
+      <dep>-1</dep>
     </entry>
   </interpolation>
   <center>
@@ -2824,8 +2751,8 @@
   <object-name>rwhiteflash</object-name>
   <object-name>rhobfairing</object-name>
   <object-name>rchrome</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
+  <property>sim/multiplay/generic/float[15]</property>
+  <factor>3</factor>
   <offset-deg>-1</offset-deg>
   <center>
    <x-m>0</x-m>
@@ -2870,8 +2797,8 @@
   <object-name>lwhiteflash</object-name>
   <object-name>lhobfairing</object-name>
   <object-name>lchrome</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
+  <property>sim/multiplay/generic/float[15]</property>
+  <factor>3</factor>
   <offset-deg>-1</offset-deg>
   <center>
    <x-m>0</x-m>
@@ -2904,8 +2831,8 @@
   <object-name>rwhiteflash</object-name>
   <object-name>rhobfairing</object-name>
   <object-name>rchrome</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
+  <property>sim/multiplay/generic/float[15]</property>
+  <factor>3</factor>
   <offset-deg>-1</offset-deg>
   <center>
    <x-m>3.6</x-m>
@@ -2913,13 +2840,14 @@
    <z-m>1.6</z-m>
   </center>
   <axis>
-   <x>-2</x>
+   <x>2</x>
    <y>-1</y>
    <z>0.2</z>
   </axis>
 </animation>
 
 <animation>
+  <type>rotate</type>
   <object-name>lwingb</object-name>
   <object-name>lhobslatb</object-name>
   <object-name>lhobslat_b</object-name>
@@ -2937,8 +2865,8 @@
   <object-name>lwhiteflash</object-name>
   <object-name>lhobfairing</object-name>
   <object-name>lchrome</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
+  <property>sim/multiplay/generic/float[15]</property>
+  <factor>3</factor>
   <offset-deg>-1</offset-deg>
   <center>
    <x-m>3.6</x-m>
@@ -2965,8 +2893,8 @@
   <object-name>lights.003</object-name>
   <object-name>rwhiteflash</object-name>
   <object-name>rchrome</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
+  <property>sim/multiplay/generic/float[15]</property>
+  <factor>3</factor>
   <offset-deg>-1</offset-deg>
   <center>
    <x-m>7.5</x-m>
@@ -2974,13 +2902,14 @@
    <z-m>2.6</z-m>
   </center>
   <axis>
-   <x>-1.6</x>
+   <x>1.6</x>
    <y>-1</y>
    <z>0.2</z>
   </axis>
 </animation>
 
 <animation>
+  <type>rotate</type>
   <object-name>lwingc</object-name>
   <object-name>lhobslatc</object-name>
   <object-name>lhobslat_c</object-name>
@@ -2992,8 +2921,8 @@
   <object-name>lights.001</object-name>
   <object-name>lwhiteflash</object-name>
   <object-name>lchrome</object-name>
-  <property>accelerations/pilot-g[0]</property>
-  <factor>1</factor>
+  <property>sim/multiplay/generic/float[15]</property>
+  <factor>3</factor>
   <offset-deg>-1</offset-deg>
   <center>
    <x-m>7.5</x-m>
@@ -5202,4 +5131,3 @@
 </model>
 
 </PropertyList>
-

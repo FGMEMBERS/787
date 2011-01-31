@@ -1,6 +1,6 @@
 # 787-8 systems
-#sim/multiplay/generic/float[13]
-#/sim/model/Boeing-787-8/n1[0]
+#
+#
 
 aircraft.livery.init("Aircraft/787/Models/Liveries");
 
@@ -37,6 +37,8 @@ mp_craft="";
 lengine_running=1;
 rengine_running=1;
 apu_running=0;
+setprop("/systems/electrical/outputs/eec-Lbus",14);
+setprop("/systems/electrical/outputs/eec-Rbus",14);
 
 strobe_switch = props.globals.getNode("controls/lighting/strobe", 1);
 aircraft.light.new("sim/model/Boeing-787-8/lighting/strobe-blink", [0.05, 1.25], strobe_switch);
@@ -455,9 +457,31 @@ if(getprop("/sim/current-view/cockpit") == 0) {
 setprop("sim/multiplay/generic/float[0]",getprop("gear/gear[0]/compression-m"));
 setprop("sim/multiplay/generic/float[1]",getprop("gear/gear[1]/compression-m"));
 setprop("sim/multiplay/generic/float[2]",getprop("gear/gear[2]/compression-m"));
-setprop("sim/multiplay/generic/float[3]",getprop("gear/gear[3]/compression-norm"));
-setprop("sim/multiplay/generic/float[4]",getprop("gear/gear[4]/compression-norm"));
 setprop("sim/multiplay/generic/int[0]",getprop("sim/model/Boeing-787-8/lighting/beacon/state"));
+setprop("sim/multiplay/generic/float[15]",getprop("accelerations/pilot-g"));
+
+if(getprop("/gear/gear[4]/wow") == 1) {
+ rrcomp=getprop("/gear/gear[4]/compression-m");
+ rfcomp=getprop("/gear/gear[2]/compression-m");
+ rcomp=((rrcomp - rfcomp) * 80);
+ if(rcomp > 20) {
+  aoa=getprop("orientation/pitch-deg");
+  rcomp=(aoa + 20);
+ }
+ setprop("sim/multiplay/generic/float[4]",rcomp);
+}
+
+if(getprop("/gear/gear[3]/wow") == 1) {
+ lrcomp=getprop("/gear/gear[3]/compression-m");
+ lfcomp=getprop("/gear/gear[1]/compression-m");
+ lcomp=((lrcomp - lfcomp) * 80);
+ if(lcomp > 20) {
+  aoa=getprop("orientation/pitch-deg");
+  lcomp=(aoa + 20);
+ }
+ setprop("sim/multiplay/generic/float[3]",lcomp);
+}
+
 
 settimer(update_systems,0);
 }

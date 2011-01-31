@@ -329,12 +329,4 @@ available.-->
 		<control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
 	</thruster>
 
-	<!--Eventually may operate with pushback over MP-->
-
-	<hitch name="aerotow" x="20.56" y="0.00" z="-3.65" force-is-calculated-by-other="0">
-		<tow length="5" weight-per-meter="0.035" elastic-constant="1" break-force="100000" mp-auto-connect-period="0.0"/>
-		<winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
-		<control-input axis="controls/aerotow/find-aircraft" control="FINDAITOW"/>
-	</hitch>
-
     </airplane>

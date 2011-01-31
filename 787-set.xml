@@ -209,8 +209,6 @@
 		<enable3d>false</enable3d>
 	</hud>
 
-	<!--virtual-cockpit archive="y">true</virtual-cockpit-->
-
 	<allow-toggle-cockpit>true</allow-toggle-cockpit>
   
 	<help>
@@ -239,15 +237,20 @@
 			<name>Shift-tab</name>
 			<desc>Set autobrakes to 0</desc>
 		</key>
-		<line>If buttons do not work on startup, press shift-v to go to copilot mode.</line>
-		<line>Press v to go to cockpit mode, buttons should work. Test by clicking</line>
-		<line>on the HUD.</line>
 		<line>Speedbrakes:</line>
-		<line>The speedbrakes have 3 settings. At 0, they never extend.</line>
+		<line>The speedbrakes have 4 settings. At 0, they never extend.</line>
 		<line>At 1, they will only fully extend on the ground.</line>
 		<line>With the setting at 2, they will extend to about a third</line>
 		<line>out, and will go to full if the left gear compresses.</line>
-		<line>At 3, they are out fully.</line>
+		<line>At 3, they are out fully. (Use with caution!)</line>
+		<hrule />
+		<line>Engine Startup:</line>
+		<line>1. Switch on the battery on electrical panel.</line>
+		<line>2. Start APU on electrical panel and wait for its work mode (on EICAS will be message "APU running").</line>
+		<line>3. Click on the APU gen.</line>
+		<line>4. On engine panel switch on starters (click on knobs) and switch on Autostart button.</line>
+		<line>5. Wait for engines idle (on EICAS lights off messages L ENG FAILURE, R ENG FAILURE).</line>
+		<line>6. Confirm engine generators are on, then on electrical panel switch off APU GEN and turn off APU.</line>
 	</help>
 
 	<multiplay>
@@ -360,6 +363,7 @@
 			<!--float n="12">0</float><cabin lights-->
 			<float n="13">0</float><!--left n1-->
 			<float n="14">0</float><!--right n1-->
+			<!--float n="15" alias="/accelerations/pilot-g"/-->
 		</generic>
 	</multiplay>
 
@@ -420,7 +424,7 @@
 			<mod-shift>
 				<binding>
 					<command>nasal</command>
-					<script>autobrakes.resetabrakes()</script>
+					<script>autobrakes.resetabrakes();</script>
 				</binding>
 			</mod-shift>
 		</key>
@@ -499,12 +503,6 @@
 		<brake-parking>1</brake-parking>
 		<autobrake>0</autobrake>
 	</gear>
-		<winch>
-			<place type="bool">false</place>
-		</winch>
-		<aerotow>
-			<find-aircraft type="bool">false</find-aircraft>
-		</aerotow>
 </controls>
 
 <instrumentation>
