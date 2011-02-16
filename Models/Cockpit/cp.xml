@@ -462,7 +462,7 @@
     <red>0.3</red>
     <green>0.25</green>
     <blue>0.2</blue>
-    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+    <factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
   </emission>
  </animation>
 
@@ -491,7 +491,7 @@
     <red>0.3</red>
     <green>0.25</green>
     <blue>0.2</blue>
-    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+    <factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
   </emission>
  </animation>
 
@@ -520,7 +520,7 @@
     <red>0.3</red>
     <green>0.25</green>
     <blue>0.2</blue>
-    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+    <factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
   </emission>
  </animation>
 
@@ -531,7 +531,7 @@
     <red>0.3</red>
     <green>0.25</green>
     <blue>0.2</blue>
-    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+    <factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
   </emission>
  </animation>
 
@@ -1275,7 +1275,7 @@
 		<red>0.3</red>
 		<green>0.25</green>
 		<blue>0.2</blue>
-		<factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+		<factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
 	</emission>
 </animation>
 
@@ -1860,7 +1860,7 @@
     <red>0.6</red>
     <green>0.6</green>
     <blue>0.6</blue>
-    <factor-prop>controls/lighting/panel-norm</factor-prop>	
+    <factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
   </emission>
 </animation>
 
@@ -1877,7 +1877,7 @@
     <red>0.8</red> <!-- 0 -->
     <green>0.8</green> <!-- 0 -->
     <blue>0.8</blue> <!-- 0 -->
-    <factor-prop>controls/lighting/panel-norm</factor-prop>	
+    <factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
   </emission>
 </animation>
 
@@ -1950,7 +1950,7 @@
 		<red>0.3</red>
 		<green>0.25</green>
 		<blue>0.2</blue>
-		<factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+		<factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
 	</emission>
 </animation>
 
@@ -1961,7 +1961,7 @@
 		<red>0.3</red>
 		<green>0.25</green>
 		<blue>0.2</blue>
-		<factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+		<factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
 	</emission>
 </animation>
 
@@ -2721,14 +2721,14 @@
    <button>0</button>
      <binding>
        <command>nasal</command>
-       <script>setprop("/controls/lighting/panel-norm",1);</script>
+       <script>setprop("sim/multiplay/generic/float[16]",1);</script>
      </binding>
    </action>
    <action>
    <button>1</button>
      <binding>
        <command>nasal</command>
-       <script>setprop("/controls/lighting/panel-norm",0);</script>
+       <script>setprop("sim/multiplay/generic/float[16]",0);</script>
      </binding>
    </action>
   <action>
@@ -2736,7 +2736,7 @@
    <repeatable>false</repeatable>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/lighting/panel-norm</property>
+    <property>sim/multiplay/generic/float[16]</property>
     <step>0.1</step>
     <min>0</min>
     <max>1</max>
@@ -2747,7 +2747,7 @@
    <repeatable>false</repeatable>
    <binding>
     <command>property-adjust</command>
-    <property>/controls/lighting/panel-norm</property>
+    <property>sim/multiplay/generic/float[16]</property>
     <step>-0.1</step>
     <min>0</min>
     <max>1</max>

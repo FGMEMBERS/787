@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version = '1.0' encoding = 'UTF-8' ?>
 <PropertyList>
   
   <path>787-8.ac</path>
@@ -575,7 +575,7 @@
     <red>0.3</red>
     <green>0.25</green>
     <blue>0.2</blue>
-    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>	
+    <factor-prop>sim/multiplay/generic/float[16]</factor-prop>	
   </emission>
 </animation>
 
@@ -5131,3 +5131,4 @@
 </model>
 
 </PropertyList>
+

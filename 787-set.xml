@@ -2,7 +2,7 @@
 <PropertyList>
 <sim>
 	<description>Boeing 787-8</description>
-	<author>Joshua Wilson (3D, Systems) Nick I (FDM, Systems) Dany93 (FDM, AP)</author>
+	<author>Joshua Wilson (3D, Systems) Nick I (FDM, Systems) Dany93 (AP, FDM)</author>
 	<status>Front Page Release</status>
 	<flight-model>yasim</flight-model>
 	<aero>787-8</aero>
@@ -27,7 +27,7 @@
 			<eec-mode n="1" type="bool">1</eec-mode>
 			<start-cycle n="0" type="bool">0</start-cycle>
 			<start-cycle n="1" type="bool">0</start-cycle>
-			<start-engines type="bool">0</start-engines>
+			<start-engines type="bool">1</start-engines>
 			<apu-n1 type="double">0</apu-n1>
 			<apu-n2 type="double">0</apu-n2>
 			<apu-egt type="double">0</apu-egt>
@@ -364,6 +364,7 @@
 			<float n="13">0</float><!--left n1-->
 			<float n="14">0</float><!--right n1-->
 			<!--float n="15" alias="/accelerations/pilot-g"/-->
+			<!--float n="16">0</float><cockpit lights-->
 		</generic>
 	</multiplay>
 
@@ -540,6 +541,13 @@
 		<file>Aircraft/787/Nasal/autobrakes.nas</file>
 	</autobrakes>
 </nasal>
+
+<autopilot>
+	<internal>
+		<aileron-max type="double">1</aileron-max>
+		<aileron-min type="double">-1</aileron-min>
+	</internal>
+</autopilot>
 
 <gear>
 	<gear n="0">
