@@ -1026,7 +1026,7 @@
    <type>translate</type>
    <object-name>vector</object-name>
    <property>orientation/side-slip-deg[0]</property>
-<factor>0.0105</factor>
+<factor>-0.0105</factor> <!-- inverted after a change in side-slip sign (bug #901) -->
 <axis>
      <x>0.0</x>
      <y>-1.0</y>
