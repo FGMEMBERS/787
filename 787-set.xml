@@ -230,7 +230,7 @@
 			<desc>Step speedbrakes setting down</desc>
 		</key>
 		<key>
-			<name>Tab</name>
+			<name>=</name>
 			<desc>Cycle autobrake settings</desc>
 		</key>
 		<key>
@@ -408,8 +408,8 @@
 				<script>reversethrust.togglereverser()</script>
 			</binding>
 		</key>
-		<key n="9">
-			<name>Tab</name>
+		<key n="61">
+			<name>=</name>
 			<desc>switch autobrake</desc>
 			<binding>
 				<command>property-cycle</command>
