@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+	<model>
+		<livery> 
+			<name type="string">Japan Airlines</name>
+			<texture>Liveries/JAL.png</texture>
+		</livery>
+		<lights>   
+			<texture>Liveries/JAL-lights.png</texture>
+		</lights>
+	</model>
+</sim>
+</PropertyList>
