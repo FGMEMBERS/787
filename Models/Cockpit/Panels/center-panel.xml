@@ -16,7 +16,7 @@
     <h>108</h>
   </instrument>
 
-  <instrument include="../Instruments/clock.xml">
+  <instrument include="Aircraft/Instruments/clock.xml">
     <name>clock LH Gauge</name>
     <x>101</x>
     <y>324</y>
@@ -24,7 +24,7 @@
     <h>8</h>
   </instrument>
 
-  <instrument include="../Instruments/clock.xml">
+  <instrument include="Aircraft/Instruments/clock.xml">
     <name>clock RH Gauge</name>
     <x>910</x>
     <y>324</y>
