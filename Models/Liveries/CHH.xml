@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+	<model>
+		<livery> 
+			<name type="string">Hainan Airlines</name>
+			<texture>Liveries/CHH.png</texture>
+		</livery>
+		<lights>   
+			<texture>Liveries/CHH-lights.png</texture>
+		</lights>
+	</model>
+</sim>
+</PropertyList>
