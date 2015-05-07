@@ -1,0 +1,60 @@
+----LIVERYMAKER INSTRUCTIONS for 787-8----
+I used GIMP to modify and make liveries. This guide uses GIMP, if you use other programs, try to do
+the same thing, or you can send me the texture to make a lights for it if you don't know how.
+
+Using paintkit.xcf, save your texture as [3-letter airline code].png, all merged together, as well as
+a .xcf file so you can edit details later. This paintkit should include most outlines for things.
+
+----LIGHTS----
+The 787 uses a separate texture for its lights. This method uses GIMP.
+
+1. Open up your livery file separately from its creation file. Open as layers "chrome template.png"
+   and merge down onto main livery. Using the paintcan, put plain white (#ffffff) on the bottom left
+   area, the wing area.
+
+2. Import "light-template.png" as a new layer.
+
+3. Using color select, select any part of the light template. All of the bits should be selected. Go
+   to Select -> Feather and use 20 pixels (10 if on a  1024 x 1024 livery, which should've been made
+   at 2048 x 2048). Hide the lights layer, and select the original texture layer. 
+
+4. Layer -> Mask -> Add Layer Mask with Selection selected. Turn opacity (in the menu with the
+   layers) down to 60%.
+
+5. Save as "[3-letter airline code].png". Ignore warnings and merge all layers.
+
+----XML---
+1. Copy and paste one of the livery XML files.
+
+2. Rename it to the same 3-letter code you used before.
+
+3. Open it up, and edit the names of the files so that they match. Make sure to keep the Liveries/ 
+   part because this shows that the image file is below the models directory, in the Liveries folder.
+
+----NOTES----
+1. Once done with a finished livery, post on the forums (in 787 and CRJ-200 dev topic) , email it to
+   me at nickyivyca [at] yahoo [dot] com, or upload it to the main FG Liveries site
+   (liveries.flightgear.org).
+
+2. Only airlines with actual 787-8 orders will be accepted into the main release (and also onto the
+   main liveries site as well, I think). So, for example, a US Airways livery would not be accepted,
+   but a Qatar Airways livery would. If you wish to make an unrealistic livery, feel free to release
+   it yourself. See wanted.txt in the Liveries folder in the main 787 for a list of wanted liveries.
+
+3. I have been basing my liveries off of those made for the 772-ER model. As long as you base your
+   liveries off of GPL licensed ones (all on official FG Liveries site are GPL), it's fine.
+
+4. I won't be including weathering in the paintkit until I know how and/or the 787 has been out long
+   enough that it'll be realistic. Seams don't exist on composite construction, so those won't be put
+   in.
+
+5. I will be moving the wing mapping to a separate texture for the main point of more detail to the
+   wing. Light textures will remain in the same spot, though.
+
+-------------
+
+Nick I
+Current Developer of the 787 Project
+
+Questions?
+nickyivyca [at] yahoo [dot] com or you can reach me on the official forums with username nickyivyca.
