@@ -12,6 +12,15 @@ var tyresmoke_0 = aircraft.tyresmoke.new(0);
 var tyresmoke_1 = aircraft.tyresmoke.new(1);
 var tyresmoke_2 = aircraft.tyresmoke.new(2);
 # =============================== listeners ===============================
+#
+#setlistener( "controls/lighting/nav-lights", func {
+#	var nav_lights_node = props.globals.getNode("controls/lighting/nav-lights", 1);
+#	var generic_node = props.globals.getNode("sim/multiplay/generic/int[0]", 1);
+#	generic_node.setIntValue(nav_lights_node.getValue());
+#	print("nav_lights ", nav_lights_node.getValue(), "generic_node ", generic_node.getValue());
+#	},
+#	1,
+#	0); 
 setlistener("gear/gear[0]/position-norm", func {
 var gear = getprop("gear/gear[0]/position-norm");
 if (gear == 1 ){
@@ -64,4 +73,3 @@ settimer(rain, 0);
 # == fire it up ===
 rain()
 # end 
-
