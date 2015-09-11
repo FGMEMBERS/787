@@ -8,7 +8,7 @@ b787.sysinfo.log_msg("[SYS] Systems Check and Logger Initialized", 0);
 
 ## LIVERY SELECT
 ################
-aircraft.livery.init("Aircraft/787-8/Models/Liveries");
+aircraft.livery.init("Aircraft/787/Models/Liveries");
 
 ## LIGHTS
 #########

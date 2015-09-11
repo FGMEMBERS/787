@@ -10,7 +10,7 @@
 		<engine>trent_1000</engine>
 
 		<model>
-			<path>Aircraft/787-8/Models/787-8.xml</path>
+			<path>Aircraft/787/Models/787-8.xml</path>
             <livery>
                <file type="string">BOE</file>
             </livery>
@@ -37,7 +37,7 @@
 		</model>
 
         <hud>
-    	        <path n="1">Aircraft/787-8/Models/FlightDeck/HUD2.xml</path>
+    	        <path n="1">Aircraft/787/Models/FlightDeck/HUD2.xml</path>
 	</hud>
 
 	<flaps>
@@ -51,7 +51,7 @@
 	</flaps>
 
 		<startup>
-			<splash-texture>Aircraft/787-8/splash.png</splash-texture>
+			<splash-texture>Aircraft/787/splash.png</splash-texture>
 		</startup>
 
 	<!-- Initialize External Connections as False, the clients will change them to true if connection is established -->
@@ -67,7 +67,7 @@
 
 	<systems>
 		<autopilot>
-			<path>Aircraft/787-8/Systems/b787-autopilot.xml</path>
+			<path>Aircraft/787/Systems/b787-autopilot.xml</path>
 		</autopilot>
 		<autopilot>
 			<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
@@ -76,23 +76,23 @@
 		<!-- Vertical Navigation PID Controller -->
 
 		<autopilot>
-			<path>Aircraft/787-8/Systems/vnav.xml</path>
+			<path>Aircraft/787/Systems/vnav.xml</path>
 		</autopilot>
 
 		<!-- Automatic Holding Pattern PID Controller -->
 
 		<autopilot>
-			<path>Aircraft/787-8/Systems/holding-pattern.xml</path>
+			<path>Aircraft/787/Systems/holding-pattern.xml</path>
 		</autopilot>
 
 		<!-- Fly-By-Wire Auto Stabilize PID Controller -->
 
 		<autopilot>
-			<path>Aircraft/787-8/Systems/fly-by-wire.xml</path>
+			<path>Aircraft/787/Systems/fly-by-wire.xml</path>
 		</autopilot>
 		<autopilot>
 			<name>Spoilers</name>
-			<path>Aircraft/787-8/Systems/b787-spoilers.xml</path>
+			<path>Aircraft/787/Systems/b787-spoilers.xml</path>
 		</autopilot>
         
 		<!-- Wing Flexer -->
@@ -106,11 +106,11 @@
 		<chase-distance-m>-100</chase-distance-m>
 
 		<sound>
-			<path>Aircraft/787-8/b787-sound.xml</path>
+			<path>Aircraft/787/b787-sound.xml</path>
 		</sound>
 
 		<instrumentation>
-			<path>Aircraft/787-8/Systems/instrumentation.xml</path>
+			<path>Aircraft/787/Systems/instrumentation.xml</path>
 
    <tcas>                                <!-- http://wiki.flightgear.org/index.php/TCAS -->
 
@@ -159,8 +159,8 @@
 		</nd-settings>
 
 		<nd n="0">
-           <radar-texture-path type="string">Aircraft/787-8/Models/Instruments/od_ndradar_1.png</radar-texture-path>
-          <symbol-texture-path type="string">Aircraft/787-8/Models/Instruments/symbols_2d.png</symbol-texture-path>
+           <radar-texture-path type="string">Aircraft/787/Models/Instruments/od_ndradar_1.png</radar-texture-path>
+          <symbol-texture-path type="string">Aircraft/787/Models/Instruments/symbols_2d.png</symbol-texture-path>
             <font>
                 <color>
                    <red type="float">0.7</red>
@@ -181,8 +181,8 @@
        </nd>
 
        <nd n="1">
-           <radar-texture-path type="string">Aircraft/787-8/Models/Instruments/od_ndradar_2.png</radar-texture-path>
-          <symbol-texture-path type="string">Aircraft/787-8/Models/Instruments/symbols_2d.png</symbol-texture-path>
+           <radar-texture-path type="string">Aircraft/787/Models/Instruments/od_ndradar_2.png</radar-texture-path>
+          <symbol-texture-path type="string">Aircraft/787/Models/Instruments/symbols_2d.png</symbol-texture-path>
             <font>
                 <color>
                    <red type="float">0.7</red>
@@ -396,7 +396,7 @@
                         <binding>
 							<command>nasal</command>
 							<script>
-							 var ap_dialog = gui.Dialog.new("sim/gui/dialogs/ap_dialog/dialog", "Aircraft/787-8/Systems/autopilot-dlg.xml");
+							 var ap_dialog = gui.Dialog.new("sim/gui/dialogs/ap_dialog/dialog", "Aircraft/787/Systems/autopilot-dlg.xml");
 							 ap_dialog.open();
 							</script>
                         </binding>
@@ -437,7 +437,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var copilotdialog = gui.Dialog.new("sim/gui/dialogs/copilot/dialog", "Aircraft/787-8/Systems/copilot-dlg.xml");
+							 var copilotdialog = gui.Dialog.new("sim/gui/dialogs/copilot/dialog", "Aircraft/787/Systems/copilot-dlg.xml");
 							 copilotdialog.open();
 							</script>
 						</binding>
@@ -447,7 +447,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var flightplan = gui.Dialog.new("sim/gui/dialogs/flightplan/dialog", "Aircraft/787-8/Systems/flightplan-dlg.xml");
+							 var flightplan = gui.Dialog.new("sim/gui/dialogs/flightplan/dialog", "Aircraft/787/Systems/flightplan-dlg.xml");
 							 flightplan.open();
 							</script>
 						</binding>
@@ -466,7 +466,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/787-8/Systems/lights-dlg.xml");
+							 var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/787/Systems/lights-dlg.xml");
 							 lights.open();
 							</script>
 						</binding>
@@ -477,7 +477,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var announce = gui.Dialog.new("sim/gui/dialogs/announcements/dialog", "Aircraft/787-8/Systems/announcements-dlg.xml");
+							 var announce = gui.Dialog.new("sim/gui/dialogs/announcements/dialog", "Aircraft/787/Systems/announcements-dlg.xml");
 							 announce.open();
 							</script>
 						</binding>
@@ -487,7 +487,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/787-8/Systems/failures-dlg.xml");
+							 var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/787/Systems/failures-dlg.xml");
 							 failures.open();
 							</script>
 						</binding>
@@ -497,7 +497,7 @@
                         <binding>
                             <command>nasal</command>
                             <script>
-                            var ground_services = gui.Dialog.new("sim/gui/dialogs/ground_services/dialog", "Aircraft/787-8/Systems/ground_services-dlg.xml");
+                            var ground_services = gui.Dialog.new("sim/gui/dialogs/ground_services/dialog", "Aircraft/787/Systems/ground_services-dlg.xml");
 							 ground_services.open();
                             </script>
                         </binding>
@@ -507,7 +507,7 @@
                         <binding>
                             <command>nasal</command>
                             <script>
-                            var fuel_truck = gui.Dialog.new("sim/gui/dialogs/fuel_truck/dialog", "Aircraft/787-8/Systems/fuel_truck.xml");
+                            var fuel_truck = gui.Dialog.new("sim/gui/dialogs/fuel_truck/dialog", "Aircraft/787/Systems/fuel_truck.xml");
 							 fuel_truck.open();
                             </script>
                         </binding>
@@ -518,7 +518,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							 var dualcontrol = gui.Dialog.new("sim/gui/dialogs/dualcontrol/dialog", "Aircraft/787-8/Systems/dualcontrol-dlg.xml");
+							 var dualcontrol = gui.Dialog.new("sim/gui/dialogs/dualcontrol/dialog", "Aircraft/787/Systems/dualcontrol-dlg.xml");
 							 dualcontrol.open();
 							</script>
 						</binding>
@@ -910,7 +910,7 @@
 				<binding>
 							<command>nasal</command>
 							<script>
-							 var ap_dialog = gui.Dialog.new("sim/gui/dialogs/ap_dialog/dialog", "Aircraft/787-8/Systems/autopilot-dlg.xml");
+							 var ap_dialog = gui.Dialog.new("sim/gui/dialogs/ap_dialog/dialog", "Aircraft/787/Systems/autopilot-dlg.xml");
 							 ap_dialog.open();
 							</script>
 				</binding>
@@ -1071,91 +1071,91 @@
 
 	<nasal>
 		<b787>
-			<file>Aircraft/787-8/Nasal/sysinfo.nas</file>
+			<file>Aircraft/787/Nasal/sysinfo.nas</file>
 		</b787>
 		<systems>
-			<file>Aircraft/787-8/Nasal/systems.nas</file>
+			<file>Aircraft/787/Nasal/systems.nas</file>
 		</systems>
 		<electrical>
-			<file>Aircraft/787-8/Nasal/electrical.nas</file>
+			<file>Aircraft/787/Nasal/electrical.nas</file>
 		</electrical>
 		<v-speeds>
-			<file>Aircraft/787-8/Nasal/v-speeds.nas</file>
+			<file>Aircraft/787/Nasal/v-speeds.nas</file>
 		</v-speeds>
 		<reversethrust>
-			<file>Aircraft/787-8/Nasal/reversethrust.nas</file>
+			<file>Aircraft/787/Nasal/reversethrust.nas</file>
 		</reversethrust>
 		<tyresmoke>
-			<file>Aircraft/787-8/Nasal/tyresmoke.nas</file>
+			<file>Aircraft/787/Nasal/tyresmoke.nas</file>
 		</tyresmoke>
 		<walk>
-			<file>Aircraft/787-8/Nasal/walk.nas</file>
+			<file>Aircraft/787/Nasal/walk.nas</file>
 		</walk>
 		<cdu>
 			<file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
 		</cdu>
 		<b787>
-			<file>Aircraft/787-8/Nasal/pneumatics.nas</file>
-			<file>Aircraft/787-8/Nasal/hydraulics.nas</file>
-			<file>Aircraft/787-8/Nasal/doors.nas</file>
-			<file>Aircraft/787-8/Nasal/navaids.nas</file>
-			<file>Aircraft/787-8/Nasal/copilot.nas</file>
-			<file>Aircraft/787-8/Nasal/wipers.nas</file>
-			<file>Aircraft/787-8/Nasal/fuel.nas</file>
-			<file>Aircraft/787-8/Nasal/heating.nas</file>
-			<file>Aircraft/787-8/Nasal/anti-ice.nas</file>
-			<file>Aircraft/787-8/Nasal/surge.nas</file>
-			<file>Aircraft/787-8/Nasal/autobrake.nas</file>
-			<file>Aircraft/787-8/Nasal/flightplans.nas</file>
-			<file>Aircraft/787-8/Nasal/procedures.nas</file>
-			<file>Aircraft/787-8/Nasal/cdu1.nas</file>
-			<file>Aircraft/787-8/Nasal/cdu2.nas</file>
-			<file>Aircraft/787-8/Nasal/mfd-navigation.nas</file>
-			<file>Aircraft/787-8/Nasal/nd-fullscreen.nas</file>
-			<file>Aircraft/787-8/Nasal/tcas.nas</file>
-			<file>Aircraft/787-8/Nasal/fbw.nas</file>
-			<file>Aircraft/787-8/Nasal/vnav.nas</file>
-			<file>Aircraft/787-8/Nasal/efb.nas</file>
-			<file>Aircraft/787-8/Nasal/chartsDB.nas</file>
-			<file>Aircraft/787-8/Nasal/modecontrol.nas</file>
-			<file>Aircraft/787-8/Nasal/warnings.nas</file>
-			<file>Aircraft/787-8/Nasal/lighting.nas</file>
-			<file>Aircraft/787-8/Nasal/wxradar-ndhalf.nas</file>
-			<file>Aircraft/787-8/Nasal/wxradar-ndfull.nas</file>
-			<file>Aircraft/787-8/Nasal/holding-pattern.nas</file>
-			<file>Aircraft/787-8/Nasal/terrain-map.nas</file>
-			<file>Aircraft/787-8/Nasal/world-map.nas</file>
-			<file>Aircraft/787-8/Nasal/gear_system.nas</file>
-			<file>Aircraft/787-8/Nasal/engine-fire.nas</file>
-			<file>Aircraft/787-8/Nasal/ground_services.nas</file>
-			<file>Aircraft/787-8/Nasal/fmc.nas</file>
-			<file>Aircraft/787-8/Nasal/fmcHelp_func.nas</file>
-			<file>Aircraft/787-8/Nasal/fmcHelp_loop.nas</file>
-			<file>Aircraft/787-8/Nasal/syscheck.nas</file>
-			<file>Aircraft/787-8/Nasal/procedures/fmsDB.nas</file>
-			<file>Aircraft/787-8/Nasal/procedures/fmsWP.nas</file>
-			<file>Aircraft/787-8/Nasal/procedures/fmsTP.nas</file>
-			<file>Aircraft/787-8/Nasal/procedures/fmsTransition.nas</file>
+			<file>Aircraft/787/Nasal/pneumatics.nas</file>
+			<file>Aircraft/787/Nasal/hydraulics.nas</file>
+			<file>Aircraft/787/Nasal/doors.nas</file>
+			<file>Aircraft/787/Nasal/navaids.nas</file>
+			<file>Aircraft/787/Nasal/copilot.nas</file>
+			<file>Aircraft/787/Nasal/wipers.nas</file>
+			<file>Aircraft/787/Nasal/fuel.nas</file>
+			<file>Aircraft/787/Nasal/heating.nas</file>
+			<file>Aircraft/787/Nasal/anti-ice.nas</file>
+			<file>Aircraft/787/Nasal/surge.nas</file>
+			<file>Aircraft/787/Nasal/autobrake.nas</file>
+			<file>Aircraft/787/Nasal/flightplans.nas</file>
+			<file>Aircraft/787/Nasal/procedures.nas</file>
+			<file>Aircraft/787/Nasal/cdu1.nas</file>
+			<file>Aircraft/787/Nasal/cdu2.nas</file>
+			<file>Aircraft/787/Nasal/mfd-navigation.nas</file>
+			<file>Aircraft/787/Nasal/nd-fullscreen.nas</file>
+			<file>Aircraft/787/Nasal/tcas.nas</file>
+			<file>Aircraft/787/Nasal/fbw.nas</file>
+			<file>Aircraft/787/Nasal/vnav.nas</file>
+			<file>Aircraft/787/Nasal/efb.nas</file>
+			<file>Aircraft/787/Nasal/chartsDB.nas</file>
+			<file>Aircraft/787/Nasal/modecontrol.nas</file>
+			<file>Aircraft/787/Nasal/warnings.nas</file>
+			<file>Aircraft/787/Nasal/lighting.nas</file>
+			<file>Aircraft/787/Nasal/wxradar-ndhalf.nas</file>
+			<file>Aircraft/787/Nasal/wxradar-ndfull.nas</file>
+			<file>Aircraft/787/Nasal/holding-pattern.nas</file>
+			<file>Aircraft/787/Nasal/terrain-map.nas</file>
+			<file>Aircraft/787/Nasal/world-map.nas</file>
+			<file>Aircraft/787/Nasal/gear_system.nas</file>
+			<file>Aircraft/787/Nasal/engine-fire.nas</file>
+			<file>Aircraft/787/Nasal/ground_services.nas</file>
+			<file>Aircraft/787/Nasal/fmc.nas</file>
+			<file>Aircraft/787/Nasal/fmcHelp_func.nas</file>
+			<file>Aircraft/787/Nasal/fmcHelp_loop.nas</file>
+			<file>Aircraft/787/Nasal/syscheck.nas</file>
+			<file>Aircraft/787/Nasal/procedures/fmsDB.nas</file>
+			<file>Aircraft/787/Nasal/procedures/fmsWP.nas</file>
+			<file>Aircraft/787/Nasal/procedures/fmsTP.nas</file>
+			<file>Aircraft/787/Nasal/procedures/fmsTransition.nas</file>
 		</b787>
 		<dualcontrol>
-			<file>Aircraft/787-8/DualControl/DualControl_base.nas</file>
+			<file>Aircraft/787/DualControl/DualControl_base.nas</file>
 		</dualcontrol>
         <dialogs>
-            <file>Aircraft/787-8/Nasal/radio.nas</file>
+            <file>Aircraft/787/Nasal/radio.nas</file>
         </dialogs>
 <!-- Animations Creators -->
 		<helpers>
-<!--			<file>Aircraft/787-8/Devel/wxradar-echo-animations.nas</file>
-			<file>Aircraft/787-8/Devel/wxradar-pixel-animations.nas</file>
-			<file>Aircraft/787-8/Devel/tcas-animations-helper.nas</file> -->
+<!--			<file>Aircraft/787/Devel/wxradar-echo-animations.nas</file>
+			<file>Aircraft/787/Devel/wxradar-pixel-animations.nas</file>
+			<file>Aircraft/787/Devel/tcas-animations-helper.nas</file> -->
 			<!-- file>Aircraft/Instruments-3d/vsd/animation_creator.nas</file -->
-			<!-- file>Aircraft/787-8/parse_dat.nas</file -->
+			<!-- file>Aircraft/787/parse_dat.nas</file -->
 		</helpers>
 		<vsd>
-			<!-- file>Aircraft/787-8/Nasal/vsd.nas</file -->
+			<!-- file>Aircraft/787/Nasal/vsd.nas</file -->
 		</vsd>
 		<tps>
-			<file>Aircraft/787-8/EFB-DB/Third-Party/CatchMe/code.nas</file>
+			<file>Aircraft/787/EFB-DB/Third-Party/CatchMe/code.nas</file>
 		</tps>
 	</nasal>
 
