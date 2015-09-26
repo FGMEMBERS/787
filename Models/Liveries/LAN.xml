@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+<sim>
+    
+<model>
+        
+<livery>
+            
+<name type="string">LAN Airlines S.A.</name>
+            
+<texture>Liveries/LAN-Livery.png</texture>
+        
+</livery>
+        
+<lights>
+            
+<texture>Liveries/LAN-Lights.png</texture>
+        
+</lights>
+  
+</model>
+
+</sim>
+
+</PropertyList>

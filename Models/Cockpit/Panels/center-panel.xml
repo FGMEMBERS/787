@@ -1,0 +1,218 @@
+<PropertyList>
+
+ <name>787 Main Panel</name>
+ <background>Aircraft/787/Models/Cockpit/Panels/transparent-bg.png</background>
+ <w>1024</w>
+ <h>512</h>
+
+<instruments>
+
+ <!-- AP FD controls -->  
+ <!-- <instrument include="Ap_Fd.xml">
+    <name>AP-FD controls</name>
+    <x>535</x>
+    <y>458</y>
+    <w>656</w>
+    <h>108</h>
+  </instrument>
+
+  <instrument include="Aircraft/Instruments/clock.xml">
+    <name>clock LH Gauge</name>
+    <x>101</x>
+    <y>324</y>
+    <w>8</w>
+    <h>8</h>
+  </instrument>
+
+  <instrument include="Aircraft/Instruments/clock.xml">
+    <name>clock RH Gauge</name>
+    <x>910</x>
+    <y>324</y>
+    <w>8</w>
+    <h>8</h>
+  </instrument>
+
+  <instrument include="dme2.xml">
+    <name>DME</name>
+    <x>340</x>
+    <y>300</y>
+    <w>60</w>
+    <h>22</h>
+  </instrument>
+
+  <instrument include="dme3.xml">
+    <name>DME</name>
+    <x>340</x>
+    <y>350</y>
+    <w>60</w>
+    <h>22</h>
+  </instrument>
+
+  <instrument include="dme.xml">
+    <name>DME</name>
+    <x>340</x>
+    <y>250</y>
+    <w>60</w>
+    <h>22</h>
+  </instrument>
+  -->
+
+<instrument>
+  <name>panel hotspots</name>
+  <x>512</x>
+  <y>256</y>
+  <w>1024</w>
+  <h>512</h>
+  <w-base>1024</w-base>
+  <h-base>512</h-base>
+
+ <actions> 
+ 
+<!-- standby altimeter-->
+<!--action>
+   <name>calibrate fine</name>
+   <button>0</button>
+   <x>-125</x>
+   <y>-62</y>
+   <w>12</w>
+   <h>12</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>-0.01</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>calibrate coarse</name>
+   <button>1</button>
+   <x>-125</x>
+   <y>-62</y>
+   <w>12</w>
+   <h>12</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>-0.1</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>calibrate fine</name>
+   <button>0</button>
+   <x>-113</x>
+   <y>-62</y>
+   <w>12</w>
+   <h>12</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>0.01</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>calibrate coarse</name>
+   <button>1</button>
+   <x>-113</x>
+   <y>-62</y>
+   <w>12</w>
+   <h>12</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>0.1</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action-->
+
+   <!--action>
+     <name>Gear Up</name>
+     <button>0</button>
+     <x>68</x>
+     <y>55</y>
+     <w>16</w>
+     <h>16</h>
+  <binding>
+   <command>nasal</command>
+   <script>controls.gearDown(-1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.gearDown(0)</script>
+   </binding>
+  </mod-up>
+   </action>
+
+   <action>
+     <name>Gear Down</name>
+     <button>0</button>
+     <x>68</x>
+     <y>34</y>
+     <w>16</w>
+     <h>16</h>
+  <binding>
+   <command>nasal</command>
+   <script>controls.gearDown(1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.gearDown(0)</script>
+   </binding>
+  </mod-up>
+   </action>
+
+<action>
+<name>Autobrake setting increase</name>
+<button>0</button>
+<x>75</x>
+<y>-50</y>
+<w>18</w>
+<h>18</h>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/gear/autobrakes</property>
+                <step>0.2</step>
+                <min>0</min>
+                <max>1.2</max>
+            </binding>
+</action>
+
+<action>
+<name>Autobrake setting decrease</name>
+<button>1</button>
+<x>75</x>
+<y>-50</y>
+<w>18</w>
+<h>18</h>
+            <binding>
+                <command>property-adjust</command>
+                <property>/controls/gear/autobrakes</property>
+                <step>-0.2</step>
+                <min>0</min>
+                <max>1.2</max>
+            </binding>
+</action-->
+
+
+
+</actions>
+</instrument>
+
+</instruments>
+
+</PropertyList>
+

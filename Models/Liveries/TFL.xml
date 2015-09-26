@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+	<model>
+		<livery> 
+			<name type="string">Arkefly</name>
+			<texture>Liveries/TFL.png</texture>
+		</livery>
+		<lights>   
+			<texture>Liveries/TFL-lights.png</texture>
+		</lights>
+	</model>
+</sim>
+</PropertyList>
