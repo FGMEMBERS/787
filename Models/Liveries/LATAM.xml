@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">LATAM S.A.</name>
+        <texture>Liveries/LATAM-Livery.png</texture>
+      </livery>
+      <lights>
+        <texture>Liveries/LATAM-Lights.png</texture>
+      </lights>
+    </model>
+  </sim>
+</PropertyList>

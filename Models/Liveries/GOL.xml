@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+<sim>    
+  <model>        
+    <livery>
+      <name type="string">GOL</name>
+      <texture>Liveries/GOL.png</texture>
+    </livery>
+    <lights>
+      <texture>Liveries/lights.png</texture>
+    </lights>
+  </model>
+</sim>
+
+</PropertyList>

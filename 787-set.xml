@@ -2,7 +2,7 @@
 <PropertyList>
 <sim>
 	<description>Boeing 787-8</description>
-	<author>Joshua Wilson (3D, Systems) Nick I (FDM, Systems) Dany93 (AP, FDM)</author>
+	<author>Joshua Wilson (3D, Systems) Nick I (FDM, Systems) Dany93 (AP, FDM), Gabriel Hernandez (New Effects, New sounds, Fixes, GPWS Etc)</author>
 	<status>Front Page Release</status>
 	<flight-model>yasim</flight-model>
 	<aero>787-8</aero>
@@ -230,7 +230,7 @@
 			<desc>Step speedbrakes setting down</desc>
 		</key>
 		<key>
-			<name>=</name>
+			<name>Tab</name>
 			<desc>Cycle autobrake settings</desc>
 		</key>
 		<key>
@@ -284,6 +284,60 @@
 						<property>controls/switches/contrails</property>
 					</binding>
 				</item>
+                              <item>
+			<label>Fuel Truck Controls</label>
+			<name>fuel</name>
+			<binding>
+				<command>nasal</command>
+				<script>
+					var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/787/Systems/fuel-truck.xml");
+					fuel.open();
+				</script>
+			</binding>
+		  </item>
+          <item>
+			<name>gs</name>
+			<label>Ground Services</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+					var gs = gui.Dialog.new("sim/gui/dialogs/gs/dialog", "Aircraft/787/Systems/ground-services-dlg.xml");
+					gs.open();
+				</script>
+			</binding>
+		  </item>
+		  <item>
+		      <label>Announcements</label>
+		      <binding>
+					<command>nasal</command>
+					<script>
+						var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", "Aircraft/787/Dialogs/announcements-dialog.xml");
+						mal.open();
+		       </script>
+		      </binding>
+          </item> 
+         <item>
+
+                <label>System Failures</label>
+					<binding>
+                            <command>nasal</command>
+                            <script>
+                             var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/787/Systems/failures-dlg.xml");
+                             failures.open();
+                            </script>
+                    </binding>
+            </item>
+<item>
+		      <label>Fuel Dump</label>
+		      <binding>
+		       <command>nasal</command>
+		       <script>
+			  var mal = gui.Dialog.new("/sim/gui/dialogs/dump/menu/dialog", "Aircraft/787/Dialogs/fueldump-dialog.xml");
+			mal.open();
+		       </script>
+		      </binding>
+		</item>
+
 			</menu>
 		</default>
 	</menubar>
@@ -408,8 +462,8 @@
 				<script>reversethrust.togglereverser()</script>
 			</binding>
 		</key>
-		<key n="61">
-			<name>=</name>
+		<key n="9">
+			<name>Tab</name>
 			<desc>switch autobrake</desc>
 			<binding>
 				<command>property-cycle</command>
@@ -461,7 +515,53 @@
 				<max>3</max>
 			</binding>
 		</key>
-	</keyboard>
+  <key n="50">
+  <name>2</name>
+  <desc>Decrease flaps.</desc>
+  <binding>
+   <command>nasal</command>
+   <script>controls.flapsDown(-1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.flapsDown(0)</script>
+   </binding>
+  </mod-up>
+ </key>
+
+ <key n="49">
+  <name>1</name>
+  <desc>Increase flaps.</desc>
+  <binding>
+   <command>nasal</command>
+   <script>controls.flapsDown(1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.flapsDown(0)</script>
+   </binding>
+  </mod-up>
+ </key>
+<key n="263">
+	<name>F7</name>
+	<desc>Show map</desc>
+	<binding>
+	<command>dialog-show</command>
+	<dialog-name>map</dialog-name>
+	</binding>
+</key>
+
+<key n="264">
+	<name>F8</name>
+	<desc>Show router manager</desc>
+	<binding>
+	<command>dialog-show</command>
+	<dialog-name>route-manager</dialog-name>
+	</binding>
+</key>
+</keyboard>
 </input>
   
 <surface-positions>
@@ -524,13 +624,49 @@
 	</flightdirector>
 </instrumentation>
 
+<mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
+      <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
+      <configuration-module>
+        <category-1>  255 </category-1>
+        <category-3>   2 </category-3>  <!-- POSITION_INPUT_SELECT -->		
+        <category-4>  13 </category-4>  <!-- ALTITUDE_CALLOUTS -->		
+        <category-5>   0 </category-5>  <!-- AUDIO_MENU_SELECT -->		
+        <category-6>   1 </category-6>  <!-- TERRAIN_DISPLAY_SELECT -->		
+        <category-7> 124 </category-7>  <!-- OPTIONS_SELECT_GROUP_1 -->		
+        <category-8>   4 </category-8>  <!-- RADIO_ALTITUDE_INPUT_SELECT-->
+        <category-9>   3 </category-9>  <!-- NAVIGATION_INPUT_SELECT -->		
+        <category-10>  6 </category-10> <!-- ATTITUDE_INPUT_SELECT -->		
+        <category-13>  7 </category-13> <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->		
+        <category-14>  0 </category-14> <!-- AUDIO_OUTPUT_LEVEL -->
+      </configuration-module>
+      <inputs>                            <!-- Module I/O -->
+        <arinc429>
+          <decision-height-ncd> true </decision-height-ncd>
+          <decision-height> 200 </decision-height>
+        </arinc429>
+        <rs-232>		
+          <present-status>		
+            <landing-flaps type="double">0.5</landing-flaps>		
+          </present-status>		
+        </rs-232>
+      </inputs>
+      <speaker>                           <!-- Speaker Configuration -->
+        <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
+        <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+        <volume type="double"> 1.0 </volume>          <!-- Volume at reference distance -->
+      </speaker>
+    </mk-viii>
+
+
 <nasal>
 	<Boeing-787>
 		<file>Aircraft/787/Nasal/electrical.nas</file>
 		<file>Aircraft/787/Nasal/system.nas</file>
 		<file>Aircraft/787/Nasal/flightdirector.nas</file>
 		<file>Aircraft/787/Nasal/contrail.nas</file>
-	</Boeing-787>
+                <file>Aircraft/787/Nasal/fuel-dump.nas</file>
+                <file>Aircraft/787/Nasal/ground-services.nas</file>	
+               </Boeing-787>
 	<reversethrust>
 		<file>Aircraft/787/Nasal/reverse-thrust.nas</file>
 	</reversethrust>
